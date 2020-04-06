@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Suisei Hosimati" />
+    <title> ☄️ Starbuttons</title>
+    <style>
+      #btn {
+        text-align: center;
+        height: 40vh;
+        margin: 30vh 30vw;
+        color: white;
+        background-color: #aacaf3;
+        line-height: 40vh;
+        font-size: 5rem;
+        box-shadow: 30px 30px 30px grey;
+        border-radius: 15px;
+        cursor: pointer !important;
+      }
+      #btn:hover {
+        box-shadow: -10px -10px 10px #111;
+      }
+      @media screen and (max-width: 1000px) {
+        #btn {
+          font-size: 2rem !important;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        #btn {
+          font-size: 1rem !important;
+        }
+      }
+      @media screen and (max-width: 300px) {
+        #btn {
+          font-size: 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="btn" onclick="play()">
+      Eeehihihi
+    </div>
+    <script>
+      var music = new Audio("./assets/ehhh.mp3");
+      function play() {
+        music.play();
+      }
+    </script>
+  </body>
+</html>

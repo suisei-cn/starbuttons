@@ -6,16 +6,32 @@
     <meta name="keywords" content="Suisei Hosimati" />
     <title>☄️ Starbuttons</title>
     <style>
+      #app {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        /* what the hell */
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
       #btn {
         text-align: center;
         font-family: fira Code, iA Writer Mono V, IBM Plex Mono, Roboto Mono,
           Courier, monospace;
         height: 40vh;
-        margin: 30vh 30vw;
+        width: 40vw;
+        margin-top: 30vh;
         color: white;
         background: linear-gradient(#97cbed, #6375bc);
         line-height: 40vh;
         font-size: 5rem;
+      }
+      .animateBtn {
         box-shadow: 0 0.9px 2.2px rgba(0, 0, 0, 0.02),
           0 2.1px 5.3px rgba(0, 0, 0, 0.028), 0 4px 10px rgba(0, 0, 0, 0.035),
           0 7.1px 17.9px rgba(0, 0, 0, 0.042),
@@ -24,7 +40,7 @@
         border-radius: 8px;
         cursor: pointer !important;
       }
-      #btn:hover {
+      .animateBtn:hover {
         font-weight: 900;
         box-shadow: 0 2.2px 2.2px rgba(176, 201, 239, 0.2),
           0 5.3px 5.3px rgba(176, 201, 239, 0.28),
@@ -48,10 +64,45 @@
           font-size: 0 !important;
         }
       }
+      #bottom {
+        margin-bottom: 4vh;
+        display: flex;
+        justify-content: space-between;
+      }
+      .bottomBtn {
+        color: #444;
+        background: #97cbed;
+        text-align: center;
+        padding: 4px;
+      }
+      .bottonBtnLink {
+        margin: 0 0.5vw;
+        text-decoration: none;
+      }
+      .bottomBtn:hover {
+        font-weight: initial;
+      }
     </style>
   </head>
   <body>
-    <div id="btn" onclick="play()">Eeehihihihi</div>
+    <div id="app">
+      <div id="btn" class="animateBtn" onclick="play()">Eeehihihihi</div>
+      <div id="bottom">
+        <a
+          class="bottonBtnLink"
+          href="https://github.com/suisei-cn"
+          target="_blank"
+          ><div class="animateBtn bottomBtn">☄️ GitHub ☄️</div></a
+        >
+        <a
+          class="bottonBtnLink"
+          href="https://t.me/suiseihosimati"
+          target="_blank"
+        >
+          <div class="animateBtn bottomBtn">☄️ Telegram ☄️</div>
+        </a>
+      </div>
+    </div>
     <script>
       var music = new Audio("./assets/ehhh.mp3");
       function play() {

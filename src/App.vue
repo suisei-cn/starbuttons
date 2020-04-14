@@ -74,6 +74,8 @@ export default class App extends Vue {
   border-radius: 8px;
   cursor: pointer !important;
 }
+
+.playingBtn,
 .animateBtn:hover {
   font-weight: 900;
   box-shadow: 0 2.2px 2.2px rgba(176, 201, 239, 0.2),

@@ -25,7 +25,7 @@ export default class CentralButton extends BaseButton { }
     monospace;
   height: 40vh;
   width: 40vw;
-  margin-top: 30vh;
+  margin-top: 3vh;
   color: white;
   background: linear-gradient(#97cbed, #6375bc);
   line-height: 40vh;

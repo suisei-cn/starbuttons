@@ -1,5 +1,19 @@
 <template>
   <div id="app">
+    <button
+      class="settingsBtn"
+      v-if="$store.state.multiPlay"
+      @click="$store.commit('disableMultiPlay')"
+    >
+      Disable multiplay
+    </button>
+    <button
+      class="settingsBtn"
+      v-else
+      @click="$store.commit('enableMultiPlay')"
+    >
+      Enable multiplay
+    </button>
     <template v-for="(item, index) of sounds">
       <CentralButton
         :item="item"
@@ -87,6 +101,11 @@ export default class App extends Vue {
 </style>
 
 <style lang="scss" scoped>
+.settingsBtn {
+  margin-top: 15vh;
+  height: 6vh;
+}
+
 #bottom {
   margin-bottom: 11vh;
   display: flex;
@@ -96,4 +115,6 @@ export default class App extends Vue {
   margin: 0 0.5vw;
   text-decoration: none;
 }
+
+@import url("./style.scss");
 </style>

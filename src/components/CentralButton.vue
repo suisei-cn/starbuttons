@@ -2,6 +2,7 @@
   <div
     class="btn animateBtn"
     @click="play"
+    :class="{ playingBtn: playLayer > 0 }"
   >
     {{ localizedName }}
   </div>

@@ -1,6 +1,12 @@
 <template>
   <div id="app">
-    <CentralButton :item="r" />
+    <template v-for="(item, index) of sounds">
+      <CentralButton
+        :item="item"
+        :key="index"
+        v-if="item.type == 'center'"
+      ></CentralButton>
+    </template>
     <div id="bottom">
       <a
         class="bottonBtnLink"
@@ -22,25 +28,25 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import { Sound } from './types';
 import CentralButton from './components/CentralButton.vue';
+import BaseButton from './components/BaseButton.vue';
 
 @Component({
   components: {
     CentralButton,
+    BaseButton,
   },
 })
 export default class App extends Vue {
+  private sounds: Sound[] = [];
 
-  public r = {
-    "name": "Eeehihihihi",
-    "name_l10n": {
-      "ja": "イヒヒヒヒ",
-      "zh": "噫hihihihi"
-    },
-    "file": "ehhh.mp3",
-    "type": "center",
-  };
-
+  private async mounted() {
+    this.sounds = (await fetch('/sounds.json').then((x) => x.json()).catch((err) => {
+      // tslint:disable-next-line:no-console
+      console.error('Sound data fetch error. Exiting.');
+    }) as Sound[]);
+  }
 }
 </script>
 

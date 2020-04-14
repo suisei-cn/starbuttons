@@ -1,0 +1,43 @@
+{
+  "name": "starbuttons",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.4.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.3.0",
+    "@vue/cli-plugin-typescript": "^4.3.0",
+    "@vue/cli-service": "^4.3.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "typescript": "~3.8.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "description": "One or more vocal buttons for Suisei.",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suisei-cn/starbuttons.git"
+  },
+  "keywords": [
+    "hololive",
+    "suisei-hosimati",
+    "vue",
+    "typescript"
+  ],
+  "author": "Outvi V <oss@outv.im>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suisei-cn/starbuttons/issues"
+  },
+  "homepage": "https://suisei.moe"
+}

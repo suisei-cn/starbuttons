@@ -16,7 +16,7 @@ import { Sound } from '../types';
 export default class BaseButton extends Vue {
   @Prop() private item!: Sound;
   private playLayer: number = 0;
-  private lang: string = ((navigator as any).language || (navigator as any).userLanguage).split('-')[0];
+  private lang: string = ((navigator as any).language || (navigator as any).userLanguage).split('-')[0] || "zh";
   get localizedName() {
     return this.item.name_l10n![this.lang] || this.item.name || '';
   }

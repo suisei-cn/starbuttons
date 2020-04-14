@@ -5,14 +5,14 @@
       v-if="$store.state.multiPlay"
       @click="$store.commit('disableMultiPlay')"
     >
-      Disable multiplay
+      {{ $t("Disable multiplay") }}
     </button>
     <button
       class="settingsBtn"
       v-else
       @click="$store.commit('enableMultiPlay')"
     >
-      Enable multiplay
+      {{ $t("Enable multiplay") }}
     </button>
     <template v-for="(item, index) of sounds">
       <CentralButton
@@ -27,14 +27,14 @@
         href="https://github.com/suisei-cn"
         target="_blank"
       >
-        GitHub</a
+        {{ $t("GitHub") }}</a
       >/
       <a
         class="bottonBtnLink"
         href="https://t.me/suiseihosimati"
         target="_blank"
       >
-        Telegram
+        {{ $t("Telegram") }}
       </a>
     </div>
   </div>
@@ -60,6 +60,8 @@ export default class App extends Vue {
       // tslint:disable-next-line:no-console
       console.error('Sound data fetch error. Exiting.');
     }) as Sound[]);
+    let lang = ((navigator as any).language || (navigator as any).userLanguage).split('-')[0] || "zh";
+    this.$i18n.locale = lang;
   }
 }
 </script>

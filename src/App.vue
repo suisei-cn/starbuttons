@@ -107,9 +107,9 @@ export default class App extends Vue {
 }
 
 #bottom {
+  margin-top: 14vh;
   margin-bottom: 11vh;
   display: flex;
-  justify-content: space-between;
 }
 .bottonBtnLink {
   margin: 0 0.5vw;

@@ -1,0 +1,91 @@
+<template>
+  <div id="app">
+    <CentralButton :item="r" />
+    <div id="bottom">
+      <a
+        class="bottonBtnLink"
+        href="https://github.com/suisei-cn"
+        target="_blank"
+      >
+        GitHub</a
+      >/
+      <a
+        class="bottonBtnLink"
+        href="https://t.me/suiseihosimati"
+        target="_blank"
+      >
+        Telegram
+      </a>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import CentralButton from './components/CentralButton.vue';
+
+@Component({
+  components: {
+    CentralButton,
+  },
+})
+export default class App extends Vue {
+
+  public r = {
+    "name": "Eeehihihihi",
+    "name_l10n": {
+      "ja": "イヒヒヒヒ",
+      "zh": "噫hihihihi"
+    },
+    "file": "ehhh.mp3",
+    "type": "center",
+  };
+
+}
+</script>
+
+<style lang="scss">
+#app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* what the hell */
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.animateBtn {
+  box-shadow: 0 0.9px 2.2px rgba(0, 0, 0, 0.02),
+    0 2.1px 5.3px rgba(0, 0, 0, 0.028), 0 4px 10px rgba(0, 0, 0, 0.035),
+    0 7.1px 17.9px rgba(0, 0, 0, 0.042), 0 13.4px 33.4px rgba(0, 0, 0, 0.05),
+    0 32px 80px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;
+  border-radius: 8px;
+  cursor: pointer !important;
+}
+.animateBtn:hover {
+  font-weight: 900;
+  box-shadow: 0 2.2px 2.2px rgba(176, 201, 239, 0.2),
+    0 5.3px 5.3px rgba(176, 201, 239, 0.28),
+    0 10px 10px rgba(176, 201, 239, 0.35), 0 17.9px 17.9px rgba(0, 0, 0, 0.042),
+    0 33.4px 33.4px rgba(0, 0, 0, 0.05), 0 80px 80px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;
+}
+</style>
+
+<style lang="scss" scoped>
+#bottom {
+  margin-bottom: 11vh;
+  display: flex;
+  justify-content: space-between;
+}
+.bottonBtnLink {
+  margin: 0 0.5vw;
+  text-decoration: none;
+}
+</style>

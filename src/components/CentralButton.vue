@@ -1,5 +1,8 @@
 <template>
-  <div id="btn" class="animateBtn" @click="play">
+  <div
+    class="btn animateBtn"
+    @click="play"
+  >
     {{ localizedName }}
   </div>
 </template>
@@ -14,7 +17,7 @@ export default class CentralButton extends BaseButton { }
 </script>
 
 <style scoped lang="scss">
-#btn {
+.btn {
   text-align: center;
   overflow: hidden;
   font-family: Fira Code, iA Writer Mono V, IBM Plex Mono, Roboto Mono, Courier,
@@ -29,17 +32,17 @@ export default class CentralButton extends BaseButton { }
 }
 
 @media screen and (max-width: 1000px) {
-  #btn {
+  .btn {
     font-size: 2rem !important;
   }
 }
 @media screen and (max-width: 600px) {
-  #btn {
+  .btn {
     font-size: 1rem !important;
   }
 }
 @media screen and (max-width: 300px) {
-  #btn {
+  .btn {
     font-size: 0 !important;
   }
 }

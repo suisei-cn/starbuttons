@@ -1,5 +1,9 @@
 <template>
-  <div id="btn" class="animateBtn" @click="play">
+  <div
+    class="btn animateBtn"
+    @click="play"
+    :class="{ playingBtn: playLayer > 0 }"
+  >
     {{ localizedName }}
   </div>
 </template>
@@ -11,11 +15,15 @@ import { Sound } from '../types';
 @Component
 export default class BaseButton extends Vue {
   @Prop() private item!: Sound;
+  private playLayer: number = 0;
   private lang: string = ((navigator as any).language || (navigator as any).userLanguage).split('-')[0];
   get localizedName() {
     return this.item.name_l10n![this.lang] || this.item.name || '';
   }
   private play() {
+    if (this.$store.getters.playing > 0 && !this.$store.state.multiPlay) {
+      return;
+    }
     let audioFilename;
     if (typeof (this.item.file) === 'string') {
       audioFilename = this.item.file;
@@ -23,18 +31,20 @@ export default class BaseButton extends Vue {
       audioFilename = this.item.file[Math.floor(Math.random() * this.item.file.length)];
     }
     const audio = new Audio(`assets/${audioFilename}`);
+    const that = this;
+    audio.addEventListener('play', () => {
+      that.playLayer += 1;
+      that.$store.commit('playOne');
+    });
+    audio.addEventListener('ended', () => {
+      that.playLayer -= 1;
+      that.$store.commit('stopOne');
+    });
     audio.play();
   }
 }
 </script>
 
 <style scoped lang="scss">
-#btn {
-  text-align: center;
-  overflow: hidden;
-  font-family: Fira Code, iA Writer Mono V, IBM Plex Mono, Roboto Mono, Courier,
-    monospace;
-  color: white;
-  background: linear-gradient(#97cbed, #6375bc);
-}
+@import url("../style.scss");
 </style>

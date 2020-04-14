@@ -16,7 +16,13 @@ export default class BaseButton extends Vue {
     return this.item.name_l10n![this.lang] || this.item.name || '';
   }
   private play() {
-    const audio = new Audio(`assets/${this.item.file}`);
+    let audioFilename;
+    if (typeof (this.item.file) === 'string') {
+      audioFilename = this.item.file;
+    } else {
+      audioFilename = this.item.file[Math.floor(Math.random() * this.item.file.length)];
+    }
+    const audio = new Audio(`assets/${audioFilename}`);
     audio.play();
   }
 }

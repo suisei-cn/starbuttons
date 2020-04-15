@@ -1,19 +1,9 @@
 <template>
   <div id="app">
-    <button
-      class="settingsBtn"
-      v-if="$store.state.multiPlay"
-      @click="$store.commit('disableMultiPlay')"
-    >
-      {{ $t("Disable multiplay") }}
-    </button>
-    <button
-      class="settingsBtn"
-      v-else
-      @click="$store.commit('enableMultiPlay')"
-    >
-      {{ $t("Enable multiplay") }}
-    </button>
+    <div class="settingsBtn">
+      <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
+      <label for="isMutliplay">{{ $t("Multiplay") }}</label>
+    </div>
     <template v-for="(item, index) of sounds">
       <CentralButton
         :item="item"
@@ -55,12 +45,19 @@ import BaseButton from './components/BaseButton.vue';
 export default class App extends Vue {
   private sounds: Sound[] = [];
 
+  get multiPlay() {
+    return this.$store.state.multiPlay;
+  }
+  set multiPlay(value) {
+    this.$store.commit('setMultiPlay', value);
+  }
+
   private async mounted() {
     this.sounds = (await fetch('/sounds.json').then((x) => x.json()).catch((err) => {
       // tslint:disable-next-line:no-console
       console.error('Sound data fetch error. Exiting.');
     }) as Sound[]);
-    let lang = ((navigator as any).language || (navigator as any).userLanguage).split('-')[0] || "zh";
+    const lang = ((navigator as any).language || (navigator as any).userLanguage).split('-')[0] || 'zh';
     this.$i18n.locale = lang;
   }
 }

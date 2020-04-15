@@ -20,11 +20,8 @@ export default new Vuex.Store({
                 state.concurPlay -= 1;
             }
         },
-        enableMultiPlay(state) {
-            state.multiPlay = true;
-        },
-        disableMultiPlay(state) {
-            state.multiPlay = false;
+        setMultiPlay(state, option) {
+            state.multiPlay = option;
         },
     },
 });

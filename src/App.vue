@@ -2,7 +2,9 @@
   <div id="app">
     <div class="settingsBtn">
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
-      <label for="isMutliplay">{{ $t("Multiplay") }}</label>
+      <label for="isMutliplay">{{ $t("Multiplay") }}
+      style="font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,sans-serif;font-variant-caps: small-caps;font-variant-numeric: oldstyle-nums;font-weight: 400;font-size: 16px;"
+      </label>
     </div>
     <template v-for="(item, index) of sounds">
       <CentralButton
@@ -12,6 +14,12 @@
       ></CentralButton>
     </template>
     <div id="bottom">
+      <style lang="scss">
+      #app {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,sans-serif;
+        font-variant-caps: small-caps;
+        font-weight: 600;
+      }
       <a
         class="bottonBtnLink"
         href="https://github.com/suisei-cn"

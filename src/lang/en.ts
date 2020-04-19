@@ -1,5 +1,5 @@
 export default {
-    Multiplay: 'Multiplay',
+    Multiplay: 'Do Not Click Me',
     GitHub: 'GitHub',
     Telegram: 'Telegram',
 };

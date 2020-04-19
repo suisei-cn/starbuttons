@@ -2,9 +2,7 @@
   <div id="app">
     <div class="settingsBtn">
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
-      <label for="isMutliplay">{{ $t("Multiplay") }}
-      style="font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,sans-serif;font-variant-caps: small-caps;font-variant-numeric: oldstyle-nums;font-weight: 400;font-size: 16px;"
-      </label>
+      <label for="isMutliplay">{{ $t("Multiplay") }}</label>
     </div>
     <template v-for="(item, index) of sounds">
       <CentralButton
@@ -108,6 +106,11 @@ export default class App extends Vue {
 </style>
 
 <style lang="scss" scoped>
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+   font-variant-caps: small-caps;
+   font-variant-numeric: oldstyle-nums;
+   font-weight: 400;
+   font-size: 16px;"
 .settingsBtn {
   margin-top: 15vh;
   height: 6vh;

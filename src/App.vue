@@ -2,7 +2,7 @@
   <div id="app">
     <div class="settingsBtn" :title="$t('Toggle chorus mode')">
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
-      <label for="isMutliplay">{{ $t("Multiplay") }}</label>
+      <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
     </div>
     <template v-for="(item, index) of sounds">
       <CentralButton

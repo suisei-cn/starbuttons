@@ -57,7 +57,7 @@ export default class App extends Vue {
       // tslint:disable-next-line:no-console
       console.error('Sound data fetch error. Exiting.');
     }) as Sound[]);
-    const lang = ((navigator as any).language || (navigator as any).userLanguage).split('-')[0] || 'zh';
+    const lang = (window.location.hash.substr(1) || (navigator as any).language || (navigator as any).userLanguage).split('-')[0] || 'zh';
     this.$i18n.locale = lang;
   }
 }

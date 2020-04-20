@@ -2,26 +2,24 @@
 
 One or more vocal buttons for Suisei.
 
-This is a developing branch, and has its latest commit previewed on Netlify: <https://suisei-more-moe.netlify.com>
+## 项目结构
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/19673b06-8cbd-4544-b7b5-736d23cea975/deploy-status)](https://app.netlify.com/sites/suisei-more-moe/deploys)
+### 音频信息
 
-## Project setup
-```
+* [`public/sounds.json`](https://github.com/suisei-cn/starbuttons/blob/master/public/sounds.json) - 音频信息
+* [`public/assets`](https://github.com/suisei-cn/starbuttons/tree/master/public/assets) - 音频文件
+
+提交音频的贡献者只需要修改这两处并 PR 即可。
+
+### 页面组件
+* [`src/components`](https://github.com/suisei-cn/starbuttons/tree/master/src/components) - 各种不同样式的按钮
+* [`src/App.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/App.vue) - 页面结构、设置按钮及其样式
+* [`src/lang`](https://github.com/suisei-cn/starbuttons/tree/master/src/lang) - 界面语言文件
+* [`src/style/style.scss`](https://github.com/suisei-cn/starbuttons/blob/master/src/style/style.scss) - 按钮公用样式
+
+## 本地开发部署
+``` sh
+# 需要安装 yarn。
 yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+yarn serve #带热重载的开发模式
 ```

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="settingsBtn">
+    <div class="settingsBtn" :title="$t('Toggle chorus mode')">
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
       <label for="isMutliplay">{{ $t("Multiplay") }}</label>
     </div>

@@ -14,7 +14,7 @@
     <div id="bottom">
       <a
         class="bottonBtnLink"
-        href="https://github.com/suisei-cn"
+        href="https://github.com/suisei-cn/starbuttons"
         target="_blank"
       >
         {{ $t("GitHub") }}</a

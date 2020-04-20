@@ -77,29 +77,11 @@ export default class App extends Vue {
   left: 0;
   top: 0;
 }
-
-.animateBtn {
-  box-shadow: 0 0.9px 2.2px rgba(0, 0, 0, 0.02),
-    0 2.1px 5.3px rgba(0, 0, 0, 0.028), 0 4px 10px rgba(0, 0, 0, 0.035),
-    0 7.1px 17.9px rgba(0, 0, 0, 0.042), 0 13.4px 33.4px rgba(0, 0, 0, 0.05),
-    0 32px 80px rgba(0, 0, 0, 0.07);
-  transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;
-  border-radius: 8px;
-  cursor: pointer !important;
-}
-
-.playingBtn,
-.animateBtn:hover {
-  font-weight: 900;
-  box-shadow: 0 2.2px 2.2px rgba(176, 201, 239, 0.2),
-    0 5.3px 5.3px rgba(176, 201, 239, 0.28),
-    0 10px 10px rgba(176, 201, 239, 0.35), 0 17.9px 17.9px rgba(0, 0, 0, 0.042),
-    0 33.4px 33.4px rgba(0, 0, 0, 0.05), 0 80px 80px rgba(0, 0, 0, 0.07);
-  transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;
-}
 </style>
 
 <style lang="scss" scoped>
+@import url("style/style.scss");
+
 label {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-variant-caps: small-caps;
@@ -123,5 +105,5 @@ label {
   text-decoration: none;
 }
 
-@import url("./style.scss");
+@import url("style/style.scss");
 </style>

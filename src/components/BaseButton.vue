@@ -46,5 +46,5 @@ export default class BaseButton extends Vue {
 </script>
 
 <style scoped lang="scss">
-@import url("../style.scss");
+@import url("../style/style.scss");
 </style>

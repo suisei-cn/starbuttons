@@ -19,15 +19,9 @@ export default class CentralButton extends BaseButton { }
 
 <style scoped lang="scss">
 .btn {
-  text-align: center;
-  overflow: hidden;
-  font-family: Fira Code, iA Writer Mono V, IBM Plex Mono, Roboto Mono, Courier,
-    monospace;
   height: 40vh;
   width: 40vw;
   margin-top: 9vh;
-  color: white;
-  background: linear-gradient(#97cbed, #6375bc);
   line-height: 40vh;
   font-size: 5rem;
 }

@@ -80,7 +80,8 @@ export default class App extends Vue {
 </style>
 
 <style lang="scss" scoped>
-@import url("style/style.scss");
+@import "style/style";
+
 
 label {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -105,5 +106,5 @@ label {
   text-decoration: none;
 }
 
-@import url("style/style.scss");
+
 </style>

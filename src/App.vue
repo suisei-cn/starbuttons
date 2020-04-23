@@ -4,13 +4,33 @@
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
     </div>
-    <template v-for="(item, index) of sounds">
-      <CentralButton
-        :item="item"
-        :key="index"
-        v-if="item.type == 'center'"
-      ></CentralButton>
-    </template>
+    <div id="board">
+      <div
+        id="musicTable"
+        class="overturnBase shadow"
+        :class="{ overturn: !musicTable }"
+      >
+        <template v-for="(item, index) of sounds">
+          <BaseButton :item="item" :key="index" class="normalBtn"></BaseButton>
+        </template>
+      </div>
+      <template v-for="(item, index) of sounds">
+        <CentralButton
+          :item="item"
+          :key="index"
+          class="overturnBase"
+          :class="{ overturn: musicTable }"
+          v-if="item.type == 'center'"
+        ></CentralButton>
+      </template>
+    </div>
+    <div
+      id="switchBtn"
+      @click="musicTable = !musicTable"
+      class="btn animateBtn"
+    >
+      {{ musicTable ? $t("Back") : $t("Music board") }}
+    </div>
     <div id="bottom">
       <a
         class="bottonBtnLink"
@@ -44,6 +64,7 @@ import BaseButton from './components/BaseButton.vue';
 })
 export default class App extends Vue {
   private sounds: Sound[] = [];
+  private musicTable = true;
 
   get multiPlay() {
     return this.$store.state.multiPlay;
@@ -82,6 +103,7 @@ export default class App extends Vue {
 <style lang="scss" scoped>
 @import "style/style";
 
+$table-height: 52vh;
 
 label {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -96,8 +118,42 @@ label {
   height: 6vh;
 }
 
+.normalBtn {
+  height: 40px;
+  line-height: 40px;
+  margin: 3px;
+  padding: 3px 6px;
+  border-radius: 2px;
+  background: #97cbed;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#board {
+  height: $table-height;
+  margin-bottom: 2vh;
+}
+
+#musicTable {
+  display: flex;
+  height: $table-height;
+  width: 80vw;
+  margin-left: -20vw;
+  padding: 5px;
+  border-radius: 12px;
+  background-color: #97cbed44;
+  position: absolute;
+}
+
+#switchBtn {
+  height: 6vh;
+  line-height: 6vh;
+  width: 30vh;
+}
+
 #bottom {
-  margin-top: 14vh;
+  margin-top: 4vh;
   margin-bottom: 11vh;
   display: flex;
 }
@@ -106,5 +162,11 @@ label {
   text-decoration: none;
 }
 
+.overturnBase {
+  transition: transform 1s;
+}
 
+.overturn {
+  transform: rotateY(90deg);
+}
 </style>

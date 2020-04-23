@@ -4,6 +4,10 @@ One or more vocal buttons for Suisei.
 
 **[中文](https://suisei.moe/#zh)** | **[English](https://suisei.moe/#en)** | **[日本語](https://suisei.moe/#ja)**
 
+---
+
+README：**日本語** | [中文](https://github.com/suisei-cn/starbuttons/blob/master/README.md) | [English](https://github.com/suisei-cn/starbuttons/blob/master/README.en.md)
+
 ## 概要
 
 ### 音声

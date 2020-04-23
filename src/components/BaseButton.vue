@@ -1,6 +1,5 @@
 <template>
   <div
-    class="btn animateBtn"
     @click="play"
     :class="{ playingBtn: playLayer > 0 }"
   >
@@ -48,7 +47,3 @@ export default class BaseButton extends Vue {
   }
 }
 </script>
-
-<style scoped lang="scss">
-@import "../style/style";
-</style>

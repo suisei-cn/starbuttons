@@ -18,6 +18,8 @@ export default class CentralButton extends BaseButton { }
 </script>
 
 <style scoped lang="scss">
+@import "../style/style";
+
 .btn {
   height: 40vh;
   width: 40vw;

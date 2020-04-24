@@ -15,5 +15,14 @@
     },
     "file": "ahhh.mp3",
     "type": "normal"
+  },
+  {
+    "name": "Big sister~",
+    "name_l10n": {
+      "zh": "姐姐，姐姐～",
+      "ja": "お姉さん，お姉さん～"
+    },
+    "file": "onee-chan.mp3",
+    "type": "normal"
   }
 ]

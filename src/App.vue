@@ -7,8 +7,11 @@
     <div id="board">
       <div
         id="musicTable"
-        class="overturnBase shadow"
-        :class="{ overturn: !musicTable }"
+        class="shadow"
+        :class="{
+          transitionOpen: musicTable,
+          transitionClose: !musicTable
+        }"
       >
         <template v-for="(item, index) of sounds">
           <BaseButton :item="item" :key="index" class="normalBtn"></BaseButton>
@@ -18,8 +21,10 @@
         <CentralButton
           :item="item"
           :key="index"
-          class="overturnBase"
-          :class="{ overturn: musicTable }"
+          :class="{
+            transitionOpen: !musicTable,
+            transitionClose: musicTable
+          }"
           v-if="item.type == 'center'"
         ></CentralButton>
       </template>
@@ -162,11 +167,37 @@ label {
   text-decoration: none;
 }
 
-.overturnBase {
-  transition: transform 1s;
+.transitionOpen {
+  animation: board-open 1s;
+  transform: rotateY(0deg);
 }
 
-.overturn {
+.transitionClose {
+  animation: board-close 1s;
   transform: rotateY(90deg);
+}
+
+@keyframes board-open {
+  0% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes board-close {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
 }
 </style>

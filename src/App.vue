@@ -64,7 +64,7 @@ import BaseButton from './components/BaseButton.vue';
 })
 export default class App extends Vue {
   private sounds: Sound[] = [];
-  private musicTable = true;
+  private musicTable = false;
 
   get multiPlay() {
     return this.$store.state.multiPlay;

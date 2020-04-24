@@ -25,7 +25,7 @@
       </template>
     </div>
     <div id="switchBtn" @click="flipTable" class="btn animateBtn">
-      {{ musicTable ? $t("Back") : $t("Music board") }}
+      {{ musicButtonFlipped ? $t("Back") : $t("Music board") }}
     </div>
     <div id="bottom">
       <a
@@ -62,18 +62,23 @@ export default class App extends Vue {
   private sounds: Sound[] = [];
   private musicTableFlipped = true;
   private musicButtonFlipped = false;
+  private flipping = false;
 
   flipTable() {
+    if (this.flipping) return;
     let that = this;
+    this.flipping = true;
     if (this.musicTableFlipped) {
       this.musicButtonFlipped = true;
       setTimeout(() => {
-        this.musicTableFlipped = false;
+        that.musicTableFlipped = false;
+        setTimeout(() => { that.flipping = false; }, 500);
       }, 500);
     } else {
       this.musicTableFlipped = true;
       setTimeout(() => {
-        this.musicButtonFlipped = false;
+        that.musicButtonFlipped = false;
+        setTimeout(() => { that.flipping = false; }, 500);
       }, 500);
     }
   }

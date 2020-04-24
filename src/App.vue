@@ -7,11 +7,8 @@
     <div id="board">
       <div
         id="musicTable"
-        class="shadow"
-        :class="{
-          transitionOpen: musicTable,
-          transitionClose: !musicTable
-        }"
+        class="overturnBase shadow"
+        :class="{ overturn: musicTableFlipped }"
       >
         <template v-for="(item, index) of sounds">
           <BaseButton :item="item" :key="index" class="normalBtn"></BaseButton>
@@ -21,19 +18,13 @@
         <CentralButton
           :item="item"
           :key="index"
-          :class="{
-            transitionOpen: !musicTable,
-            transitionClose: musicTable
-          }"
+          class="overturnBase"
+          :class="{ overturn: musicButtonFlipped }"
           v-if="item.type == 'center'"
         ></CentralButton>
       </template>
     </div>
-    <div
-      id="switchBtn"
-      @click="musicTable = !musicTable"
-      class="btn animateBtn"
-    >
+    <div id="switchBtn" @click="flipTable" class="btn animateBtn">
       {{ musicTable ? $t("Back") : $t("Music board") }}
     </div>
     <div id="bottom">
@@ -69,7 +60,23 @@ import BaseButton from './components/BaseButton.vue';
 })
 export default class App extends Vue {
   private sounds: Sound[] = [];
-  private musicTable = false;
+  private musicTableFlipped = true;
+  private musicButtonFlipped = false;
+
+  flipTable() {
+    let that = this;
+    if (this.musicTableFlipped) {
+      this.musicButtonFlipped = true;
+      setTimeout(() => {
+        this.musicTableFlipped = false;
+      }, 500);
+    } else {
+      this.musicTableFlipped = true;
+      setTimeout(() => {
+        this.musicButtonFlipped = false;
+      }, 500);
+    }
+  }
 
   get multiPlay() {
     return this.$store.state.multiPlay;
@@ -167,37 +174,11 @@ label {
   text-decoration: none;
 }
 
-.transitionOpen {
-  animation: board-open 1s;
-  transform: rotateY(0deg);
+.overturnBase {
+  transition: transform 0.5s ease-in-out;
 }
 
-.transitionClose {
-  animation: board-close 1s;
+.overturn {
   transform: rotateY(90deg);
-}
-
-@keyframes board-open {
-  0% {
-    transform: rotateY(90deg);
-  }
-  50% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(0deg);
-  }
-}
-
-@keyframes board-close {
-  0% {
-    transform: rotateY(0deg);
-  }
-  50% {
-    transform: rotateY(90deg);
-  }
-  100% {
-    transform: rotateY(90deg);
-  }
 }
 </style>

@@ -64,9 +64,9 @@ export default class App extends Vue {
   private musicButtonFlipped = false;
   private flipping = false;
 
-  flipTable() {
-    if (this.flipping) return;
-    let that = this;
+  private flipTable() {
+    if (this.flipping) { return; }
+    const that = this;
     this.flipping = true;
     if (this.musicTableFlipped) {
       this.musicButtonFlipped = true;
@@ -95,7 +95,10 @@ export default class App extends Vue {
       // tslint:disable-next-line:no-console
       console.error('Sound data fetch error. Exiting.');
     }) as Sound[]);
-    const lang = (window.location.hash.substr(1) || (navigator as any).language || (navigator as any).userLanguage).split('-')[0] || 'zh';
+    const lang = (window.location.hash.substr(1) ||
+      (navigator as any).language ||
+      (navigator as any).userLanguage).split('-')[0] ||
+      'zh';
     this.$i18n.locale = lang;
   }
 }

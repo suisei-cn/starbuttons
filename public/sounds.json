@@ -24,5 +24,13 @@
     },
     "file": "onee-chan.mp3",
     "type": "normal"
+  },{
+    "name": "I'm not calling you!",
+    "name_l10n": {
+      "zh": "没叫你啊！",
+      "ja": "呼んで無いですけど！"
+    },
+    "file": "not-calling-you.mp3",
+    "type": "normal"
   }
 ]

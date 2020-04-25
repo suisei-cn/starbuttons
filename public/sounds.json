@@ -41,5 +41,12 @@
     "file": "but-shirakami-do-not-believ-in-you.mp3",
     "type": "normal"
   },
+  {
+    "name": "I'm gonna kill ya all over here!",
+    "name_l10n": {
+      "zh": "就在这里把你们都杀光！"
+    },
+    "file": "gonna-kill-ya-all-over-here.mp3",
+    "type": "normal"
   }
 ]

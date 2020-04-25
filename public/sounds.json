@@ -32,5 +32,14 @@
     },
     "file": "not-calling-you.mp3",
     "type": "normal"
+  },
+  {
+    "name": "But I Shirakami don't believe in you!",
+    "name_l10n": {
+      "zh": "但是我白上不相信你的鬼话"
+    },
+    "file": "but-shirakami-do-not-believ-in-you.mp3",
+    "type": "normal"
+  },
   }
 ]

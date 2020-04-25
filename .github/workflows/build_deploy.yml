@@ -1,12 +1,10 @@
-name: Build and Deploy
+name: Test, Build and Deploy
 
 on:
-  push:
-    branches:
-      - master
+  push
 
 jobs:
-  build-and-deploy:
+  build:
     if: "(!contains(github.event.commits[0].message, '[skip ci]')) && (!contains(github.event.commits[0].message, '[ci skip]'))"
     runs-on: ubuntu-latest
     steps:
@@ -23,6 +21,22 @@ jobs:
         run: |
           npm install
           npm run build
+      
+      - name: Upload build result for deploy
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: dist
+
+  deploy:
+    if: "((github.ref == 'master') && !contains(github.event.commits[0].message, '[skip build]')) && (!contains(github.event.commits[0].message, '[build skip]'))"
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build result
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
 
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.2.0

@@ -105,7 +105,7 @@ export default class App extends Vue {
       })) as Sound[];
     const lang =
       (
-        window.location.hash.substr(1) ||
+        window.location.search.match(/lang=([a-zA-Z-]+)/)?.[1] ||
         (navigator as any).language ||
         (navigator as any).userLanguage
       ).split("-")[0] || "zh";

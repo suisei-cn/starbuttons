@@ -22,8 +22,9 @@ jobs:
           npm install
           npm run build
       
-      - name: Upload build result for deploy
+      - name: Upload build result for deploy 🔼
         uses: actions/upload-artifact@v1
+        if: "((github.ref == 'master') && !contains(github.event.commits[0].message, '[skip build]')) && (!contains(github.event.commits[0].message, '[build skip]'))"
         with:
           name: dist
           path: dist
@@ -33,10 +34,16 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download build result
+      - name: Download build result 🔽
         uses: actions/download-artifact@v1
         with:
           name: dist
+      
+      - name: Remove old artifacts 🗑️
+        uses: c-hive/gha-remove-artifacts@v1
+        with:
+          age: '1 day'
+          skip-tags: true
 
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.2.0

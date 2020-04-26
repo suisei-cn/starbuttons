@@ -148,34 +148,6 @@ label {
   height: 6vh;
 }
 
-.normalBtn {
-  height: 40px;
-  line-height: 40px;
-  margin: 12px 12px;
-  padding: 4px 16px;
-  border-radius: 4px;
-  background: #97cbed;
-  box-shadow: 0 0.2px 0.5px rgba(0, 0, 0, 0.02),
-    0 0.5px 1.1px rgba(0, 0, 0, 0.028), 0 1px 2.1px rgba(0, 0, 0, 0.035),
-    0 1.8px 3.8px rgba(0, 0, 0, 0.042), 0 3.3px 7.1px rgba(0, 0, 0, 0.05),
-    0 8px 17px rgba(0, 0, 0, 0.07);
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto",
-    "Segoe UI", "Helvetica Neue", "Lucida Grande", HYQiHei, FZYouH,
-    Source Han Sans, Yu Gothic, Kozuka Gothic Pro, Meiryo, sans-serif;
-  transition: box-shadow 2.3s ease-in-out;
-  font-weight: 0.23s ease-in-out;
-
-  &:hover {
-    cursor: pointer;
-    font-weight: 800;
-    box-shadow: 0 0.4px 0.7px rgba(0, 0, 0, 0.02),
-      0 1px 1.6px rgba(0, 0, 0, 0.028), 0 1.9px 3px rgba(0, 0, 0, 0.035),
-      0 3.4px 5.4px rgba(102, 116, 181, 0.042),
-      0 6.3px 10px rgba(102, 116, 181, 0.25),
-      0 15px 24px rgba(102, 116, 181, 0.37);
-  }
-}
-
 #board {
   height: $table-height;
   margin-bottom: 2vh;

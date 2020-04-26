@@ -1,4 +1,4 @@
-@mixin shadow ($hover: 0) {
+@mixin shadow($hover: 0) {
   box-shadow: 0 0.9px 2.2px rgba(0, 0, 0, 0.02),
     0 2.1px 5.3px rgba(0, 0, 0, 0.028), 0 4px 10px rgba(0, 0, 0, 0.035),
     0 7.1px 17.9px rgba(0, 0, 0, 0.042), 0 13.4px 33.4px rgba(0, 0, 0, 0.05),
@@ -15,6 +15,8 @@
   }
 }
 
+$btn-height: 40px;
+
 .btn {
   text-align: center;
   overflow: hidden;
@@ -25,6 +27,34 @@
   cursor: pointer;
   background: linear-gradient(#97cbed, #6375bc);
   user-select: none;
+}
+
+.normalBtn {
+  height: $btn-height;
+  line-height: $btn-height;
+  margin: 12px 12px;
+  padding: 4px 16px;
+  border-radius: 4px;
+  background: #97cbed;
+  box-shadow: 0 0.2px 0.5px rgba(0, 0, 0, 0.02),
+    0 0.5px 1.1px rgba(0, 0, 0, 0.028), 0 1px 2.1px rgba(0, 0, 0, 0.035),
+    0 1.8px 3.8px rgba(0, 0, 0, 0.042), 0 3.3px 7.1px rgba(0, 0, 0, 0.05),
+    0 8px 17px rgba(0, 0, 0, 0.07);
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto",
+    "Segoe UI", "Helvetica Neue", "Lucida Grande", HYQiHei, FZYouH,
+    Source Han Sans, Yu Gothic, Kozuka Gothic Pro, Meiryo, sans-serif;
+  transition: box-shadow 2.3s ease-in-out;
+  font-weight: 0.23s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    font-weight: 800;
+    box-shadow: 0 0.4px 0.7px rgba(0, 0, 0, 0.02),
+      0 1px 1.6px rgba(0, 0, 0, 0.028), 0 1.9px 3px rgba(0, 0, 0, 0.035),
+      0 3.4px 5.4px rgba(102, 116, 181, 0.042),
+      0 6.3px 10px rgba(102, 116, 181, 0.25),
+      0 15px 24px rgba(102, 116, 181, 0.37);
+  }
 }
 
 .shadow {

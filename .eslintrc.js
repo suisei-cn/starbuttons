@@ -22,5 +22,6 @@ module.exports = {
         allowedNames: ["that"],
       },
     ],
+    "@typescript-eslint/camelcase": 0,
   },
 };

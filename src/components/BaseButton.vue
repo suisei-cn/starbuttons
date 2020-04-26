@@ -11,6 +11,7 @@ import { Sound } from "../types";
 @Component
 export default class BaseButton extends Vue {
   @Prop() private item!: Sound;
+  @Prop() private noclickplay!: boolean;
   private playLayer = 0;
   private lang = "zh";
   private mounted() {
@@ -20,6 +21,7 @@ export default class BaseButton extends Vue {
     return this?.item.name_l10n![this.lang] || this?.item.name || "";
   }
   private play() {
+    if (this.noclickplay) return;
     if (!this.item) {
       return;
     }

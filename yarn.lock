@@ -828,6 +828,178 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@interactjs/actions@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/actions/download/@interactjs/actions-1.9.10.tgz#6071cc16b0cbf426872149d23a2c4030f5365499"
+  integrity sha1-YHHMFrDL9CaHIUnSOixAMPU2VJk=
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/arrange@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/arrange/download/@interactjs/arrange-1.9.10.tgz#570ea70bc3af1272330a7c724cc2a36a8324b406"
+  integrity sha1-Vw6nC8OvEnIzCnxyTMKjaoMktAY=
+
+"@interactjs/auto-scroll@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/auto-scroll/download/@interactjs/auto-scroll-1.9.10.tgz#a647477b1e6c55b9ec8a92500d107f723e43a7da"
+  integrity sha1-pkdHex5sVbnsipJQDRB/cj5Dp9o=
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/auto-start@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/auto-start/download/@interactjs/auto-start-1.9.10.tgz#1abf5aa410a8e3813ffc5e3df69f60f9b8e0cdf7"
+  integrity sha1-Gr9apBCo44E//F499p9g+bjgzfc=
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/clone@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/clone/download/@interactjs/clone-1.9.10.tgz#40623fa1911ab7b266ff3ad4b680ec7368f6c881"
+  integrity sha1-QGI/oZEat7Jm/zrUtoDsc2j2yIE=
+
+"@interactjs/components@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/components/download/@interactjs/components-1.9.10.tgz#1e7159e45205424ba3371ba5ebb06855101c0923"
+  integrity sha1-HnFZ5FIFQkujNxul67BoVRAcCSM=
+
+"@interactjs/core@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/core/download/@interactjs/core-1.9.10.tgz#e6e246dfde7188ec60f85f86b8e3cebf9961606a"
+  integrity sha1-5uJG395xiOxg+F+GuOPOv5lhYGo=
+
+"@interactjs/dev-tools@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/dev-tools/download/@interactjs/dev-tools-1.9.10.tgz#1675eb22f349e496145416fc7e2a9e51d69a2563"
+  integrity sha1-FnXrIvNJ5JYUVBb8fiqeUdaaJWM=
+  dependencies:
+    "@interactjs/utils" "1.9.10"
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/feedback@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/feedback/download/@interactjs/feedback-1.9.10.tgz#aa0fe2d2aeb3bc978db505fb1a10f8894ce535c8"
+  integrity sha1-qg/i0q6zvJeNtQX7GhD4iUzlNcg=
+
+"@interactjs/inertia@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/inertia/download/@interactjs/inertia-1.9.10.tgz#3608aa4ef46d73ddc3a25bbd4a448fe8a79e13dc"
+  integrity sha1-NgiqTvRtc93Dolu9SkSP6KeeE9w=
+  dependencies:
+    "@interactjs/offset" "1.9.10"
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/interact@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/interact/download/@interactjs/interact-1.9.10.tgz#2b810c7b86ea3b649f08473d5ad421a11130d03b"
+  integrity sha1-K4EMe4bqO2SfCEc9WtQhoREw0Ds=
+  dependencies:
+    "@interactjs/core" "1.9.10"
+    "@interactjs/types" "1.9.10"
+    "@interactjs/utils" "1.9.10"
+
+"@interactjs/interactjs@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/interactjs/download/@interactjs/interactjs-1.9.10.tgz#241acb2c5dae4e9a27980d0a1e369f163a80e79a"
+  integrity sha1-JBrLLF2uTponmA0KHjafFjqA55o=
+  dependencies:
+    "@interactjs/actions" "1.9.10"
+    "@interactjs/arrange" "1.9.10"
+    "@interactjs/auto-scroll" "1.9.10"
+    "@interactjs/auto-start" "1.9.10"
+    "@interactjs/clone" "1.9.10"
+    "@interactjs/components" "1.9.10"
+    "@interactjs/core" "1.9.10"
+    "@interactjs/dev-tools" "1.9.10"
+    "@interactjs/feedback" "1.9.10"
+    "@interactjs/inertia" "1.9.10"
+    "@interactjs/interact" "1.9.10"
+    "@interactjs/modifiers" "1.9.10"
+    "@interactjs/multi-target" "1.9.10"
+    "@interactjs/offset" "1.9.10"
+    "@interactjs/pointer-events" "1.9.10"
+    "@interactjs/reflow" "1.9.10"
+    "@interactjs/types" "1.9.10"
+    "@interactjs/utils" "1.9.10"
+    "@interactjs/vue" "1.9.10"
+
+"@interactjs/modifiers@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/modifiers/download/@interactjs/modifiers-1.9.10.tgz#b06f0d72b345cf36965bc67c4fe82aecf8276cf6"
+  integrity sha1-sG8NcrNFzzaWW8Z8T+gq7PgnbPY=
+  dependencies:
+    "@interactjs/snappers" "1.9.10"
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/multi-target@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/multi-target/download/@interactjs/multi-target-1.9.10.tgz#cee1478c5fd78e1cbd0c981cca47d2b81b5440a1"
+  integrity sha1-zuFHjF/Xjhy9DJgcykfSuBtUQKE=
+
+"@interactjs/offset@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/offset/download/@interactjs/offset-1.9.10.tgz#64811521ffb852d505f2ffd4f057665787d4024b"
+  integrity sha1-ZIEVIf+4UtUF8v/U8FdmV4fUAks=
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/pointer-events@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/pointer-events/download/@interactjs/pointer-events-1.9.10.tgz#1935a4d90bbb3fb7aac818c8752b29a4e3ec4aed"
+  integrity sha1-GTWk2Qu7P7eqyBjIdSsppOPsSu0=
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/reflow@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/reflow/download/@interactjs/reflow-1.9.10.tgz#c39e426d52f0949e8ba83e166e30d1de742ecad9"
+  integrity sha1-w55CbVLwlJ6LqD4WbjDR3nQuytk=
+  optionalDependencies:
+    "@interactjs/interact" "1.9.10"
+
+"@interactjs/snappers@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/snappers/download/@interactjs/snappers-1.9.10.tgz#b9355f085e9ddbf0c24f43b5fa1be66db688281b"
+  integrity sha1-uTVfCF6d2/DCT0O1+hvmbbaIKBs=
+
+"@interactjs/symbol-tree@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/symbol-tree/download/@interactjs/symbol-tree-1.9.10.tgz#7b7f4d7d22d5ad81c23dcadede554e1a5114d3f0"
+  integrity sha1-e39NfSLVrYHCPcre3lVOGlEU0/A=
+
+"@interactjs/types@1.9.10", "@interactjs/types@^1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/types/download/@interactjs/types-1.9.10.tgz#d64bd3cde6107b9162321816ab4cf1cb9f5f8d24"
+  integrity sha1-1kvTzeYQe5FiMhgWq0zxy59fjSQ=
+  dependencies:
+    "@interactjs/actions" "1.9.10"
+    "@interactjs/arrange" "1.9.10"
+    "@interactjs/auto-scroll" "1.9.10"
+    "@interactjs/auto-start" "1.9.10"
+    "@interactjs/core" "1.9.10"
+    "@interactjs/dev-tools" "1.9.10"
+    "@interactjs/inertia" "1.9.10"
+    "@interactjs/modifiers" "1.9.10"
+    "@interactjs/pointer-events" "1.9.10"
+    "@interactjs/reflow" "1.9.10"
+    "@interactjs/snappers" "1.9.10"
+    "@interactjs/symbol-tree" "1.9.10"
+    "@interactjs/utils" "1.9.10"
+
+"@interactjs/utils@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/utils/download/@interactjs/utils-1.9.10.tgz#c8676fee611a718e12aeabcee288735dcabd4704"
+  integrity sha1-yGdv7mEacY4SrqvO4ohzXcq9RwQ=
+
+"@interactjs/vue@1.9.10":
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/@interactjs/vue/download/@interactjs/vue-1.9.10.tgz#88db28c41e0820a6ffece3aca9c7ee6134d1fafd"
+  integrity sha1-iNsoxB4IIKb/7OOsqcfuYTTR+v0=
+
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
   resolved "https://registry.npm.taobao.org/@intervolga/optimize-cssnano-plugin/download/@intervolga/optimize-cssnano-plugin-1.0.6.tgz#be7c7846128b88f6a9b1d1261a0ad06eb5c0fdf8"
@@ -868,6 +1040,11 @@
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/@types/color-name/download/@types/color-name-1.1.1.tgz?cache=0&sync_timestamp=1580841712213&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fcolor-name%2Fdownload%2F%40types%2Fcolor-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha1-HBJhu+qhCoBVu8XYq4S3sq/IRqA=
+
+"@types/dragula@^3.7.0":
+  version "3.7.0"
+  resolved "https://registry.npm.taobao.org/@types/dragula/download/@types/dragula-3.7.0.tgz#62178f21c3896ab9823a33d08ed844ab9af496af"
+  integrity sha1-YhePIcOJarmCOjPQjthEq5r0lq8=
 
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
@@ -1676,6 +1853,11 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npm.taobao.org/asynckit/download/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
+
+atoa@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/atoa/download/atoa-1.0.0.tgz#0cc0e91a480e738f923ebc103676471779b34a49"
+  integrity sha1-DMDpGkgOc4+SPrwQNnZHF3mzSkk=
 
 atob@^2.1.2:
   version "2.1.2"
@@ -2538,6 +2720,14 @@ content-type@~1.0.4:
   resolved "https://registry.npm.taobao.org/content-type/download/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha1-4TjMdeBAxyexlm/l5fjJruJW/js=
 
+contra@1.9.4:
+  version "1.9.4"
+  resolved "https://registry.npm.taobao.org/contra/download/contra-1.9.4.tgz#f53bde42d7e5b5985cae4d99a8d610526de8f28d"
+  integrity sha1-9TveQtfltZhcrk2ZqNYQUm3o8o0=
+  dependencies:
+    atoa "1.0.0"
+    ticky "1.0.1"
+
 convert-source-map@^1.7.0:
   version "1.7.0"
   resolved "https://registry.npm.taobao.org/convert-source-map/download/convert-source-map-1.7.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fconvert-source-map%2Fdownload%2Fconvert-source-map-1.7.0.tgz#17a2cb882d7f77d3490585e2ce6c524424a3a442"
@@ -2685,6 +2875,13 @@ cross-spawn@^7.0.0:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
     which "^2.0.1"
+
+crossvent@1.5.4:
+  version "1.5.4"
+  resolved "https://registry.npm.taobao.org/crossvent/download/crossvent-1.5.4.tgz#da2c4f8f40c94782517bf2beec1044148194ab92"
+  integrity sha1-2ixPj0DJR4JRe/K+7BBEFIGUq5I=
+  dependencies:
+    custom-event "1.0.0"
 
 crypto-browserify@^3.11.0:
   version "3.12.0"
@@ -2872,6 +3069,11 @@ currently-unhandled@^0.4.1:
   integrity sha1-mI3zP+qxke95mmE2nddsF635V+o=
   dependencies:
     array-find-index "^1.0.1"
+
+custom-event@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/custom-event/download/custom-event-1.0.0.tgz#2e4628be19dc4b214b5c02630c5971e811618062"
+  integrity sha1-LkYovhncSyFLXAJjDFlx6BFhgGI=
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -3157,6 +3359,14 @@ dotenv@^8.2.0:
   version "8.2.0"
   resolved "https://registry.npm.taobao.org/dotenv/download/dotenv-8.2.0.tgz?cache=0&sync_timestamp=1571190782798&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdotenv%2Fdownload%2Fdotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
   integrity sha1-l+YZJZradQ7qPk6j4mvO6lQksWo=
+
+dragula@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.npm.taobao.org/dragula/download/dragula-3.7.2.tgz#4a35c9d3981ffac1a949c29ca7285058e87393ce"
+  integrity sha1-SjXJ05gf+sGpScKcpyhQWOhzk84=
+  dependencies:
+    contra "1.9.4"
+    crossvent "1.5.4"
 
 duplexer@^0.1.1:
   version "0.1.1"
@@ -4598,6 +4808,14 @@ inquirer@^7.0.0, inquirer@^7.1.0:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
     through "^2.3.6"
+
+interactjs@^1.9.10:
+  version "1.9.10"
+  resolved "https://registry.npm.taobao.org/interactjs/download/interactjs-1.9.10.tgz#33582b762c29ea8717417e59a130c4837e2d123a"
+  integrity sha1-M1grdiwp6ocXQX5ZoTDEg34tEjo=
+  dependencies:
+    "@interactjs/interactjs" "1.9.10"
+    "@interactjs/types" "1.9.10"
 
 internal-ip@^4.3.0:
   version "4.3.0"
@@ -8184,6 +8402,11 @@ thunky@^1.0.2:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/thunky/download/thunky-1.1.0.tgz#5abaf714a9405db0504732bbccd2cedd9ef9537d"
   integrity sha1-Wrr3FKlAXbBQRzK7zNLO3Z75U30=
+
+ticky@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/ticky/download/ticky-1.0.1.tgz#b7cfa71e768f1c9000c497b9151b30947c50e46d"
+  integrity sha1-t8+nHnaPHJAAxJe5FRswlHxQ5G0=
 
 timers-browserify@^2.0.4:
   version "2.0.11"

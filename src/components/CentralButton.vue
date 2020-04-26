@@ -9,12 +9,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import { Sound } from '../types';
-import BaseButton from './BaseButton.vue';
+import { Component, Prop, Vue } from "vue-property-decorator";
+import { Sound } from "../types";
+import BaseButton from "./BaseButton.vue";
 
 @Component
-export default class CentralButton extends BaseButton { }
+export default class CentralButton extends BaseButton {}
 </script>
 
 <style scoped lang="scss">

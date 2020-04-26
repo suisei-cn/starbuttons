@@ -144,7 +144,7 @@ export default class App extends Vue {
     const tracks = document.getElementsByClassName("track");
     if (!tracks) return;
     const track = tracks[0];
-    const ratio = Number(track.offsetWidth) / 3;
+    const ratio = Number((track as HTMLElement).offsetWidth) / 3;
     const preparedSounds: { [key: number]: HTMLAudioElement } = {};
     console.log(editorElements);
     for (const i of Object.values(editorElements)) {

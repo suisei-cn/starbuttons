@@ -69,12 +69,33 @@ export default class App extends Vue {
   private sounds: Sound[] = [];
 
   private async loadVoice() {
-    this.sounds = (await fetch("/sounds.json")
+    const soundNotExpanded = (await fetch("/sounds.json")
       .then(x => x.json())
       .catch(() => {
         // tslint:disable-next-line:no-console
         console.error("Sound data fetch error. Exiting.");
       })) as Sound[];
+    for (const i of soundNotExpanded) {
+      if (typeof i.file === "string") {
+        // Single voice, go on
+        this.sounds.push(i);
+      } else {
+        // Array of voices
+        for (let idx = 0; idx < i.file.length; idx++) {
+          const name_l10n = { ...i.name_l10n };
+          for (const lang in name_l10n) {
+            name_l10n[lang] += ` (${idx + 1})`;
+          }
+          const singleSound = Object.assign({}, i, {
+            name: `${i.name} (${idx + 1})`,
+            name_l10n,
+            file: i.file[idx]
+          });
+          this.sounds.push(singleSound);
+        }
+      }
+    }
+    console.log(this.sounds);
   }
 
   private loadLang() {

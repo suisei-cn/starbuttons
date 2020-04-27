@@ -110,6 +110,14 @@ export default class App extends Vue {
           const location = getXLocation(target);
           editorElements[seq].location = location;
         },
+        end: function(event: any) {
+          const target: HTMLElement = event.target;
+          if (!target.getAttribute("data-seq-id")) {
+            target.style.webkitTransform = target.style.transform = "";
+            target.removeAttribute("data-x");
+            target.removeAttribute("data-y");
+          }
+        }
       }
     });
     interact(".track").dropzone({

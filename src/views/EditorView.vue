@@ -48,6 +48,15 @@ function getXLocation(target: HTMLElement) {
   );
 }
 
+function updateElementPos(target: HTMLElement, dx: number, dy: number) {
+  const x = (parseFloat(target.getAttribute("data-x") || "") || 0) + dx;
+  const y = (parseFloat(target.getAttribute("data-y") || "") || 0) + dy;
+  target.style.webkitTransform = target.style.transform =
+    "translate(" + x + "px, " + y + "px)";
+  target.setAttribute("data-x", x);
+  target.setAttribute("data-y", y);
+}
+
 @Component({
   components: {
     BaseButton
@@ -82,6 +91,8 @@ export default class App extends Vue {
   }
 
   private initDrag() {
+    const buttonsOffsetLeft = (this.$refs.clips as HTMLElement).offsetLeft;
+    const buttonsOffsetTop = (this.$refs.clips as HTMLElement).offsetTop;
     interact(".item").draggable({
       inertia: false,
       modifiers: [
@@ -91,53 +102,66 @@ export default class App extends Vue {
         })
       ],
       listeners: {
-        move: function(event: any) {
+        move: function (event: any) {
           const target: HTMLElement = event.target;
 
           // Move
-          const x =
-            (parseFloat(target.getAttribute("data-x") || "") || 0) + event.dx;
-          const y =
-            (parseFloat(target.getAttribute("data-y") || "") || 0) + event.dy;
-          target.style.webkitTransform = target.style.transform =
-            "translate(" + x + "px, " + y + "px)";
-          target.setAttribute("data-x", x);
-          target.setAttribute("data-y", y);
+          updateElementPos(target, event.dx, event.dy);
 
           // Update value
           const seq = Number(target.getAttribute("data-seq-id"));
-          if (!seq) return;
+          if (!editorElements[seq]) return;
           const location = getXLocation(target);
           editorElements[seq].location = location;
         },
-        end: function(event: any) {
+        end: function (event: any) {
           const target: HTMLElement = event.target;
           if (!target.getAttribute("data-seq-id")) {
-            target.style.webkitTransform = target.style.transform = "";
-            target.removeAttribute("data-x");
-            target.removeAttribute("data-y");
+            // Revert button location
+            if (target.getAttribute("data-in-track")) {
+              document.getElementById("buttons").removeChild(target);
+            } else {
+              target.style.webkitTransform = target.style.transform = "";
+              target.removeAttribute("data-x");
+              target.removeAttribute("data-y");
+            }
+          } else {
+            // Append the same button
+            if (!target.getAttribute("data-in-track")) {
+              const newNode = target.cloneNode(true);
+              newNode.style.webkitTransform = newNode.style.transform = "";
+              newNode.removeAttribute("data-x");
+              newNode.removeAttribute("data-y");
+              newNode.removeAttribute("data-seq-id");
+              newNode.removeAttribute("data-in-track");
+              document.getElementById("buttons").appendChild(newNode);
+              target.setAttribute("data-in-track", "1");
+
+              updateElementPos(
+                target,
+                target.offsetLeft - buttonsOffsetLeft - 12,
+                target.offsetTop - buttonsOffsetTop - 12
+              );
+              target.style.position = "absolute";
+            }
           }
         }
       }
     });
     interact(".track").dropzone({
       accept: ".item",
-      ondragenter: function(event) {
+      ondragenter: function (event) {
         const target: HTMLElement = event.relatedTarget;
         let seqId = target.getAttribute("data-seq-id");
-        if (!seqId) {
-          seqId = String(Math.random());
-          target.setAttribute("data-seq-id", seqId);
-          editorElements[seqId] = {
-            id: Number(target.getAttribute("data-sound-id")) || -1,
-            location: -1
-          };
-        }
-        if (!editorElements[seqId])
-          editorElements[seqId] = { id: -1, location: -1 };
-        editorElements[seqId].location = getXLocation(target);
+        if (seqId) return;
+        seqId = String(Math.random());
+        target.setAttribute("data-seq-id", seqId);
+        editorElements[seqId] = {
+          id: Number(target.getAttribute("data-sound-id")) || -1,
+          location: -1
+        };
       },
-      ondragleave: function(event) {
+      ondragleave: function (event) {
         const target: HTMLElement = event.relatedTarget;
         const seqId = target.getAttribute("data-seq-id");
         if (seqId) {
@@ -153,19 +177,19 @@ export default class App extends Vue {
     if (!tracks) return;
     const track = tracks[0];
     const ratio = Number((track as HTMLElement).offsetWidth) / 3;
-    const preparedSounds: { [key: number]: HTMLAudioElement } = {};
-    for (const i of Object.values(editorElements)) {
+    const preparedSounds: { [key: string]: HTMLAudioElement } = {};
+    for (const [key, i] of Object.entries(editorElements)) {
       if (i.id < 0) continue;
       const id = i.id;
-      const sound = preparedSounds[id];
+      const sound = preparedSounds[key];
       if (sound) continue;
       const audioFilename = this.sounds[id].file;
-      preparedSounds[id] = new Audio(`assets/${audioFilename}`);
+      preparedSounds[key] = new Audio(`assets/${audioFilename}`);
     }
-    for (const i of Object.values(editorElements)) {
+    for (const [key, i] of Object.entries(editorElements)) {
       if (i.id < 0 || i.location < 0) continue;
       setTimeout(() => {
-        preparedSounds[i.id].play();
+        preparedSounds[key].play();
       }, (i.location / ratio) * 1000);
     }
   }

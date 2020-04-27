@@ -48,24 +48,6 @@ function getXLocation(target: HTMLElement) {
   );
 }
 
-function dragMoveListener(event: any) {
-  const target: HTMLElement = event.target;
-
-  // Move
-  const x = (parseFloat(target.getAttribute("data-x") || "") || 0) + event.dx;
-  const y = (parseFloat(target.getAttribute("data-y") || "") || 0) + event.dy;
-  target.style.webkitTransform = target.style.transform =
-    "translate(" + x + "px, " + y + "px)";
-  target.setAttribute("data-x", x);
-  target.setAttribute("data-y", y);
-
-  // Update value
-  const seq = Number(target.getAttribute("data-seq-id"));
-  if (!seq) return;
-  const location = getXLocation(target);
-  editorElements[seq].location = location;
-}
-
 @Component({
   components: {
     BaseButton
@@ -109,12 +91,30 @@ export default class App extends Vue {
         })
       ],
       listeners: {
-        move: dragMoveListener
+        move: function(event: any) {
+          const target: HTMLElement = event.target;
+
+          // Move
+          const x =
+            (parseFloat(target.getAttribute("data-x") || "") || 0) + event.dx;
+          const y =
+            (parseFloat(target.getAttribute("data-y") || "") || 0) + event.dy;
+          target.style.webkitTransform = target.style.transform =
+            "translate(" + x + "px, " + y + "px)";
+          target.setAttribute("data-x", x);
+          target.setAttribute("data-y", y);
+
+          // Update value
+          const seq = Number(target.getAttribute("data-seq-id"));
+          if (!seq) return;
+          const location = getXLocation(target);
+          editorElements[seq].location = location;
+        },
       }
     });
     interact(".track").dropzone({
       accept: ".item",
-      ondragenter: function (event) {
+      ondragenter: function(event) {
         const target: HTMLElement = event.relatedTarget;
         let seqId = target.getAttribute("data-seq-id");
         if (!seqId) {
@@ -123,13 +123,13 @@ export default class App extends Vue {
           editorElements[seqId] = {
             id: Number(target.getAttribute("data-sound-id")) || -1,
             location: -1
-          }
+          };
         }
         if (!editorElements[seqId])
           editorElements[seqId] = { id: -1, location: -1 };
         editorElements[seqId].location = getXLocation(target);
       },
-      ondragleave: function (event) {
+      ondragleave: function(event) {
         const target: HTMLElement = event.relatedTarget;
         const seqId = target.getAttribute("data-seq-id");
         if (seqId) {
@@ -146,7 +146,6 @@ export default class App extends Vue {
     const track = tracks[0];
     const ratio = Number((track as HTMLElement).offsetWidth) / 3;
     const preparedSounds: { [key: number]: HTMLAudioElement } = {};
-    console.log(editorElements);
     for (const i of Object.values(editorElements)) {
       if (i.id < 0) continue;
       const id = i.id;
@@ -159,7 +158,7 @@ export default class App extends Vue {
       if (i.id < 0 || i.location < 0) continue;
       setTimeout(() => {
         preparedSounds[i.id].play();
-      }, i.location / ratio * 1000);
+      }, (i.location / ratio) * 1000);
     }
   }
 }

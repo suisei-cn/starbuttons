@@ -5,6 +5,7 @@
       <p>You can remix the sounds at this page!</p>
       <div id="operations">
         <div class="normalBtn" @click="playRemix">Play</div>
+        <div class="normalBtn" @click="clearRemix">Clear</div>
       </div>
     </div>
     <div id="buttons" ref="clips">
@@ -35,7 +36,7 @@ import { Sound } from "../types";
 import BaseButton from "../components/BaseButton.vue";
 import interact from "interactjs";
 
-const editorElements: {
+let editorElements: {
   [key: string]: {
     id: number;
     location: number;
@@ -216,6 +217,13 @@ export default class App extends Vue {
         preparedSounds[key].play();
       }, (i.location / ratio) * 1000);
     }
+  }
+
+  private clearRemix() {
+    for (const item of document.querySelectorAll(".item[data-seq-id]")) {
+      (this.$refs.clips as HTMLElement).removeChild(item);
+    }
+    editorElements = {};
   }
 }
 </script>

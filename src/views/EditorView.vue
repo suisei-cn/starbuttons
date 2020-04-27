@@ -244,6 +244,7 @@ export default class App extends Vue {
 
 #buttons {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #tracks {

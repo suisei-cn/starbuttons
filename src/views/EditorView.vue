@@ -57,8 +57,8 @@ function updateElementPos(target: HTMLElement, dx: number, dy: number) {
   const y = (parseFloat(target.getAttribute("data-y") || "") || 0) + dy;
   target.style.webkitTransform = target.style.transform =
     "translate(" + x + "px, " + y + "px)";
-  target.setAttribute("data-x", x);
-  target.setAttribute("data-y", y);
+  target.setAttribute("data-x", String(x));
+  target.setAttribute("data-y", String(y));
 }
 
 @Component({
@@ -118,6 +118,7 @@ export default class App extends Vue {
   private initDrag() {
     const buttonsOffsetLeft = (this.$refs.clips as HTMLElement).offsetLeft;
     const buttonsOffsetTop = (this.$refs.clips as HTMLElement).offsetTop;
+    const that = this;
     interact(".item").draggable({
       inertia: false,
       modifiers: [
@@ -127,7 +128,7 @@ export default class App extends Vue {
         })
       ],
       listeners: {
-        move: function (event: any) {
+        move: function(event: any) {
           const target: HTMLElement = event.target;
 
           // Move
@@ -139,12 +140,12 @@ export default class App extends Vue {
           const location = getXLocation(target);
           editorElements[seq].location = location;
         },
-        end: function (event: any) {
+        end: function(event: any) {
           const target: HTMLElement = event.target;
           if (!target.getAttribute("data-seq-id")) {
             // Revert button location
             if (target.getAttribute("data-in-track")) {
-              document.getElementById("buttons").removeChild(target);
+              (that.$refs.clips as HTMLElement).removeChild(target);
             } else {
               target.style.webkitTransform = target.style.transform = "";
               target.removeAttribute("data-x");
@@ -154,12 +155,13 @@ export default class App extends Vue {
             // Append the same button
             if (!target.getAttribute("data-in-track")) {
               const newNode = target.cloneNode(true);
-              newNode.style.webkitTransform = newNode.style.transform = "";
-              newNode.removeAttribute("data-x");
-              newNode.removeAttribute("data-y");
-              newNode.removeAttribute("data-seq-id");
-              newNode.removeAttribute("data-in-track");
-              document.getElementById("buttons").appendChild(newNode);
+              (newNode as HTMLElement).style.webkitTransform = (newNode as HTMLElement).style.transform =
+                "";
+              (newNode as HTMLElement).removeAttribute("data-x");
+              (newNode as HTMLElement).removeAttribute("data-y");
+              (newNode as HTMLElement).removeAttribute("data-seq-id");
+              (newNode as HTMLElement).removeAttribute("data-in-track");
+              (that.$refs.clips as HTMLElement).appendChild(newNode);
               target.setAttribute("data-in-track", "1");
 
               updateElementPos(
@@ -175,7 +177,7 @@ export default class App extends Vue {
     });
     interact(".track").dropzone({
       accept: ".item",
-      ondragenter: function (event) {
+      ondragenter: function(event) {
         const target: HTMLElement = event.relatedTarget;
         let seqId = target.getAttribute("data-seq-id");
         if (seqId) return;
@@ -186,7 +188,7 @@ export default class App extends Vue {
           location: -1
         };
       },
-      ondragleave: function (event) {
+      ondragleave: function(event) {
         const target: HTMLElement = event.relatedTarget;
         const seqId = target.getAttribute("data-seq-id");
         if (seqId) {

@@ -99,7 +99,7 @@ export default class App extends Vue {
   private async mounted() {
     this.sounds = (await fetch("/sounds.json")
       .then(x => x.json())
-      .catch(err => {
+      .catch(() => {
         // tslint:disable-next-line:no-console
         console.error("Sound data fetch error. Exiting.");
       })) as Sound[];

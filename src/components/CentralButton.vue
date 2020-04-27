@@ -9,8 +9,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import { Sound } from "../types";
+import { Component } from "vue-property-decorator";
 import BaseButton from "./BaseButton.vue";
 
 @Component

@@ -3,28 +3,47 @@
     <div id="header">
       <h1>Suisei Remix Editor <sup>experimental</sup></h1>
       <p>You can remix the sounds at this page!</p>
-      <div id="operations">
+      <div
+        id="operations"
+        :style="{
+          display: smallScreen === 1 ? 'none' : 'block',
+          opacity: smallScreen === 2 ? 0 : 1
+        }"
+      >
         <div class="normalBtn" @click="playRemix">Play</div>
         <div class="normalBtn" @click="clearRemix">Clear</div>
       </div>
     </div>
-    <div id="buttons" ref="clips">
-      <template v-for="(item, index) of sounds">
-        <BaseButton
-          :item="item"
-          :key="index"
-          :noclickplay="true"
-          :data-sound-id="index"
-          class="item normalBtn"
-        ></BaseButton>
-      </template>
+    <div
+      id="smallScreen"
+      :style="{ display: smallScreen === 0 ? 'none' : 'block' }"
+    >
+      <p>Your device screen is too small to run this editor. Sorry~</p>
     </div>
-    <div id="editor">
-      <div id="tracks">
-        <div data-track-id="1" class="track"></div>
-        <div data-track-id="2" class="track"></div>
-        <div data-track-id="3" class="track"></div>
-        <div data-track-id="4" class="track"></div>
+    <div
+      :style="{
+        display: smallScreen === 1 ? 'none' : 'block',
+        opacity: smallScreen === 2 ? 0 : 1
+      }"
+    >
+      <div id="buttons" ref="clips">
+        <template v-for="(item, index) of sounds">
+          <BaseButton
+            :item="item"
+            :key="index"
+            :noclickplay="true"
+            :data-sound-id="index"
+            class="item normalBtn"
+          ></BaseButton>
+        </template>
+      </div>
+      <div id="editor" ref="editor">
+        <div id="tracks">
+          <div data-track-id="1" class="track"></div>
+          <div data-track-id="2" class="track"></div>
+          <div data-track-id="3" class="track"></div>
+          <div data-track-id="4" class="track"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -68,6 +87,7 @@ function updateElementPos(target: HTMLElement, dx: number, dy: number) {
 })
 export default class App extends Vue {
   private sounds: Sound[] = [];
+  private smallScreen = 0;
 
   private async loadVoice() {
     const soundNotExpanded = (await fetch("/sounds.json")
@@ -109,9 +129,29 @@ export default class App extends Vue {
     this.$i18n.locale = lang;
   }
 
+  private validateDisplay() {
+    if (window.innerHeight > 600) {
+      this.smallScreen = 0;
+      return;
+    }
+    this.smallScreen = 2;
+    const editorBottom =
+      (this.$refs.editor as HTMLElement).offsetHeight +
+      (this.$refs.editor as HTMLElement).offsetTop;
+    if (window.innerHeight < editorBottom) {
+      this.smallScreen = 1;
+    } else {
+      if (editorBottom !== 0) {
+        this.smallScreen = 0;
+      }
+    }
+  }
+
   private async mounted() {
     await this.loadVoice();
     this.loadLang();
+    this.validateDisplay();
+    window.addEventListener("resize", this.validateDisplay);
     this.initDrag();
   }
 
@@ -128,7 +168,7 @@ export default class App extends Vue {
         })
       ],
       listeners: {
-        move: function(event: any) {
+        move: function (event: any) {
           const target: HTMLElement = event.target;
 
           // Move
@@ -140,7 +180,7 @@ export default class App extends Vue {
           const location = getXLocation(target);
           editorElements[seq].location = location;
         },
-        end: function(event: any) {
+        end: function (event: any) {
           const target: HTMLElement = event.target;
           if (!target.getAttribute("data-seq-id")) {
             // Revert button location
@@ -177,7 +217,7 @@ export default class App extends Vue {
     });
     interact(".track").dropzone({
       accept: ".item",
-      ondragenter: function(event) {
+      ondragenter: function (event) {
         const target: HTMLElement = event.relatedTarget;
         let seqId = target.getAttribute("data-seq-id");
         if (seqId) return;
@@ -188,7 +228,7 @@ export default class App extends Vue {
           location: -1
         };
       },
-      ondragleave: function(event) {
+      ondragleave: function (event) {
         const target: HTMLElement = event.relatedTarget;
         const seqId = target.getAttribute("data-seq-id");
         if (seqId) {
@@ -240,6 +280,18 @@ export default class App extends Vue {
 
 #header {
   text-align: center;
+}
+
+#smallScreen {
+  position: absolute;
+  height: 80vh;
+  width: 80vw;
+  text-align: center;
+  background-color: #eee8;
+  top: 5vh;
+  left: 10vw;
+  line-height: 80vh;
+  font-size: 1.4rem;
 }
 
 #buttons {

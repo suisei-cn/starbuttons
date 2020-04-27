@@ -20,7 +20,10 @@
     </div>
     <div id="editor">
       <div id="tracks">
-        <div ref="track1" class="track"></div>
+        <div data-track-id="1" class="track"></div>
+        <div data-track-id="2" class="track"></div>
+        <div data-track-id="3" class="track"></div>
+        <div data-track-id="4" class="track"></div>
       </div>
     </div>
   </div>

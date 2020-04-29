@@ -23,5 +23,6 @@ module.exports = {
       },
     ],
     "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/no-var-requires": 0,
   },
 };

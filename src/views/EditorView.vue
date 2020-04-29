@@ -11,6 +11,7 @@
         }"
       >
         <div class="normalBtn" @click="playRemix">Play</div>
+        <div class="normalBtn" @click="exportRemix">Export</div>
         <div class="normalBtn" @click="clearRemix">Clear</div>
       </div>
     </div>
@@ -54,6 +55,7 @@ import { Component, Vue } from "vue-property-decorator";
 import { Sound } from "../types";
 import BaseButton from "../components/BaseButton.vue";
 import interact from "interactjs";
+import { mergeAudio, SynthItem } from "../components/HappySynthesizer";
 
 let editorElements: {
   [key: string]: {
@@ -88,6 +90,7 @@ function updateElementPos(target: HTMLElement, dx: number, dy: number) {
 export default class App extends Vue {
   private sounds: Sound[] = [];
   private smallScreen = 0;
+  private timelineLength = 3;
 
   private async loadVoice() {
     const soundNotExpanded = (await fetch("/sounds.json")
@@ -243,7 +246,7 @@ export default class App extends Vue {
     const tracks = document.getElementsByClassName("track");
     if (!tracks) return;
     const track = tracks[0];
-    const ratio = Number((track as HTMLElement).offsetWidth) / 3;
+    const ratio = Number((track as HTMLElement).offsetWidth) / this.timelineLength;
     const preparedSounds: { [key: string]: HTMLAudioElement } = {};
     for (const [key, i] of Object.entries(editorElements)) {
       if (i.id < 0) continue;
@@ -268,6 +271,25 @@ export default class App extends Vue {
       (this.$refs.clips as HTMLElement).removeChild(item);
     }
     editorElements = {};
+  }
+
+  private async exportRemix() {
+    const tracks = document.getElementsByClassName("track");
+    if (!tracks) return;
+    const track = tracks[0];
+    const clips: SynthItem[] = [];
+    const ratio = Number((track as HTMLElement).offsetWidth) / this.timelineLength;
+    for (const i of Object.values(editorElements)) {
+      clips.push({
+        musicurl: `assets/${this.sounds[i.id].file}`,
+        delay: i.location / ratio
+      });
+    }
+    const url = await mergeAudio(clips);
+    const fileLink = document.createElement('a');
+    fileLink.href = url;
+    fileLink.download = "output.mp3";
+    fileLink.click();
   }
 }
 </script>

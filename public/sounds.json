@@ -66,5 +66,22 @@
     },
     "file": "_B-Q10J9KSg--0--2.mp3",
     "type": "normal"
+  },
+  {
+    "name": "Tetris sure is fun!​",
+    "name_l10n": {
+      "zh": "果然俄罗斯方块很有趣呢！",
+      "ja": "やっぱりテトリスは楽しいなぁ​！​"
+    },
+    "metadata": {
+      "site": "youtube",
+      "identifier": "_B-Q10J9KSg",
+      "time": {
+        "from": 57,
+        "to": 59
+      }
+    },
+    "file": "_B-Q10J9KSg--57--59.mp3",
+    "type": "normal"
   }
 ]

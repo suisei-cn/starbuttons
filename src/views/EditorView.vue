@@ -230,7 +230,7 @@ export default class App extends Vue {
         seqId = String(Math.random());
         target.setAttribute("data-seq-id", seqId);
         editorElements[seqId] = {
-          id: Number(target.getAttribute("data-sound-id")) || -1,
+          id: Number(target.getAttribute("data-sound-id")),
           location: -1
         };
       },

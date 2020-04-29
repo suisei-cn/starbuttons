@@ -1,6 +1,4 @@
-# starbuttons (music-board, dev)
-
-Preview: <https://music-board--suisei-more-moe.netlify.app/>
+# starbuttons
 
 One or more vocal buttons for Suisei.
 

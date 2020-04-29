@@ -24,13 +24,13 @@ jobs:
       
       - name: Upload build result for deploy 🔼
         uses: actions/upload-artifact@v1
-        if: "((github.ref == 'master') && !contains(github.event.commits[0].message, '[skip build]')) && (!contains(github.event.commits[0].message, '[build skip]'))"
+        if: "(github.ref == 'refs/heads/master') && (!contains(github.event.commits[0].message, '[skip build]')) && (!contains(github.event.commits[0].message, '[build skip]'))"
         with:
           name: dist
           path: dist
 
   deploy:
-    if: "((github.ref == 'master') && !contains(github.event.commits[0].message, '[skip build]')) && (!contains(github.event.commits[0].message, '[build skip]'))"
+    if: "(github.ref == 'refs/heads/master') && (!contains(github.event.commits[0].message, '[skip build]')) && (!contains(github.event.commits[0].message, '[build skip]'))"
     needs: build
     runs-on: ubuntu-latest
     steps:

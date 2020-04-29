@@ -24,7 +24,8 @@
     },
     "file": "onee-chan.mp3",
     "type": "normal"
-  },{
+  },
+  {
     "name": "I'm not calling you!",
     "name_l10n": {
       "zh": "没叫你啊！",
@@ -47,6 +48,23 @@
       "zh": "就在这里把你们都杀光！"
     },
     "file": "GfbgRHGLOZw-503.5-505.9-gonna-kill-ya-all-over-here.mp3",
+    "type": "normal"
+  },
+  {
+    "name": "I wanna play Tetris with the girls as the blocks!​",
+    "name_l10n": {
+      "zh": "想把大家当作俄罗斯方块玩！",
+      "ja": "みんなをテトリスにして遊びたい！​"
+    },
+    "metadata": {
+      "site": "youtube",
+      "identifier": "_B-Q10J9KSg",
+      "time": {
+        "from": 0,
+        "to": 2
+      }
+    },
+    "file": "_B-Q10J9KSg--0--2.mp3",
     "type": "normal"
   }
 ]

@@ -82,6 +82,17 @@ function updateElementPos(target: HTMLElement, dx: number, dy: number) {
   target.setAttribute("data-y", String(y));
 }
 
+function moveHandler(event: any) {
+  const target = event.target;
+  updateElementPos(target, event.dx, event.dy);
+
+  // Update value
+  const seq = Number(target.getAttribute("data-seq-id"));
+  if (!editorElements[seq]) return;
+  const location = getXLocation(target);
+  editorElements[seq].location = location;
+}
+
 @Component({
   components: {
     BaseButton
@@ -171,19 +182,11 @@ export default class App extends Vue {
         })
       ],
       listeners: {
-        move: function(event: any) {
-          const target: HTMLElement = event.target;
-
-          // Move
-          updateElementPos(target, event.dx, event.dy);
-
-          // Update value
-          const seq = Number(target.getAttribute("data-seq-id"));
-          if (!editorElements[seq]) return;
-          const location = getXLocation(target);
-          editorElements[seq].location = location;
+        move: function (event: any) {
+          moveHandler(event);
         },
-        end: function(event: any) {
+        end: function (event: any) {
+          moveHandler(event);
           const target: HTMLElement = event.target;
           if (!target.getAttribute("data-seq-id")) {
             // Revert button location

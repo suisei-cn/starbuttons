@@ -162,6 +162,8 @@ label {
   border-radius: 12px;
   background-color: #97cbed44;
   position: absolute;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 #switchBtn {

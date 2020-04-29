@@ -251,7 +251,9 @@ export default class App extends Vue {
       const sound = preparedSounds[key];
       if (sound) continue;
       const audioFilename = this.sounds[id].file;
-      preparedSounds[key] = new Audio(`assets/${audioFilename}`);
+      const audio = new Audio(`assets/${audioFilename}`);
+      audio.preload = "auto";
+      preparedSounds[key] = audio;
     }
     for (const [key, i] of Object.entries(editorElements)) {
       if (i.id < 0 || i.location < 0) continue;

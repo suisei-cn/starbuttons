@@ -83,5 +83,22 @@
     },
     "file": "_B-Q10J9KSg--57--59.mp3",
     "type": "normal"
+  },
+  {
+    "name": "I'll definitely kill everyone",
+    "name_l10n": {
+      "zh": "绝对要把大家都杀掉",
+      "ja": "絶対全員殺してやる"
+    },
+    "metadata": {
+      "site": "youtube",
+      "identifier": "GfbgRHGLOZw",
+      "time": {
+        "from": 503.55,
+        "to": 505.55
+      }
+    },
+    "file": "GfbgRHGLOZw--503--505.mp3",
+    "type": "normal"
   }
 ]

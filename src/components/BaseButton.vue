@@ -20,7 +20,7 @@ export default class BaseButton extends Vue {
   get localizedName() {
     return (this?.item.name_l10n || {})[this.lang] || this?.item.name || "";
   }
-  private play() {
+  public play() {
     if (this.noclickplay) return;
     if (!this.item) {
       return;

@@ -4,28 +4,39 @@
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
     </div>
-    <div id="board">
-      <div
-        id="musicTable"
-        class="overturnBase shadow"
-        :class="{ overturn: musicTableFlipped }"
-      >
-        <template v-for="(item, index) of sounds">
-          <BaseButton :item="item" :key="index" class="normalBtn"></BaseButton>
-        </template>
-      </div>
+    <div
+      id="board"
+      :class="{
+        musicBoard: displayMusicBoard,
+        musicButton: !displayMusicBoard,
+        btn: !displayMusicBoard,
+        animateBtn: !displayMusicBoard
+      }"
+      @click="playEhhh"
+    >
       <template v-for="(item, index) of sounds">
-        <CentralButton
+        <BaseButton
           :item="item"
           :key="index"
-          class="overturnBase"
-          :class="{ overturn: musicButtonFlipped }"
-          v-if="item.type == 'center'"
-        ></CentralButton>
+          class="normalBtn"
+          v-if="displayMusicBoard"
+        ></BaseButton>
+      </template>
+      <template v-if="!displayMusicBoard">
+        {{ ehhhLocalizedName }}
       </template>
     </div>
-    <div id="switchBtn" @click="flipTable" class="btn animateBtn">
-      {{ musicButtonFlipped ? $t("Back") : $t("Music board") }}
+    <BaseButton
+      id="virtualCentralButton"
+      :item="sounds[0]"
+      ref="centralButton"
+    ></BaseButton>
+    <div
+      id="switchBtn"
+      @click="displayMusicBoard = !displayMusicBoard"
+      class="btn animateBtn"
+    >
+      {{ displayMusicBoard ? $t("Back") : $t("Music board") }}
     </div>
     <div id="bottom">
       <a
@@ -59,41 +70,28 @@ import BaseButton from "../components/BaseButton.vue";
   }
 })
 export default class App extends Vue {
-  private sounds: Sound[] = [];
-  private musicTableFlipped = true;
-  private musicButtonFlipped = false;
-  private flipping = false;
-
-  private flipTable() {
-    if (this.flipping) {
-      return;
-    }
-    const that = this;
-    this.flipping = true;
-    if (this.musicTableFlipped) {
-      this.musicButtonFlipped = true;
-      setTimeout(() => {
-        that.musicTableFlipped = false;
-        setTimeout(() => {
-          that.flipping = false;
-        }, 500);
-      }, 500);
-    } else {
-      this.musicTableFlipped = true;
-      setTimeout(() => {
-        that.musicButtonFlipped = false;
-        setTimeout(() => {
-          that.flipping = false;
-        }, 500);
-      }, 500);
-    }
-  }
+  // @ts-ignore
+  private sounds: Sound[] = [{}];
+  private displayMusicBoard = false;
 
   get multiPlay() {
     return this.$store.state.multiPlay;
   }
   set multiPlay(value) {
     this.$store.commit("setMultiPlay", value);
+  }
+
+  get ehhhLocalizedName() {
+    return (
+      (this?.sounds[0].name_l10n || {})[this.$i18n.locale] ||
+      this?.sounds[0].name ||
+      ""
+    );
+  }
+
+  private playEhhh() {
+    // @ts-ignore
+    this.$refs.centralButton.play();
   }
 
   private async mounted() {
@@ -132,6 +130,7 @@ export default class App extends Vue {
 
 <style lang="scss" scoped>
 @import "../style/style";
+@import "../style/centralButton";
 
 $table-height: 52vh;
 
@@ -150,20 +149,28 @@ label {
 
 #board {
   height: $table-height;
-  margin-bottom: 2vh;
+  transition: width 0.33s ease-in-out, height 0.33s ease-in-out,
+    background 0.33s linear;
 }
 
-#musicTable {
+.musicBoard {
   display: flex;
   height: $table-height;
   width: 80vw;
-  margin-left: -20vw;
   padding: 5px;
   border-radius: 12px;
-  background-color: #97cbed44;
-  position: absolute;
+  background: #97cbed44;
   flex-wrap: wrap;
   align-content: flex-start;
+}
+
+.musicButton {
+  height: 40vh;
+  width: 40vw;
+}
+
+#virtualCentralButton {
+  display: none;
 }
 
 #switchBtn {
@@ -180,13 +187,5 @@ label {
 .bottonBtnLink {
   margin: 0 0.5vw;
   text-decoration: none;
-}
-
-.overturnBase {
-  transition: transform 0.5s ease-in-out;
-}
-
-.overturn {
-  transform: rotateY(90deg);
 }
 </style>

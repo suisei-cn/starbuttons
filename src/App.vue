@@ -126,6 +126,7 @@ export default class App extends Vue {
 $table-height: 52vh;
 
 label {
+  font-display: swap;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-variant-caps: small-caps;
   font-variant-numeric: oldstyle-nums;
@@ -154,10 +155,12 @@ label {
     Source Han Sans, Yu Gothic, Kozuka Gothic Pro, Meiryo, sans-serif;
   transition: box-shadow 2.3s ease-in-out;
   font-weight: 0.23s ease-in-out;
+  font-display: swap;
 
   &:hover {
     cursor: pointer;
     font-weight: 800;
+    font-display: swap;
     box-shadow: 0 0.4px 0.7px rgba(0, 0, 0, 0.02),
       0 1px 1.6px rgba(0, 0, 0, 0.028), 0 1.9px 3px rgba(0, 0, 0, 0.035),
       0 3.4px 5.4px rgba(102, 116, 181, 0.042),

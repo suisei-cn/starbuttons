@@ -153,8 +153,7 @@ label {
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto",
     "Segoe UI", "Helvetica Neue", "Lucida Grande", HYQiHei, FZYouH,
     Source Han Sans, Yu Gothic, Kozuka Gothic Pro, Meiryo, sans-serif;
-  transition: box-shadow 2.3s ease-in-out;
-  font-weight: 0.23s ease-in-out;
+  transition: box-shadow 0.23s ease-in-out. font-weight: 0.23s ease-in-out;
   font-display: swap;
 
   &:hover {
@@ -166,6 +165,7 @@ label {
       0 3.4px 5.4px rgba(102, 116, 181, 0.042),
       0 6.3px 10px rgba(102, 116, 181, 0.25),
       0 15px 24px rgba(102, 116, 181, 0.37);
+    transition: box-shadow 0.23s ease-in-out. font-weight: 0.23s ease-in-out;
   }
 }
 
@@ -204,10 +204,10 @@ label {
 }
 
 .overturnBase {
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.33s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .overturn {
-  transform: rotateY(90deg);
+  transform: scale(0.01);
 }
 </style>

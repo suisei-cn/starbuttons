@@ -90,7 +90,6 @@ export default class App extends Vue {
   }
 
   private playEhhh() {
-
     if (!this.displayMusicBoard) {
       // @ts-ignore
       this.$refs.centralButton.play();

@@ -182,10 +182,10 @@ export default class App extends Vue {
         })
       ],
       listeners: {
-        move: function (event: any) {
+        move: function(event: any) {
           moveHandler(event);
         },
-        end: function (event: any) {
+        end: function(event: any) {
           moveHandler(event);
           const target: HTMLElement = event.target;
           if (!target.getAttribute("data-seq-id")) {
@@ -249,7 +249,8 @@ export default class App extends Vue {
     const tracks = document.getElementsByClassName("track");
     if (!tracks) return;
     const track = tracks[0];
-    const ratio = Number((track as HTMLElement).offsetWidth) / this.timelineLength;
+    const ratio =
+      Number((track as HTMLElement).offsetWidth) / this.timelineLength;
     const preparedSounds: { [key: string]: HTMLAudioElement } = {};
     for (const [key, i] of Object.entries(editorElements)) {
       if (i.id < 0) continue;
@@ -281,7 +282,8 @@ export default class App extends Vue {
     if (!tracks) return;
     const track = tracks[0];
     const clips: SynthItem[] = [];
-    const ratio = Number((track as HTMLElement).offsetWidth) / this.timelineLength;
+    const ratio =
+      Number((track as HTMLElement).offsetWidth) / this.timelineLength;
     for (const i of Object.values(editorElements)) {
       clips.push({
         musicurl: `assets/${this.sounds[i.id].file}`,
@@ -289,7 +291,7 @@ export default class App extends Vue {
       });
     }
     const url = await mergeAudio(clips);
-    const fileLink = document.createElement('a');
+    const fileLink = document.createElement("a");
     fileLink.href = url;
     fileLink.download = "output.mp3";
     fileLink.click();

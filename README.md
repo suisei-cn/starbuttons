@@ -1,8 +1,4 @@
-# starbuttons (remix-editor, dev)
-
-Preview: <https://remix-editor--suisei-more-moe.netlify.app/>
-
-Editor preview: <https://remix-editor--suisei-more-moe.netlify.app/#/editor>
+# starbuttons
 
 One or more vocal buttons for Suisei.
 

@@ -175,9 +175,12 @@ label {
   background: #97cbed44;
   flex-wrap: wrap;
   align-content: flex-start;
+  overflow-y: scroll;
   .normalBtn {
     animation: 0.66s button-appear;
     z-index: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   #bigButtonText {
     opacity: 0;

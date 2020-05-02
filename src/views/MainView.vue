@@ -153,6 +153,18 @@ label {
     background 0.33s linear;
 }
 
+@keyframes button-appear {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .musicBoard {
   display: flex;
   height: $table-height;
@@ -162,6 +174,9 @@ label {
   background: #97cbed44;
   flex-wrap: wrap;
   align-content: flex-start;
+  .normalBtn {
+    animation: 0.66s button-appear;
+  }
 }
 
 .musicButton {

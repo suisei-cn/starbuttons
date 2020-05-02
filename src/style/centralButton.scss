@@ -1,24 +1,34 @@
+.musicButton {
+  height: 40vh;
+  width: 40vw;
+}
+
 #board {
   &.btn {
     height: 40vh;
     width: 40vw;
     margin-top: 9vh;
-    line-height: 40vh;
-    font-size: 5rem;
   }
 
-  @media screen and (max-width: 1000px) {
-    &.btn {
+  #bigButtonText {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+
+    @media screen and (max-width: 1340px) {
       font-size: 2rem !important;
     }
-  }
-  @media screen and (max-width: 600px) {
-    &.btn {
+    @media screen and (max-width: 600px) {
       font-size: 1rem !important;
     }
-  }
-  @media screen and (max-width: 300px) {
-    &.btn {
+    @media screen and (max-width: 300px) {
       font-size: 0 !important;
     }
   }

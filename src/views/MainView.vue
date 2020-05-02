@@ -22,9 +22,9 @@
           v-if="displayMusicBoard"
         ></BaseButton>
       </template>
-      <template v-if="!displayMusicBoard">
+      <span id="bigButtonText">
         {{ ehhhLocalizedName }}
-      </template>
+      </span>
     </div>
     <BaseButton
       id="virtualCentralButton"
@@ -149,8 +149,9 @@ label {
 
 #board {
   height: $table-height;
-  transition: width 0.33s ease-in-out, height 0.33s ease-in-out,
-    background 0.33s linear;
+  transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
+    background 0.25s linear;
+  position: relative; // for #bigButtonText
 }
 
 @keyframes button-appear {
@@ -176,12 +177,12 @@ label {
   align-content: flex-start;
   .normalBtn {
     animation: 0.66s button-appear;
+    z-index: 1;
   }
-}
-
-.musicButton {
-  height: 40vh;
-  width: 40vw;
+  #bigButtonText {
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+  }
 }
 
 #virtualCentralButton {

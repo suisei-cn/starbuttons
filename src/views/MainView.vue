@@ -90,8 +90,11 @@ export default class App extends Vue {
   }
 
   private playEhhh() {
-    // @ts-ignore
-    this.$refs.centralButton.play();
+
+    if (!this.displayMusicBoard) {
+      // @ts-ignore
+      this.$refs.centralButton.play();
+    }
   }
 
   private async mounted() {

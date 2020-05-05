@@ -37,7 +37,7 @@
       >/
       <a
         class="bottonBtnLink"
-        href="https://t.me/suiseihosimati"
+        href="https://t.me/Hoshimati_Suisei"
         target="_blank"
       >
         {{ $t("Telegram") }}

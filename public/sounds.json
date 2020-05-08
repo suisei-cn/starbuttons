@@ -11,7 +11,8 @@
   {
     "name": "Ahahaha",
     "name_l10n": {
-      "zh": "啊哈哈哈"
+      "zh": "啊哈哈哈",
+      "ja": "あははははは"
     },
     "file": "ahhh.mp3",
     "type": "normal"
@@ -20,7 +21,7 @@
     "name": "Big sister~",
     "name_l10n": {
       "zh": "姐姐，姐姐～",
-      "ja": "お姉さん，お姉さん～"
+      "ja": "お姉ちゃん，お姉ちゃん～"
     },
     "file": "onee-chan.mp3",
     "type": "normal"
@@ -37,7 +38,8 @@
   {
     "name": "But I Shirakami don't believe in you!",
     "name_l10n": {
-      "zh": "但是我白上不相信你的鬼话"
+      "zh": "但是我白上不相信你的鬼话",
+      "ja": "でも白上信じられないな"
     },
     "file": "but-shirakami-do-not-believe-in-you.mp3",
     "type": "normal"
@@ -45,7 +47,8 @@
   {
     "name": "I'm gonna kill ya all over here!",
     "name_l10n": {
-      "zh": "就在这里把你们都杀光！"
+      "zh": "就在这里把你们都杀光！",
+      "ja": "みんなここで殺してやるよ"
     },
     "file": "QcZp1-pPfxU-f--3486--3489.mp3",
     "type": "normal"
@@ -105,7 +108,7 @@
     "name": "(Scream) ...I'm sorry.",
     "name_l10n": {
       "zh": "(非洲人的呐喊) ...抱歉。",
-      "ja": "(あぁぁぁぁぁ...) ... しみません。"
+      "ja": "(あ゛ぁ゛ぁ゛ぁ゛ぁ゛ぁ゛) ... しみません。"
     },
     "metadata": {
       "site": "youtube",

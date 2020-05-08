@@ -100,5 +100,22 @@
     },
     "file": "GfbgRHGLOZw-503.5-505.9-gonna-kill-ya-all-over-here.mp3",
     "type": "normal"
+  },
+  {
+    "name": "(Scream) ...I'm sorry.",
+    "name_l10n": {
+      "zh": "(非洲人的呐喊) ...抱歉。",
+      "ja": "(あぁぁぁぁぁ...) ... しみません。"
+    },
+    "metadata": {
+      "site": "youtube",
+      "identifier": "kKm-MqVoLzg",
+      "time": {
+        "from": 2032.5,
+        "to": 2042.6
+      }
+    },
+    "file": "kKm-MqVoLzg--2032.5--2042.6.mp3",
+    "type": "normal"
   }
 ]

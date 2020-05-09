@@ -4,27 +4,29 @@
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
     </div>
-    <div
-      id="board"
-      :class="{
-        musicBoard: displayMusicBoard,
-        musicButton: !displayMusicBoard,
-        btn: !displayMusicBoard,
-        animateBtn: !displayMusicBoard
-      }"
-      @click="playEhhh"
-    >
-      <template v-for="(item, index) of sounds">
-        <BaseButton
-          :item="item"
-          :key="index"
-          class="normalBtn"
-          v-if="displayMusicBoard"
-        ></BaseButton>
-      </template>
-      <span id="bigButtonText">
-        {{ ehhhLocalizedName }}
-      </span>
+    <div id="mainWrapper">
+      <div
+        id="board"
+        :class="{
+          musicBoard: displayMusicBoard,
+          musicButton: !displayMusicBoard,
+          btn: !displayMusicBoard,
+          animateBtn: !displayMusicBoard
+        }"
+        @click="playEhhh"
+      >
+        <template v-for="(item, index) of sounds">
+          <BaseButton
+            :item="item"
+            :key="index"
+            class="normalBtn"
+            v-if="displayMusicBoard"
+          ></BaseButton>
+        </template>
+        <span id="bigButtonText">
+          {{ ehhhLocalizedName }}
+        </span>
+      </div>
     </div>
     <BaseButton
       id="virtualCentralButton"
@@ -148,6 +150,10 @@ label {
 .settingsBtn {
   margin-top: 15vh;
   height: 6vh;
+}
+
+#mainWrapper {
+  height: 60vh;
 }
 
 #board {

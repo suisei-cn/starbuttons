@@ -1,5 +1,12 @@
 <template>
-  <div @click="play" :class="{ playingBtn: playLayer > 0 }">
+  <div
+    @click="play"
+    ref="self"
+    :class="{ playingBtn: playLayer > 0, testHoverWidth }"
+    :style="{
+      minWidth
+    }"
+  >
     {{ localizedName }}
   </div>
 </template>
@@ -13,9 +20,17 @@ export default class BaseButton extends Vue {
   @Prop() private item!: Sound;
   @Prop() private noclickplay!: boolean;
   private playLayer = 0;
+  private testHoverWidth = false;
+  private minWidth = "0px";
   private lang = "zh";
   private mounted() {
     this.lang = this.$i18n.locale;
+    this.testHoverWidth = true;
+    this.$nextTick(() => {
+      const width = (this.$refs.self as HTMLElement).offsetWidth;
+      this.minWidth = String(width - 16 + "px");
+      this.testHoverWidth = false;
+    });
   }
   get localizedName() {
     return (this?.item.name_l10n || {})[this.lang] || this?.item.name || "";

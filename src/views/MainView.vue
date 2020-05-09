@@ -15,14 +15,16 @@
         }"
         @click="playEhhh"
       >
-        <template v-for="(item, index) of sounds">
-          <BaseButton
-            :item="item"
-            :key="index"
-            class="normalBtn"
-            v-if="displayMusicBoard"
-          ></BaseButton>
-        </template>
+        <div id="boardWrapper">
+          <template v-for="(item, index) of sounds">
+            <BaseButton
+              :item="item"
+              :key="index"
+              class="normalBtn"
+              v-if="displayMusicBoard"
+            ></BaseButton>
+          </template>
+        </div>
         <span id="bigButtonText">
           {{ ehhhLocalizedName }}
         </span>
@@ -157,7 +159,6 @@ label {
 }
 
 #board {
-  height: $table-height;
   transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
     background 0.25s linear;
   position: relative; // for #bigButtonText
@@ -175,16 +176,20 @@ label {
   }
 }
 
-.musicBoard {
+#boardWrapper {
   display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.musicBoard {
+  overflow-y: scroll;
   height: $table-height;
   width: 80vw;
   padding: 5px;
   border-radius: 12px;
   background: #97cbed44;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  overflow-y: scroll;
+
   font-display: swap;
   .normalBtn {
     animation: 0.66s button-appear;

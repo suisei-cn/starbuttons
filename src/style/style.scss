@@ -30,7 +30,7 @@ $btn-height: 40px;
 }
 
 .normalBtn {
-  height: $btn-height;
+  min-height: $btn-height;
   line-height: $btn-height;
   margin: 12px 12px;
   padding: 4px 16px;

@@ -120,5 +120,22 @@
     },
     "file": "kKm-MqVoLzg--2032.5--2042.6.mp3",
     "type": "normal"
+  },
+  {
+    "name": "Lambda!",
+    "name_l10n": {
+      "zh": "Lambda!",
+      "ja": "らむだ！"
+    },
+    "metadata": {
+      "site": "youtube",
+      "identifier": "LS6srVfrxIk",
+      "time": {
+        "from": 1327.3,
+        "to": 1328.4
+      }
+    },
+    "file": "LS6srVfrxIk--1327.3--1328.4.mp3",
+    "type": "normal"
   }
 ]

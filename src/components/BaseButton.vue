@@ -1,28 +1,42 @@
 <template>
   <div
     @click="play"
-    :class="{ playingBtn: playLayer > 0 }"
+    ref="self"
+    :class="{ playingBtn: playLayer > 0, testHoverWidth }"
+    :style="{
+      minWidth
+    }"
   >
     {{ localizedName }}
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import { Sound } from '../types';
+import { Component, Prop, Vue } from "vue-property-decorator";
+import { Sound } from "../types";
 
 @Component
 export default class BaseButton extends Vue {
   @Prop() private item!: Sound;
-  private playLayer: number = 0;
-  private lang: string = 'zh';
+  @Prop() private noclickplay!: boolean;
+  private playLayer = 0;
+  private testHoverWidth = false;
+  private minWidth = "0px";
+  private lang = "zh";
   private mounted() {
     this.lang = this.$i18n.locale;
+    this.testHoverWidth = true;
+    this.$nextTick(() => {
+      const width = (this.$refs.self as HTMLElement).offsetWidth;
+      this.minWidth = String(width - 16 + "px");
+      this.testHoverWidth = false;
+    });
   }
   get localizedName() {
-    return this?.item.name_l10n![this.lang] || this?.item.name || '';
+    return (this?.item.name_l10n || {})[this.lang] || this?.item.name || "";
   }
-  private play() {
+  public play() {
+    if (this.noclickplay) return;
     if (!this.item) {
       return;
     }
@@ -30,20 +44,22 @@ export default class BaseButton extends Vue {
       return;
     }
     let audioFilename;
-    if (typeof (this.item.file) === 'string') {
+    if (typeof this.item.file === "string") {
       audioFilename = this.item.file;
     } else {
-      audioFilename = this.item.file[Math.floor(Math.random() * this.item.file.length)];
+      audioFilename = this.item.file[
+        Math.floor(Math.random() * this.item.file.length)
+      ];
     }
     const audio = new Audio(`assets/${audioFilename}`);
     const that = this;
-    audio.addEventListener('play', () => {
+    audio.addEventListener("play", () => {
       that.playLayer += 1;
-      that.$store.commit('playOne');
+      that.$store.commit("playOne");
     });
-    audio.addEventListener('ended', () => {
+    audio.addEventListener("ended", () => {
       that.playLayer -= 1;
-      that.$store.commit('stopOne');
+      that.$store.commit("stopOne");
     });
     audio.play();
   }

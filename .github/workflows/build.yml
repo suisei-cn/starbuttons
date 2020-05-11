@@ -19,5 +19,5 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm install
-          npm run build
+          yarn
+          yarn build

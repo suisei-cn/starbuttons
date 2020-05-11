@@ -4,7 +4,7 @@
       <h1>
         {{ $t("Suisei Remix Editor") }} <sup>{{ $t("experimental") }}</sup>
       </h1>
-      <p>You can remix the sounds at this page!</p>
+      <p v-html="$t('long-editor-description')"></p>
       <div
         id="operations"
         :style="{

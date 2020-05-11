@@ -22,9 +22,7 @@ export default class BaseButton extends Vue {
   private playLayer = 0;
   private testHoverWidth = false;
   private minWidth = "0px";
-  private lang = "zh";
   private mounted() {
-    this.lang = this.$i18n.locale;
     this.testHoverWidth = true;
     this.$nextTick(() => {
       const width = (this.$refs.self as HTMLElement).offsetWidth;
@@ -33,7 +31,9 @@ export default class BaseButton extends Vue {
     });
   }
   get localizedName() {
-    return (this?.item.name_l10n || {})[this.lang] || this?.item.name || "";
+    return (
+      (this?.item.name_l10n || {})[this.$i18n.locale] || this?.item.name || ""
+    );
   }
   public play() {
     if (this.noclickplay) return;

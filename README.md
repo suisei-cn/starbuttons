@@ -1,8 +1,10 @@
-# starbuttons
+# starbuttons ![Build & Deploy](https://github.com/suisei-cn/starbuttons/workflows/Build%20&%20Deploy/badge.svg)
 
 One or more vocal buttons for Suisei.
 
 **[中文](https://suisei.moe/?lang=zh)** | **[English](https://suisei.moe/?lang=en)** | **[日本語](https://suisei.moe/?lang=ja)**
+
+新功能：[星音混响编辑器](https://suisei.moe/?lang=zh#/editor) （实验性）
 
 ---
 
@@ -19,7 +21,8 @@ README：**中文** | [English](https://github.com/suisei-cn/starbuttons/blob/ma
 
 ### 页面组件
 * [`src/components`](https://github.com/suisei-cn/starbuttons/tree/master/src/components) - 各种不同样式的按钮
-* [`src/App.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/App.vue) - 页面结构、设置按钮及其样式
+* [`src/views/MainView.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/views/MainView.vue) - 主页
+* [`src/views/EditorView.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/views/EditorView.vue) - 星音混响编辑器（实验性）
 * [`src/lang`](https://github.com/suisei-cn/starbuttons/tree/master/src/lang) - 界面语言文件
 * [`src/style/style.scss`](https://github.com/suisei-cn/starbuttons/blob/master/src/style/style.scss) - 按钮公用样式
 

@@ -4,6 +4,8 @@ One or more vocal buttons for Suisei.
 
 **[中文](https://suisei.moe/?lang=zh)** | **[English](https://suisei.moe/?lang=en)** | **[日本語](https://suisei.moe/?lang=ja)**
 
+New feature: [Suisei remix editor](https://suisei.moe/?lang=en#/editor) (experimental)
+
 ---
 
 README：**日本語** | [中文](https://github.com/suisei-cn/starbuttons/blob/master/README.md) | [English](https://github.com/suisei-cn/starbuttons/blob/master/README.en.md)
@@ -19,7 +21,8 @@ README：**日本語** | [中文](https://github.com/suisei-cn/starbuttons/blob/
 
 ### 構成
 * [`src/components`](https://github.com/suisei-cn/starbuttons/tree/master/src/components) - ボタンの構成
-* [`src/App.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/App.vue) - ページ構造とボタンの変更
+* [`src/views/MainView.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/views/MainView.vue) - ページ構造
+* [`src/views/EditorView.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/views/EditorView.vue) - Suisei remix editor (experimental)
 * [`src/lang`](https://github.com/suisei-cn/starbuttons/tree/master/src/lang) - インターフェース言語ファイル
 * [`src/style/style.scss`](https://github.com/suisei-cn/starbuttons/blob/master/src/style/style.scss) - ボタンの共用スタイル
 

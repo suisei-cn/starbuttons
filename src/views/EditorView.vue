@@ -8,7 +8,7 @@
       <div
         id="operations"
         :style="{
-          display: smallScreen === 1 ? 'none' : 'block',
+          display: smallScreen === 1 ? 'none' : 'flex',
           opacity: smallScreen === 2 ? 0 : 1
         }"
       >
@@ -308,11 +308,20 @@ export default class App extends Vue {
 
 #page {
   height: 100%;
-  width: 100%;
+  margin: 0 2vw;
 }
 
 #header {
   text-align: center;
+}
+
+#operations {
+  display: flex;
+  flex-direction: row;
+  margin: 0 unquote("max(33vw, 200px)");
+  .normalBtn {
+    flex-grow: 1;
+  }
 }
 
 #smallScreen {
@@ -333,16 +342,10 @@ export default class App extends Vue {
 }
 
 #tracks {
-  position: static;
-  left: 2vw;
-  right: 2vw;
-  bottom: 2vh;
   background-color: aquamarine;
 }
 
 .track {
-  width: 100%;
-  left: 2.5%;
   height: $btn-height * 1.4;
   background-color: aqua;
 

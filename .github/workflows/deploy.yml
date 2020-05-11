@@ -16,12 +16,12 @@ jobs:
           persist-credentials: false
 
       - name: Test for voices 👓
-        run: npm run test-voice
+        run: yarn test-voice
 
       - name: Install and Build 🔧
         run: |
-          npm install
-          npm run build
+          yarn
+          yarn build
 
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.2.0

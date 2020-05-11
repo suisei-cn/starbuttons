@@ -14,8 +14,7 @@ jobs:
           persist-credentials: false
       
       - name: Test for voices 👓
-        run:
-          npm run test-voice
+        run: yarn test-voice
 
       - name: Install and Build 🔧
         run: |

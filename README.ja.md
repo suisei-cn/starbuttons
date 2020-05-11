@@ -22,7 +22,7 @@ README：**日本語** | [中文](https://github.com/suisei-cn/starbuttons/blob/
 ### 構成
 * [`src/components`](https://github.com/suisei-cn/starbuttons/tree/master/src/components) - ボタンの構成
 * [`src/views/MainView.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/views/MainView.vue) - ページ構造
-* [`src/views/EditorView.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/views/EditorView.vue) - Suisei remix editor (experimental)
+* [`src/views/EditorView.vue`](https://github.com/suisei-cn/starbuttons/blob/master/src/views/EditorView.vue) - すいちゃんリミックスエディター (試作版)
 * [`src/lang`](https://github.com/suisei-cn/starbuttons/tree/master/src/lang) - インターフェース言語ファイル
 * [`src/style/style.scss`](https://github.com/suisei-cn/starbuttons/blob/master/src/style/style.scss) - ボタンの共用スタイル
 

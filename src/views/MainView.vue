@@ -66,6 +66,7 @@ import { Component, Vue } from "vue-property-decorator";
 import { Sound } from "../types";
 import CentralButton from "../components/CentralButton.vue";
 import BaseButton from "../components/BaseButton.vue";
+import { setLanguage } from "../components/setLanguage";
 
 @Component({
   components: {
@@ -107,13 +108,7 @@ export default class App extends Vue {
         // tslint:disable-next-line:no-console
         console.error("Sound data fetch error. Exiting.");
       })) as Sound[];
-    const lang =
-      (
-        window.location.search.match(/lang=([a-zA-Z-]+)/)?.[1] ||
-        (navigator as any).language ||
-        (navigator as any).userLanguage
-      ).split("-")[0] || "zh";
-    this.$i18n.locale = lang;
+    setLanguage(window, navigator, this);
   }
 }
 </script>

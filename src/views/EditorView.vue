@@ -60,6 +60,7 @@ import { Sound } from "../types";
 import BaseButton from "../components/BaseButton.vue";
 import interact from "interactjs";
 import { mergeAudio, SynthItem } from "../components/HappySynthesizer";
+import { setLanguage } from "../components/setLanguage";
 
 let editorElements: {
   [key: string]: {
@@ -137,16 +138,6 @@ export default class App extends Vue {
     console.log(this.sounds);
   }
 
-  private loadLang() {
-    const lang =
-      (
-        window.location.search.match(/lang=([a-zA-Z-]+)/)?.[1] ||
-        (navigator as any).language ||
-        (navigator as any).userLanguage
-      ).split("-")[0] || "zh";
-    this.$i18n.locale = lang;
-  }
-
   private validateDisplay() {
     if (window.innerHeight > 600) {
       this.smallScreen = 0;
@@ -167,7 +158,7 @@ export default class App extends Vue {
 
   private async mounted() {
     await this.loadVoice();
-    this.loadLang();
+    setLanguage(window, navigator, this);
     this.validateDisplay();
     window.addEventListener("resize", this.validateDisplay);
     this.initDrag();

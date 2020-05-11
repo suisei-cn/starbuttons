@@ -1,7 +1,9 @@
 <template>
   <div id="page">
     <div id="header">
-      <h1>Suisei Remix Editor <sup>experimental</sup></h1>
+      <h1>
+        {{ $t("Suisei Remix Editor") }} <sup>{{ $t("experimental") }}</sup>
+      </h1>
       <p>You can remix the sounds at this page!</p>
       <div
         id="operations"
@@ -10,16 +12,18 @@
           opacity: smallScreen === 2 ? 0 : 1
         }"
       >
-        <div class="normalBtn" @click="playRemix">Play</div>
-        <div class="normalBtn" @click="exportRemix">Export</div>
-        <div class="normalBtn" @click="clearRemix">Clear</div>
+        <div class="normalBtn" @click="playRemix">{{ $t("Play") }}</div>
+        <div class="normalBtn" @click="exportRemix">{{ $t("Export") }}</div>
+        <div class="normalBtn" @click="clearRemix">{{ $t("Clear") }}</div>
       </div>
     </div>
     <div
       id="smallScreen"
       :style="{ display: smallScreen === 0 ? 'none' : 'block' }"
     >
-      <p>Your device screen is too small to run this editor. Sorry~</p>
+      <p>
+        {{ $t("Your device screen is too small to run this editor. Sorry~") }}
+      </p>
     </div>
     <div
       :style="{
@@ -182,10 +186,10 @@ export default class App extends Vue {
         })
       ],
       listeners: {
-        move: function(event: any) {
+        move: function (event: any) {
           moveHandler(event);
         },
-        end: function(event: any) {
+        end: function (event: any) {
           moveHandler(event);
           const target: HTMLElement = event.target;
           if (!target.getAttribute("data-seq-id")) {
@@ -223,7 +227,7 @@ export default class App extends Vue {
     });
     interact(".track").dropzone({
       accept: ".item",
-      ondragenter: function(event) {
+      ondragenter: function (event) {
         const target: HTMLElement = event.relatedTarget;
         let seqId = target.getAttribute("data-seq-id");
         if (seqId) return;
@@ -234,7 +238,7 @@ export default class App extends Vue {
           location: -1
         };
       },
-      ondragleave: function(event) {
+      ondragleave: function (event) {
         const target: HTMLElement = event.relatedTarget;
         const seqId = target.getAttribute("data-seq-id");
         if (seqId) {

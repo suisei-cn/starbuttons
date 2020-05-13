@@ -15,7 +15,6 @@ const routes: Array<RouteConfig> = [
     path: "/editor",
     name: "Editor",
     component: EditorView
-      
   }
 ];
 

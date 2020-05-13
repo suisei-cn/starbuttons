@@ -177,10 +177,10 @@ export default class App extends Vue {
         })
       ],
       listeners: {
-        move: function (event: any) {
+        move: function(event: any) {
           moveHandler(event);
         },
-        end: function (event: any) {
+        end: function(event: any) {
           moveHandler(event);
           const target: HTMLElement = event.target;
           if (!target.getAttribute("data-seq-id")) {
@@ -218,7 +218,7 @@ export default class App extends Vue {
     });
     interact(".track").dropzone({
       accept: ".item",
-      ondragenter: function (event) {
+      ondragenter: function(event) {
         const target: HTMLElement = event.relatedTarget;
         let seqId = target.getAttribute("data-seq-id");
         if (seqId) return;
@@ -229,7 +229,7 @@ export default class App extends Vue {
           location: -1
         };
       },
-      ondragleave: function (event) {
+      ondragleave: function(event) {
         const target: HTMLElement = event.relatedTarget;
         const seqId = target.getAttribute("data-seq-id");
         if (seqId) {

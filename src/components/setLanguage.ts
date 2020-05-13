@@ -5,6 +5,5 @@ export function setLanguage(window: Window, navigator: Navigator, vue: Vue) {
       (navigator as any).language ||
       (navigator as any).userLanguage
     ).split("-")[0] || "zh";
-  console.log("Locale", lang);
   vue.$i18n.locale = lang;
 }

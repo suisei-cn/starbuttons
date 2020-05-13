@@ -2,6 +2,8 @@
   "name": "starbuttons",
   "version": "1.1.0",
   "private": true,
+  "description": "One or more vocal buttons for Suisei.",
+  "author": "Outvi V <oss@outv.im>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,10 +11,12 @@
     "test-voice": "test/voices.js",
     "test-bitrate": "bash test/bitrate.sh"
   },
+  "main": "babel.config.js",
   "dependencies": {
     "audio-encoder": "^1.0.1",
     "core-js": "^3.6.4",
     "interactjs": "^1.9.10",
+    "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-i18n": "^8.17.0",
@@ -26,6 +30,7 @@
     "@typescript-eslint/parser": "^2.26.0",
     "@vue/cli-plugin-babel": "^4.3.0",
     "@vue/cli-plugin-eslint": "^4.3.0",
+    "@vue/cli-plugin-pwa": "^4.3.1",
     "@vue/cli-plugin-router": "^4.3.0",
     "@vue/cli-plugin-typescript": "^4.3.0",
     "@vue/cli-plugin-vuex": "^4.3.0",
@@ -41,22 +46,19 @@
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
   },
-  "description": "One or more vocal buttons for Suisei.",
-  "main": "babel.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/suisei-cn/starbuttons.git"
+  "bugs": {
+    "url": "https://github.com/suisei-cn/starbuttons/issues"
   },
+  "homepage": "https://suisei.moe",
   "keywords": [
     "hololive",
     "suisei-hosimati",
     "vue",
     "typescript"
   ],
-  "author": "Outvi V <oss@outv.im>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/suisei-cn/starbuttons/issues"
-  },
-  "homepage": "https://suisei.moe"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suisei-cn/starbuttons.git"
+  }
 }

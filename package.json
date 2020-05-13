@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test-voice": "test/voices.js"
+    "test-voice": "test/voices.js",
+    "test-bitrate": "bash test/bitrate.sh"
   },
   "dependencies": {
     "audio-encoder": "^1.0.1",

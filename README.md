@@ -1,4 +1,4 @@
-# starbuttons ![Build & Deploy](https://github.com/suisei-cn/starbuttons/workflows/Build%20&%20Deploy/badge.svg)
+# starbuttons [![Build & Deploy](https://github.com/suisei-cn/starbuttons/workflows/Build%20&%20Deploy/badge.svg)](https://github.com/suisei-cn/starbuttons/actions)
 
 One or more vocal buttons for Suisei.
 

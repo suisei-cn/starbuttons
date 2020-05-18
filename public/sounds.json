@@ -23,8 +23,16 @@
       "zh": "姐姐，姐姐～",
       "ja": "お姉ちゃん，お姉ちゃん～"
     },
-    "file": "onee-chan.mp3",
-    "type": "normal"
+    "file": "j1Rrg4BnBjs--2774--2778.5.mp3",
+    "type": "normal",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "j1Rrg4BnBjs",
+      "time": {
+        "from": 2774,
+        "to": 2778.5
+      }
+    }
   },
   {
     "name": "I'm not calling you!",
@@ -32,8 +40,16 @@
       "zh": "没叫你啊！",
       "ja": "呼んで無いですけど！"
     },
-    "file": "not-calling-you.mp3",
-    "type": "normal"
+    "file": "j1Rrg4BnBjs--2781--2784.5.mp3",
+    "type": "normal",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "j1Rrg4BnBjs",
+      "time": {
+        "from": 2781,
+        "to": 2784.5
+      }
+    }
   },
   {
     "name": "But I Shirakami don't believe in you!",
@@ -41,8 +57,16 @@
       "zh": "但是我白上不相信你的鬼话",
       "ja": "でも白上信じられないな"
     },
-    "file": "but-shirakami-do-not-believe-in-you.mp3",
-    "type": "normal"
+    "file": "QcZp1-pPfxU--3563.9--3566.6.mp3",
+    "type": "normal",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "QcZp1-pPfxU",
+      "time": {
+        "from": 3563.9,
+        "to": 3566.6
+      }
+    }
   },
   {
     "name": "I'm gonna kill ya all over here!",
@@ -51,6 +75,14 @@
       "ja": "みんなここで殺してやるよ"
     },
     "file": "QcZp1-pPfxU-f--3486--3489.mp3",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "QcZp1-pPfxU",
+      "time": {
+        "from": 3486,
+        "to": 3489
+      }
+    },
     "type": "normal"
   },
   {

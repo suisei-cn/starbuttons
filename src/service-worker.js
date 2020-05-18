@@ -1,7 +1,7 @@
 const INITIAL_PRECACHING_URL = [
   "/assets/ehhh.mp3",
   "/assets/ehhh2.mp3",
-  "/assets/ehhh3.mp3",
+  "/assets/ehhh3.mp3"
 ];
 
 /**

@@ -2,9 +2,13 @@ const encoder = require("audio-encoder");
 
 async function encoderWrapper(buf: AudioBuffer): Promise<Blob> {
   return new Promise((resolve, reject) => {
-    encoder(buf, 128, null, function onComplete(blob: Blob) {
-      resolve(blob);
-    });
+    try {
+      encoder(buf, 128, null, function onComplete(blob: Blob) {
+        resolve(blob);
+      });
+    } catch (e) {
+      reject(e);
+    }
   });
 }
 
@@ -12,7 +16,7 @@ async function encoderWrapper(buf: AudioBuffer): Promise<Blob> {
  * ハッピーシンセサイザ (Happy Synthesizer)
  * This is the module used by EditorView to export the edits.
  */
-export async function mergeAudio(srcs: SynthItem[]): Promise<any> {
+export async function mergeAudio(srcs: SynthItem[]): Promise<string> {
   const ctx = new OfflineAudioContext(2, 44100 * 5, 44100);
   for (const i of srcs) {
     console.log(`Fetching ${i.musicurl}`);

@@ -48,27 +48,37 @@
         href="https://github.com/suisei-cn/starbuttons"
         target="_blank"
       >
-        <font-awesome-icon :icon="['fab', 'github']"/></a
+        <font-awesome-icon :alt="$t('GitHub')" :icon="['fab', 'github']"/></a
       >/
       <a
         class="bottonBtnLink"
         href="https://t.me/Hoshimati_Suisei"
         target="_blank"
       >
-        <font-awesome-icon :icon="['fab', 'telegram']" /> </a
+        <font-awesome-icon
+          :alt="$t('Telegram')"
+          :icon="['fab', 'telegram']"
+        /> </a
       >/
       <a
         class="bottonBtnLink"
         href="https://discord.gg/9fJGBZz"
         target="_blank"
       >
-        <font-awesome-icon :icon="['fab', 'discord']" /> </a
+        <font-awesome-icon
+          :alt="$t('Discord')"
+          :icon="['fab', 'discord']"
+        /> </a
       >/<a
         class="bottonBtnLink"
         href="https://discord.gg/4fmY8WC"
         target="_blank"
       >
-        <font-awesome-icon :icon="['fab', 'discord']" /> 🇬🇧
+        <font-awesome-icon
+          :alt="$t('Discord') + ' (' + $t('English') + ')'"
+          :icon="['fab', 'discord']"
+        />
+        🇬🇧
       </a>
     </div>
   </div>

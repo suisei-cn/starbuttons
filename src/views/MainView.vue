@@ -1,10 +1,10 @@
 <template>
   <main id="page" :class="{ themeDark: darkMode, themeSystem: !darkMode }">
     <div id="settings" :title="$t('Toggle chorus mode')">
-      <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
+      <input type="checkbox" value="multiPlay" v-model="settings" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
       |
-      <input type="checkbox" id="isDarkMode" v-model="darkMode" />
+      <input type="checkbox" value="darkMode" v-model="settings" />
       <label for="isDarkMode">{{ $t("Dark Theme") }}</label>
     </div>
     <div id="mainWrapper">
@@ -82,7 +82,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Watch } from "vue-property-decorator";
 import { Sound } from "../types";
 import BaseButton from "../components/BaseButton.vue";
 import { setLanguage } from "../components/setLanguage";
@@ -96,19 +96,13 @@ export default class App extends Vue {
   // @ts-ignore
   private sounds: Sound[] = [{}];
   private displayMusicBoard = false;
+  private settings: string[] = [];
+  private darkMode = false;
 
-  get multiPlay() {
-    return this.$store.state.multiPlay;
-  }
-  set multiPlay(value) {
-    this.$store.commit("setMultiPlay", value);
-  }
-
-  get darkMode() {
-    return this.$store.state.darkMode;
-  }
-  set darkMode(value) {
-    this.$store.commit("setDarkMode", value);
+  @Watch("settings")
+  private updateSettings(newValue: string[]) {
+    this.darkMode = this.$status.darkMode = newValue.includes("darkMode");
+    this.$status.multiPlay = newValue.includes("multiPlay");
   }
 
   get ehhhLocalizedName() {
@@ -127,11 +121,12 @@ export default class App extends Vue {
   }
 
   private async mounted() {
+    this.settings = ["multiPlay"];
     this.sounds = (await fetch("/sounds.json")
       .then(x => x.json())
       .catch(() => {
         // tslint:disable-next-line:no-console
-        console.error('Sound data fetch error. Exiting.');
+        console.error("Sound data fetch error. Exiting.");
       })) as Sound[];
     setLanguage(window, navigator, this);
   }

@@ -169,5 +169,20 @@
     },
     "file": "LS6srVfrxIk--1327.3--1328.4.mp3",
     "type": "normal"
+  },
+  {
+    "name": "Sui-chan made no mistake!",
+    "name_l10n": {
+      "zh": "彗酱才没有错呢！"
+    },
+    "file": "IRr6aAS3zLQ--2596.4--2599.mp3",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "IRr6aAS3zLQ",
+      "time": {
+        "from": 2596.4,
+        "to": 2599
+      }
+    }
   }
 ]

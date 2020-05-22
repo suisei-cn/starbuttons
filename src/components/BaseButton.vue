@@ -6,6 +6,7 @@
     :style="{
       minWidth
     }"
+    tabindex="0"
   >
     {{ localizedName }}
   </div>

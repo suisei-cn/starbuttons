@@ -1,16 +1,16 @@
 @import "./colorScheme.scss";
 
-#app {
+#page {
   @include colorScheme(0);
 }
 
-#app.themeSystem {
+#page.themeSystem {
   @media (prefers-color-scheme: dark) {
     @include colorScheme(1);
   }
 }
 
-#app.themeDark {
+#page.themeDark {
   @include colorScheme(1);
 }
 

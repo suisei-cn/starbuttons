@@ -46,7 +46,7 @@ export default class BaseButton extends Vue {
     if (!this.item) {
       return;
     }
-    if (this.$store.getters.playing > 0 && !this.$store.state.multiPlay) {
+    if (this.$status.playCount > 0 && !this.$status.multiPlay) {
       return;
     }
     let audioFilename;
@@ -63,11 +63,11 @@ export default class BaseButton extends Vue {
     audio.addEventListener("play", () => {
       this.pendingNetwork = false;
       that.playLayer += 1;
-      that.$store.commit("playOne");
+      this.$status.playCount++;
     });
     audio.addEventListener("ended", () => {
       that.playLayer -= 1;
-      that.$store.commit("stopOne");
+      this.$status.playCount--;
     });
     audio.play();
   }

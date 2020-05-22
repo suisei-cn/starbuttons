@@ -171,9 +171,10 @@
     "type": "normal"
   },
   {
-    "name": "Sui-chan made no mistake!",
+    "//":"For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk",
+    "name": "Sui-chan made no mistake watamever it was!",
     "name_l10n": {
-      "zh": "彗酱才没有错呢！"
+      "zh": "wtm才没有错呢！"
     },
     "file": "IRr6aAS3zLQ--2596.4--2599.mp3",
     "metadata": {

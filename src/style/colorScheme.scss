@@ -1,0 +1,19 @@
+@mixin colorScheme($dark: 0) {
+  @if $dark == 0 {
+    --color-background: white;
+    --color-font: black;
+    --color-1: #97cbed;
+    --color-2: #6375bc;
+    --board-color: #97cbed44;
+    --bottom-link-color: #6375bc;
+  } @else {
+    --color-background: black;
+    --color-font: white;
+    --color-1: #6375bc;
+    --color-2: #485488;
+    --board-color: #97cbed44;
+    --bottom-link-color: #ccc;
+  }
+}
+
+

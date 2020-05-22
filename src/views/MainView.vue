@@ -1,8 +1,11 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ themeDark: darkMode, themeSystem: !darkMode }">
     <div class="settingsBtn" :title="$t('Toggle chorus mode')">
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
+      |
+      <input type="checkbox" id="isDarkMode" v-model="darkMode" />
+      <label for="isDarkMode">{{ $t("Dark Mode") }}</label>
     </div>
     <div id="mainWrapper">
       <div
@@ -109,6 +112,13 @@ export default class App extends Vue {
     this.$store.commit("setMultiPlay", value);
   }
 
+  get darkMode() {
+    return this.$store.state.darkMode;
+  }
+  set darkMode(value) {
+    this.$store.commit("setDarkMode", value);
+  }
+
   get ehhhLocalizedName() {
     return (
       (this?.sounds[0].name_l10n || {})[this.$i18n.locale] ||
@@ -149,6 +159,8 @@ export default class App extends Vue {
   position: absolute;
   left: 0;
   top: 0;
+  background-color: var(--color-background);
+  color: var(--color-font);
 }
 </style>
 
@@ -206,7 +218,7 @@ label {
   width: 80vw;
   padding: 5px;
   border-radius: 12px;
-  background: #97cbed44;
+  background: var(--board-color);
 
   font-display: swap;
   .normalBtn {
@@ -239,6 +251,6 @@ label {
 .bottonBtnLink {
   margin: 0 0.5vw;
   text-decoration: none;
-  color: #6375bc;
+  color: var(--bottom-link-color);
 }
 </style>

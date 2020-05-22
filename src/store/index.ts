@@ -6,7 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     concurPlay: 0,
-    multiPlay: true
+    multiPlay: true,
+    darkMode: false
   },
   getters: {
     playing: state => state.concurPlay > 0
@@ -22,6 +23,9 @@ export default new Vuex.Store({
     },
     setMultiPlay(state, option) {
       state.multiPlay = option;
+    },
+    setDarkMode(state, option) {
+      state.darkMode = option;
     }
   }
 });

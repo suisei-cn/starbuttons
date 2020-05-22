@@ -50,36 +50,27 @@
         href="https://github.com/suisei-cn/starbuttons"
         target="_blank"
       >
-        <font-awesome-icon :alt="$t('GitHub')" :icon="['fab', 'github']"/></a
+        <i class="icon-github"></i> </a
       >/
       <a
         class="bottonBtnLink"
         href="https://t.me/Hoshimachi_Suisei"
         target="_blank"
       >
-        <font-awesome-icon
-          :alt="$t('Telegram')"
-          :icon="['fab', 'telegram']"
-        /> </a
+        <i class="icon-telegram"></i> </a
       >/
       <a
         class="bottonBtnLink"
         href="https://discord.gg/9fJGBZz"
         target="_blank"
       >
-        <font-awesome-icon
-          :alt="$t('Discord')"
-          :icon="['fab', 'discord']"
-        /> </a
+        <i class="icon-discord"></i> </a
       >/<a
         class="bottonBtnLink"
         href="https://discord.gg/4fmY8WC"
         target="_blank"
       >
-        <font-awesome-icon
-          :alt="$t('Discord') + ' (' + $t('English') + ')'"
-          :icon="['fab', 'discord']"
-        />
+        <i class="icon-discord"></i>
         🇬🇧
       </a>
     </div>

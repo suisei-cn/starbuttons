@@ -3,3 +3,7 @@
     <router-view />
   </div>
 </template>
+
+<style lang="scss">
+@import "./style/fontface.scss";
+</style>

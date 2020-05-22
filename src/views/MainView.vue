@@ -13,7 +13,6 @@
         :class="{
           musicBoard: displayMusicBoard,
           musicButton: !displayMusicBoard,
-          btn: !displayMusicBoard,
           animateBtn: !displayMusicBoard
         }"
         @click="playEhhh"
@@ -41,7 +40,7 @@
     <div
       id="switchBtn"
       @click="displayMusicBoard = !displayMusicBoard"
-      class="btn animateBtn"
+      class="animateBtn"
     >
       {{ displayMusicBoard ? $t("Back") : $t("Music board") }}
     </div>
@@ -90,13 +89,11 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { Sound } from "../types";
-import CentralButton from "../components/CentralButton.vue";
 import BaseButton from "../components/BaseButton.vue";
 import { setLanguage } from "../components/setLanguage";
 
 @Component({
   components: {
-    CentralButton,
     BaseButton
   }
 })
@@ -166,7 +163,6 @@ export default class App extends Vue {
 
 <style lang="scss" scoped>
 @import "../style/style";
-@import "../style/centralButton";
 
 $table-height: 52vh;
 
@@ -189,9 +185,37 @@ label {
 }
 
 #board {
+  #bigButtonText {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
     background 0.25s linear;
   position: relative; // for #bigButtonText
+}
+
+.animateBtn {
+  height: 40vh;
+  width: 40vw;
+  margin-top: 9vh;
+  line-height: 40vh;
+  font-size: 5rem;
+  @media screen and (max-width: 1340px) {
+    font-size: 2rem !important;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 1rem !important;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 0 !important;
+  }
 }
 
 @keyframes button-appear {
@@ -232,6 +256,11 @@ label {
   }
 }
 
+.musicButton {
+  height: 40vh;
+  width: 40vw;
+}
+
 #virtualCentralButton {
   display: none;
 }
@@ -248,6 +277,7 @@ label {
   display: flex;
   line-height: 1em;
 }
+
 .bottonBtnLink {
   margin: 0 0.5vw;
   text-decoration: none;

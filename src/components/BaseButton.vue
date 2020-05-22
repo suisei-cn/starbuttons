@@ -2,7 +2,11 @@
   <div
     @click="play"
     ref="self"
-    :class="{ playingBtn: playLayer > 0, testHoverWidth }"
+    :class="{
+      playingBtn: playLayer > 0,
+      testHoverWidth,
+      pending: pendingNetwork
+    }"
     :style="{
       minWidth
     }"
@@ -21,6 +25,7 @@ export default class BaseButton extends Vue {
   @Prop() private item!: Sound;
   @Prop() private noclickplay!: boolean;
   private playLayer = 0;
+  private pendingNetwork = false;
   private testHoverWidth = false;
   private minWidth = "0px";
   private mounted() {
@@ -52,9 +57,11 @@ export default class BaseButton extends Vue {
         Math.floor(Math.random() * this.item.file.length)
       ];
     }
+    this.pendingNetwork = true;
     const audio = new Audio(`assets/${audioFilename}`);
     const that = this;
     audio.addEventListener("play", () => {
+      this.pendingNetwork = false;
       that.playLayer += 1;
       that.$store.commit("playOne");
     });
@@ -66,3 +73,9 @@ export default class BaseButton extends Vue {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.pending {
+  opacity: 0.8;
+}
+</style>

@@ -136,7 +136,7 @@ export default class App extends Vue {
       .then(x => x.json())
       .catch(() => {
         // tslint:disable-next-line:no-console
-        console.error("Sound data fetch error. Exiting.");
+        console.error('Sound data fetch error. Exiting.');
       })) as Sound[];
     setLanguage(window, navigator, this);
   }
@@ -312,6 +312,7 @@ label {
   margin-bottom: 11vh;
   display: flex;
   line-height: 1em;
+  align-items: center;
 }
 
 .bottonBtnLink {

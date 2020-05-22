@@ -5,7 +5,7 @@
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
       |
       <input type="checkbox" id="isDarkMode" v-model="darkMode" />
-      <label for="isDarkMode">{{ $t("Dark Mode") }}</label>
+      <label for="isDarkMode">{{ $t("Dark Theme") }}</label>
     </div>
     <div id="mainWrapper">
       <div

@@ -1,5 +1,6 @@
 export default {
   "Do Not Click Me": "没事不要点",
+  "Dark Theme": "暗色主题",
   GitHub: "代码猫",
   Telegram: "观星台",
   Discord: "Discord",

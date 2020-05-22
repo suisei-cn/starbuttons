@@ -2,6 +2,7 @@
   @if $dark == 0 {
     --color-background: white;
     --color-font: black;
+    --color-font-button: white;
     --color-1: #97cbed;
     --color-2: #6375bc;
     --board-color: #97cbed44;
@@ -9,11 +10,10 @@
   } @else {
     --color-background: black;
     --color-font: white;
+    --color-font-button: white;
     --color-1: #6375bc;
     --color-2: #485488;
     --board-color: #97cbed44;
     --bottom-link-color: #ccc;
   }
 }
-
-

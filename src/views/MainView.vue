@@ -1,6 +1,6 @@
 <template>
   <div id="app" :class="{ themeDark: darkMode, themeSystem: !darkMode }">
-    <div class="settingsBtn" :title="$t('Toggle chorus mode')">
+    <div id="settings" :title="$t('Toggle chorus mode')">
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
       |
@@ -12,9 +12,9 @@
         id="board"
         :class="{
           musicBoard: displayMusicBoard,
-          musicButton: !displayMusicBoard,
           animateBtn: !displayMusicBoard
         }"
+        class="bigBtn"
         @click="playEhhh"
       >
         <div id="boardWrapper">
@@ -40,7 +40,7 @@
     <div
       id="switchBtn"
       @click="displayMusicBoard = !displayMusicBoard"
-      class="animateBtn"
+      class="animateBtn smallBtn"
     >
       {{ displayMusicBoard ? $t("Back") : $t("Music board") }}
     </div>
@@ -144,6 +144,20 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
+// Frames
+@keyframes button-appear {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Styles
 #app {
   height: 100vh;
   width: 100vw;
@@ -175,7 +189,7 @@ label {
   font-size: 16px;
 }
 
-.settingsBtn {
+#settings {
   margin-top: 15vh;
   height: 6vh;
 }
@@ -185,23 +199,62 @@ label {
 }
 
 #board {
-  #bigButtonText {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
     background 0.25s linear;
   position: relative; // for #bigButtonText
 }
 
+#bigButtonText {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .animateBtn {
+  text-align: center;
+  overflow: hidden;
+  font-family: Fira Code, iA Writer Mono V, IBM Plex Mono, Roboto Mono, Courier,
+    monospace;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(var(--color-1), var(--color-2));
+  user-select: none;
+  box-shadow: 0 0.9px 2.2px rgba(0, 0, 0, 0.02),
+    0 2.1px 5.3px rgba(0, 0, 0, 0.028), 0 4px 10px rgba(0, 0, 0, 0.035),
+    0 7.1px 17.9px rgba(0, 0, 0, 0.042), 0 13.4px 33.4px rgba(0, 0, 0, 0.05),
+    0 32px 80px rgba(0, 0, 0, 0.07);
+
+  &:hover {
+    box-shadow: 0 2.2px 2.2px rgba(176, 201, 239, 0.2),
+      0 5.3px 5.3px rgba(176, 201, 239, 0.28),
+      0 10px 10px rgba(176, 201, 239, 0.35),
+      0 17.9px 17.9px rgba(0, 0, 0, 0.042), 0 33.4px 33.4px rgba(0, 0, 0, 0.05),
+      0 80px 80px rgba(0, 0, 0, 0.07);
+  }
+
+  transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;
+  color: var(--color-font-button);
+}
+
+.smallBtn {
+  font-size: 1.6rem;
+  @media screen and (max-width: 1340px) {
+    font-size: 1rem !important;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 0.5rem !important;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 0 !important;
+  }
+}
+
+.animateBtn.bigBtn {
   height: 40vh;
   width: 40vw;
   margin-top: 9vh;
@@ -215,18 +268,6 @@ label {
   }
   @media screen and (max-width: 300px) {
     font-size: 0 !important;
-  }
-}
-
-@keyframes button-appear {
-  from {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
@@ -254,11 +295,6 @@ label {
   #bigButtonText {
     opacity: 0;
   }
-}
-
-.musicButton {
-  height: 40vh;
-  width: 40vw;
 }
 
 #virtualCentralButton {

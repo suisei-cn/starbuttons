@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ themeDark: darkMode, themeSystem: !darkMode }">
+  <main id="page" :class="{ themeDark: darkMode, themeSystem: !darkMode }">
     <div id="settings" :title="$t('Toggle chorus mode')">
       <input type="checkbox" id="isMutliplay" v-model="multiPlay" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
@@ -27,7 +27,7 @@
             ></BaseButton>
           </template>
         </div>
-        <span id="bigButtonText">
+        <span id="bigButtonText" :tabindex="displayMusicBoard ? -1 : 0">
           {{ ehhhLocalizedName }}
         </span>
       </div>
@@ -40,6 +40,7 @@
     <div
       id="switchBtn"
       @click="displayMusicBoard = !displayMusicBoard"
+      tabindex="0"
       class="animateBtn smallBtn"
     >
       {{ displayMusicBoard ? $t("Back") : $t("Music board") }}
@@ -48,7 +49,7 @@
       <a
         class="bottonBtnLink"
         href="https://github.com/suisei-cn/starbuttons"
-        alt="GitHub repository of suisei.moe"
+        aria-label="GitHub repository of suisei.moe"
         target="_blank"
       >
         <i class="icon-github"></i> </a
@@ -56,7 +57,7 @@
       <a
         class="bottonBtnLink"
         href="https://t.me/Hoshimachi_Suisei"
-        alt="Telegram Fan Group"
+        aria-label="Telegram Fan Group"
         target="_blank"
       >
         <i class="icon-telegram"></i> <sup>(CN)</sup></a
@@ -64,20 +65,20 @@
       <a
         class="bottonBtnLink"
         href="https://discord.gg/9fJGBZz"
-        alt="Discord Fan Group"
+        aria-label="Discord Fan Group"
         target="_blank"
       >
         <i class="icon-discord"></i> <sup>(JP)</sup></a
       >/<a
         class="bottonBtnLink"
         href="https://discord.gg/4fmY8WC"
-        alt="Discord Fan Group"
+        aria-label="Discord Fan Group"
         target="_blank"
       >
         <i class="icon-discord"></i> <sup>(EN)</sup>
       </a>
     </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts">
@@ -152,7 +153,7 @@ export default class App extends Vue {
 }
 
 // Styles
-#app {
+#page {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -167,11 +168,11 @@ export default class App extends Vue {
   background-color: var(--color-background);
   color: var(--color-font);
 }
+
+@import "../style/style";
 </style>
 
 <style lang="scss" scoped>
-@import "../style/style";
-
 $table-height: 52vh;
 
 label {

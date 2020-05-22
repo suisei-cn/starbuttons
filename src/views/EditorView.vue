@@ -177,9 +177,11 @@ export default class App extends Vue {
         })
       ],
       listeners: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         move: function(event: any) {
           moveHandler(event);
         },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         end: function(event: any) {
           moveHandler(event);
           const target: HTMLElement = event.target;

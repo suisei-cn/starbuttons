@@ -48,6 +48,7 @@
       <a
         class="bottonBtnLink"
         href="https://github.com/suisei-cn/starbuttons"
+        alt="GitHub repository of suisei.moe"
         target="_blank"
       >
         <i class="icon-github"></i> </a
@@ -55,6 +56,7 @@
       <a
         class="bottonBtnLink"
         href="https://t.me/Hoshimachi_Suisei"
+        alt="Telegram Fan Group"
         target="_blank"
       >
         <i class="icon-telegram"></i> <sup>(CN)</sup></a
@@ -62,12 +64,14 @@
       <a
         class="bottonBtnLink"
         href="https://discord.gg/9fJGBZz"
+        alt="Discord Fan Group"
         target="_blank"
       >
         <i class="icon-discord"></i> <sup>(JP)</sup></a
       >/<a
         class="bottonBtnLink"
         href="https://discord.gg/4fmY8WC"
+        alt="Discord Fan Group"
         target="_blank"
       >
         <i class="icon-discord"></i> <sup>(EN)</sup>

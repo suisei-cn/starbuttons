@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import MainView from "../views/MainView.vue";
-import EditorView from "../views/EditorView.vue";
+
+const MainView = () => import("../views/MainView.vue");
+const EditorView = () => import("../views/EditorView.vue");
 
 Vue.use(VueRouter);
 

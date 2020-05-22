@@ -57,21 +57,20 @@
         href="https://t.me/Hoshimachi_Suisei"
         target="_blank"
       >
-        <i class="icon-telegram"></i> </a
+        <i class="icon-telegram"></i> <sup>(CN)</sup></a
       >/
       <a
         class="bottonBtnLink"
         href="https://discord.gg/9fJGBZz"
         target="_blank"
       >
-        <i class="icon-discord"></i> </a
+        <i class="icon-discord"></i> <sup>(JP)</sup></a
       >/<a
         class="bottonBtnLink"
         href="https://discord.gg/4fmY8WC"
         target="_blank"
       >
-        <i class="icon-discord"></i>
-        🇬🇧
+        <i class="icon-discord"></i> <sup>(EN)</sup>
       </a>
     </div>
   </div>

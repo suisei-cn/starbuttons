@@ -15,6 +15,7 @@
 }
 
 $btn-height: 40px;
+$btn-hover-font-weight: 900;
 
 .normalBtn {
   text-align: center;
@@ -35,12 +36,12 @@ $btn-height: 40px;
   font-weight: 0.23s ease-in-out;
 
   &.testHoverWidth {
-    font-weight: 800;
+    font-weight: $btn-hover-font-weight;
   }
 
   &:hover {
     cursor: pointer;
-    font-weight: 800;
+    font-weight: $btn-hover-font-weight;
     box-shadow: 0 0.4px 0.7px rgba(0, 0, 0, 0.02),
       0 1px 1.6px rgba(0, 0, 0, 0.028), 0 1.9px 3px rgba(0, 0, 0, 0.035),
       0 3.4px 5.4px rgba(102, 116, 181, 0.042),
@@ -51,6 +52,6 @@ $btn-height: 40px;
 
 .playingBtn,
 .animateBtn:hover {
-  font-weight: 900;
+  font-weight: $btn-hover-font-weight;
   transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;
 }

@@ -46,9 +46,6 @@ export default class BaseButton extends Vue {
     if (!this.item) {
       return;
     }
-    if (this.$status.playCount > 0 && !this.$status.multiPlay) {
-      return;
-    }
     let audioFilename;
     if (typeof this.item.file === "string") {
       audioFilename = this.item.file;
@@ -58,18 +55,17 @@ export default class BaseButton extends Vue {
       ];
     }
     this.pendingNetwork = true;
-    const audio = new Audio(`assets/${audioFilename}`);
+    const audio = this.$status.player.addAudio(`assets/${audioFilename}`);
     const that = this;
     audio.addEventListener("play", () => {
       this.pendingNetwork = false;
       that.playLayer += 1;
-      this.$status.playCount++;
+      console.log("Playlay+", this.playLayer);
     });
-    audio.addEventListener("ended", () => {
+    audio.addEventListener("pause", () => {
       that.playLayer -= 1;
-      this.$status.playCount--;
+      console.log("Playlay-", this.playLayer);
     });
-    audio.play();
   }
 }
 </script>

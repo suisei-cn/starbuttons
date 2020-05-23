@@ -52,7 +52,7 @@
       >/
       <a
         class="bottonBtnLink"
-        href="https://t.me/Hoshimati_Suisei"
+        href="https://t.me/Hoshimachi_Suisei"
         target="_blank"
       >
         <font-awesome-icon

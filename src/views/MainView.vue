@@ -27,7 +27,11 @@
             ></BaseButton>
           </template>
         </div>
-        <span id="bigButtonText" :tabindex="displayMusicBoard ? -1 : 0">
+        <span
+          id="bigButtonText"
+          :class="{ playingBtn }"
+          :tabindex="displayMusicBoard ? -1 : 0"
+        >
           {{ ehhhLocalizedName }}
         </span>
       </div>
@@ -36,6 +40,8 @@
       id="virtualCentralButton"
       :item="sounds[0]"
       ref="centralButton"
+      @started="playingBtn = true"
+      @stopped="playingBtn = false"
     ></BaseButton>
     <div
       id="switchBtn"
@@ -98,6 +104,7 @@ export default class App extends Vue {
   private displayMusicBoard = false;
   private settings: string[] = [];
   private darkMode = false;
+  private playingBtn = false;
 
   @Watch("settings")
   private updateSettings(newValue: string[]) {

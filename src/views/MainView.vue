@@ -102,7 +102,7 @@ export default class App extends Vue {
   @Watch("settings")
   private updateSettings(newValue: string[]) {
     this.darkMode = this.$status.darkMode = newValue.includes("darkMode");
-    this.$status.multiPlay = newValue.includes("multiPlay");
+    this.$status.player.multiPlay = newValue.includes("multiPlay");
   }
 
   get ehhhLocalizedName() {

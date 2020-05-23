@@ -2,13 +2,14 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import { i18n } from "./i18n-setup";
+import CentralPlayer from "./components/centralPlayer";
 
 import "./registerServiceWorker";
 
 Vue.prototype.$status = {
-  multiPlay: true,
   darkMode: false,
-  playCount: 0
+  playCount: 0,
+  player: new CentralPlayer()
 };
 
 Vue.config.productionTip = false;

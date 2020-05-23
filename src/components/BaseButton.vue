@@ -56,14 +56,19 @@ export default class BaseButton extends Vue {
     }
     this.pendingNetwork = true;
     const audio = this.$status.player.addAudio(`assets/${audioFilename}`);
-    const that = this;
     audio.addEventListener("play", () => {
       this.pendingNetwork = false;
-      that.playLayer += 1;
+      this.playLayer += 1;
+      if (this.playLayer === 1) {
+        this.$emit("started");
+      }
       console.log("Playlay+", this.playLayer);
     });
     audio.addEventListener("pause", () => {
-      that.playLayer -= 1;
+      this.playLayer -= 1;
+      if (this.playLayer === 0) {
+        this.$emit("stopped");
+      }
       console.log("Playlay-", this.playLayer);
     });
   }

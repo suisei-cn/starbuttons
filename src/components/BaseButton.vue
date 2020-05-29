@@ -62,14 +62,12 @@ export default class BaseButton extends Vue {
       if (this.playLayer === 1) {
         this.$emit("started");
       }
-      console.log("Playlay+", this.playLayer);
     });
     audio.addEventListener("pause", () => {
       this.playLayer -= 1;
       if (this.playLayer === 0) {
         this.$emit("stopped");
       }
-      console.log("Playlay-", this.playLayer);
     });
   }
 }

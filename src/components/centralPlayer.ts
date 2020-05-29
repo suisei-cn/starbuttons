@@ -7,11 +7,9 @@ export default class CentralPlayer {
     this.audios.push(audio);
     audio.addEventListener("play", () => {
       this.playCount += 1;
-      console.log("Playcnt+", this.playCount);
     });
     audio.addEventListener("pause", () => {
       this.playCount -= 1;
-      console.log("Playcnt-", this.playCount);
     });
     if (playNow) {
       audio.addEventListener("loadeddata", () => {

@@ -135,7 +135,6 @@ export default class App extends Vue {
         }
       }
     }
-    console.log(this.sounds);
   }
 
   private validateDisplay() {

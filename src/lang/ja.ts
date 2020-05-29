@@ -5,16 +5,16 @@ export default {
   Telegram: "Telegram",
   Discord: "Discord",
   English: "英語",
-  "Toggle chorus mode": "Toggle chorus mode",
+  "Toggle chorus mode": "コーラスモードをオンにする",
   "Music board": "Music board",
   Back: "Back",
-  "Suisei Remix Editor": "Suisei Remix Editor",
-  experimental: "experimental",
+  "Suisei Remix Editor": "すいちゃんリミックスエディター",
+  experimental: "試作版",
   Play: "Play",
   Export: "Export",
   Clear: "Clear",
   "Your device screen is too small to run this editor. Sorry~":
-    "Your device screen is too small to run this editor. Sorry~",
+    "ごめんなさい。画面が小さいためこのエディターを利用できません。",
   "long-editor-description":
-    "Here you can remix with Suisei's voice clips and export your sparks.<br>The full track length is 5 seconds. Drag the voice clip button on wherever you want on the track.<br>Please comply to <a href='https://hololive.tv/terms'>Hololive's fan work guidelines</a> when creating derivative works.<br>(This editor is experimental and may change a lot and add many features in the future.)"
+    "ここですいちゃんの音声素材をリミックスして保存することができます。<br>音声は5秒まで可能です。 追加したい場所に音声素材をドラッグしてください。<br>使用する際は<a href='https://hololive.tv/terms'>ホロライブ二次創作規約</a>に従ってください。<br>(このエディターは試作版です。今後新たな機能が追加されることがあります。)"
 };

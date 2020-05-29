@@ -235,6 +235,7 @@ label {
   margin-top: 4vh;
   margin-bottom: 11vh;
   display: flex;
+  line-height: 1em;
 }
 .bottonBtnLink {
   margin: 0 0.5vw;

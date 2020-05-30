@@ -186,5 +186,22 @@
         "to": 2599
       }
     }
+  }, {
+    "//": "English translation via https://www.youtube.com/watch?v=_B-Q10J9KSg",
+    "name": "It's your diamond in the rough, your shooting star,​ Hoshimachi Suisei, in the flash!",
+    "name_l10n": {
+      "//": "Chinese translation via https://www.bilibili.com/video/av94833283",
+      "zh": "如同彗星一般登场的星之原石，我是星街彗星！",
+      "ja": "彗星​のごとくあらわれた​スター​の原石​☆​​星街すいせいです！"
+    },
+    "file": "_B-Q10J9KSg--11.4--14.5.mp3",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "_B-Q10J9KSg",
+      "time": {
+        "from": 11.4,
+        "to": 14.5
+      }
+    }
   }
 ]

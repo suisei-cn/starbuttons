@@ -1,12 +1,19 @@
 @import "./colorScheme.scss";
 
-#page {
+#page,
+#page.themeSystem {
   @include colorScheme(0);
 }
+#page {
+  --theme-preference: "light";
+}
 
-#page.themeSystem {
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
+  #page.themeSystem {
     @include colorScheme(1);
+  }
+  #page {
+    --theme-preference: "dark";
   }
 }
 

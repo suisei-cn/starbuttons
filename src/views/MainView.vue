@@ -1,11 +1,30 @@
 <template>
-  <main id="page" :class="{ themeDark: darkMode, themeSystem: !darkMode }">
+  <main
+    id="page"
+    :class="{ themeDark: enforceDarkTheme, themeSystem: useSystemTheme }"
+  >
     <div id="settings" :title="$t('Toggle chorus mode')">
       <input type="checkbox" value="multiPlay" v-model="settings" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
       |
-      <input type="checkbox" value="darkMode" v-model="settings" />
-      <label for="isDarkMode">{{ $t("Dark Theme") }}</label>
+      <template v-if="currentSystemTheme === 'light'">
+        <input
+          id="toggleEnforceDarkMode"
+          type="checkbox"
+          value="enforceMode__dark"
+          v-model="settings"
+        />
+        <label for="toggleEnforceDarkMode">{{ $t("Dark Theme") }}</label>
+      </template>
+      <template v-else>
+        <input
+          id="toggleEnforceLightMode"
+          type="checkbox"
+          value="enforceMode__light"
+          v-model="settings"
+        />
+        <label for="toggleEnforceLightMode">{{ $t("Light Theme") }}</label>
+      </template>
     </div>
     <div id="mainWrapper">
       <div
@@ -90,8 +109,14 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 import { Sound } from "../types";
+import {
+  getItem,
+  setItem,
+  removeItem
+} from "../components/localStorageWrapper";
 import BaseButton from "../components/BaseButton.vue";
 import { setLanguage } from "../components/setLanguage";
+const THEME_ENFORCEMENT_SETTINGS_ITEM = "enforced-theme";
 
 @Component({
   components: {
@@ -103,12 +128,24 @@ export default class App extends Vue {
   private sounds: Sound[] = [{}];
   private displayMusicBoard = false;
   private settings: string[] = [];
-  private darkMode = false;
+  private useSystemTheme = true;
+  private enforceDarkTheme = false;
   private playingBtn = false;
+  private currentSystemTheme = "light";
 
   @Watch("settings")
   private updateSettings(newValue: string[]) {
-    this.darkMode = this.$status.darkMode = newValue.includes("darkMode");
+    if (newValue.includes("enforceMode__dark")) {
+      setItem(THEME_ENFORCEMENT_SETTINGS_ITEM, "dark");
+      this.enforceDarkTheme = true;
+    } else if (newValue.includes("enforceMode__light")) {
+      setItem(THEME_ENFORCEMENT_SETTINGS_ITEM, "light");
+      this.enforceDarkTheme = false;
+      this.useSystemTheme = false;
+    } else {
+      this.enforceDarkTheme = false;
+      this.useSystemTheme = true;
+    }
     this.$status.player.multiPlay = newValue.includes("multiPlay");
   }
 
@@ -127,6 +164,28 @@ export default class App extends Vue {
     }
   }
 
+  private updateThemeSettings() {
+    this.currentSystemTheme = (() => {
+      try {
+        return getComputedStyle(document.getElementById("page") as HTMLElement)
+          .getPropertyValue("--theme-preference")
+          .includes("light")
+          ? "light"
+          : "dark";
+      } catch (e) {
+        return "light";
+      }
+    })();
+    const enforcedTheme = getItem(THEME_ENFORCEMENT_SETTINGS_ITEM);
+    if (enforcedTheme === null) return;
+    if (this.currentSystemTheme === enforcedTheme) {
+      removeItem(THEME_ENFORCEMENT_SETTINGS_ITEM);
+    } else {
+      this.useSystemTheme = false;
+      this.settings.push(`enforceMode__${enforcedTheme}`);
+    }
+  }
+
   private async mounted() {
     this.settings = ["multiPlay"];
     this.sounds = (await fetch("/sounds.json")
@@ -136,6 +195,7 @@ export default class App extends Vue {
         console.error("Sound data fetch error. Exiting.");
       })) as Sound[];
     setLanguage(window, navigator, this);
+    this.updateThemeSettings();
   }
 }
 </script>

@@ -1,6 +1,7 @@
 export default {
   "Do Not Click Me": "Do Not Click Me",
   "Dark Theme": "Dark Theme",
+  "Light Theme": "Light Theme",
   GitHub: "GitHub",
   Telegram: "Telegram",
   Discord: "Discord",

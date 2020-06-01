@@ -8,6 +8,5 @@ export interface Sound {
 }
 
 export interface PageStatus {
-  darkMode: boolean;
   player: CentralPlayer;
 }

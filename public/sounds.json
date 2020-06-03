@@ -171,7 +171,7 @@
     "type": "normal"
   },
   {
-    "//":"For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk",
+    "//": "For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk",
     "name": "Sui-chan made no mistake watamever it was!",
     "name_l10n": {
       "zh": "wtm才没有错呢！",
@@ -186,7 +186,8 @@
         "to": 2599
       }
     }
-  }, {
+  },
+  {
     "//": "English translation via https://www.youtube.com/watch?v=_B-Q10J9KSg",
     "name": "It's your diamond in the rough, your shooting star,​ Hoshimachi Suisei, in the flash!",
     "name_l10n": {
@@ -201,6 +202,23 @@
       "time": {
         "from": 11.4,
         "to": 14.5
+      }
+    }
+  },
+  {
+    "name": "I'm not invited!!",
+    "name_l10n": {
+      "//": "zh: https://t.bilibili.com/395499860137488715?tab=2, ja: https://twitter.com/suisei_hosimati/status/1267046799421792256",
+      "zh": "咋不带我玩儿呢！!",
+      "ja": "私誘われていないんだけど！!"
+    },
+    "file": "PJf3XZ636-0--66--68.05.mp3",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "PJf3XZ636-0",
+      "time": {
+        "from": 66,
+        "to": 68.05
       }
     }
   }

@@ -237,5 +237,21 @@
         "to": 1953.36
       }
     }
+  },
+  {
+    "name": "(Mario BGM...) Ahhhhh!",
+    "name_l10n": {
+      "zh": "（马里奥背景音乐...）啊！",
+      "ja": "(Mario BGM...) Ahhhhh!"
+    },
+    "file": "KTuIsqb7G1s--711.4--716.5.mp3",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "KTuIsqb7G1s",
+      "time": {
+        "from": 711.4,
+        "to": 716.5
+      }
+    }
   }
 ]

@@ -221,5 +221,21 @@
         "to": 68.05
       }
     }
+  },
+  {
+    "name": "LOL",
+    "name_l10n": {
+      "zh": "（笑）",
+      "ja": "（笑）"
+    },
+    "file": "BjuYqoY_CxI--1842.9--1953.36.mp3",
+    "metadata": {
+      "site": "youtube",
+      "identifier": "BjuYqoY_CxI",
+      "time": {
+        "from": 1842.9,
+        "to": 1953.36
+      }
+    }
   }
 ]

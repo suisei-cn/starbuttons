@@ -1,257 +1,277 @@
 [
-  {
-    "name": "Eeehihihihi",
-    "name_l10n": {
-      "ja": "イヒヒヒヒ",
-      "zh": "噫hihihihi"
+    {
+        "name": "Eeehihihihi",
+        "name_l10n": {
+            "ja": "イヒヒヒヒ",
+            "zh": "噫hihihihi"
+        },
+        "file": [
+            "ehhh.mp3",
+            "ehhh2.mp3",
+            "ehhh3.mp3"
+        ],
+        "type": "center"
     },
-    "file": ["ehhh.mp3", "ehhh2.mp3", "ehhh3.mp3"],
-    "type": "center"
-  },
-  {
-    "name": "Ahahaha",
-    "name_l10n": {
-      "zh": "啊哈哈哈",
-      "ja": "あははははは"
+    {
+        "name": "Ahahaha",
+        "name_l10n": {
+            "zh": "啊哈哈哈",
+            "ja": "あははははは"
+        },
+        "file": "ahhh.mp3",
+        "type": "normal"
     },
-    "file": "ahhh.mp3",
-    "type": "normal"
-  },
-  {
-    "name": "Big sister~",
-    "name_l10n": {
-      "zh": "姐姐，姐姐～",
-      "ja": "お姉ちゃん，お姉ちゃん～"
+    {
+        "name": "Big sister~",
+        "name_l10n": {
+            "zh": "姐姐，姐姐～",
+            "ja": "お姉ちゃん，お姉ちゃん～"
+        },
+        "file": "j1Rrg4BnBjs--2774--2778.5.mp3",
+        "type": "normal",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "j1Rrg4BnBjs",
+            "time": {
+                "from": 2774,
+                "to": 2778.5
+            }
+        }
     },
-    "file": "j1Rrg4BnBjs--2774--2778.5.mp3",
-    "type": "normal",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "j1Rrg4BnBjs",
-      "time": {
-        "from": 2774,
-        "to": 2778.5
-      }
+    {
+        "name": "I'm not calling you!",
+        "name_l10n": {
+            "zh": "没叫你啊！",
+            "ja": "呼んで無いですけど！"
+        },
+        "file": "j1Rrg4BnBjs--2781--2784.5.mp3",
+        "type": "normal",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "j1Rrg4BnBjs",
+            "time": {
+                "from": 2781,
+                "to": 2784.5
+            }
+        }
+    },
+    {
+        "name": "But I Shirakami don't believe in you!",
+        "name_l10n": {
+            "zh": "但是我白上不相信你的鬼话",
+            "ja": "でも白上信じられないな"
+        },
+        "file": "QcZp1-pPfxU--3563.9--3566.6.mp3",
+        "type": "normal",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "QcZp1-pPfxU",
+            "time": {
+                "from": 3563.9,
+                "to": 3566.6
+            }
+        }
+    },
+    {
+        "name": "I'm gonna kill ya all over here!",
+        "name_l10n": {
+            "zh": "就在这里把你们都杀光！",
+            "ja": "みんなここで殺してやるよ"
+        },
+        "file": "QcZp1-pPfxU-f--3486--3489.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "QcZp1-pPfxU",
+            "time": {
+                "from": 3486,
+                "to": 3489
+            }
+        },
+        "type": "normal"
+    },
+    {
+        "name": "I wanna play Tetris with the girls as the blocks!​",
+        "name_l10n": {
+            "zh": "想把大家当作俄罗斯方块玩！",
+            "ja": "みんなをテトリスにして遊びたい！​"
+        },
+        "metadata": {
+            "site": "youtube",
+            "identifier": "_B-Q10J9KSg",
+            "time": {
+                "from": 0,
+                "to": 2
+            }
+        },
+        "file": "_B-Q10J9KSg--0--2.mp3",
+        "type": "normal"
+    },
+    {
+        "name": "Tetris sure is fun!​",
+        "name_l10n": {
+            "zh": "果然俄罗斯方块很有趣呢！",
+            "ja": "やっぱりテトリスは楽しいなぁ​！​"
+        },
+        "metadata": {
+            "site": "youtube",
+            "identifier": "_B-Q10J9KSg",
+            "time": {
+                "from": 57,
+                "to": 59
+            }
+        },
+        "file": "_B-Q10J9KSg--57--59.mp3",
+        "type": "normal"
+    },
+    {
+        "name": "I'll definitely kill everyone",
+        "name_l10n": {
+            "zh": "绝对要把大家都杀掉",
+            "ja": "絶対全員殺してやる"
+        },
+        "metadata": {
+            "site": "youtube",
+            "identifier": "GfbgRHGLOZw",
+            "time": {
+                "from": 503.55,
+                "to": 505.55
+            }
+        },
+        "file": "GfbgRHGLOZw-503.5-505.9-gonna-kill-ya-all-over-here.mp3",
+        "type": "normal"
+    },
+    {
+        "name": "(Scream) ...I'm sorry.",
+        "name_l10n": {
+            "zh": "(非洲人的呐喊) ...抱歉。",
+            "ja": "(あ゛ぁ゛ぁ゛ぁ゛ぁ゛ぁ゛) ... しみません。"
+        },
+        "metadata": {
+            "site": "youtube",
+            "identifier": "kKm-MqVoLzg",
+            "time": {
+                "from": 2032.5,
+                "to": 2042.6
+            }
+        },
+        "file": "kKm-MqVoLzg--2032.5--2042.6.mp3",
+        "type": "normal"
+    },
+    {
+        "name": "Lambda!",
+        "name_l10n": {
+            "zh": "Lambda!",
+            "ja": "らむだ！"
+        },
+        "metadata": {
+            "site": "youtube",
+            "identifier": "LS6srVfrxIk",
+            "time": {
+                "from": 1327.3,
+                "to": 1328.4
+            }
+        },
+        "file": "LS6srVfrxIk--1327.3--1328.4.mp3",
+        "type": "normal"
+    },
+    {
+        "//": "For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk",
+        "name": "Sui-chan made no mistake watamever it was!",
+        "name_l10n": {
+            "zh": "wtm才没有错呢！",
+            "ja": "すいちゃんはわるくないよねぇ..."
+        },
+        "file": "IRr6aAS3zLQ--2596.4--2599.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "IRr6aAS3zLQ",
+            "time": {
+                "from": 2596.4,
+                "to": 2599
+            }
+        }
+    },
+    {
+        "//": "English translation via https://www.youtube.com/watch?v=_B-Q10J9KSg",
+        "name": "It's your diamond in the rough, your shooting star,​ Hoshimachi Suisei, in the flash!",
+        "name_l10n": {
+            "//": "Chinese translation via https://www.bilibili.com/video/av94833283",
+            "zh": "如同彗星一般登场的星之原石，我是星街彗星！",
+            "ja": "彗星​のごとくあらわれた​スター​の原石​☆​​星街すいせいです！"
+        },
+        "file": "_B-Q10J9KSg--11.4--14.5.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "_B-Q10J9KSg",
+            "time": {
+                "from": 11.4,
+                "to": 14.5
+            }
+        }
+    },
+    {
+        "name": "I'm not invited!!",
+        "name_l10n": {
+            "//": "zh: https://t.bilibili.com/395499860137488715?tab=2, ja: https://twitter.com/suisei_hosimati/status/1267046799421792256",
+            "zh": "咋不带我玩儿呢！!",
+            "ja": "私誘われていないんだけど！!"
+        },
+        "file": "PJf3XZ636-0--66--68.05.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "PJf3XZ636-0",
+            "time": {
+                "from": 66,
+                "to": 68.05
+            }
+        }
+    },
+    {
+        "name": "LOL",
+        "name_l10n": {
+            "zh": "（笑）",
+            "ja": "（笑）"
+        },
+        "file": "BjuYqoY_CxI--1842.9--1953.36.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "BjuYqoY_CxI",
+            "time": {
+                "from": 1842.9,
+                "to": 1953.36
+            }
+        }
+    },
+    {
+        "name": "(Mario BGM...) Ahhhhh!",
+        "name_l10n": {
+            "zh": "（马里奥背景音乐...）啊！",
+            "ja": "(Mario BGM...) Ahhhhh!"
+        },
+        "file": "KTuIsqb7G1s--711.4--716.5.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "KTuIsqb7G1s",
+            "time": {
+                "from": 711.4,
+                "to": 716.5
+            }
+        }
+    },
+    {
+        "name": "Today Sui-chan is still kawaiiiiiiiiiiiiiiiiiiiiii!",
+        "name_l10n": {
+            "zh": "彗酱今天也很卡哇伊伊伊伊伊伊伊伊伊伊伊～！",
+            "ja": "すいちゃんは、今日もかわいいぃぃぃぃぃぃぃぃぃ〜！"
+        },
+        "file": "yc3xAjmXZ1A--85.4--97.7.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "yc3xAjmXZ1A",
+            "time": {
+                "from": 85.4,
+                "to": 97.7
+            }
+        }
     }
-  },
-  {
-    "name": "I'm not calling you!",
-    "name_l10n": {
-      "zh": "没叫你啊！",
-      "ja": "呼んで無いですけど！"
-    },
-    "file": "j1Rrg4BnBjs--2781--2784.5.mp3",
-    "type": "normal",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "j1Rrg4BnBjs",
-      "time": {
-        "from": 2781,
-        "to": 2784.5
-      }
-    }
-  },
-  {
-    "name": "But I Shirakami don't believe in you!",
-    "name_l10n": {
-      "zh": "但是我白上不相信你的鬼话",
-      "ja": "でも白上信じられないな"
-    },
-    "file": "QcZp1-pPfxU--3563.9--3566.6.mp3",
-    "type": "normal",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "QcZp1-pPfxU",
-      "time": {
-        "from": 3563.9,
-        "to": 3566.6
-      }
-    }
-  },
-  {
-    "name": "I'm gonna kill ya all over here!",
-    "name_l10n": {
-      "zh": "就在这里把你们都杀光！",
-      "ja": "みんなここで殺してやるよ"
-    },
-    "file": "QcZp1-pPfxU-f--3486--3489.mp3",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "QcZp1-pPfxU",
-      "time": {
-        "from": 3486,
-        "to": 3489
-      }
-    },
-    "type": "normal"
-  },
-  {
-    "name": "I wanna play Tetris with the girls as the blocks!​",
-    "name_l10n": {
-      "zh": "想把大家当作俄罗斯方块玩！",
-      "ja": "みんなをテトリスにして遊びたい！​"
-    },
-    "metadata": {
-      "site": "youtube",
-      "identifier": "_B-Q10J9KSg",
-      "time": {
-        "from": 0,
-        "to": 2
-      }
-    },
-    "file": "_B-Q10J9KSg--0--2.mp3",
-    "type": "normal"
-  },
-  {
-    "name": "Tetris sure is fun!​",
-    "name_l10n": {
-      "zh": "果然俄罗斯方块很有趣呢！",
-      "ja": "やっぱりテトリスは楽しいなぁ​！​"
-    },
-    "metadata": {
-      "site": "youtube",
-      "identifier": "_B-Q10J9KSg",
-      "time": {
-        "from": 57,
-        "to": 59
-      }
-    },
-    "file": "_B-Q10J9KSg--57--59.mp3",
-    "type": "normal"
-  },
-  {
-    "name": "I'll definitely kill everyone",
-    "name_l10n": {
-      "zh": "绝对要把大家都杀掉",
-      "ja": "絶対全員殺してやる"
-    },
-    "metadata": {
-      "site": "youtube",
-      "identifier": "GfbgRHGLOZw",
-      "time": {
-        "from": 503.55,
-        "to": 505.55
-      }
-    },
-    "file": "GfbgRHGLOZw-503.5-505.9-gonna-kill-ya-all-over-here.mp3",
-    "type": "normal"
-  },
-  {
-    "name": "(Scream) ...I'm sorry.",
-    "name_l10n": {
-      "zh": "(非洲人的呐喊) ...抱歉。",
-      "ja": "(あ゛ぁ゛ぁ゛ぁ゛ぁ゛ぁ゛) ... しみません。"
-    },
-    "metadata": {
-      "site": "youtube",
-      "identifier": "kKm-MqVoLzg",
-      "time": {
-        "from": 2032.5,
-        "to": 2042.6
-      }
-    },
-    "file": "kKm-MqVoLzg--2032.5--2042.6.mp3",
-    "type": "normal"
-  },
-  {
-    "name": "Lambda!",
-    "name_l10n": {
-      "zh": "Lambda!",
-      "ja": "らむだ！"
-    },
-    "metadata": {
-      "site": "youtube",
-      "identifier": "LS6srVfrxIk",
-      "time": {
-        "from": 1327.3,
-        "to": 1328.4
-      }
-    },
-    "file": "LS6srVfrxIk--1327.3--1328.4.mp3",
-    "type": "normal"
-  },
-  {
-    "//": "For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk",
-    "name": "Sui-chan made no mistake watamever it was!",
-    "name_l10n": {
-      "zh": "wtm才没有错呢！",
-      "ja": "すいちゃんはわるくないよねぇ..."
-    },
-    "file": "IRr6aAS3zLQ--2596.4--2599.mp3",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "IRr6aAS3zLQ",
-      "time": {
-        "from": 2596.4,
-        "to": 2599
-      }
-    }
-  },
-  {
-    "//": "English translation via https://www.youtube.com/watch?v=_B-Q10J9KSg",
-    "name": "It's your diamond in the rough, your shooting star,​ Hoshimachi Suisei, in the flash!",
-    "name_l10n": {
-      "//": "Chinese translation via https://www.bilibili.com/video/av94833283",
-      "zh": "如同彗星一般登场的星之原石，我是星街彗星！",
-      "ja": "彗星​のごとくあらわれた​スター​の原石​☆​​星街すいせいです！"
-    },
-    "file": "_B-Q10J9KSg--11.4--14.5.mp3",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "_B-Q10J9KSg",
-      "time": {
-        "from": 11.4,
-        "to": 14.5
-      }
-    }
-  },
-  {
-    "name": "I'm not invited!!",
-    "name_l10n": {
-      "//": "zh: https://t.bilibili.com/395499860137488715?tab=2, ja: https://twitter.com/suisei_hosimati/status/1267046799421792256",
-      "zh": "咋不带我玩儿呢！!",
-      "ja": "私誘われていないんだけど！!"
-    },
-    "file": "PJf3XZ636-0--66--68.05.mp3",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "PJf3XZ636-0",
-      "time": {
-        "from": 66,
-        "to": 68.05
-      }
-    }
-  },
-  {
-    "name": "LOL",
-    "name_l10n": {
-      "zh": "（笑）",
-      "ja": "（笑）"
-    },
-    "file": "BjuYqoY_CxI--1842.9--1953.36.mp3",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "BjuYqoY_CxI",
-      "time": {
-        "from": 1842.9,
-        "to": 1953.36
-      }
-    }
-  },
-  {
-    "name": "(Mario BGM...) Ahhhhh!",
-    "name_l10n": {
-      "zh": "（马里奥背景音乐...）啊！",
-      "ja": "(Mario BGM...) Ahhhhh!"
-    },
-    "file": "KTuIsqb7G1s--711.4--716.5.mp3",
-    "metadata": {
-      "site": "youtube",
-      "identifier": "KTuIsqb7G1s",
-      "time": {
-        "from": 711.4,
-        "to": 716.5
-      }
-    }
-  }
 ]

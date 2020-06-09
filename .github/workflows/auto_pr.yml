@@ -1,0 +1,45 @@
+name: "Auto PR for new sound"
+
+on:
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  push_to_branch_and_create_pr:
+    name: Create a PR with the sound
+    if: "(contains(github.event.comment.body, ' pr ')) && ((contains(github.event.comment.author_association, 'OWNER') || contains(github.event.comment.user.login, 'librehsbot')) && (github.event.issue.number == 5))"
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        name: Check out current commit
+          
+      - uses: suisei-cn/actions-download-file@master
+        id: downloadfile
+        name: Download the file
+        with:
+          url: ${{ github.event.comment.body }}
+          target: public/assets
+          auto-match: true
+
+      - uses: suisei-cn/actions-update-metadata@master
+        id: updatemeta
+        name: Update sounds.json
+        with:
+          comment: ${{ github.event.comment.body }}
+          target: public/sounds.json
+          default-username: librehsbot
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2.8.0
+        with:
+          committer: Suisei Bot <noreply@suisei.moe>
+          author: ${{ steps.updatemeta.outputs.username }} <${{ steps.updatemeta.outputs.username }}@users.noreply.github.com>
+          commit-message: "feat(sound): Add ${{ steps.downloadfile.outputs.filename }}"
+          title: "feat(sound): Add ${{ steps.downloadfile.outputs.filename }}"
+          body: |
+            This is an automated sound addition PR. Netlify preview should be available soon, and a preview link should be shown.
+
+            <sub>Having problems? Check your [workflow](https://github.com/outloudvi/starbuttons/blob/master/.github/workflows/auto_pr.yml).</sub>
+          branch: sound/new
+          branch-suffix: "short-commit-hash"
+          labels: new-sound

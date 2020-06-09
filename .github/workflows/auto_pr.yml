@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         name: Check out current commit
           
-      - uses: suisei-cn/actions-download-file@master
+      - uses: suisei-cn/actions-download-file@v1
         id: downloadfile
         name: Download the file
         with:
@@ -21,7 +21,7 @@ jobs:
           target: public/assets
           auto-match: true
 
-      - uses: suisei-cn/actions-update-metadata@master
+      - uses: suisei-cn/actions-update-metadata@v1
         id: updatemeta
         name: Update sounds.json
         with:
@@ -39,7 +39,7 @@ jobs:
           body: |
             This is an automated sound addition PR. Netlify preview should be available soon, and a preview link should be shown.
 
-            <sub>Having problems? Check your [workflow](https://github.com/outloudvi/starbuttons/blob/master/.github/workflows/auto_pr.yml).</sub>
+            <sub>Having problems? Check your [workflow](https://github.com/suisei-cn/starbuttons/blob/master/.github/workflows/auto_pr.yml).</sub>
           branch: sound/new
           branch-suffix: "short-commit-hash"
           labels: new-sound

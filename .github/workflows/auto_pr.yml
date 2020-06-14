@@ -41,5 +41,5 @@ jobs:
 
             <sub>Having problems? Check your [workflow](https://github.com/suisei-cn/starbuttons/blob/master/.github/workflows/auto_pr.yml).</sub>
           branch: sound/new
-          branch-suffix: "short-commit-hash"
+          branch-suffix: "random"
           labels: new-sound

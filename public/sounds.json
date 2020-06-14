@@ -307,6 +307,22 @@
         }
     },
     {
+        "name": "Today Sui-chan is still kawaii! (Lovely and quietly)",
+        "name_l10n": {
+            "zh": "彗酱今天也很卡哇伊～！（奶声奶气）",
+            "ja": "すいちゃんは、今日もかわいい〜！（愛らしい、ひそやかに）"
+        },
+        "file": "U84Pn69RIy0--321.75--349.56.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "U84Pn69RIy0",
+            "time": {
+                "from": 321.75,
+                "to": 349.56
+            }
+        }
+    },
+    {
         "name": "Pikachu~",
         "name_l10n": {
             "zh": "皮卡丘~",

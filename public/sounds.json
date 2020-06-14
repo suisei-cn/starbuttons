@@ -273,5 +273,21 @@
                 "to": 97.7
             }
         }
+    },
+    {
+        "name": "Sui Cappella(Frightened Only)",
+        "name_l10n": {
+            "zh": "星乐器（吃瘪限定）",
+            "ja": "すい楽器（びびってる限定）"
+        },
+        "file": "RLKWrmGTemM--139--144.5.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "RLKWrmGTemM",
+            "time": {
+                "from": 139,
+                "to": 144.5
+            }
+        }
     }
 ]

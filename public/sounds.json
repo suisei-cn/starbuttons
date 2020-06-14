@@ -289,5 +289,21 @@
                 "to": 144.5
             }
         }
+    },
+    {
+        "name": "Today Sui-chan is still kawaii!(Frightened Only)",
+        "name_l10n": {
+            "zh": "彗酱今天也很卡哇伊～！（吃瘪限定）",
+            "ja": "すいちゃんは、今日もかわいい〜！（びびってる限定）"
+        },
+        "file": "RLKWrmGTemM--154.9--163.35.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "RLKWrmGTemM",
+            "time": {
+                "from": 154.9,
+                "to": 163.35
+            }
+        }
     }
 ]

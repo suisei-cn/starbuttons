@@ -62,3 +62,7 @@ $btn-hover-font-weight: 900;
   font-weight: $btn-hover-font-weight;
   transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;
 }
+
+*:focus {
+  outline: none;
+}

@@ -303,9 +303,6 @@ label {
   @media screen and (max-width: 1340px) {
     font-size: 1rem !important;
   }
-  @media screen and (max-width: 600px) {
-    font-size: 0.5rem !important;
-  }
   @media screen and (max-width: 300px) {
     font-size: 0 !important;
   }

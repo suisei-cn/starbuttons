@@ -321,5 +321,21 @@
                 "to": 1022.7
             }
         }
+    },
+    {
+        "name": "Ultimate flapping tongue",
+        "name_l10n": {
+            "zh": "极致弹舌",
+            "ja": "極道弹舌"
+        },
+        "file": "H1D_xTnXvSE--1449.82--1451.75.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "H1D_xTnXvSE",
+            "time": {
+                "from": 1449.82,
+                "to": 1451.75
+            }
+        }
     }
 ]

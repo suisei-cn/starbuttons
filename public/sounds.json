@@ -345,12 +345,23 @@
             "ja": "hoi！hoi！ドッコイショ！"
         },
         "file": "H1D_xTnXvSE--1577.2--1582.9.mp3",
+        "time": {
+            "from": 1577.2,
+            "to": 1582.9
+        }
+    },{
+        "name": "PIKAAAAACHUUUUUUUUUUUUUUUUU~",
+        "name_l10n": {
+            "zh": "皮卡卡卡卡丘丘丘丘丘丘丘丘丘丘丘丘~",
+            "ja": "ピカチュウウウウウウウウウウ~"
+        },
+        "file": "H1D_xTnXvSE--1212--1216.mp3",
         "metadata": {
             "site": "youtube",
             "identifier": "H1D_xTnXvSE",
             "time": {
-                "from": 1577.2,
-                "to": 1582.9
+                "from": 1212,
+                "to": 1216
             }
         }
     }

@@ -15,8 +15,9 @@ Vue.prototype.$status = {
 };
 
 Sentry.init({
-  dsn: "https://571ceb23ed804c08bc4a59087b4ba079@o407498.ingest.sentry.io/5276537",
-  integrations: [new VueIntegration({ Vue, attachProps: true })],
+  dsn:
+    "https://fea8a42155df4851b95de0a8de86cb17@o407537.ingest.sentry.io/5276695",
+  integrations: [new VueIntegration({ Vue, attachProps: true })]
 });
 
 Vue.config.productionTip = false;

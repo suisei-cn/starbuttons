@@ -19,6 +19,11 @@ jobs:
         run: yarn test-voice
 
       - name: Install and Build 🔧
+        env:
+          ENV: "PRODUCTION"
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         run: |
           yarn
           yarn build

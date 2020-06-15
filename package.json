@@ -13,6 +13,8 @@
   },
   "main": "babel.config.js",
   "dependencies": {
+    "@sentry/browser": "^5.17.0",
+    "@sentry/integrations": "^5.17.0",
     "audio-encoder": "^1.0.1",
     "core-js": "^3.6.4",
     "interactjs": "^1.9.10",

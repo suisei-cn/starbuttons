@@ -337,5 +337,21 @@
                 "to": 1451.75
             }
         }
+    },
+    {
+        "name": "hoi,hoi,dokkoisho!",
+        "name_l10n": {
+            "zh": "hoi,hoi,六魁首!",
+            "ja": "hoi,hoi,ドッコイショ!"
+        },
+        "file": "H1D_xTnXvSE--1577.2--1582.9.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "H1D_xTnXvSE",
+            "time": {
+                "from": 1577.2,
+                "to": 1582.9
+            }
+        }
     }
 ]

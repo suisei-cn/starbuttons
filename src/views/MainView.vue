@@ -3,6 +3,9 @@
     id="page"
     :class="{ themeDark: enforceDarkTheme, themeSystem: useSystemTheme }"
   >
+    <template v-for="(item, index) in currentErrors">
+      <ErrorBar :err="item" :key="index"></ErrorBar>
+    </template>
     <div id="settings" :title="$t('Toggle chorus mode')">
       <input type="checkbox" value="multiPlay" v-model="settings" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
@@ -50,6 +53,7 @@
           id="bigButtonText"
           :class="{ playingBtn }"
           :tabindex="displayMusicBoard ? -1 : 0"
+          @error="showError"
         >
           {{ ehhhLocalizedName }}
         </span>
@@ -61,6 +65,7 @@
       ref="centralButton"
       @started="playingBtn = true"
       @stopped="playingBtn = false"
+      @error="showError"
     ></BaseButton>
     <div
       id="switchBtn"
@@ -107,7 +112,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue, Watch, Emit } from "vue-property-decorator";
 import { Sound } from "../types";
 import {
   getItem,
@@ -116,11 +121,13 @@ import {
 } from "../components/localStorageWrapper";
 import BaseButton from "../components/BaseButton.vue";
 import { setLanguage } from "../components/setLanguage";
+import ErrorBar from "../components/ErrorBar.vue";
 const THEME_ENFORCEMENT_SETTINGS_ITEM = "enforced-theme";
 
 @Component({
   components: {
-    BaseButton
+    BaseButton,
+    ErrorBar
   }
 })
 export default class App extends Vue {
@@ -132,7 +139,16 @@ export default class App extends Vue {
   private enforceDarkTheme = false;
   private playingBtn = false;
   private currentSystemTheme = "light";
+  private currentErrors: string[] = [];
 
+  @Emit("error")
+  private showError(text: string, timeout = 3000) {
+    this.currentErrors.push(text);
+    setTimeout(() => {
+      const id = this.currentErrors.indexOf(text);
+      this.currentErrors.splice(id, 1);
+    }, timeout);
+  }
   @Watch("settings")
   private updateSettings(newValue: string[]) {
     if (newValue.includes("enforceMode__dark")) {

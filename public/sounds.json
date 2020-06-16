@@ -368,5 +368,21 @@
                 "to": 1216
             }
         }
+    },
+    {
+        "name": "Being sick",
+        "name_l10n": {
+            "zh": "发病中",
+            "ja": "病気中"
+        },
+        "file": "H1D_xTnXvSE--2342.29--2348.99.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "H1D_xTnXvSE",
+            "time": {
+                "from": 2342.29,
+                "to": 2348.99
+            }
+        }
     }
 ]

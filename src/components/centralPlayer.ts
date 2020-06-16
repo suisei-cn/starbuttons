@@ -13,14 +13,19 @@ export default class CentralPlayer {
     });
     if (playNow) {
       audio.addEventListener("loadeddata", () => {
-        if (!this.multiPlay) {
-          this.stopAll();
-        }
+        this.stopAllWhenNonMultiPlay();
         audio.play();
       });
     }
     return audio;
   }
+
+  stopAllWhenNonMultiPlay() {
+    if (!this.multiPlay) {
+      this.stopAll();
+    }
+  }
+
   preload(url: string) {
     this.addAudio(url, false);
   }

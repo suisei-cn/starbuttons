@@ -206,9 +206,10 @@ export default class App extends Vue {
     this.settings = ["multiPlay"];
     this.sounds = (await fetch("/sounds.json")
       .then(x => x.json())
-      .catch(() => {
+      .catch(e => {
         // tslint:disable-next-line:no-console
         console.error("Sound data fetch error. Exiting.");
+        this.showError(this.$t("Sound list fetch error:") + e.toString());
       })) as Sound[];
     setLanguage(window, navigator, this);
     this.updateThemeSettings();

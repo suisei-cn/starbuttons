@@ -41,7 +41,25 @@ export default class BaseButton extends Vue {
       (this?.item.name_l10n || {})[this.$i18n.locale] || this?.item.name || ""
     );
   }
+
   public play() {
+    try {
+      this.playHandler()
+    } catch (e) {
+      this.$emit(
+        "error",
+        this.$t("Error in sound playing:").toString() +
+        e.toString() +
+        "\n" +
+        this.$t(
+          "We've known about it and will work on it soon."
+        ).toString()
+      );
+      throw e;
+    }
+  }
+
+  private playHandler() {
     if (this.noclickplay) return;
     if (!this.item) {
       return;
@@ -59,36 +77,23 @@ export default class BaseButton extends Vue {
     try {
       audio = this.$status.player.addAudio(`assets/${audioFilename}`);
     } catch (_) {
-      try {
-        this.$status.player.stopAllWhenNonMultiPlay();
-        (audio as HTMLAudioElement).play();
-      } catch (e) {
-        this.$emit(
-          "error",
-          this.$t("Error in sound playing:").toString() +
-          e.toString() +
-          "\n" +
-          this.$t(
-            "We'll appreciate it if you can report this via GitHub by the link at bottom."
-          ).toString()
-        );
-
-        throw e;
-      }
+      this.$status.player.stopAllWhenNonMultiPlay();
+      (audio as HTMLAudioElement).play();
     }
+  }
     (audio as HTMLAudioElement).addEventListener("play", () => {
-      this.pendingNetwork = false;
-      this.playLayer += 1;
-      if (this.playLayer === 1) {
-        this.$emit("started");
-      }
-    });
-    (audio as HTMLAudioElement).addEventListener("pause", () => {
-      this.playLayer -= 1;
-      if (this.playLayer === 0) {
-        this.$emit("stopped");
-      }
-    });
+    this.pendingNetwork = false;
+    this.playLayer += 1;
+    if (this.playLayer === 1) {
+      this.$emit("started");
+    }
+  });
+(audio as HTMLAudioElement).addEventListener("pause", () => {
+  this.playLayer -= 1;
+  if (this.playLayer === 0) {
+    this.$emit("stopped");
+  }
+});
   }
 }
 </script>

@@ -17,5 +17,8 @@ export default {
   "Your device screen is too small to run this editor. Sorry~":
     "你的屏幕尺寸过小，不适合运行此编辑器。抱歉～",
   "long-editor-description":
-    "你可以在此页对星音剪辑进行组合，并且导出你的作品。<br>轨道总长度为 5 秒。拖动声音剪辑按钮到轨道上以添加音频片段。<br>在创作衍生作品时，请遵守 <a href='https://hololive.tv/terms'>Hololive 二创条例</a>。<br>（这是一个实验性编辑器。在将来可能会有大量改变及功能添加。）"
+    "你可以在此页对星音剪辑进行组合，并且导出你的作品。<br>轨道总长度为 5 秒。拖动声音剪辑按钮到轨道上以添加音频片段。<br>在创作衍生作品时，请遵守 <a href='https://hololive.tv/terms'>Hololive 二创条例</a>。<br>（这是一个实验性编辑器。在将来可能会有大量改变及功能添加。）",
+  "Error in sound playing:": "在播放声音时出现错误",
+  "We've known about it and will work on it soon.": "我们已经获知此问题并将着手处理。",
+  "Sound list fetch error:": "音频列表获取失败：",
 };

@@ -80,20 +80,20 @@ export default class BaseButton extends Vue {
       this.$status.player.stopAllWhenNonMultiPlay();
       (audio as HTMLAudioElement).play();
     }
-  }
+
     (audio as HTMLAudioElement).addEventListener("play", () => {
-    this.pendingNetwork = false;
-    this.playLayer += 1;
-    if (this.playLayer === 1) {
-      this.$emit("started");
-    }
-  });
-(audio as HTMLAudioElement).addEventListener("pause", () => {
-  this.playLayer -= 1;
-  if (this.playLayer === 0) {
-    this.$emit("stopped");
-  }
-});
+      this.pendingNetwork = false;
+      this.playLayer += 1;
+      if (this.playLayer === 1) {
+        this.$emit("started");
+      }
+    });
+    (audio as HTMLAudioElement).addEventListener("pause", () => {
+      this.playLayer -= 1;
+      if (this.playLayer === 0) {
+        this.$emit("stopped");
+      }
+    });
   }
 }
 </script>

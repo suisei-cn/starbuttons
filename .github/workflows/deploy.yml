@@ -27,7 +27,8 @@ jobs:
         run: |
           yarn
           yarn build
-          "node_modules/.bin/sentry-cli releases propose-version | xargs -I REV node_modules/.bin/sentry-cli releases set-commits --auto REV"
+          sudo npm install -g @sentry/cli
+          "sentry-cli releases propose-version | xargs -I REV sentry-cli releases set-commits --auto REV"
 
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.2.0
@@ -46,5 +47,4 @@ jobs:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
-        run: |
-          "node_modules/.bin/sentry-cli releases propose-version | xargs -I REV node_modules/.bin/sentry-cli releases deploys REV new -e PROD"
+        run: "sentry-cli releases propose-version | xargs -I REV sentry-cli releases deploys REV new -e PROD"

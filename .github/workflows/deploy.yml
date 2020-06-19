@@ -39,3 +39,9 @@ jobs:
           SSH: true
           BRANCH: gh-pages
           FOLDER: dist
+
+      - name: Announce deploy to Sentry
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        run: "node_modules/.bin/sentry-cli releases propose-version | xargs -I REV node_modules/.bin/sentry-cli releases deploys REV new -e PROD"

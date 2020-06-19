@@ -1,5 +1,6 @@
 #!/bin/bash
+set -e
 
 REV=$(sentry-cli releases propose-version)
-sentry-cli releases set-commits --auto $REV
-sentry-cli releases deploys $REV new -e PROD
+node_modules/.bin/sentry-cli releases set-commits --auto $REV
+node_modules/.bin/sentry-cli releases deploys $REV new -e PROD

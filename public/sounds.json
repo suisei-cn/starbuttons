@@ -353,7 +353,8 @@
                 "to": 1582.9
             }
         }
-    },{
+    },
+    {
         "name": "PIKAAAAACHUUUUUUUUUUUUUUUUU~",
         "name_l10n": {
             "zh": "皮卡卡卡卡丘丘丘丘丘丘丘丘丘丘丘丘~",
@@ -382,6 +383,22 @@
             "time": {
                 "from": 2342.29,
                 "to": 2348.99
+            }
+        }
+    },
+    {
+        "name": "LOL",
+        "name_l10n": {
+            "zh": "（狂笑）",
+            "ja": "（大笑いする）"
+        },
+        "file": "DGjBouw_yeI--2561.09--2677.55.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "DGjBouw_yeI",
+            "time": {
+                "from": 2561.09,
+                "to": 2677.55
             }
         }
     }

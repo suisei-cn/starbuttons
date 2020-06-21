@@ -401,5 +401,21 @@
                 "to": 2677.55
             }
         }
+    },
+    {
+        "name": "Pararira *n",
+        "name_l10n": {
+            "zh": "Pararira *n",
+            "ja": "Pararira *n"
+        },
+        "file": "MORh1OhPnak--10.75--15.28.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "MORh1OhPnak",
+            "time": {
+                "from": 10.75,
+                "to": 15.28
+            }
+        }
     }
 ]

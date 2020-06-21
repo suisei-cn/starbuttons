@@ -433,5 +433,21 @@
                 "to": 3419.6
             }
         }
+    },
+    {
+        "name": "Confession (Only Suisei)",
+        "name_l10n": {
+            "zh": "彗酱的表白",
+            "ja": "彗星の告白"
+        },
+        "file": "tsbLvsv2Sao--3391.38--3419.6--edited.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "tsbLvsv2Sao",
+            "time": {
+                "from": 3391.38,
+                "to": 3419.6
+            }
+        }
     }
 ]

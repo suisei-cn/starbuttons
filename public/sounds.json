@@ -417,5 +417,21 @@
                 "to": 16.47
             }
         }
+    },
+    {
+        "name": "Confession (Roboco and Suisei)",
+        "name_l10n": {
+            "zh": "萝卜子与彗酱的表白",
+            "ja": "ロボ子と彗星の告白"
+        },
+        "file": "tsbLvsv2Sao--3391.38--3419.6.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "tsbLvsv2Sao",
+            "time": {
+                "from": 3391.38,
+                "to": 3419.6
+            }
+        }
     }
 ]

@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://suisei.moe/schema.json",
+  "title": "Starbuttons sound list",
+  "description": "A list of sounds used by starbuttons",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Sound name"
+      },
+      "name_l10n": {
+        "type": "object",
+        "title": "Translations for sound name"
+      },
+      "file": {
+        "title": "Filename(s) for this sound",
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "type": {
+        "type": "string",
+        "title": "Sound button type",
+        "default": "normal"
+      },
+      "metadata": {
+        "type": "object",
+        "title": "Metadata of the sound",
+        "properties": {
+          "site": {
+            "type": "string",
+            "title": "Source site name"
+          },
+          "identifier": {
+            "title": "Identifer of this source on the site",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "time": {
+            "title": "Time of the sound clip in the source",
+            "type": "object",
+            "properties": {
+              "from": {
+                "title": "Start time (sec)",
+                "type": "number"
+              },
+              "to": {
+                "title": "End time (sec)",
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    },
+    "required": ["name", "file"]
+  }
+}

@@ -371,10 +371,10 @@
         }
     },
     {
-        "name": "Being sick",
+        "name": "(Being sick)",
         "name_l10n": {
-            "zh": "发病中",
-            "ja": "病気中"
+            "zh": "（发病中）",
+            "ja": "（病気中）"
         },
         "file": "H1D_xTnXvSE--2342.29--2348.99.mp3",
         "metadata": {
@@ -448,6 +448,42 @@
                 "from": 3391.38,
                 "to": 3419.6
             }
+        }
+    },
+    {
+        "name": "BAKA!",
+        "name_l10n": {
+            "zh": "笨蛋！",
+            "ja": "バカ"
+        },
+        "file": "lnrFF5TnvYI-baka.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "lnrFF5TnvYI"
+        }
+    },
+    {
+        "name": "(scold)",
+        "name_l10n": {
+            "zh": "（骂）",
+            "ja": "（叱る）"
+        },
+        "file": "lnrFF5TnvYI-scold.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "lnrFF5TnvYI"
+        }
+    },
+    {
+        "name": "Aiiiiiiiiiiiiiii",
+        "name_l10n": {
+            "zh": "Aiiiiiiiiiiiiiii",
+            "ja": "Aiiiiiiiiiiiiiii"
+        },
+        "file": "Aiiiiiiiiiiiiiii.mp3",
+        "metadata": {
+            "site": "bilibili",
+            "identifier": "av95334801"
         }
     }
 ]

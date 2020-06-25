@@ -8,13 +8,14 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test-voice": "test/voices.js",
-    "test-bitrate": "bash test/bitrate.sh"
+    "test-selenium": "mocha tests/test_*.js --timeout 60000",
+    "test-voice": "utils/voices.js",
+    "test-bitrate": "bash utils/bitrate.sh"
   },
   "main": "babel.config.js",
   "dependencies": {
-    "@sentry/browser": "^5.17.0",
-    "@sentry/integrations": "^5.17.0",
+    "@sentry/browser": "^5.18.0",
+    "@sentry/integrations": "^5.18.0",
     "audio-encoder": "^1.0.1",
     "core-js": "^3.6.4",
     "interactjs": "^1.9.10",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@interactjs/types": "^1.9.10",
     "@sentry/webpack-plugin": "^1.11.1",
+    "@types/mocha": "^7.0.2",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
     "@vue/cli-plugin-babel": "^4.3.0",
@@ -39,12 +41,15 @@
     "@vue/cli-service": "^4.3.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "chai": "^4.2.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.2.2",
+    "mocha": "^8.0.1",
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
+    "selenium-webdriver": "^4.0.0-alpha.7",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
   },

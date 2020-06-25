@@ -46,3 +46,11 @@ jobs:
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         run: bash utils/sentry-commit.sh
+
+      - name: Do browser compatibility testing
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESSKEY: ${{ secrets.BROWSERSTACK_ACCESSKEY }}
+        run: |
+          git rev-parse HEAD > HEAD
+          yarn test-selenium

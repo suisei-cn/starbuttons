@@ -300,7 +300,7 @@ export default class App extends Vue {
 
 #page {
   height: 100%;
-  margin: 0 2vw;
+  padding: 0 2vw;
 }
 
 #header {

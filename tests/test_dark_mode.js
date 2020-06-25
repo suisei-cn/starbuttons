@@ -27,7 +27,7 @@ describe("Dark mode should work", () => {
   it("should be able to toggle to and from dark mode", async () => {
     const element = await driver.findElement({ id: "page" });
     const darkModeToggle = await driver.findElement({
-      id: "toggleEnforceDarkMode",
+      id: "toggleEnforceDarkMode"
     });
     await darkModeToggle.click();
     let attrValue = await element.getAttribute("class");

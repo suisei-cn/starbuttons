@@ -19,12 +19,12 @@ describe("Board should work", () => {
   it("should display small buttons at board display", async () => {
     const element = await driver.findElement({ id: "switchBtn" });
     let normalBtnElements = await driver.findElements({
-      className: "normalBtn",
+      className: "normalBtn"
     });
     expect(normalBtnElements.length).to.equal(0);
     await element.click();
     normalBtnElements = await driver.findElements({
-      className: "normalBtn",
+      className: "normalBtn"
     });
     expect(normalBtnElements.length).to.greaterThan(0);
     await driver.sleep(1500);
@@ -32,7 +32,7 @@ describe("Board should work", () => {
     await element.click();
     await driver.sleep(1500);
     normalBtnElements = await driver.findElements({
-      className: "normalBtn",
+      className: "normalBtn"
     });
     expect(normalBtnElements.length).to.equal(0);
   });

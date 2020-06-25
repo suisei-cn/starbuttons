@@ -19,6 +19,7 @@ export default {
   "long-editor-description":
     "Here you can remix with Suisei's voice clips and export your sparks.<br>The full track length is 5 seconds. Drag the voice clip button on wherever you want on the track.<br>Please comply to <a href='https://en.hololive.tv/terms'>Hololive's fan work guidelines</a> when creating derivative works.<br>(This editor is experimental and may change a lot and add many features in the future.)",
   "Error in sound playing:": "Error in sound playing:",
-  "We've known about it and will work on it soon.": "We've known about it and will work on it soon.",
-  "Sound list fetch error:": "Sound list fetch error:",
+  "We've known about it and will work on it soon.":
+    "We've known about it and will work on it soon.",
+  "Sound list fetch error:": "Sound list fetch error:"
 };

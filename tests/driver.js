@@ -13,7 +13,7 @@ const browserstackURL =
 const cap = require("./capabilities");
 const capabilities = Object.assign(cap[2], {
   project: "Starbuttons",
-  build: getcmt(),
+  build: getcmt()
 });
 
 console.info(`Testing for build ${getcmt()}`);

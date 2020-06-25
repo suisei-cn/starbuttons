@@ -4,7 +4,7 @@ module.exports = [
     device: "iPhone 8",
     real_mobile: "true",
     browserName: "iPhone",
-    "browserstack.local": "false",
+    "browserstack.local": "false"
   },
   {
     os_version: "9.0",
@@ -12,7 +12,7 @@ module.exports = [
     real_mobile: "true",
     browserName: "Android",
     name: "AND_9_REDMI",
-    "browserstack.local": "false",
+    "browserstack.local": "false"
   },
   {
     os: "Windows",
@@ -21,6 +21,6 @@ module.exports = [
     browser_version: "83.0",
     name: "WIN_10_EDGE_83",
     "browserstack.local": "false",
-    "browserstack.selenium_version": "3.5.2",
-  },
+    "browserstack.selenium_version": "3.5.2"
+  }
 ];

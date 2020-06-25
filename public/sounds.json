@@ -485,5 +485,31 @@
             "site": "bilibili",
             "identifier": "av95334801"
         }
+    },
+    {
+        "name": "Doooooooooo~~~",
+        "name_l10n": {
+            "zh": "Doooooooooo~~~",
+            "ja": "Doooooooooo~~~"
+        },
+        "file": "doooooooooo.mp3",
+        "metadata": {
+            "site": "bilibili"
+        }
+    },
+    {
+        "name": "Thanks (Chinese)",
+        "name_l10n": {
+            "zh": "谢谢",
+            "ja": "ありがとう（中国語）"
+        },
+        "file": "thanks.mp3",
+        "metadata": {
+            "site": "bilibili",
+            "time": {
+                "from": 3672.495,
+                "to": 3679.785
+            }
+        }
     }
 ]

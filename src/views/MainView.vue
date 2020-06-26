@@ -53,6 +53,7 @@
           id="bigButtonText"
           :class="{ playingBtn }"
           :tabindex="displayMusicBoard ? -1 : 0"
+          v-if="!displayMusicBoard"
           @error="showError"
         >
           {{ ehhhLocalizedName }}

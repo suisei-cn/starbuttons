@@ -352,7 +352,6 @@ label {
   font-display: swap;
   .normalBtn {
     animation: 0.66s button-appear;
-    z-index: 1;
     text-overflow: ellipsis;
     overflow: hidden;
   }

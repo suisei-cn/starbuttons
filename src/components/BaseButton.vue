@@ -73,22 +73,24 @@ export default class BaseButton extends Vue {
       ];
     }
     this.pendingNetwork = true;
-    let audio;
+    let audio: HTMLAudioElement | null = null;
     try {
       audio = this.$status.player.addAudio(`assets/${audioFilename}`);
-    } catch (_) {
       this.$status.player.stopAllWhenNonMultiPlay();
-      (audio as HTMLAudioElement).play();
+      audio?.play();
+    } catch (err) {
+      this.$status.player.stopAllWhenNonMultiPlay();
+      audio?.play();
     }
 
-    (audio as HTMLAudioElement).addEventListener("play", () => {
+    audio?.addEventListener("play", () => {
       this.pendingNetwork = false;
       this.playLayer += 1;
       if (this.playLayer === 1) {
         this.$emit("started");
       }
     });
-    (audio as HTMLAudioElement).addEventListener("pause", () => {
+    audio?.addEventListener("pause", () => {
       this.playLayer -= 1;
       if (this.playLayer === 0) {
         this.$emit("stopped");

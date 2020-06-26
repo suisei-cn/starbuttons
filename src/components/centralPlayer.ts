@@ -1,22 +1,29 @@
 export default class CentralPlayer {
-  private audios: HTMLAudioElement[] = [];
+  // private audios: HTMLAudioElement[] = [];
+  private audios: Map<string, HTMLAudioElement> = new Map;
   public multiPlay = true;
   public playCount = 0;
   addAudio(url: string, playNow = true): HTMLAudioElement {
-    const audio = new Audio(url);
-    this.audios.push(audio);
+    if (this.audios.has(url)) {
+      return this.audios.get(url)!
+    }
+
+    const audio = new Audio();
+    audio.preload = "auto";
+    this.audios.set(url, audio);
     audio.addEventListener("play", () => {
       this.playCount += 1;
     });
     audio.addEventListener("pause", () => {
       this.playCount -= 1;
     });
-    if (playNow) {
-      audio.addEventListener("loadeddata", () => {
-        this.stopAllWhenNonMultiPlay();
-        audio.play();
-      });
-    }
+    // if (playNow) {
+    //   audio.addEventListener("loadeddata", () => {
+    //     this.stopAllWhenNonMultiPlay();
+    //     audio.play();
+    //   });
+    // }
+    audio.src = url;
     return audio;
   }
 
@@ -30,7 +37,7 @@ export default class CentralPlayer {
     this.addAudio(url, false);
   }
   stopAll() {
-    for (const i of this.audios) {
+    for (const i of this.audios.values()) {
       i.pause();
     }
   }

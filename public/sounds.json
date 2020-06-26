@@ -511,5 +511,85 @@
                 "to": 3679.785
             }
         }
+    },
+    {
+        "name": "あああああああクソかよ！",
+        "name_l10n": {
+            "zh": "啊啊啊可恶啊！",
+            "ja": "Ahhhhhh Damn!"
+        },
+        "file": "aaaaaaaaaaakuso.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "lwszUzu_ARc",
+            "time": {
+                "from": 928.151,
+                "to": 934.117
+            }
+        }
+    },
+    {
+        "name": "Get away!",
+        "name_l10n": {
+            "zh": "住手啊！",
+            "ja": "やめる！"
+        },
+        "file": "yameru.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "lwszUzu_ARc",
+            "time": {
+                "from": 2498.851,
+                "to": 2502.772
+            }
+        }
+    },
+    {
+        "name": "Wuaaaaaaaa...",
+        "name_l10n": {
+            "zh": "呜哇呜哇。。。",
+            "ja": "Wuaaaaaaaa..."
+        },
+        "file": "wuwawuwawuwa.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "lwszUzu_ARc",
+            "time": {
+                "from": 5655.012,
+                "to": 5660.261
+            }
+        }
+    },
+    {
+        "name": "Dance Mama",
+        "name_l10n": {
+            "zh": "Dance Mama",
+            "ja": "Dance Mama"
+        },
+        "file": "dancemama.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "lwszUzu_ARc",
+            "time": {
+                "from": 8172.947,
+                "to": 8177.934
+            }
+        }
+    },
+    {
+        "name": "Ahhhhhh! (volume attention)",
+        "name_l10n": {
+            "zh": "啊啊啊啊！（音量注意）",
+            "ja": "あああああああ！（ボリュームノート）"
+        },
+        "file": ".mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "lwszUzu_ARc",
+            "time": {
+                "from": 8180.789,
+                "to": 8184.828
+            }
+        }
     }
 ]

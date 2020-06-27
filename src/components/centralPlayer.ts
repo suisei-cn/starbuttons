@@ -1,16 +1,11 @@
 export default class CentralPlayer {
-  // private audios: HTMLAudioElement[] = [];
-  private audios: Map<string, HTMLAudioElement> = new Map;
+  private audios: HTMLAudioElement[] = [];
   public multiPlay = true;
   public playCount = 0;
   addAudio(url: string, playNow = true): HTMLAudioElement {
-    if (this.audios.has(url)) {
-      return this.audios.get(url)!
-    }
-
     const audio = new Audio();
     audio.preload = "auto";
-    this.audios.set(url, audio);
+    this.audios.push(audio);
     audio.addEventListener("play", () => {
       this.playCount += 1;
     });

@@ -5666,6 +5666,11 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-web@^5.6.10:
+  version "5.6.10"
+  resolved "https://registry.npm.taobao.org/lottie-web/download/lottie-web-5.6.10.tgz?cache=0&sync_timestamp=1589148733271&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flottie-web%2Fdownload%2Flottie-web-5.6.10.tgz#9c2959df12976f49637f563dcc96db2078010b4d"
+  integrity sha1-nClZ3xKXb0ljf1Y9zJbbIHgBC00=
+
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "https://registry.npm.taobao.org/loud-rejection/download/loud-rejection-1.6.0.tgz?cache=0&sync_timestamp=1569686954132&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Floud-rejection%2Fdownload%2Floud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"

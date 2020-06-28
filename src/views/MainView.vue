@@ -3,6 +3,7 @@
     id="page"
     :class="{ themeDark: enforceDarkTheme, themeSystem: useSystemTheme }"
   >
+    <div id="svgAnim" ref="svgAnim"></div>
     <div id="errors">
       <template v-for="(item, index) in currentErrors">
         <ErrorBar :err="item" :key="index"></ErrorBar>
@@ -120,6 +121,7 @@
 <script lang="ts">
 import { Component, Vue, Watch, Emit } from "vue-property-decorator";
 import { Sound } from "../types";
+import Lottie from "lottie-web";
 import {
   getItem,
   setItem,
@@ -210,6 +212,16 @@ export default class App extends Vue {
     }
   }
 
+  private setupBackgroundAnimations() {
+    Lottie.loadAnimation({
+      container: this.$refs.svgAnim as Element,
+      renderer: "svg",
+      loop: !0,
+      autoplay: !0,
+      path: "/bg-anim.json",
+    });
+  }
+
   private async mounted() {
     this.settings = ["multiPlay"];
     this.sounds = (await fetch("/sounds.json")
@@ -221,6 +233,7 @@ export default class App extends Vue {
       })) as Sound[];
     setLanguage(window, navigator, this);
     this.updateThemeSettings();
+    this.setupBackgroundAnimations();
   }
 }
 </script>
@@ -254,6 +267,18 @@ export default class App extends Vue {
   top: 0;
   background-color: var(--color-background);
   color: var(--color-font);
+}
+
+#svgAnim {
+  position: absolute;
+  left: 0;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 @import "../style/style";

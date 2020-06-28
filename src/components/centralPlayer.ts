@@ -2,7 +2,7 @@ export default class CentralPlayer {
   private audios: HTMLAudioElement[] = [];
   public multiPlay = true;
   public playCount = 0;
-  addAudio(url: string, playNow = true): HTMLAudioElement {
+  addAudio(url: string): HTMLAudioElement {
     const audio = new Audio();
     audio.preload = "auto";
     this.audios.push(audio);
@@ -29,7 +29,7 @@ export default class CentralPlayer {
   }
 
   preload(url: string) {
-    this.addAudio(url, false);
+    this.addAudio(url);
   }
   stopAll() {
     for (const i of this.audios.values()) {

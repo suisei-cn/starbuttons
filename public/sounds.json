@@ -625,10 +625,10 @@
         }
     },
     {
-        "name": "Help Me!!!",
+        "name": "Help Me!!!(Volume attention!)",
         "name_l10n": {
-            "zh": "救命啊！！！",
-            "ja": "助けて！！！"
+            "zh": "救命啊！！！（音量注意!）",
+            "ja": "助けて！！！（ボリュームノート!）"
         },
         "file": "helpme.mp3",
         "metadata": {

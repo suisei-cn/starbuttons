@@ -14,25 +14,6 @@
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
       |<input type="checkbox" value="repeatThis" v-model="settings" />
       <label for="isRepeat">{{ $t("Repeat") }}</label>
-      |
-      <template v-if="currentSystemTheme === 'light'">
-        <input
-          id="toggleEnforceDarkMode"
-          type="checkbox"
-          value="enforceMode__dark"
-          v-model="settings"
-        />
-        <label for="toggleEnforceDarkMode">{{ $t("Dark Theme") }}</label>
-      </template>
-      <template v-else>
-        <input
-          id="toggleEnforceLightMode"
-          type="checkbox"
-          value="enforceMode__light"
-          v-model="settings"
-        />
-        <label for="toggleEnforceLightMode">{{ $t("Light Theme") }}</label>
-      </template>
     </div>
     <div id="mainWrapper">
       <div
@@ -144,7 +125,7 @@ export default class App extends Vue {
   private displayMusicBoard = false;
   private settings: string[] = [];
   private useSystemTheme = true;
-  private enforceDarkTheme = false;
+  private enforceDarkTheme = true;
   private playingBtn = false;
   private currentSystemTheme = "light";
   private currentErrors: string[] = [];
@@ -160,17 +141,6 @@ export default class App extends Vue {
   }
   @Watch("settings")
   private updateSettings(newValue: string[]) {
-    if (newValue.includes("enforceMode__dark")) {
-      setItem(THEME_ENFORCEMENT_SETTINGS_ITEM, "dark");
-      this.enforceDarkTheme = true;
-    } else if (newValue.includes("enforceMode__light")) {
-      setItem(THEME_ENFORCEMENT_SETTINGS_ITEM, "light");
-      this.enforceDarkTheme = false;
-      this.useSystemTheme = false;
-    } else {
-      this.enforceDarkTheme = false;
-      this.useSystemTheme = true;
-    }
     this.$status.player.multiPlay = newValue.includes("multiPlay");
     this.$status.player.repeatThis = newValue.includes("repeatThis");
   }

@@ -547,7 +547,7 @@
     {
         "name": "Wuaaaaaaaa...",
         "name_l10n": {
-            "zh": "呜哇呜哇。。。",
+            "zh": "Wuaaaaaaaa...",
             "ja": "Wuaaaaaaaa..."
         },
         "file": "wuwawuwawuwa.mp3",
@@ -577,10 +577,10 @@
         }
     },
     {
-        "name": "Ahhhhhh! (volume attention)",
+        "name": "Ahhhhhh! (Volume attention!)",
         "name_l10n": {
-            "zh": "啊啊啊啊！（音量注意）",
-            "ja": "あああああああ！（ボリュームノート）"
+            "zh": "啊啊啊啊！（音量警告!）",
+            "ja": "あああああああ！（ボリュームノート!）"
         },
         "file": "yiaaaaaaaaaaaa.mp3",
         "metadata": {
@@ -589,6 +589,102 @@
             "time": {
                 "from": 8180.789,
                 "to": 8184.828
+            }
+        }
+    },
+    {
+        "name": "Nyaaaaa~",
+        "name_l10n": {
+            "zh": "Nyaaaaa~",
+            "ja": "Nyaaaaa~"
+        },
+        "file": "Nyaaaaa.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "boRajPeaJwA",
+            "time": {
+                "from": 2745.158,
+                "to": 2752.189
+            }
+        }
+    },
+    {
+        "name": "(Talk Nonsense)",
+        "name_l10n": {
+            "zh": "（胡言乱语）",
+            "ja": "（でたらめ）"
+        },
+        "file": "talknonsense.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "boRajPeaJwA",
+            "time": {
+                "from": 1564.709,
+                "to": 1577.448
+            }
+        }
+    },
+    {
+        "name": "Help Me!!!",
+        "name_l10n": {
+            "zh": "救命啊！！！",
+            "ja": "助けて！！！"
+        },
+        "file": "helpme.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "boRajPeaJwA",
+            "time": {
+                "from": 1583.648,
+                "to": 1589.874
+            }
+        }
+    },
+    {
+        "name": "Punai Punai!",
+        "name_l10n": {
+            "zh": "Punai Punai!",
+            "ja": "プナイプナイ!"
+        },
+        "file": "punaipunai.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "boRajPeaJwA",
+            "time": {
+                "from": 2020.581,
+                "to": 2022.649
+            }
+        }
+    },
+    {
+        "name": "Merry Christmas!",
+        "name_l10n": {
+            "zh": "Merry Christmas!",
+            "ja": "Merry Christmas!"
+        },
+        "file": "merrychristmas.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "boRajPeaJwA",
+            "time": {
+                "from": 3275.26,
+                "to": 3276.265
+            }
+        }
+    },
+    {
+        "name": "(Boiling water))",
+        "name_l10n": {
+            "zh": "（水 开 了）",
+            "ja": "（お湯）"
+        },
+        "file": "boilingwater.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "boRajPeaJwA",
+            "time": {
+                "from": 3962.019,
+                "to": 3967.475
             }
         }
     }

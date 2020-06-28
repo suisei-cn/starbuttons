@@ -1,9 +1,13 @@
 <template>
   <main
     id="page"
-    :class="{ themeDark: enforceDarkTheme, themeSystem: useSystemTheme }"
+    :class="{
+      themeDark: enforceDarkTheme,
+      themeSystem: useSystemTheme,
+    }"
   >
     <div id="svgAnim" ref="svgAnim"></div>
+    <div class="smShrinkSpace" :class="{ hidden: displayMusicBoard }"></div>
     <div id="errors">
       <template v-for="(item, index) in currentErrors">
         <ErrorBar :err="item" :key="index"></ErrorBar>
@@ -15,7 +19,7 @@
       |<input type="checkbox" value="repeatThis" v-model="settings" />
       <label for="isRepeat">{{ $t("Repeat") }}</label>
     </div>
-    <div id="mainWrapper">
+    <div id="mainWrapper" :class="{ shrinkable: !displayMusicBoard }">
       <div
         id="board"
         :class="{
@@ -96,6 +100,7 @@
         <i class="icon-discord"></i> <sup>(EN)</sup>
       </a>
     </div>
+    <div class="smShrinkSpace" :class="{ hidden: displayMusicBoard }"></div>
   </main>
 </template>
 
@@ -353,6 +358,25 @@ label {
   }
   @media screen and (max-width: 300px) {
     font-size: 0 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .smShrinkSpace {
+    height: 10vh;
+  }
+  .smShrinkSpace.hidden {
+    height: 0;
+    transition: height 0.1s ease-in-out;
+  }
+  #mainWrapper.shrinkable {
+    height: 15vh;
+  }
+  .animateBtn.bigBtn {
+    font-size: 1rem !important;
+    margin-top: 0;
+    width: 30vh;
+    height: 13vh;
   }
 }
 

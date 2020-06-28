@@ -100,7 +100,6 @@
         <i class="icon-discord"></i> <sup>(EN)</sup>
       </a>
     </div>
-    <div class="smShrinkSpace" :class="{ hidden: displayMusicBoard }"></div>
   </main>
 </template>
 
@@ -363,7 +362,7 @@ label {
 
 @media screen and (max-width: 600px) {
   .smShrinkSpace {
-    height: 10vh;
+    height: 20vh;
   }
   .smShrinkSpace.hidden {
     height: 0;

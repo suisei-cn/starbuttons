@@ -235,7 +235,18 @@ export default class App extends Vue {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: var(--color-background);
+  background: transparent
+    linear-gradient(
+      180deg,
+      #431f79 0%,
+      #15161e 3%,
+      #33394f 45%,
+      #6a6faf 60%,
+      #6b71b0 88%,
+      #9a9ccc 99%,
+      #eadab9 100%
+    )
+    0% 0% no-repeat padding-box;
   color: var(--color-font);
 }
 

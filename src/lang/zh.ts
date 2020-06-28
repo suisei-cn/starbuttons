@@ -1,5 +1,6 @@
 export default {
   "Do Not Click Me": "没事不要点",
+  Repeat: "洗脑循环",
   "Dark Theme": "暗色主题",
   "Light Theme": "浅色主题",
   GitHub: "代码猫",
@@ -21,5 +22,5 @@ export default {
   "Error in sound playing:": "在播放声音时出现错误",
   "We've known about it and will work on it soon.":
     "我们已经获知此问题并将着手处理。",
-  "Sound list fetch error:": "音频列表获取失败："
+  "Sound list fetch error:": "音频列表获取失败：",
 };

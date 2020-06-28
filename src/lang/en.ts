@@ -1,5 +1,6 @@
 export default {
   "Do Not Click Me": "Do Not Click Me",
+  Repeat: "Repeat",
   "Dark Theme": "Dark Theme",
   "Light Theme": "Light Theme",
   GitHub: "GitHub",
@@ -21,5 +22,5 @@ export default {
   "Error in sound playing:": "Error in sound playing:",
   "We've known about it and will work on it soon.":
     "We've known about it and will work on it soon.",
-  "Sound list fetch error:": "Sound list fetch error:"
+  "Sound list fetch error:": "Sound list fetch error:",
 };

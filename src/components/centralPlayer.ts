@@ -1,6 +1,7 @@
 export default class CentralPlayer {
   private audios: HTMLAudioElement[] = [];
   public multiPlay = true;
+  public repeatThis = false;
   public playCount = 0;
   addAudio(url: string): HTMLAudioElement {
     const audio = new Audio();
@@ -11,6 +12,11 @@ export default class CentralPlayer {
     });
     audio.addEventListener("pause", () => {
       this.playCount -= 1;
+    });
+    audio.addEventListener("ended", () => {
+      if (this.repeatThis) {
+        audio.play();
+      }
     });
     // if (playNow) {
     //   audio.addEventListener("loadeddata", () => {

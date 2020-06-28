@@ -9,6 +9,8 @@
     <div id="settings" :title="$t('Toggle chorus mode')">
       <input type="checkbox" value="multiPlay" v-model="settings" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
+      |<input type="checkbox" value="repeatThis" v-model="settings" />
+      <label for="isRepeat">{{ $t("Repeat") }}</label>
       |
       <template v-if="currentSystemTheme === 'light'">
         <input
@@ -164,6 +166,7 @@ export default class App extends Vue {
       this.useSystemTheme = true;
     }
     this.$status.player.multiPlay = newValue.includes("multiPlay");
+    this.$status.player.repeatThis = newValue.includes("repeatThis");
   }
 
   get ehhhLocalizedName() {

@@ -687,5 +687,21 @@
                 "to": 3967.475
             }
         }
+    },
+    {
+        "name": "Today Sui-chan is still kawaii!(Soft)",
+        "name_l10n": {
+            "zh": "彗酱今天也很卡哇伊～！（软绵绵）",
+            "ja": "すいちゃんは、今日もかわいい〜！（ふわふわ）"
+        },
+        "file": "N4Op5gpV2AU--403.5--412.5.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "N4Op5gpV2AU",
+            "time": {
+                "from": 403.5,
+                "to": 412.5
+            }
+        }
     }
 ]

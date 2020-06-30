@@ -36,7 +36,7 @@
         id="board"
         :class="{
           musicBoard: displayMusicBoard,
-          animateBtn: !displayMusicBoard
+          animateBtn: !displayMusicBoard,
         }"
         class="bigBtn"
         @click="playEhhh"
@@ -48,6 +48,7 @@
               :key="index"
               class="normalBtn"
               v-if="displayMusicBoard"
+              @error="showError"
             ></BaseButton>
           </template>
         </div>
@@ -120,7 +121,7 @@ import { Sound } from "../types";
 import {
   getItem,
   setItem,
-  removeItem
+  removeItem,
 } from "../components/localStorageWrapper";
 import BaseButton from "../components/BaseButton.vue";
 import { setLanguage } from "../components/setLanguage";
@@ -130,8 +131,8 @@ const THEME_ENFORCEMENT_SETTINGS_ITEM = "enforced-theme";
 @Component({
   components: {
     BaseButton,
-    ErrorBar
-  }
+    ErrorBar,
+  },
 })
 export default class App extends Vue {
   // @ts-ignore
@@ -146,6 +147,7 @@ export default class App extends Vue {
 
   @Emit("error")
   private showError(text: string, timeout = 3000) {
+    console.warn("Err");
     this.currentErrors.push(text);
     setTimeout(() => {
       const id = this.currentErrors.indexOf(text);
@@ -209,8 +211,8 @@ export default class App extends Vue {
   private async mounted() {
     this.settings = ["multiPlay"];
     this.sounds = (await fetch("/sounds.json")
-      .then(x => x.json())
-      .catch(e => {
+      .then((x) => x.json())
+      .catch((e) => {
         // tslint:disable-next-line:no-console
         console.error("Sound data fetch error. Exiting.");
         this.showError(this.$t("Sound list fetch error:") + e.toString());

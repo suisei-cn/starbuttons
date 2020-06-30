@@ -77,6 +77,12 @@ export default class BaseButton extends Vue {
     this.pendingNetwork = true;
     let audio: HTMLAudioElement | null = null;
     let playPromise;
+    const notifyUserOfLongLoadingTime = setTimeout(() => {
+      this.$emit(
+        "error",
+        this.$t("Voice is still loading. Please be patient...")
+      );
+    }, 1500);
     try {
       audio = this.$status.player.addAudio(`assets/${audioFilename}`);
       this.$status.player.stopAllWhenNonMultiPlay();
@@ -89,6 +95,7 @@ export default class BaseButton extends Vue {
     if (playPromise !== undefined) {
       playPromise
         .then(() => {
+          clearTimeout(notifyUserOfLongLoadingTime);
           this.pendingNetwork = false;
           this.playLayer += 1;
           if (this.playLayer === 1) {

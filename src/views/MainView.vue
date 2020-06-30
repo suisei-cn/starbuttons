@@ -3,9 +3,11 @@
     id="page"
     :class="{ themeDark: enforceDarkTheme, themeSystem: useSystemTheme }"
   >
-    <template v-for="(item, index) in currentErrors">
-      <ErrorBar :err="item" :key="index"></ErrorBar>
-    </template>
+    <div id="errors">
+      <template v-for="(item, index) in currentErrors">
+        <ErrorBar :err="item" :key="index"></ErrorBar>
+      </template>
+    </div>
     <div id="settings" :title="$t('Toggle chorus mode')">
       <input type="checkbox" value="multiPlay" v-model="settings" />
       <label for="isMutliplay">{{ $t("Do Not Click Me") }}</label>
@@ -259,6 +261,13 @@ export default class App extends Vue {
 
 <style lang="scss" scoped>
 $table-height: 52vh;
+
+#errors {
+  position: absolute;
+  top: 4vh;
+  opacity: 0.8;
+  pointer-events: none;
+}
 
 label {
   font-display: swap;

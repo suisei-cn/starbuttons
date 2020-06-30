@@ -18,12 +18,6 @@ export default class CentralPlayer {
         audio.play();
       }
     });
-    // if (playNow) {
-    //   audio.addEventListener("loadeddata", () => {
-    //     this.stopAllWhenNonMultiPlay();
-    //     audio.play();
-    //   });
-    // }
     audio.src = url;
     return audio;
   }
@@ -39,7 +33,12 @@ export default class CentralPlayer {
   }
   stopAll() {
     for (const i of this.audios.values()) {
-      i.pause();
+      try {
+        i.pause();
+      } catch (_) {
+        // Pause before loaded would trigger an error
+        // See https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
+      }
     }
   }
 }

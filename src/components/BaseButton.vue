@@ -5,10 +5,10 @@
     :class="{
       playingBtn: playLayer > 0,
       testHoverWidth,
-      pending: pendingNetwork
+      pending: pendingNetwork,
     }"
     :style="{
-      minWidth
+      minWidth,
     }"
     tabindex="0"
   >
@@ -42,19 +42,21 @@ export default class BaseButton extends Vue {
     );
   }
 
-  public play() {
-    try {
-      this.playHandler()
-    } catch (e) {
-      this.$emit(
-        "error",
-        this.$t("Error in sound playing:").toString() +
+  public emitError(e: any) {
+    this.$emit(
+      "error",
+      this.$t("Error in sound playing:").toString() +
         e.toString() +
         "\n" +
-        this.$t(
-          "We've known about it and will work on it soon."
-        ).toString()
-      );
+        this.$t("We've known about it and will work on it soon.").toString()
+    );
+  }
+
+  public play() {
+    try {
+      this.playHandler();
+    } catch (e) {
+      this.emitError(e);
       throw e;
     }
   }
@@ -74,22 +76,31 @@ export default class BaseButton extends Vue {
     }
     this.pendingNetwork = true;
     let audio: HTMLAudioElement | null = null;
+    let playPromise;
     try {
       audio = this.$status.player.addAudio(`assets/${audioFilename}`);
       this.$status.player.stopAllWhenNonMultiPlay();
-      audio?.play();
+      playPromise = audio?.play();
     } catch (err) {
       this.$status.player.stopAllWhenNonMultiPlay();
-      audio?.play();
+      playPromise = audio?.play();
     }
 
-    audio?.addEventListener("play", () => {
-      this.pendingNetwork = false;
-      this.playLayer += 1;
-      if (this.playLayer === 1) {
-        this.$emit("started");
-      }
-    });
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          this.pendingNetwork = false;
+          this.playLayer += 1;
+          if (this.playLayer === 1) {
+            this.$emit("started");
+          }
+        })
+        .catch((e) => {
+          this.emitError(e);
+          throw e;
+        });
+    }
+
     audio?.addEventListener("pause", () => {
       this.playLayer -= 1;
       if (this.playLayer === 0) {

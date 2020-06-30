@@ -23,4 +23,5 @@ export default {
   "We've known about it and will work on it soon.":
     "我们已经获知此问题并将着手处理。",
   "Sound list fetch error:": "音频列表获取失败：",
+  "Voices are still loading. Please be patient...": "音频仍在加载，请稍等...",
 };

@@ -23,4 +23,6 @@ export default {
   "We've known about it and will work on it soon.":
     "We've known about it and will work on it soon.",
   "Sound list fetch error:": "Sound list fetch error:",
+  "Voices are still loading. Please be patient...":
+    "Voices are still loading. Please be patient...",
 };

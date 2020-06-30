@@ -80,7 +80,7 @@ export default class BaseButton extends Vue {
     const notifyUserOfLongLoadingTime = setTimeout(() => {
       this.$emit(
         "error",
-        this.$t("Voice is still loading. Please be patient...")
+        this.$t("Voices are still loading. Please be patient...")
       );
     }, 1500);
     try {

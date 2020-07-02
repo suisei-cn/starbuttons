@@ -25,4 +25,6 @@ export default {
   "Sound list fetch error:": "Sound list fetch error:",
   "Voices are still loading. Please be patient...":
     "Voices are still loading. Please be patient...",
+  "Unrecognized sound list.": "Unrecognized sound list.",
+  "Still loading...": "Still loading...",
 };

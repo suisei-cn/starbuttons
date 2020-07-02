@@ -19,6 +19,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { Sound } from "../types";
+import * as Sentry from "@sentry/browser";
 
 @Component
 export default class BaseButton extends Vue {
@@ -69,10 +70,18 @@ export default class BaseButton extends Vue {
     let audioFilename;
     if (typeof this.item.file === "string") {
       audioFilename = this.item.file;
-    } else {
+    } else if (Array.isArray(this.item.file)) {
       audioFilename = this.item.file[
         Math.floor(Math.random() * this.item.file.length)
       ];
+    } else {
+      this.emitError(this.$t("Unrecognized sound list."));
+      // @ts-ignore
+      // eslint-disable-next-line no-undef
+      const err = new Error();
+      err.name = "BadSoundsJsonError";
+      err.message = JSON.stringify(this.item);
+      Sentry.captureException(err);
     }
     this.pendingNetwork = true;
     let audio: HTMLAudioElement | null = null;

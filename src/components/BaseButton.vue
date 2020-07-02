@@ -67,6 +67,10 @@ export default class BaseButton extends Vue {
     if (!this.item) {
       return;
     }
+    if (!this.item.file) {
+      this.emitError(this.$t("Still loading..."));
+      return;
+    }
     let audioFilename;
     if (typeof this.item.file === "string") {
       audioFilename = this.item.file;

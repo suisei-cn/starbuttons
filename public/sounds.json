@@ -703,5 +703,21 @@
                 "to": 412.5
             }
         }
+    },
+    {
+        "name": "Uhuhuhu Ehihihi",
+        "name_l10n": {
+            "zh": "唔呼呼呼 噫嘻嘻嘻",
+            "ja": "うふふふ いひひひ"
+        },
+        "file": "1768lvpfxRI--3210--3216.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "1768lvpfxRI",
+            "time": {
+                "from":  3210,
+                "to":3216
+            }
+        }
     }
 ]

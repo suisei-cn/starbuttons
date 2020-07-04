@@ -29,6 +29,7 @@ export default class BaseButton extends Vue {
   private pendingNetwork = false;
   private testHoverWidth = false;
   private minWidth = "0px";
+  private timeouts: number[] = [];
   private mounted() {
     this.testHoverWidth = true;
     this.$nextTick(() => {
@@ -43,10 +44,18 @@ export default class BaseButton extends Vue {
     );
   }
 
+  public clearAllLoadingTimeout() {
+    for (const i of this.timeouts) {
+      clearTimeout(i);
+    }
+    this.timeouts = [];
+  }
+
   public emitError(e: any) {
+    this.clearAllLoadingTimeout();
     this.$emit(
       "error",
-      this.$t("Error in sound playing:").toString() +
+      this.$t("Error in sound playing: ").toString() +
         e.toString() +
         "\n" +
         this.$t("We've known about it and will work on it soon.").toString()
@@ -96,6 +105,7 @@ export default class BaseButton extends Vue {
         this.$t("Voices are still loading. Please be patient...")
       );
     }, 1500);
+    this.timeouts.push(notifyUserOfLongLoadingTime);
     try {
       audio = this.$status.player.addAudio(`assets/${audioFilename}`);
       this.$status.player.stopAllWhenNonMultiPlay();

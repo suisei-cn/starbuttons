@@ -719,5 +719,65 @@
                 "to":3216
             }
         }
+    },
+    {
+        "name": "Sorry! I'll kill everyone here!",
+        "name_l10n": {
+            "zh": "对不起！我会把在场的所有人都杀光的！",
+            "ja": "ごめんなさい！ここで皆殺しにしてやる！"
+        },
+        "file": "6GW8cEyNH7o.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "6GW8cEyNH7o"
+        }
+    },
+    {
+        "name": "I love you (choco) chu~",
+        "name_l10n": {
+            "zh": "最喜欢了 啾~",
+            "ja": "大好き ちゅん~"
+        },
+        "file": "FY-WtN7c7tI--1312.648--1314.171‬‬.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "FY-WtN7c7tI"
+        }
+    },
+    {
+        "name": "Woof Woof! ",
+        "name_l10n": {
+            "zh": "汪汪！",
+            "ja": "わんわん!"
+        },
+        "file": "FY-WtN7c7tI--380.5--381.174.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "FY-WtN7c7tI"
+        }
+    },
+    {
+        "name": "I’m very happy~",
+        "name_l10n": {
+            "zh": "好开心~",
+            "ja": "嬉しい~"
+        },
+        "file": "FY-WtN7c7tI--472.467--473.863.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "FY-WtN7c7tI"
+        }
+    },
+    {
+        "name": "I feel embarrassed~",
+        "name_l10n": {
+            "zh": "好害羞~",
+            "ja": "恥ずかしい~"
+        },
+        "file": "FY-WtN7c7tI--746.285--749.923.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "FY-WtN7c7tI"
+        }
     }
 ]

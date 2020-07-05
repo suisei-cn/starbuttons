@@ -1,11 +1,15 @@
 #!/bin/bash
 # Arguments:
 #   -o: Only output audio filenames
+
+# Only check files with size > 50kb
+FILTER_FILE_SIZE=50k
+# Target bitrate limit
 TARGET_BITRATE=200
 
 cd public/assets
 HAVE_HI_BIT=0
-for i in $(ls | grep -v README.md); do
+for i in $(find . -size +$FILTER_FILE_SIZE | grep -v README.md); do
     BITRATE=$(ffprobe $i 2>&1 | grep Duration | awk '{print $6}')
     if [ "$BITRATE" -gt "$TARGET_BITRATE" ]; then
         if [ "$1" != "-o" ]; then

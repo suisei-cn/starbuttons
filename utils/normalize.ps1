@@ -1,7 +1,7 @@
-$FILENAMES = &"utils/bitrate.ps1 -o"
+$FILENAMES = &"utils/bitrate.ps1" -o
 Set-Location public\assets
 foreach ($i in $FILENAMES){
-    Rename-Item $1 -NewName 'current.mp3'
+    Rename-Item $i -NewName 'current.mp3'
     &"ffmpeg" -i current.mp3 -ab 192k -map_metadata -1 $i
     Remove-Item current.mp3
 }

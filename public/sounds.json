@@ -908,22 +908,6 @@
         }
     },
     {
-        "name": "I'm home",
-        "name_l10n": {
-            "zh": "我回来啦",
-            "ja": "ただいま"
-        },
-        "file": "clXusKnSBY0--115.616--176.423.mp3",
-        "metadata": {
-            "site": "youtube",
-            "identifier": "clXusKnSBY0",
-            "time": {
-                "from": 138.591,
-                "to": 160
-            }
-        }
-    },
-    {
         "name": "Today Sui-chan Nyaaaaaa is still kawaii!",
         "name_l10n": {
             "zh": "彗酱Nyaaaaaa今天也很卡哇伊！",

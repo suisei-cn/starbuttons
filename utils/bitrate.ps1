@@ -1,16 +1,14 @@
-New-Variable -Name TARGET_BITRATE -Value 200 -Option Constant # Target bitrate limit
+$TARGET_BITRATE = 200 # Target bitrate limit
 $HAVE_HI_BIT=0
-Get-Location | findstr 'utils'
-if ($? -eq "True"){
+if (Test-Path -Path ..\public\assets){
     Set-Location ..\public\assets
 }
 else {
-    $null = Test-Path public\assets
-    if ($? -eq "True") {
+    if (Test-Path -Path public\assets) {
         Set-Location public\assets
     }
     else {
-        Write-Output "Can't get location."
+        Write-Output "Can't get location. Please switch to root of repository."
     }
 }
 $files = Get-Item *.mp3

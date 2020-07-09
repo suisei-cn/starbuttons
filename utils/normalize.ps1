@@ -1,4 +1,15 @@
-$FILENAMES = &"utils/bitrate.ps1" -o
+if (Test-Path -Path ..\public\assets){
+    Set-Location ..\
+}
+else {
+    if (Test-Path -Path public\assets) {
+        Set-Location
+    }
+    else {
+        Write-Output "Can't get location. Please switch to root of repository."
+    }
+}
+$FILENAMES = &"utils\bitrate.ps1" -o
 Set-Location public\assets
 foreach ($i in $FILENAMES){
     Rename-Item $i -NewName 'current.mp3'

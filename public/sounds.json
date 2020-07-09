@@ -408,14 +408,34 @@
             "zh": "（发病中）",
             "ja": "（病気中）"
         },
-        "file": "H1D_xTnXvSE--2342.29--2348.99.mp3",
+        "file": [
+            "H1D_xTnXvSE--2342.29--2348.99.mp3",
+            "clXusKnSBY0--1203.459--1209.377.mp3",
+            "clXusKnSBY0--3368.421--3380.969.mp3",
+            "clXusKnSBY0--5624.559--5647.903.mp3"
+        ],
         "metadata": {
             "site": "youtube",
-            "identifier": "H1D_xTnXvSE",
-            "time": {
+            "identifier": [
+                "H1D_xTnXvSE",
+                "clXusKnSBY0"
+            ],
+            "time": [{
                 "from": 2342.29,
                 "to": 2348.99
-            }
+            },
+            {
+                "from": 1203.459,
+                "to":1209.377
+            },
+            {
+                "from": 3368.421,
+                "to": 3380.969
+            },
+            {
+                "from": 5624.559,
+                "to": 5647.903
+            }]
         }
     },
     {
@@ -853,6 +873,134 @@
                 "to": 1577.448
             }
             ]
+        }
+    },
+    {
+        "name": "Yoooooo~",
+        "name_l10n": {
+            "zh": "Yoooooo~",
+            "ja": "Yoooooo~"
+        },
+        "file": "clXusKnSBY0--110.243--111.749.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "clXusKnSBY0",
+            "time": {
+                "from": 110.243,
+                "to": 111.749
+            }
+        }
+    },
+    {
+        "name": "I'm home",
+        "name_l10n": {
+            "zh": "我回来啦",
+            "ja": "ただいま"
+        },
+        "file": "clXusKnSBY0--115.616--176.423.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "clXusKnSBY0",
+            "time": {
+                "from": 115.616,
+                "to": 116.423
+            }
+        }
+    },
+    {
+        "name": "I'm home",
+        "name_l10n": {
+            "zh": "我回来啦",
+            "ja": "ただいま"
+        },
+        "file": "clXusKnSBY0--115.616--176.423.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "clXusKnSBY0",
+            "time": {
+                "from": 138.591,
+                "to": 160
+            }
+        }
+    },
+    {
+        "name": "Today Sui-chan Nyaaaaaa is still kawaii!",
+        "name_l10n": {
+            "zh": "彗酱Nyaaaaaa今天也很卡哇伊！",
+            "ja": "すいちゃんは、Nyaaaaaa、今日もかわいい〜！"
+        },
+        "file": "clXusKnSBY0--138.591--160.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "clXusKnSBY0",
+            "time": {
+                "from": 138.591,
+                "to": 160
+            }
+        }
+    },
+    {
+        "name": "Pien→~ Pien↑~ Pien↓~",
+        "name_l10n": {
+            "zh": "Pien→~ Pien↑~ Pien↓~",
+            "ja": "Pien→~ Pien↑~ Pien↓~"
+        },
+        "file": "clXusKnSBY0--1024--1027.415.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "clXusKnSBY0",
+            "time": {
+                "from": 1024,
+                "to": 1027.415
+            }
+        }
+    },
+    {
+        "name": "PienPienPien↓...PienPien↓↓...Pien↓↓↓....",
+        "name_l10n": {
+            "zh": "PienPienPien↓...PienPien↓↓...Pien↓↓↓....",
+            "ja": "PienPienPien↓...PienPien↓↓...Pien↓↓↓...."
+        },
+        "file": "clXusKnSBY0--1037.399--1042.938.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "clXusKnSBY0",
+            "time": {
+                "from": 1037.399,
+                "to": 1042.938
+            }
+        }
+    },
+    {
+        "name": "Ohhhhh↓~ Ohhhhhh→~ Ohhhhhhhhh↑~",
+        "name_l10n": {
+            "zh": "Ohhhhh↓~ Ohhhhhh→~ Ohhhhhhhhh↑~",
+            "ja": "Ohhhhh↓~ Ohhhhhh→~ Ohhhhhhhhh↑~"
+        },
+        "file": "clXusKnSBY0--2305.387--2312.375.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "clXusKnSBY0",
+            "time": {
+                "from": 2305.387,
+                "to": 2312.375
+            }
+        }
+    },
+    {
+        "name": "Unravel (psycho version)",
+        "name_l10n": {
+            "zh": "Unravel (神经病版)",
+            "ja": "Unravel (サイコ バ—ジョン)"
+        },
+        "file": "clXusKnSBY0--5822.387--5845.454.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "clXusKnSBY0",
+            "time": {
+                "from": 5822.387,
+                "to": 5845.454
+            }
         }
     }
 ]

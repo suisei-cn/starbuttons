@@ -3,21 +3,20 @@ $HAVE_HI_BIT=0
 if (Test-Path -Path ..\public\assets){
     Set-Location ..\public\assets
 }
-else {
-    if (Test-Path -Path public\assets) {
+elseif (Test-Path -Path public\assets){
         Set-Location public\assets
     }
-    else {
+else {
         Write-Output "Can't get location. Please switch to root of repository."
-    }
 }
+
 $files = Get-Item *.mp3
 foreach ($file in $files) {
     $null = $filesize = Get-ChildItem | ForEach-Object {[math]::ceiling($file.length / 1kb)}
     if ($filesize -gt '51') {
         # Only check files with size > 50kb
-        $info = &"ffprobe" $file.Name 2>&1 | findstr "Duration"
-        $BITRATE = ForEach-Object {($info -split "[ ]")[7]}
+        $info = &"ffprobe" -v error -show_entries format=bit_rate -i $file.Name
+        $BITRATE = ForEach-Object {[math]::ceiling(($info -split "[=]")[2] / 1kb)}
         if ($BITRATE -gt $TARGET_BITRATE) {
             if ($args[0] -ne "-o") {
                 # Arguments:

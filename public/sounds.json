@@ -986,5 +986,21 @@
                 "to": 5845.454
             }
         }
+    },
+    {
+        "name": "Holy F***",
+        "name_l10n": {
+            "zh": "Holy F***",
+            "ja": "Holy F***"
+        },
+        "file": "pLUf75CZg38--3802.3--3806.8.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "pLUf75CZg38",
+            "time": {
+                "from": 3802.3,
+                "to": 3806.8
+            }            
+        }
     }
 ]

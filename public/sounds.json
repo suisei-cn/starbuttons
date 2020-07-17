@@ -18,7 +18,11 @@
             "zh": "啊哈哈哈",
             "ja": "あははははは"
         },
-        "file": "ahhh.mp3",
+        "file": [
+            "ahhh.mp3",
+            "pLUf75CZg38--2806.545--2811.583.mp3",
+            "pLUf75CZg38--3058.48--3064.917.mp3"
+        ],
         "type": "normal"
     },
     {
@@ -344,14 +348,26 @@
             "zh": "极致弹舌",
             "ja": "極道弹舌"
         },
-        "file": "H1D_xTnXvSE--1449.82--1451.75.mp3",
+        "file": [
+            "H1D_xTnXvSE--1449.82--1451.75.mp3",
+            "pLUf75CZg38--3303.694--3308.923.mp3"
+        ],
         "metadata": {
             "site": "youtube",
-            "identifier": "H1D_xTnXvSE",
-            "time": {
-                "from": 1449.82,
-                "to": 1451.75
-            }
+            "identifier": [
+                "H1D_xTnXvSE",
+                "pLUf75CZg38"
+            ],
+            "time": [
+                {
+                    "from": 1449.82,
+                    "to": 1451.75
+                },
+                {
+                    "from": 3303.694,
+                    "to": 3308.923
+                }
+            ]
         }
     },
     {
@@ -420,22 +436,24 @@
                 "H1D_xTnXvSE",
                 "clXusKnSBY0"
             ],
-            "time": [{
-                "from": 2342.29,
-                "to": 2348.99
-            },
-            {
-                "from": 1203.459,
-                "to":1209.377
-            },
-            {
-                "from": 3368.421,
-                "to": 3380.969
-            },
-            {
-                "from": 5624.559,
-                "to": 5647.903
-            }]
+            "time": [
+                {
+                    "from": 2342.29,
+                    "to": 2348.99
+                },
+                {
+                    "from": 1203.459,
+                    "to": 1209.377
+                },
+                {
+                    "from": 3368.421,
+                    "to": 3380.969
+                },
+                {
+                    "from": 5624.559,
+                    "to": 5647.903
+                }
+            ]
         }
     },
     {
@@ -629,19 +647,41 @@
         }
     },
     {
-        "name": "Ahhhhhh! (Volume attention!)",
+        "name": "Ahhhhhh!",
         "name_l10n": {
-            "zh": "啊啊啊啊！（音量警告!）",
-            "ja": "あああああああ！（ボリュームノート!）"
+            "zh": "啊啊啊啊",
+            "ja": "あああああああ"
         },
-        "file": "lwszUzu_ARc--8180--8184.mp3",
+        "file": [
+            "lwszUzu_ARc--8180--8184.mp3",
+            "pLUf75CZg38--430.302--436.mp3",
+            "pLUf75CZg38--2793.522--2795.mp3",
+            "pLUf75CZg38--3179.149--3185.929.mp3"
+        ],
         "metadata": {
             "site": "youtube",
-            "identifier": "lwszUzu_ARc",
-            "time": {
-                "from": 8180.789,
-                "to": 8184.828
-            }
+            "identifier": [
+                "lwszUzu_ARc",
+                "pLUf75CZg38"
+            ],
+            "time": [
+                {
+                    "from": 8180.789,
+                    "to": 8184.828
+                },
+                {
+                    "from": 430.302,
+                    "to": 436
+                },
+                {
+                    "from": 2793.522,
+                    "to": 2795
+                },
+                {
+                    "from": 3179.149,
+                    "to": 3185.929
+                }
+            ]
         }
     },
     {
@@ -751,8 +791,8 @@
             "site": "youtube",
             "identifier": "1768lvpfxRI",
             "time": {
-                "from":  3210,
-                "to":3216
+                "from": 3210,
+                "to": 3216
             }
         }
     },
@@ -856,22 +896,59 @@
         },
         "file": [
             "2TRd-2q9JYA--3634.903--3638.6842.mp3",
-            "boRajPeaJwA--1564--1577.mp3"
+            "boRajPeaJwA--1564--1577.mp3",
+            "pLUf75CZg38--695.664--722.762.mp3",
+            "pLUf75CZg38--1913.155--1918.837.mp3",
+            "pLUf75CZg38--1957.304--1962.699.mp3",
+            "pLUf75CZg38--2066.737-2117.848.mp3",
+            "pLUf75CZg38--2118.064--2136.733.mp3",
+            "pLUf75CZg38--2761.676--2776.016.mp3",
+            "pLUf75CZg38--3715--3724.275.mp3"
         ],
         "metadata": {
             "site": "youtube",
             "identifier": [
                 "2TRd-2q9JYA",
-                "boRajPeaJwA"
+                "boRajPeaJwA",
+                "pLUf75CZg38"
             ],
-            "time": [{
-                "from": 3634.903,
-                "to": 3638.684
-            },
-            {
-                "from": 1564.709,
-                "to": 1577.448
-            }
+            "time": [
+                {
+                    "from": 3634.903,
+                    "to": 3638.684
+                },
+                {
+                    "from": 1564.709,
+                    "to": 1577.448
+                },
+                {
+                    "from": 695.664,
+                    "to": 722.762
+                },
+                {
+                    "from": 1913.155,
+                    "to": 1918.837
+                },
+                {
+                    "from": 1957.304,
+                    "to": 1962.699
+                },
+                {
+                    "from": 2066.737,
+                    "to": 2117.848
+                },
+                {
+                    "from": 2118.064,
+                    "to": 2136.733
+                },
+                {
+                    "from": 2761.676,
+                    "to": 2776.016
+                },
+                {
+                    "from": 3715,
+                    "to": 3724.275
+                }
             ]
         }
     },
@@ -1000,7 +1077,71 @@
             "time": {
                 "from": 3802.3,
                 "to": 3806.8
-            }            
+            }
+        }
+    },
+    {
+        "name": "(Lament)",
+        "name_l10n": {
+            "zh": "（悲鸣）",
+            "ja": "（悲鳴）"
+        },
+        "file": "pLUf75CZg38--1980.543--1985.657.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "pLUf75CZg38",
+            "time": {
+                "from": 1980.543,
+                "to": 1985.657
+            }
+        }
+    },
+    {
+        "name": "Aka-chan, aka-chan, aka-chan!",
+        "name_l10n": {
+            "zh": "蓝酱，蓝酱，蓝酱！",
+            "ja": "らんちゃん，らんちゃん，らんちゃん！"
+        },
+        "file": "pLUf75CZg38--567.08--574.946.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "pLUf75CZg38",
+            "time": {
+                "from": 567.08,
+                "to": 574.946
+            }
+        }
+    },
+    {
+        "name": "No!!!... (deep breath)",
+        "name_l10n": {
+            "zh": "这不妙啊！！！...（深呼吸）",
+            "ja": "オーケーじゃなーい！！！...（息をする）"
+        },
+        "file": "pLUf75CZg38--634.594--648.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "pLUf75CZg38",
+            "time": {
+                "from": 634.594,
+                "to": 648
+            }
+        }
+    },
+    {
+        "name": "Sorry→~↑",
+        "name_l10n": {
+            "zh": "抱歉！→~↑",
+            "ja": "すみません！→~↑"
+        },
+        "file": "pLUf75CZg38--2780--2788.057.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "pLUf75CZg38",
+            "time": {
+                "from": 2780,
+                "to": 2788.057
+            }
         }
     }
 ]

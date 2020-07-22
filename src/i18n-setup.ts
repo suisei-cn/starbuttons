@@ -12,6 +12,7 @@ export const i18n = new VueI18n({
   messages: {
     en: i18n_en,
     ja: i18n_ja,
-    zh: i18n_zh
+    zh: i18n_zh,
+    yue: i18n_zh
   }
 });

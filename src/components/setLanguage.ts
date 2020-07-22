@@ -1,5 +1,5 @@
 export function setLanguage(window: Window, navigator: Navigator, vue: Vue) {
-  const lang =
+  let lang =
     (
       window.location.search.match(/lang=([a-zA-Z-]+)/)?.[1] ||
       (navigator as Navigator).language ||

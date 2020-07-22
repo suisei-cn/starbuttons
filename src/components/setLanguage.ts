@@ -6,5 +6,7 @@ export function setLanguage(window: Window, navigator: Navigator, vue: Vue) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (navigator as any).userLanguage
     ).split("-")[0] || "zh";
+  // Fallback yue to zh for now
+  if (lang === "yue") lang = "zh";
   vue.$i18n.locale = lang;
 }

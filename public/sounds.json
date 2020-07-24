@@ -428,13 +428,17 @@
             "H1D_xTnXvSE--2342.29--2348.99.mp3",
             "clXusKnSBY0--1203.459--1209.377.mp3",
             "clXusKnSBY0--3368.421--3380.969.mp3",
-            "clXusKnSBY0--5624.559--5647.903.mp3"
+            "clXusKnSBY0--5624.559--5647.903.mp3",
+            "0WsDVU_W6QU--4150.545--4158.mp3",
+            "0WsDVU_W6QU--4289.28--4295.832.mp3",
+            "0WsDVU_W6QU--2692.343--2700.186.mp3"
         ],
         "metadata": {
             "site": "youtube",
             "identifier": [
                 "H1D_xTnXvSE",
-                "clXusKnSBY0"
+                "clXusKnSBY0",
+                "0WsDVU_W6QU"
             ],
             "time": [
                 {
@@ -452,6 +456,18 @@
                 {
                     "from": 5624.559,
                     "to": 5647.903
+                },
+                {
+                    "from": 4150.545,
+                    "to": 4158
+                },
+                {
+                    "from": 4289.28,
+                    "to": 4295.832
+                },
+                {
+                    "from": 2692.343,
+                    "to": 2700.186
                 }
             ]
         }
@@ -656,13 +672,15 @@
             "lwszUzu_ARc--8180--8184.mp3",
             "pLUf75CZg38--430.302--436.mp3",
             "pLUf75CZg38--2793.522--2795.mp3",
-            "pLUf75CZg38--3179.149--3185.929.mp3"
+            "pLUf75CZg38--3179.149--3185.929.mp3",
+            "0WsDVU_W6QU--2289.926--2292.501.mp3"
         ],
         "metadata": {
             "site": "youtube",
             "identifier": [
                 "lwszUzu_ARc",
-                "pLUf75CZg38"
+                "pLUf75CZg38",
+                "0WsDVU_W6QU"
             ],
             "time": [
                 {
@@ -680,6 +698,10 @@
                 {
                     "from": 3179.149,
                     "to": 3185.929
+                },
+                {
+                    "from": 2289.926,
+                    "to": 2292.501
                 }
             ]
         }
@@ -903,14 +925,17 @@
             "pLUf75CZg38--2066.737-2117.848.mp3",
             "pLUf75CZg38--2118.064--2136.733.mp3",
             "pLUf75CZg38--2761.676--2776.016.mp3",
-            "pLUf75CZg38--3715--3724.275.mp3"
+            "pLUf75CZg38--3715--3724.275.mp3",
+            "0WsDVU_W6QU--939.717--947.618.mp3",
+            "0WsDVU_W6QU--2202.963--2207.233.mp3"
         ],
         "metadata": {
             "site": "youtube",
             "identifier": [
                 "2TRd-2q9JYA",
                 "boRajPeaJwA",
-                "pLUf75CZg38"
+                "pLUf75CZg38",
+                "0WsDVU_W6QU"
             ],
             "time": [
                 {
@@ -948,6 +973,14 @@
                 {
                     "from": 3715,
                     "to": 3724.275
+                },
+                {
+                    "from": 939.717,
+                    "to": 947.618
+                },
+                {
+                    "from": 2202.963,
+                    "to": 2207.233
                 }
             ]
         }
@@ -1142,6 +1175,181 @@
                 "from": 2780,
                 "to": 2788.057
             }
+        }
+    },
+    {
+        "name": "Ahh...Ahh!",
+        "name_l10n": {
+            "zh": "哇... 哇！",
+            "ja": "うわー...うわー！"
+        },
+        "file": "0WsDVU_W6QU--279.217--282.923.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "0WsDVU_W6QU",
+            "time": {
+                "from": 279.217,
+                "to": 282.923
+            }
+        }
+    },
+    {
+        "name": "Hoshi-Nya",
+        "name_l10n": {
+            "zh": "星猫",
+            "ja": "星猫"
+        },
+        "file": [
+            "0WsDVU_W6QU--2968.326--2970.mp3",
+            "0WsDVU_W6QU--1702.619--1705.827.mp3",
+            "0WsDVU_W6QU--1818.752--1820.936.mp3"
+        ],
+        "metadata": {
+            "site": "youtube",
+            "identifier": "0WsDVU_W6QU",
+            "time": [
+                {
+                    "from": 2968.326,
+                    "to": 2970
+                },
+                {
+                    "from": 1702.619,
+                    "to": 1705.827
+                },
+                {
+                    "from": 1818.752,
+                    "to": 1820.936
+                }
+            ]
+        }
+    },
+    {
+        "name": "Eh-Ahhh~~~",
+        "name_l10n": {
+            "zh": "饿啊~~~",
+            "ja": "Eh-Ahhh~~~"
+        },
+        "file": "0WsDVU_W6QU--954.659--956.353.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "0WsDVU_W6QU",
+            "time": {
+                "from": 954.659,
+                "to": 956.353
+            }
+        }
+    },
+    {
+        "name": "Na!!! (angry)",
+        "name_l10n": {
+            "zh": "呐！！！（恼怒）",
+            "ja": "な！！！（怒り）"
+        },
+        "file": [
+            "0WsDVU_W6QU--2308.182--2310.823.mp3",
+            "0WsDVU_W6QU--2978.508--2980.508.mp3",
+            "0WsDVU_W6QU--3605.335--3614.21.mp3",
+            "0WsDVU_W6QU--4134.913--4142.164.mp3",
+            "0WsDVU_W6QU--9735.791--9738.mp3"
+        ],
+        "metadata": {
+            "site": "youtube",
+            "identifier": "0WsDVU_W6QU",
+            "time": [
+                {
+                    "from": 2308.182,
+                    "to": 2310.823
+                },
+                {
+                    "from": 2978.508,
+                    "to": 2980.508
+                },
+                {
+                    "from": 3605.335,
+                    "to": 3614.21
+                },
+                {
+                    "from": 4134.913,
+                    "to": 4142.164
+                },
+                {
+                    "from": 9735.791,
+                    "to": 9738
+                }
+            ]
+        }
+    },
+    {
+        "name": "Na~~~ (Lovely)",
+        "name_l10n": {
+            "zh": "呐~~~（奶声奶气）",
+            "ja": "な~~~（愛らしい、ひそやかに）"
+        },
+        "file": "0WsDVU_W6QU--4942.557--4955.393.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "0WsDVU_W6QU",
+            "time": {
+                "from": 4942.557,
+                "to": 4955.393
+            }
+        }
+    },
+    {
+        "name": "Ahhh!!! What the hell is this game!",
+        "name_l10n": {
+            "zh": "啊！！！这游戏什么啊！",
+            "ja": "あ！！！何だこのゲームわ！"
+        },
+        "file": "0WsDVU_W6QU--3802--3812.721.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "0WsDVU_W6QU",
+            "time": {
+                "from": 3802,
+                "to": 3812.721
+            }
+        }
+    },
+    {
+        "name": "\"Ticker-tape Timer\"",
+        "name_l10n": {
+            "zh": "“打 点 计 时 器”",
+            "ja": "“タイムスイッチ”"
+        },
+        "file": "0WsDVU_W6QU--4485--4495.634.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "0WsDVU_W6QU",
+            "time": {
+                "from": 4485,
+                "to": 4495.634
+            }
+        }
+    },
+    {
+        "name": "\"Air-raid Siren\" (✓ Repeat)",
+        "name_l10n": {
+            "zh": "“防空警报”（✓ 洗脑循环）",
+            "ja": "“空襲警報”（✓ Repeat）"
+        },
+        "file": [
+            "0WsDVU_W6QU--4565.222--4568.472.mp3",
+            "0WsDVU_W6QU--4832--4837.468.mp3"
+        ],
+        "metadata": {
+            "site": "youtube",
+            "identifier": "0WsDVU_W6QU",
+            "time": [
+                {
+                    "from": 4565.222,
+                    "to": 4568.472
+                },
+                {
+                    "from": 4832,
+                    "to": 4837.468
+                }
+            ]
         }
     }
 ]

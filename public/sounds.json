@@ -1351,5 +1351,21 @@
                 }
             ]
         }
+    },
+    {
+        "name": "Hehehehehe",
+        "name_l10n": {
+            "zh": "嘿嘿嘿嘿嘿",
+            "ja": "へへへへへ"
+        },
+        "file": "Qpc1ysd9S9c--3946.3--3947.35.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "Qpc1ysd9S9c",
+            "time": {
+                "from": 3946.3,
+                "to": 3947.35
+            }
+        }
     }
 ]

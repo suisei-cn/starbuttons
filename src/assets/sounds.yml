@@ -11,6 +11,7 @@
   name_l10n:
     zh: 啊哈哈哈
     ja: あははははは
+  category: cute
   file:
     - ahhh.mp3
     - pLUf75CZg38--2806.545--2811.583.mp3
@@ -104,6 +105,7 @@
   name_l10n:
     zh: (非洲人的呐喊) ...抱歉。
     ja: (あ゛ぁ゛ぁ゛ぁ゛ぁ゛ぁ゛) ... しみません。
+  category: cute
   metadata:
     site: youtube
     identifier: kKm-MqVoLzg
@@ -116,6 +118,7 @@
   name_l10n:
     zh: Lambda!
     ja: らむだ！
+  category: cute
   metadata:
     site: youtube
     identifier: LS6srVfrxIk
@@ -171,6 +174,7 @@
   name_l10n:
     zh: （笑）
     ja: （笑）
+  category: cute
   file: BjuYqoY_CxI--1842.9--1953.36.mp3
   metadata:
     site: youtube
@@ -182,6 +186,7 @@
   name_l10n:
     zh: （马里奥背景音乐...）啊！
     ja: (Mario BGM...) Ahhhhh!
+  category: cute
   file: KTuIsqb7G1s--711.4--716.5.mp3
   metadata:
     site: youtube
@@ -204,6 +209,7 @@
   name_l10n:
     zh: 星乐器（吃瘪限定）
     ja: すい楽器（びびってる限定）
+  category: cute
   file: RLKWrmGTemM--139--144.5.mp3
   metadata:
     site: youtube
@@ -237,13 +243,14 @@
   name_l10n:
     zh: 皮卡丘~
     ja: ピカチュウ~
-  file: 
+  category: cute
+  file:
     - H1D_xTnXvSE--1021.74--1022.7.mp3
     - -cWxSCiPKk4--1511.069--1512.099.mp3
     - -cWxSCiPKk4--1569.075--1570.109.mp3
   metadata:
     site: youtube
-    identifier: 
+    identifier:
       - H1D_xTnXvSE
       - -cWxSCiPKk4
     time:
@@ -257,6 +264,7 @@
   name_l10n:
     zh: 极致弹舌
     ja: 極道弹舌
+  category: cute
   file:
     - H1D_xTnXvSE--1449.82--1451.75.mp3
     - pLUf75CZg38--3303.694--3308.923.mp3
@@ -274,6 +282,7 @@
   name_l10n:
     zh: hoihoihoi~
     ja: hoihoihoi~
+  category: cute
   file: H1D_xTnXvSE--1526--1544.24.mp3
   metadata:
     site: youtube
@@ -285,6 +294,7 @@
   name_l10n:
     zh: hoi！hoi！六魁首！
     ja: hoi！hoi！ドッコイショ！
+  category: cute
   file: H1D_xTnXvSE--1577.2--1582.9.mp3
   metadata:
     site: youtube
@@ -296,6 +306,7 @@
   name_l10n:
     zh: 皮卡卡卡卡丘丘丘丘丘丘丘丘丘丘丘丘~
     ja: ピカチュウウウウウウウウウウ~
+  category: cute
   file: H1D_xTnXvSE--1212--1216.mp3
   metadata:
     site: youtube
@@ -318,6 +329,7 @@
   name_l10n:
     zh: （发病中）
     ja: （病気中）
+  category: cute
   file:
     - H1D_xTnXvSE--2342.29--2348.99.mp3
     - clXusKnSBY0--1203.459--1209.377.mp3
@@ -351,6 +363,7 @@
   name_l10n:
     zh: （狂笑）
     ja: （大笑いする）
+  category: cute
   file: DGjBouw_yeI--2561.09--2677.55.mp3
   metadata:
     site: youtube
@@ -362,6 +375,7 @@
   name_l10n:
     zh: Pararira *n
     ja: Pararira *n
+  category: cute
   file: MORh1OhPnak--10.75--16.47.mp3
   metadata:
     site: youtube
@@ -411,6 +425,7 @@
   name_l10n:
     zh: Aiiiiiiiiiiiiiii
     ja: Aiiiiiiiiiiiiiii
+  category: cute
   file: Aiiiiiiiiiiiiiii.mp3
   metadata:
     site: bilibili
@@ -419,6 +434,7 @@
   name_l10n:
     zh: Doooooooooo~~~
     ja: Doooooooooo~~~
+  category: cute
   file: doooooooooo.mp3
   metadata:
     site: bilibili
@@ -458,6 +474,7 @@
   name_l10n:
     zh: Wuaaaaaaaa...
     ja: Wuaaaaaaaa...
+  category: cute
   file: lwszUzu_ARc--5655--5660.mp3
   metadata:
     site: youtube
@@ -480,6 +497,7 @@
   name_l10n:
     zh: 啊啊啊啊
     ja: あああああああ
+  category: cute
   file:
     - lwszUzu_ARc--8180--8184.mp3
     - pLUf75CZg38--430.302--436.mp3
@@ -507,6 +525,7 @@
   name_l10n:
     zh: Nyaaaaa~
     ja: Nyaaaaa~
+  category: cute
   file: boRajPeaJwA--2745--2752.mp3
   metadata:
     site: youtube
@@ -529,6 +548,7 @@
   name_l10n:
     zh: Punai Punai!
     ja: プナイプナイ!
+  category: cute
   file: boRajPeaJwA--2020--2022.mp3
   metadata:
     site: youtube
@@ -551,6 +571,7 @@
   name_l10n:
     zh: （水 开 了）
     ja: （お湯）
+  category: cute
   file: boRajPeaJwA--3962--3967.mp3
   metadata:
     site: youtube
@@ -573,6 +594,7 @@
   name_l10n:
     zh: 唔呼呼呼 噫嘻嘻嘻
     ja: うふふふ いひひひ
+  category: cute
   file: 1768lvpfxRI--3210--3216.mp3
   metadata:
     site: youtube
@@ -603,6 +625,7 @@
   name_l10n:
     zh: 汪汪！
     ja: わんわん!
+  category: cute
   file: FY-WtN7c7tI--380.5--381.174.mp3
   metadata:
     site: youtube
@@ -636,6 +659,7 @@
   name_l10n:
     zh: Ei Nya
     ja: Ei Nya
+  category: cute
   file: 2TRd-2q9JYA--934.169--934.645.mp3
   metadata:
     site: youtube
@@ -647,6 +671,7 @@
   name_l10n:
     zh: （胡言乱语）
     ja: （でたらめ）
+  category: cute
   file:
     - 2TRd-2q9JYA--3634.903--3638.6842.mp3
     - boRajPeaJwA--1564--1577.mp3
@@ -697,6 +722,7 @@
   name_l10n:
     zh: Yoooooo~
     ja: Yoooooo~
+  category: cute
   file: clXusKnSBY0--110.243--111.749.mp3
   metadata:
     site: youtube
@@ -730,6 +756,7 @@
   name_l10n:
     zh: Pien→~ Pien↑~ Pien↓~
     ja: Pien→~ Pien↑~ Pien↓~
+  category: cute
   file: clXusKnSBY0--1024--1027.415.mp3
   metadata:
     site: youtube
@@ -741,6 +768,7 @@
   name_l10n:
     zh: PienPienPien↓...PienPien↓↓...Pien↓↓↓....
     ja: PienPienPien↓...PienPien↓↓...Pien↓↓↓....
+  category: cute
   file: clXusKnSBY0--1037.399--1042.938.mp3
   metadata:
     site: youtube
@@ -752,6 +780,7 @@
   name_l10n:
     zh: Ohhhhh↓~ Ohhhhhh→~ Ohhhhhhhhh↑~
     ja: Ohhhhh↓~ Ohhhhhh→~ Ohhhhhhhhh↑~
+  category: cute
   file: clXusKnSBY0--2305.387--2312.375.mp3
   metadata:
     site: youtube
@@ -785,6 +814,7 @@
   name_l10n:
     zh: （悲鸣）
     ja: （悲鳴）
+  category: cute
   file: pLUf75CZg38--1980.543--1985.657.mp3
   metadata:
     site: youtube
@@ -829,6 +859,7 @@
   name_l10n:
     zh: 哇... 哇！
     ja: うわー...うわー！
+  category: cute
   file: 0WsDVU_W6QU--279.217--282.923.mp3
   metadata:
     site: youtube
@@ -840,6 +871,7 @@
   name_l10n:
     zh: 星猫
     ja: 星猫
+  category: cute
   file:
     - 0WsDVU_W6QU--2968.326--2970.mp3
     - 0WsDVU_W6QU--1702.619--1705.827.mp3
@@ -858,6 +890,7 @@
   name_l10n:
     zh: 饿啊~~~
     ja: Eh-Ahhh~~~
+  category: cute
   file: 0WsDVU_W6QU--954.659--956.353.mp3
   metadata:
     site: youtube
@@ -869,6 +902,7 @@
   name_l10n:
     zh: 呐！！！（恼怒）
     ja: な！！！（怒り）
+  category: cute
   file:
     - 0WsDVU_W6QU--2308.182--2310.823.mp3
     - 0WsDVU_W6QU--2978.508--2980.508.mp3
@@ -893,6 +927,7 @@
   name_l10n:
     zh: 呐~~~（奶声奶气）
     ja: な~~~（愛らしい、ひそやかに）
+  category: cute
   file: 0WsDVU_W6QU--4942.557--4955.393.mp3
   metadata:
     site: youtube
@@ -915,6 +950,7 @@
   name_l10n:
     zh: “打 点 计 时 器”
     ja: “タイムスイッチ”
+  category: cute
   file: 0WsDVU_W6QU--4485--4495.634.mp3
   metadata:
     site: youtube
@@ -926,6 +962,7 @@
   name_l10n:
     zh: “防空警报”（✓ 洗脑循环）
     ja: “空襲警報”（✓ Repeat）
+  category: cute
   file:
     - 0WsDVU_W6QU--4565.222--4568.472.mp3
     - 0WsDVU_W6QU--4832--4837.468.mp3
@@ -941,6 +978,7 @@
   name_l10n:
     zh: 嘿嘿嘿嘿嘿
     ja: へへへへへ
+  category: cute
   file: Qpc1ysd9S9c--3946.3--3947.35.mp3
   metadata:
     site: youtube
@@ -1101,12 +1139,12 @@
   name_l10n:
     zh: 再见啦！
     ja: じゃあね！
-  file: 
+  file:
     - I58nqKO2fak--3639.59--3640.496.mp3
     - -cWxSCiPKk4--3606.307--3613.59.mp3
   metadata:
     site: youtube
-    identifier: 
+    identifier:
       - I58nqKO2fak
       - -cWxSCiPKk4
     time:
@@ -1140,7 +1178,7 @@
   name_l10n:
     zh: （各种口胡）
     ja: （いろいろなでたらめ）
-  file: 
+  file:
     - -cWxSCiPKk4--1445.142--1448.413.mp3
     - -cWxSCiPKk4--1625.381--1632.897.mp3
     - -cWxSCiPKk4--2326.832--2332.343.mp3

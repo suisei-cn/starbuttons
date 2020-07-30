@@ -34,6 +34,11 @@
         "title": "Sound button type",
         "default": "normal"
       },
+      "category": {
+        "type": "string",
+        "title": "Sound category",
+        "default": ""
+      },
       "metadata": {
         "type": "object",
         "title": "Metadata of the sound",

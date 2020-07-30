@@ -30,12 +30,27 @@
         @click="playEhhh"
       >
         <div id="boardWrapper">
-          <template v-for="(item, index) of sounds">
+          <template v-if="displayMusicBoard">
+            <template
+              v-for="(cat, catIndex) of Object.entries(categoriedSounds)"
+            >
+              <div class="categoryTitle" :key="catIndex">
+                {{ localizedName(categories[cat[0]]) }}
+              </div>
+              <BaseButton
+                v-for="(item, index) of cat[1]"
+                :item="item"
+                :key="catIndex * 2048 + 1 + index"
+                class="normalBtn"
+                @error="showError"
+              ></BaseButton>
+            </template>
+            <div class="categoryTitle">{{ $t("Uncategorized") }}</div>
             <BaseButton
+              v-for="(item, index) of sounds"
               :item="item"
               :key="index"
               class="normalBtn"
-              v-if="displayMusicBoard"
               @error="showError"
             ></BaseButton>
           </template>
@@ -105,7 +120,7 @@
 
 <script lang="ts">
 import { Component, Vue, Watch, Emit } from "vue-property-decorator";
-import { Sound } from "../types";
+import { Sound, CategorizedSounds, Categories, NameWithL10n } from "../types";
 import Lottie from "lottie-web";
 import { getItem, removeItem } from "../components/localStorageWrapper";
 import BaseButton from "../components/BaseButton.vue";
@@ -121,7 +136,9 @@ const THEME_ENFORCEMENT_SETTINGS_ITEM = "enforced-theme";
 })
 export default class App extends Vue {
   // @ts-ignore
-  private sounds: Sound[] = [{}];
+  private sounds: Sound[] = [];
+  private categoriedSounds: CategorizedSounds = {};
+  private categories: Categories = {};
   private displayMusicBoard = false;
   private settings: string[] = [];
   private useSystemTheme = true;
@@ -145,12 +162,12 @@ export default class App extends Vue {
     this.$status.player.repeatThis = newValue.includes("repeatThis");
   }
 
+  private localizedName(nameseq: NameWithL10n) {
+    return (nameseq?.name_l10n || {})[this.$i18n.locale] || nameseq?.name || "";
+  }
+
   get ehhhLocalizedName() {
-    return (
-      (this?.sounds[0].name_l10n || {})[this.$i18n.locale] ||
-      this?.sounds[0].name ||
-      ""
-    );
+    return this.localizedName(this?.sounds[0] as Sound);
   }
 
   private playEhhh() {
@@ -192,6 +209,21 @@ export default class App extends Vue {
     });
   }
 
+  private putSoundsIntoCategories() {
+    const soundsNoCat: Sound[] = [];
+    const categoriedSounds: CategorizedSounds = {};
+    for (const i of this.sounds) {
+      if (!i.category) {
+        soundsNoCat.push(i);
+        continue;
+      }
+      if (!categoriedSounds[i.category]) categoriedSounds[i.category] = [];
+      categoriedSounds[i.category].push(i);
+    }
+    this.categoriedSounds = categoriedSounds;
+    this.sounds = soundsNoCat;
+  }
+
   private async mounted() {
     this.settings = ["multiPlay"];
     this.sounds = (await fetch("/sounds.json")
@@ -201,6 +233,14 @@ export default class App extends Vue {
         console.error("Sound data fetch error. Exiting.");
         this.showError(this.$t("Sound list fetch error:") + e.toString());
       })) as Sound[];
+    this.categories = (await fetch("/categories.json")
+      .then(x => x.json())
+      .catch(e => {
+        // tslint:disable-next-line:no-console
+        console.error("Sound data fetch error. Exiting.");
+        this.showError(this.$t("Sound list fetch error:") + e.toString());
+      })) as Categories;
+    this.putSoundsIntoCategories();
     setLanguage(window, navigator, this);
     this.updateThemeSettings();
     this.setupBackgroundAnimations();
@@ -398,6 +438,13 @@ label {
   #bigButtonText {
     opacity: 0;
   }
+}
+
+.categoryTitle {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 12px;
+  width: 100%;
 }
 
 #virtualCentralButton {

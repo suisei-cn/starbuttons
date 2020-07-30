@@ -5,10 +5,10 @@
     :class="{
       playingBtn: playLayer > 0,
       testHoverWidth,
-      pending: pendingNetwork,
+      pending: pendingNetwork
     }"
     :style="{
-      minWidth,
+      minWidth
     }"
     tabindex="0"
   >
@@ -22,7 +22,7 @@ import { Sound } from "../types";
 import * as Sentry from "@sentry/browser";
 
 async function sleep(time: number) {
-  await new Promise((resolve) => {
+  await new Promise(resolve => {
     setTimeout(() => {
       resolve();
     }, time);
@@ -145,7 +145,7 @@ export default class BaseButton extends Vue {
             this.$emit("started");
           }
         })
-        .catch((e) => {
+        .catch(e => {
           this.emitError(e);
           throw e;
         });

@@ -39,6 +39,7 @@ jobs:
           SSH: true
           BRANCH: gh-pages
           FOLDER: dist
+          SINGLE_COMMIT: true
 
       - name: Announce release and deploy to Sentry
         env:

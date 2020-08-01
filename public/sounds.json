@@ -1399,5 +1399,21 @@
                 "to": 2031
             }
         }
+    },
+    {
+        "name": "You have strived for you life, you don't need to push yourself hard any more.",
+        "name_l10n": {
+            "zh": "你已经很努力的生存了, 不用再勉强自己了.",
+            "ja": "人生頑張ったね、もう、無理しなくて良いだよ。"
+        },
+        "file": "mXOF0_qy8vI--2788.5--2793.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "mXOF0_qy8vI",
+            "time": {
+                "from": 2788.5,
+                "to": 2793
+            }
+        }
     }
 ]

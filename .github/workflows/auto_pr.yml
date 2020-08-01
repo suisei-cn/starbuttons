@@ -21,13 +21,14 @@ jobs:
           target: public/assets
           auto-match: true
 
-      - uses: suisei-cn/actions-update-metadata@v1
+      - uses: suisei-cn/actions-update-metadata@v2
         id: updatemeta
         name: Update sounds.json
         with:
           comment: ${{ github.event.comment.body }}
-          target: public/sounds.json
+          target: src/assets/sounds.yml
           default-username: librehsbot
+          format: yaml
           
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2.8.0

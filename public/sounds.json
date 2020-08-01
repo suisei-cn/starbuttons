@@ -1383,5 +1383,21 @@
                 "to": 913.5
             }
         }
+    },
+    {
+        "name": "(Boiling water 2.0)",
+        "name_l10n": {
+            "zh": "(中之壶 v2)",
+            "ja": "(沸騰したお湯 v2)"
+        },
+        "file": "mXOF0_qy8vI--2024--2031.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "mXOF0_qy8vI",
+            "time": {
+                "from": 2024,
+                "to": 2031
+            }
+        }
     }
 ]

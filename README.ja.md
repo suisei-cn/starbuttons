@@ -14,7 +14,7 @@ README：**日本語** | [中文](https://github.com/suisei-cn/starbuttons/blob/
 
 ### 音声
 
-* [`public/sounds.json`](https://github.com/suisei-cn/starbuttons/blob/master/public/sounds.json) - 音声情報
+* [`src/assets/sounds.yml`](https://github.com/suisei-cn/starbuttons/blob/master/src/assets/sounds.yml) - 音声情報
 * [`public/assets`](https://github.com/suisei-cn/starbuttons/tree/master/public/assets) - 音声ファイル
 
 音声のみの投稿をする人は上記の2つを変更してください。

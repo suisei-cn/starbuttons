@@ -5,6 +5,7 @@ import { i18n } from "./i18n-setup";
 import CentralPlayer from "./components/centralPlayer";
 import * as Sentry from "@sentry/browser";
 import { Vue as VueIntegration } from "@sentry/integrations";
+import './assets/sounds.yml';
 
 import "./registerServiceWorker";
 

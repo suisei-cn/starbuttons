@@ -6,6 +6,18 @@ module.exports = {
       args[0].title = "Starbuttons";
       return args;
     });
+    config.module
+      .rule("yaml")
+      .test(/\.ya?ml$/)
+      .use("file-loader")
+      .loader("file-loader")
+      .options({
+        name: "./[name].json"
+      })
+      .end()
+      .use("yaml-loader")
+      .loader("yaml-loader")
+      .end();
   },
   configureWebpack: {
     plugins:

@@ -14,7 +14,7 @@ README：**中文** | [English](https://github.com/suisei-cn/starbuttons/blob/ma
 
 ### 音频信息
 
-* [`public/sounds.json`](https://github.com/suisei-cn/starbuttons/blob/master/public/sounds.json) - 音频信息
+* [`src/assets/sounds.yml`](https://github.com/suisei-cn/starbuttons/blob/master/src/assets/sounds.yml) - 音频信息
 * [`public/assets`](https://github.com/suisei-cn/starbuttons/tree/master/public/assets) - 音频文件
 
 提交音频的贡献者只需要修改这两处并 PR 即可。

@@ -14,7 +14,7 @@ README：**English** | [日本語](https://github.com/suisei-cn/starbuttons/blob
 
 ### Audio data
 
-* [`public/sounds.json`](https://github.com/suisei-cn/starbuttons/blob/master/public/sounds.json) - Audio information
+* [`src/assets/sounds.yml`](https://github.com/suisei-cn/starbuttons/blob/master/src/assets/sounds.yml) - Audio information
 * [`public/assets`](https://github.com/suisei-cn/starbuttons/tree/master/public/assets) - Audio files
 
 Audio contributor only need to modify the files above and make a pull request.

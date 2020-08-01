@@ -1367,5 +1367,21 @@
                 "to": 3947.35
             }
         }
+    },
+    {
+        "name": "(Hip instrument and laughter)",
+        "name_l10n": {
+            "zh": "(尻乐器)(笑)",
+            "ja": "(けつドラム)(笑)"
+        },
+        "file": "mXOF0_qy8vI--911--913.5.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "mXOF0_qy8vI",
+            "time": {
+                "from": 911,
+                "to": 913.5
+            }
+        }
     }
 ]

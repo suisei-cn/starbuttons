@@ -16,7 +16,9 @@ jobs:
           persist-credentials: false
 
       - name: Test for voices 👓
-        run: yarn test-voice
+        run: |
+          yarn add yaml
+          yarn test-voice
 
       - name: Install and Build 🔧
         env:

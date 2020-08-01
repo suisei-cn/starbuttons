@@ -1399,5 +1399,21 @@
                 "to": 2031
             }
         }
+    },
+    {
+        "name": "Song of Frogs ft. Kanata & Coco.",
+        "name_l10n": {
+            "zh": "青蛙之歌 ft. 彼方 & 可可",
+            "ja": "かえるのうた ft. かなたん&ココ"
+        },
+        "file": "mXOF0_qy8vI--3039--3048.66.mp3",
+        "metadata": {
+            "site": "youtube",
+            "identifier": "mXOF0_qy8vI",
+            "time": {
+                "from": 3039,
+                "to": 3048.66
+            }
+        }
     }
 ]

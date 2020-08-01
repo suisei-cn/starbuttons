@@ -896,7 +896,7 @@
     time:
       from: 4485
       to: 4495.634
-- name: '"Air-raid Siren" (✓ Repeat)'
+- name: '"Stuka Siren" (✓ Repeat)'
   name_l10n:
     zh: “防空警报”（✓ 洗脑循环）
     ja: “空襲警報”（✓ Repeat）

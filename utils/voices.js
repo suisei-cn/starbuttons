@@ -11,7 +11,7 @@ function validateFile(filename, paths = "public/assets/") {
 }
 
 console.log("Validating sounds.json...");
-const yamlText = fs.readFileSync("src/assets/sounds.yml");
+const yamlText = fs.readFileSync("src/assets/sounds.yml", "utf-8");
 const yamlObj = yaml.parse(yamlText);
 for (const i of yamlObj) {
   if (typeof i.file === "string") {

@@ -124,8 +124,8 @@
       to: 1328.4
   file: LS6srVfrxIk--1327.3--1328.4.mp3
   type: normal
-- //: 'For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk'
-  name: Sui-chan made no mistake watamever it was!
+# For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk
+- name: Sui-chan made no mistake watamever it was!
   name_l10n:
     zh: wtm才没有错呢！
     ja: すいちゃんはわるくないよねぇ...
@@ -136,12 +136,12 @@
     time:
       from: 2596.4
       to: 2599
-- //: 'English translation via https://www.youtube.com/watch?v=_B-Q10J9KSg'
-  name: >-
+# English translation via https://www.youtube.com/watch?v=_B-Q10J9KSg
+- name: >-
     It's your diamond in the rough, your shooting star,​ Hoshimachi Suisei, in
     the flash!
   name_l10n:
-    //: 'Chinese translation via https://www.bilibili.com/video/av94833283'
+    # Chinese translation via https://www.bilibili.com/video/av94833283
     zh: 如同彗星一般登场的星之原石，我是星街彗星！
     ja: 彗星​のごとくあらわれた​スター​の原石​☆​​星街すいせいです！
   file: _B-Q10J9KSg--11.4--14.5.mp3
@@ -153,9 +153,8 @@
       to: 14.5
 - name: I'm not invited!!
   name_l10n:
-    //: >-
-      zh: https://t.bilibili.com/395499860137488715?tab=2, ja:
-      https://twitter.com/suisei_hosimati/status/1267046799421792256
+    # zh: https://t.bilibili.com/395499860137488715?tab=2
+    # ja: https://twitter.com/suisei_hosimati/status/1267046799421792256
     zh: 咋不带我玩儿呢！!
     ja: 私誘われていないんだけど！!
   file: PJf3XZ636-0--66--68.05.mp3

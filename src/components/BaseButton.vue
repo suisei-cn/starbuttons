@@ -21,6 +21,21 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import { Sound } from "../types";
 import * as Sentry from "@sentry/browser";
 
+async function sleep(time: number) {
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
+}
+
+async function evaluate(obj: any, times = 20) {
+  for (let i = 0; i < times; i++) {
+    if (obj()) return;
+    await sleep(500);
+  }
+}
+
 @Component
 export default class BaseButton extends Vue {
   @Prop() private item!: Sound;
@@ -32,15 +47,19 @@ export default class BaseButton extends Vue {
   private timeouts: number[] = [];
   private mounted() {
     this.testHoverWidth = true;
-    this.$nextTick(() => {
-      const width = (this.$refs.self as HTMLElement).offsetWidth;
-      this.minWidth = String(width - 16 + "px");
-      this.testHoverWidth = false;
-    });
+    this.scanHoverWidth();
+  }
+  private async scanHoverWidth() {
+    await evaluate(() => {
+      return this.$refs.self;
+    }, 4);
+    const width = (this.$refs.self as HTMLElement).offsetWidth;
+    this.minWidth = String(width - 16 + "px");
+    this.testHoverWidth = false;
   }
   get localizedName() {
     return (
-      (this?.item.name_l10n || {})[this.$i18n.locale] || this?.item.name || ""
+      (this?.item?.name_l10n || {})[this.$i18n.locale] || this?.item?.name || ""
     );
   }
 

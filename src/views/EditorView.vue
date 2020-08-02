@@ -69,6 +69,7 @@ let editorElements: {
   };
 } = {};
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 (window as any).editorElements = editorElements;
 
 function getXLocation(target: HTMLElement) {
@@ -87,6 +88,7 @@ function updateElementPos(target: HTMLElement, dx: number, dy: number) {
   target.setAttribute("data-y", String(y));
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function moveHandler(event: any) {
   const target = event.target;
   updateElementPos(target, event.dx, event.dy);

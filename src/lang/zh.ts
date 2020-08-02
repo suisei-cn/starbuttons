@@ -25,5 +25,5 @@ export default {
   "Sound list fetch error:": "音频列表获取失败：",
   "Voices are still loading. Please be patient...": "音频仍在加载，请稍等...",
   "Unrecognized sound list.": "未能识别声音列表。",
-  "Still loading...": "仍在加载...",
+  "Still loading...": "仍在加载..."
 };

@@ -989,3 +989,69 @@
     time:
       from: 2948.8
       to: 2951.52
+- name: Today Sui-chan is still kawaii!(Madame's version)
+  name_l10n:
+    zh: 彗酱今天也很卡哇伊～（大小姐限定）
+    ja: すいちゃんは、今日もかわいい〜！（おじょうさま限定）
+  file: Qpc1ysd9S9c--173.764--191.575.mp3
+  metadata:
+    site: youtube
+    identifier: Qpc1ysd9S9c
+    time: 
+      from: 173.764
+      to: 191.575
+- name: (The laughter of the lady)
+  name_l10n:
+    zh: （大小姐的笑声）
+    ja: （お嬢様の笑い声）
+  file: Qpc1ysd9S9c--301.875--303.367.mp3
+  metadata:
+    site: youtube
+    identifier: Qpc1ysd9S9c
+    time:
+      from: 301.875
+      to: 303.367
+- name: Clang!
+  name_l10n:
+    zh: 铛铛！
+    ja: がちゃん！
+  file: Qpc1ysd9S9c--1863--1873.648.mp3
+  metadata:
+    site: youtube
+    identifier: Qpc1ysd9S9c
+    time:
+      from: 1863
+      to: 1863.648
+- name: Chu~...Chu~~~
+  name_l10n:
+    zh: 啾~...啾~~~
+    ja: ちゅん~...ちゅん~~~
+  file: Qpc1ysd9S9c--1869.893--1875.804.mp3
+  metadata:
+    site: youtube
+    identifier: Qpc1ysd9S9c
+    time: 
+      from: 1869.893
+      to: 1875.804
+- name: (A leaky balloon)
+  name_l10n:
+    zh: （漏气的气球）
+    ja: （空気の漏れる風船）
+  file: Qpc1ysd9S9c--2384.61--2385.24.mp3
+  metadata:
+    site: youtube
+    identifier: Qpc1ysd9S9c
+    time:
+      from: 2384.61
+      to: 2385.24
+- name: (change countenance as fast as light)
+  name_l10n:
+    zh: （光 速 变 脸）
+    ja: （光のように早く顔色が変わりました）
+  file: Qpc1ysd9S9c--2780.652--2789.727.mp3
+  metadata:
+    site: youtube
+    identifier: Qpc1ysd9S9c
+    time:
+      from: 2780.652
+      to: 2789.727

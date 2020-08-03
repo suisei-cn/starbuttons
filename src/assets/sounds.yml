@@ -636,6 +636,7 @@
     - pLUf75CZg38--3715--3724.275.mp3
     - 0WsDVU_W6QU--939.717--947.618.mp3
     - 0WsDVU_W6QU--2202.963--2207.233.mp3
+    - I58nqKO2fak--226.274--229.927.mp3
   metadata:
     site: youtube
     identifier:
@@ -643,6 +644,7 @@
       - boRajPeaJwA
       - pLUf75CZg38
       - 0WsDVU_W6QU
+      - I58nqKO2fak
     time:
       - from: 3634.903
         to: 3638.684
@@ -666,6 +668,8 @@
         to: 947.618
       - from: 2202.963
         to: 2207.233
+      - from: 226.274
+        to: 229.927
 - name: Yoooooo~
   name_l10n:
     zh: Yoooooo~
@@ -1055,3 +1059,29 @@
     time:
       from: 2780.652
       to: 2789.727
+- name: (Can't stop laughing)
+  name_l10n:
+    zh: （笑个不停）
+    ja: （笑いが止まらない）
+  file: 
+    - I58nqKO2fak--1734--1760.791.mp3
+    - I58nqKO2fak--2664.296--2689.414.mp3
+  metadata:
+    site: youtube
+    identifier: I58nqKO2fak
+    time:
+      - from: 1734
+        to: 1760.791
+      - from: 2664.296
+        to: 2689.414
+- name: Goodbye!
+  name_l10n:
+    zh: 再见啦！
+    ja: じゃあね！
+  file: I58nqKO2fak--3639.59--3640.496.mp3
+  metadata:
+    site: youtube
+    identifier: I58nqKO2fak
+    time:
+      from: 3639.59
+      to: 3640.496

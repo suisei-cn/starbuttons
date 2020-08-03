@@ -13,7 +13,7 @@ else {
 $files = Get-Item *.mp3
 foreach ($file in $files) {
     $null = $filesize = Get-ChildItem | ForEach-Object { [math]::ceiling($file.length / 1kb) }
-    if ($filesize -gt '51') {
+    if ($filesize -gt '50') {
         # Only check files with size > 50kb
         $info = &"ffprobe" -v error -show_entries format=bit_rate -i $file.Name
         $BITRATE = ForEach-Object { [math]::ceiling(($info -split "[=]")[2] / 1kb) }

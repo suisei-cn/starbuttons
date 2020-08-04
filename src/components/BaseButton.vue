@@ -5,10 +5,10 @@
     :class="{
       playingBtn: playLayer > 0,
       testHoverWidth,
-      pending: pendingNetwork
+      pending: pendingNetwork,
     }"
     :style="{
-      minWidth
+      minWidth,
     }"
     tabindex="0"
   >
@@ -22,7 +22,7 @@ import { Sound } from "../types";
 import * as Sentry from "@sentry/browser";
 
 async function sleep(time: number) {
-  await new Promise(resolve => {
+  await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
     }, time);
@@ -51,7 +51,7 @@ export default class BaseButton extends Vue {
   }
   private async scanHoverWidth() {
     await evaluate(() => {
-      return this.$refs.self;
+      return !!this.$refs.self;
     }, 4);
     const width = (this.$refs.self as HTMLElement).offsetWidth;
     this.minWidth = String(width - 16 + "px");
@@ -70,7 +70,8 @@ export default class BaseButton extends Vue {
     this.timeouts = [];
   }
 
-  public emitError(e: Error) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  public emitError(e: any) {
     this.clearAllLoadingTimeout();
     this.$emit(
       "error",
@@ -144,7 +145,7 @@ export default class BaseButton extends Vue {
             this.$emit("started");
           }
         })
-        .catch(e => {
+        .catch((e) => {
           this.emitError(e);
           throw e;
         });

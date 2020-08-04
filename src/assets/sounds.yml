@@ -125,7 +125,8 @@
   file: LS6srVfrxIk--1327.3--1328.4.mp3
   type: normal
 - name: Sui-chan made no mistake watamever it was!
-  _comment: For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk
+  _comment: |
+    For translators: this is a meme of Watame, see youtu.be/h6IwhTuKSRk
   name_l10n:
     zh: wtm才没有错呢！
     ja: すいちゃんはわるくないよねぇ...
@@ -271,7 +272,7 @@
     time:
       from: 1526
       to: 1544.24
-- name: 'hoi, hoi, dokkoisho!'
+- name: "hoi, hoi, dokkoisho!"
   name_l10n:
     zh: hoi！hoi！六魁首！
     ja: hoi！hoi！ドッコイショ！
@@ -578,7 +579,7 @@
     time:
       from: 1312.648
       to: 1314.171
-- name: 'Woof Woof! '
+- name: "Woof Woof! "
   name_l10n:
     zh: 汪汪！
     ja: わんわん!
@@ -771,7 +772,7 @@
     time:
       from: 1980.543
       to: 1985.657
-- name: 'Aka-chan, aka-chan, aka-chan!'
+- name: "Aka-chan, aka-chan, aka-chan!"
   name_l10n:
     zh: 蓝酱，蓝酱，蓝酱！
     ja: らんちゃん，らんちゃん，らんちゃん！
@@ -953,7 +954,7 @@
     You have strived for you life, you don't need to push yourself hard any
     more.
   name_l10n:
-    zh: '你已经很努力的生存了, 不用再勉强自己了.'
+    zh: "你已经很努力的生存了, 不用再勉强自己了."
     ja: 人生頑張ったね、もう、無理しなくて良いだよ。
   file: mXOF0_qy8vI--2788.5--2793.mp3
   metadata:
@@ -986,7 +987,7 @@
       to: 3048.66
 - name: Do you have any last wish?
   name_l10n:
-    zh: '大家, 你们有什么遗愿么?'
+    zh: "大家, 你们有什么遗愿么?"
     ja: 皆んな、人生の最後に何して欲しい?
   file: mXOF0_qy8vI--2948.8--2951.52.mp3
   metadata:
@@ -1003,7 +1004,7 @@
   metadata:
     site: youtube
     identifier: Qpc1ysd9S9c
-    time: 
+    time:
       from: 173.764
       to: 191.575
 - name: (The laughter of the lady)
@@ -1036,7 +1037,7 @@
   metadata:
     site: youtube
     identifier: Qpc1ysd9S9c
-    time: 
+    time:
       from: 1869.893
       to: 1875.804
 - name: (A leaky balloon)
@@ -1065,7 +1066,7 @@
   name_l10n:
     zh: （笑个不停）
     ja: （笑いが止まらない）
-  file: 
+  file:
     - I58nqKO2fak--1734--1760.791.mp3
     - I58nqKO2fak--2664.296--2689.414.mp3
   metadata:

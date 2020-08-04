@@ -1176,3 +1176,14 @@
     time:
       from: 2812.32
       to: 2817.835
+- name:　Junk computer, let's count your sins in detail!
+  name_l10n:
+    zh: 杂鱼臭电脑，来细数你的罪恶吧！
+    ja: クソ雑魚パソコン、君の罪を数えろ！
+  file: RXIVBFiuZcA--307.807--323.08.mp3
+  metadata:
+    site: youtube #bilibili
+    identifier: RXIVBFiuZcA #av87674746
+    time:
+      from: 307.807
+      to: 323.08

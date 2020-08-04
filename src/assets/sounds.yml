@@ -237,13 +237,22 @@
   name_l10n:
     zh: 皮卡丘~
     ja: ピカチュウ~
-  file: H1D_xTnXvSE--1021.74--1022.7.mp3
+  file: 
+    - H1D_xTnXvSE--1021.74--1022.7.mp3
+    - -cWxSCiPKk4--1511.069--1512.099.mp3
+    - -cWxSCiPKk4--1569.075--1570.109.mp3
   metadata:
     site: youtube
-    identifier: H1D_xTnXvSE
+    identifier: 
+      - H1D_xTnXvSE
+      - -cWxSCiPKk4
     time:
-      from: 1021.74
-      to: 1022.7
+      - from: 1021.74
+        to: 1022.7
+      - from: 1511.069
+        to: 1512.099
+      - from: 1569.075
+        to: 1570.109
 - name: Ultimate flapping tongue
   name_l10n:
     zh: 极致弹舌
@@ -294,6 +303,17 @@
     time:
       from: 1212
       to: 1216
+- name: PIKAAAAAAAAAAAAAAAAA~
+  name_l10n:
+    zh: 皮卡卡卡卡卡卡卡~
+    ja: ピカチュ~
+  file: -cWxSCiPKk4--1616.884--1618.346.mp3
+  metadata:
+    site: youtube
+    identifier: -cWxSCiPKk4
+    time:
+      from: 1616.884
+      to: 1618.346
 - name: (Being sick)
   name_l10n:
     zh: （发病中）
@@ -1081,10 +1101,78 @@
   name_l10n:
     zh: 再见啦！
     ja: じゃあね！
-  file: I58nqKO2fak--3639.59--3640.496.mp3
+  file: 
+    - I58nqKO2fak--3639.59--3640.496.mp3
+    - -cWxSCiPKk4--3606.307--3613.59.mp3
   metadata:
     site: youtube
-    identifier: I58nqKO2fak
+    identifier: 
+      - I58nqKO2fak
+      - -cWxSCiPKk4
     time:
-      from: 3639.59
-      to: 3640.496
+      - from: 3639.59
+        to: 3640.496
+      - from: 3606.307
+        to: 3613.59
+- name: '"Thanks" Repeater'
+  name_l10n:
+    zh: 无情的道谢机器
+    ja: '"ありがとう" 複読機'
+  file: -cWxSCiPKk4--463.5--469.136.mp3
+  metadata:
+    site: youtube
+    identifier: -cWxSCiPKk4
+    time:
+      from: 463.5
+      to: 469.136
+- name: ABA,ABA,ABA,ABA (STAMMERING)
+  name_l10n:
+    zh: 阿巴阿巴阿巴阿巴
+    ja: アバアバアバアバ
+  file: -cWxSCiPKk4--504.787--506.085.mp3
+  metadata:
+    site: youtube
+    identifier: -cWxSCiPKk4
+    time:
+      from: 504.787
+      to: 506.085
+- name: (various nonsense)
+  name_l10n:
+    zh: （各种口胡）
+    ja: （いろいろなでたらめ）
+  file: 
+    - -cWxSCiPKk4--1445.142--1448.413.mp3
+    - -cWxSCiPKk4--1625.381--1632.897.mp3
+    - -cWxSCiPKk4--2326.832--2332.343.mp3
+  metadata:
+    site: youtube
+    identifier: -cWxSCiPKk4
+    time:
+      - from: 1445.142
+        to: 1448.413
+      - from: 1625.381
+        to: 1632.897
+      - from: 2326.832
+        to: 2332.343
+- name: Ha... (soft)
+  name_l10n:
+    zh: 哈。。。（软软星）
+    ja: は。。。（ふわふわ）
+  file: -cWxSCiPKk4--1720.262--1722.mp3
+  metadata:
+    site: youtube
+    identifier: -cWxSCiPKk4
+    time:
+      from: 1720.262
+      to: 1722
+- name: '"Hat-trick"'
+  name_l10n:
+    zh: 帽 子 戏 法
+    ja: '"ハットトリック"'
+  file: -cWxSCiPKk4--2812.32--2817.835.mp3
+  metadata:
+    site: youtube
+    identifier: -cWxSCiPKk4
+    time:
+      from: 2812.32
+      to: 2817.835

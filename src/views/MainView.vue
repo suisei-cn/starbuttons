@@ -3,7 +3,7 @@
     id="page"
     :class="{
       themeDark: enforceDarkTheme,
-      themeSystem: useSystemTheme
+      themeSystem: useSystemTheme,
     }"
   >
     <div id="svgAnim" ref="svgAnim"></div>
@@ -24,7 +24,7 @@
         id="board"
         :class="{
           musicBoard: displayMusicBoard,
-          animateBtn: !displayMusicBoard
+          animateBtn: !displayMusicBoard,
         }"
         class="bigBtn"
         @click="playEhhh"
@@ -131,8 +131,8 @@ const THEME_ENFORCEMENT_SETTINGS_ITEM = "enforced-theme";
 @Component({
   components: {
     BaseButton,
-    ErrorBar
-  }
+    ErrorBar,
+  },
 })
 export default class App extends Vue {
   // @ts-ignore
@@ -205,7 +205,7 @@ export default class App extends Vue {
       renderer: "svg",
       loop: !0,
       autoplay: !0,
-      path: "/bg-anim.json"
+      path: "/bg-anim.json",
     });
   }
 
@@ -227,15 +227,15 @@ export default class App extends Vue {
   private async mounted() {
     this.settings = ["multiPlay"];
     this.sounds = (await fetch("/sounds.json")
-      .then(x => x.json())
-      .catch(e => {
+      .then((x) => x.json())
+      .catch((e) => {
         // tslint:disable-next-line:no-console
         console.error("Sound data fetch error. Exiting.");
         this.showError(this.$t("Sound list fetch error:") + e.toString());
       })) as Sound[];
     this.categories = (await fetch("/categories.json")
-      .then(x => x.json())
-      .catch(e => {
+      .then((x) => x.json())
+      .catch((e) => {
         // tslint:disable-next-line:no-console
         console.error("Sound data fetch error. Exiting.");
         this.showError(this.$t("Sound list fetch error:") + e.toString());
@@ -263,6 +263,10 @@ export default class App extends Vue {
 }
 
 // Styles
+body {
+  overflow: hidden;
+}
+
 #page {
   height: 100vh;
   width: 100vw;

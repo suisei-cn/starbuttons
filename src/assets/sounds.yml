@@ -1220,8 +1220,11 @@
     ja: クソ雑魚パソコン、君の罪を数えろ！
   file: RXIVBFiuZcA--307.807--323.08.mp3
   metadata:
-    site: youtube #bilibili
-    identifier: RXIVBFiuZcA #av87674746
+    site: youtube
+    identifier: RXIVBFiuZcA
+    other_sources:
+      - site: bilibili
+        identifier: av87674746
     time:
       from: 307.807
       to: 323.08

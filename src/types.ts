@@ -3,6 +3,7 @@ import CentralPlayer from "./components/centralPlayer";
 export interface NameWithL10n {
   name: string;
   name_l10n?: { [key: string]: string };
+  order?: number;
 }
 
 export interface Sound extends NameWithL10n {

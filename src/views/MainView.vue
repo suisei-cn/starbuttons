@@ -31,9 +31,7 @@
       >
         <div id="boardWrapper">
           <template v-if="displayMusicBoard">
-            <template
-              v-for="(cat, catIndex) of Object.entries(categoriedSounds)"
-            >
+            <template v-for="(cat, catIndex) of categorizedSoundEntries">
               <div class="categoryTitle" :key="'ct-' + catIndex">
                 {{ localizedName(categories[cat[0]]) }}
               </div>
@@ -140,7 +138,7 @@ const THEME_ENFORCEMENT_SETTINGS_ITEM = "enforced-theme";
 export default class App extends Vue {
   // @ts-ignore
   private sounds: Sound[] = [];
-  private categoriedSounds: CategorizedSounds = {};
+  private categorizedSoundEntries: [string, Sound[]][] = [];
   private categories: Categories = {};
   private displayMusicBoard = false;
   private settings: string[] = [];
@@ -232,7 +230,13 @@ export default class App extends Vue {
       if (!categoriedSounds[i.category]) categoriedSounds[i.category] = [];
       categoriedSounds[i.category].push(i);
     }
-    this.categoriedSounds = categoriedSounds;
+    const categorizedSoundEntries = Object.entries(categoriedSounds).sort(
+      (a, b) =>
+        (this.categories[a[0]]?.order || 999) -
+        (this.categories[b[0]]?.order || 999)
+    );
+    console.log(categorizedSoundEntries.map(x => x[0]));
+    this.categorizedSoundEntries = categorizedSoundEntries;
     this.sounds = soundsNoCat;
   }
 

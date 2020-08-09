@@ -10,7 +10,7 @@
     <div class="smShrinkSpace" :class="{ hidden: displayMusicBoard }"></div>
     <div id="errors">
       <template v-for="(item, index) in currentErrors">
-        <ErrorBar :err="item" :key="index"></ErrorBar>
+        <ErrorBar :err="item" :key="'err-' + index"></ErrorBar>
       </template>
     </div>
     <div id="settings" :title="$t('Toggle chorus mode')">
@@ -34,13 +34,13 @@
             <template
               v-for="(cat, catIndex) of Object.entries(categoriedSounds)"
             >
-              <div class="categoryTitle" :key="catIndex">
+              <div class="categoryTitle" :key="'ct-' + catIndex">
                 {{ localizedName(categories[cat[0]]) }}
               </div>
               <BaseButton
                 v-for="(item, index) of cat[1]"
                 :item="item"
-                :key="catIndex * 2048 + 1 + index"
+                :key="'cb-' + catIndex + '-' + index"
                 class="normalBtn"
                 @error="showError"
               ></BaseButton>
@@ -49,7 +49,7 @@
             <BaseButton
               v-for="(item, index) of sounds"
               :item="item"
-              :key="index"
+              :key="'cb-default-' + index"
               class="normalBtn"
               @error="showError"
             ></BaseButton>

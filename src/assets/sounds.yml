@@ -11,7 +11,7 @@
   name_l10n:
     zh: 啊哈哈哈
     ja: あははははは
-  category: cute
+  category: hahaha
   file:
     - ahhh.mp3
     - pLUf75CZg38--2806.545--2811.583.mp3
@@ -174,7 +174,7 @@
   name_l10n:
     zh: （笑）
     ja: （笑）
-  category: cute
+  category: hahaha
   file: BjuYqoY_CxI--1842.9--1953.36.mp3
   metadata:
     site: youtube
@@ -199,6 +199,7 @@
     zh: 彗酱今天也很卡哇伊伊伊伊伊伊伊伊伊伊伊～！
     ja: すいちゃんは、今日もかわいいぃぃぃぃぃぃぃぃぃ〜！
   file: yc3xAjmXZ1A--85.4--97.7.mp3
+  category: kawaii
   metadata:
     site: youtube
     identifier: yc3xAjmXZ1A
@@ -222,6 +223,7 @@
     zh: 彗酱今天也很卡哇伊～！（吃瘪限定）
     ja: すいちゃんは、今日もかわいい〜！（びびってる限定）
   file: RLKWrmGTemM--154.9--163.35.mp3
+  category: kawaii
   metadata:
     site: youtube
     identifier: RLKWrmGTemM
@@ -233,6 +235,7 @@
     zh: ...彗酱今天也很卡哇伊～！（奶声奶气）
     ja: ...すいちゃんは、今日もかわいい〜！（愛らしい、ひそやかに）
   file: U84Pn69RIy0--321.75--349.56.mp3
+  category: kawaii
   metadata:
     site: youtube
     identifier: U84Pn69RIy0
@@ -363,7 +366,7 @@
   name_l10n:
     zh: （狂笑）
     ja: （大笑いする）
-  category: cute
+  category: hahaha
   file: DGjBouw_yeI--2561.09--2677.55.mp3
   metadata:
     site: youtube
@@ -583,6 +586,7 @@
   name_l10n:
     zh: 彗酱今天也很卡哇伊～！（软绵绵）
     ja: すいちゃんは、今日もかわいい〜！（ふわふわ）
+  category: kawaii
   file: N4Op5gpV2AU--403.5--412.5.mp3
   metadata:
     site: youtube
@@ -614,6 +618,7 @@
   name_l10n:
     zh: 最喜欢了 啾~
     ja: 大好き ちゅん~
+  category: cute
   file: FY-WtN7c7tI--1312.648--1314.171.mp3
   metadata:
     site: youtube
@@ -637,6 +642,7 @@
   name_l10n:
     zh: 好开心~
     ja: 嬉しい~
+  category: cute
   file: FY-WtN7c7tI--472.467--473.863.mp3
   metadata:
     site: youtube
@@ -648,6 +654,7 @@
   name_l10n:
     zh: 好害羞~
     ja: 恥ずかしい~
+  category: cute
   file: FY-WtN7c7tI--746.285--749.923.mp3
   metadata:
     site: youtube
@@ -746,6 +753,7 @@
     zh: 彗酱Nyaaaaaa今天也很卡哇伊！
     ja: すいちゃんは、Nyaaaaaa、今日もかわいい〜！
   file: clXusKnSBY0--138.591--160.mp3
+  category: kawaii
   metadata:
     site: youtube
     identifier: clXusKnSBY0
@@ -1059,6 +1067,7 @@
     zh: 彗酱今天也很卡哇伊～（大小姐限定）
     ja: すいちゃんは、今日もかわいい〜！（おじょうさま限定）
   file: Qpc1ysd9S9c--173.764--191.575.mp3
+  category: kawaii
   metadata:
     site: youtube
     identifier: Qpc1ysd9S9c
@@ -1069,6 +1078,7 @@
   name_l10n:
     zh: （大小姐的笑声）
     ja: （お嬢様の笑い声）
+  category: hahaha
   file: Qpc1ysd9S9c--301.875--303.367.mp3
   metadata:
     site: youtube
@@ -1080,6 +1090,7 @@
   name_l10n:
     zh: 铛铛！
     ja: がちゃん！
+  category: cute
   file: Qpc1ysd9S9c--1863--1873.648.mp3
   metadata:
     site: youtube
@@ -1091,6 +1102,7 @@
   name_l10n:
     zh: 啾~...啾~~~
     ja: ちゅん~...ちゅん~~~
+  category: cute
   file: Qpc1ysd9S9c--1869.893--1875.804.mp3
   metadata:
     site: youtube
@@ -1124,6 +1136,7 @@
   name_l10n:
     zh: （笑个不停）
     ja: （笑いが止まらない）
+  category: hahaha
   file:
     - I58nqKO2fak--1734--1760.791.mp3
     - I58nqKO2fak--2664.296--2689.414.mp3
@@ -1167,6 +1180,7 @@
   name_l10n:
     zh: 阿巴阿巴阿巴阿巴
     ja: アバアバアバアバ
+  category: cute
   file: -cWxSCiPKk4--504.787--506.085.mp3
   metadata:
     site: youtube
@@ -1196,6 +1210,7 @@
   name_l10n:
     zh: 哈。。。（软软星）
     ja: は。。。（ふわふわ）
+  category: cute
   file: -cWxSCiPKk4--1720.262--1722.mp3
   metadata:
     site: youtube

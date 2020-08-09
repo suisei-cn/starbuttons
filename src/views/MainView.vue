@@ -76,7 +76,10 @@
     ></BaseButton>
     <div
       id="switchBtn"
-      @click="displayMusicBoard = !displayMusicBoard"
+      @click="
+        freezeMainBtn();
+        displayMusicBoard = !displayMusicBoard;
+      "
       tabindex="0"
       class="animateBtn smallBtn"
     >
@@ -146,6 +149,7 @@ export default class App extends Vue {
   private playingBtn = false;
   private currentSystemTheme = "light";
   private currentErrors: string[] = [];
+  private dontRespond = false;
 
   @Emit("error")
   private showError(text: string, timeout = 3000) {
@@ -170,7 +174,15 @@ export default class App extends Vue {
     return this.localizedName(this?.sounds[0] as Sound);
   }
 
+  private freezeMainBtn() {
+    this.dontRespond = true;
+    setTimeout(() => {
+      this.dontRespond = false;
+    }, 500);
+  }
+
   private playEhhh() {
+    if (this.dontRespond) return;
     if (!this.displayMusicBoard) {
       // @ts-ignore
       this.$refs.centralButton.play();

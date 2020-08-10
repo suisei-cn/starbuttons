@@ -102,7 +102,7 @@
       >/
       <a
         class="bottonBtnLink"
-        href="https://discord.gg/9fJGBZz"
+        href="https://discord.com/invite/suiseicord"
         aria-label="Discord Fan Group"
         target="_blank"
       >

@@ -6,6 +6,7 @@ import CentralPlayer from "./components/centralPlayer";
 import * as Sentry from "@sentry/browser";
 import { Vue as VueIntegration } from "@sentry/integrations";
 import "./assets/sounds.yml";
+import "./assets/categories.yml";
 
 import "./registerServiceWorker";
 

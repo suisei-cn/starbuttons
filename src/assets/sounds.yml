@@ -7,11 +7,20 @@
     - ehhh2.mp3
     - ehhh3.mp3
   type: center
+- name: Eeehihihihi
+  name_l10n:
+    ja: イヒヒヒヒ
+    zh: 噫hihihihi
+  file:
+    - ehhh.mp3
+    - ehhh2.mp3
+    - ehhh3.mp3
+  category: psycho
 - name: Ahahaha
   name_l10n:
     zh: 啊哈哈哈
     ja: あははははは
-  category: hahaha
+  category: hihihi
   file:
     - ahhh.mp3
     - pLUf75CZg38--2806.545--2811.583.mp3
@@ -23,6 +32,7 @@
     ja: お姉ちゃん，お姉ちゃん～
   file: j1Rrg4BnBjs--2774--2778.5.mp3
   type: normal
+  category: cute
   metadata:
     site: youtube
     identifier: j1Rrg4BnBjs
@@ -105,7 +115,7 @@
   name_l10n:
     zh: (非洲人的呐喊) ...抱歉。
     ja: (あ゛ぁ゛ぁ゛ぁ゛ぁ゛ぁ゛) ... しみません。
-  category: cute
+  category: psycho
   metadata:
     site: youtube
     identifier: kKm-MqVoLzg
@@ -134,6 +144,7 @@
     zh: wtm才没有错呢！
     ja: すいちゃんはわるくないよねぇ...
   file: IRr6aAS3zLQ--2596.4--2599.mp3
+  category: cute
   metadata:
     site: youtube
     identifier: IRr6aAS3zLQ
@@ -150,6 +161,7 @@
     zh: 如同彗星一般登场的星之原石，我是星街彗星！
     ja: 彗星​のごとくあらわれた​スター​の原石​☆​​星街すいせいです！
   file: _B-Q10J9KSg--11.4--14.5.mp3
+  category: kawaii
   metadata:
     site: youtube
     identifier: _B-Q10J9KSg
@@ -161,8 +173,8 @@
     zh: https://t.bilibili.com/395499860137488715?tab=2
     ja: https://twitter.com/suisei_hosimati/status/1267046799421792256
   name_l10n:
-    zh: 咋不带我玩儿呢！!
-    ja: 私誘われていないんだけど！!
+    zh: 咋不带我玩儿呢！！
+    ja: 私誘われていないんだけど！！
   file: PJf3XZ636-0--66--68.05.mp3
   metadata:
     site: youtube
@@ -174,7 +186,7 @@
   name_l10n:
     zh: （笑）
     ja: （笑）
-  category: hahaha
+  category: hihihi
   file: BjuYqoY_CxI--1842.9--1953.36.mp3
   metadata:
     site: youtube
@@ -186,7 +198,7 @@
   name_l10n:
     zh: （马里奥背景音乐...）啊！
     ja: (Mario BGM...) Ahhhhh!
-  category: cute
+  category: psycho
   file: KTuIsqb7G1s--711.4--716.5.mp3
   metadata:
     site: youtube
@@ -322,6 +334,7 @@
     zh: 皮卡卡卡卡卡卡卡~
     ja: ピカチュ~
   file: -cWxSCiPKk4--1616.884--1618.346.mp3
+  category: cute
   metadata:
     site: youtube
     identifier: -cWxSCiPKk4
@@ -332,7 +345,7 @@
   name_l10n:
     zh: （发病中）
     ja: （病気中）
-  category: cute
+  category: psycho
   file:
     - H1D_xTnXvSE--2342.29--2348.99.mp3
     - clXusKnSBY0--1203.459--1209.377.mp3
@@ -366,7 +379,7 @@
   name_l10n:
     zh: （狂笑）
     ja: （大笑いする）
-  category: hahaha
+  category: hihihi
   file: DGjBouw_yeI--2561.09--2677.55.mp3
   metadata:
     site: youtube
@@ -413,6 +426,7 @@
     zh: 笨蛋！
     ja: バカ
   file: lnrFF5TnvYI-baka.mp3
+  category: cute
   metadata:
     site: youtube
     identifier: lnrFF5TnvYI
@@ -456,6 +470,7 @@
     zh: 啊啊啊可恶啊！
     ja: あああああああクソかよ！
   file: lwszUzu_ARc--928--934.mp3
+  category: psycho
   metadata:
     site: youtube
     identifier: lwszUzu_ARc
@@ -500,7 +515,7 @@
   name_l10n:
     zh: 啊啊啊啊
     ja: あああああああ
-  category: cute
+  category: psycho
   file:
     - lwszUzu_ARc--8180--8184.mp3
     - pLUf75CZg38--430.302--436.mp3
@@ -598,7 +613,7 @@
   name_l10n:
     zh: 唔呼呼呼 噫嘻嘻嘻
     ja: うふふふ いひひひ
-  category: cute
+  category: psycho
   file: 1768lvpfxRI--3210--3216.mp3
   metadata:
     site: youtube
@@ -796,11 +811,12 @@
     time:
       from: 2305.387
       to: 2312.375
-- name: Unravel (psycho version)
+- name: Unravel
   name_l10n:
-    zh: Unravel (神经病版)
-    ja: Unravel (サイコ バ—ジョン)
+    zh: Unravel
+    ja: Unravel
   file: clXusKnSBY0--5822.387--5845.454.mp3
+  category: psycho
   metadata:
     site: youtube
     identifier: clXusKnSBY0
@@ -812,6 +828,7 @@
     zh: Holy F***
     ja: Holy F***
   file: pLUf75CZg38--3802.3--3806.8.mp3
+  category: cute
   metadata:
     site: youtube
     identifier: pLUf75CZg38
@@ -1078,7 +1095,7 @@
   name_l10n:
     zh: （大小姐的笑声）
     ja: （お嬢様の笑い声）
-  category: hahaha
+  category: hihihi
   file: Qpc1ysd9S9c--301.875--303.367.mp3
   metadata:
     site: youtube
@@ -1115,6 +1132,7 @@
     zh: （漏气的气球）
     ja: （空気の漏れる風船）
   file: Qpc1ysd9S9c--2384.61--2385.24.mp3
+  category: cute
   metadata:
     site: youtube
     identifier: Qpc1ysd9S9c
@@ -1136,7 +1154,7 @@
   name_l10n:
     zh: （笑个不停）
     ja: （笑いが止まらない）
-  category: hahaha
+  category: hihihi
   file:
     - I58nqKO2fak--1734--1760.791.mp3
     - I58nqKO2fak--2664.296--2689.414.mp3
@@ -1155,6 +1173,7 @@
   file:
     - I58nqKO2fak--3639.59--3640.496.mp3
     - -cWxSCiPKk4--3606.307--3613.59.mp3
+  category: cute
   metadata:
     site: youtube
     identifier:
@@ -1196,6 +1215,7 @@
     - -cWxSCiPKk4--1445.142--1448.413.mp3
     - -cWxSCiPKk4--1625.381--1632.897.mp3
     - -cWxSCiPKk4--2326.832--2332.343.mp3
+  category: cute
   metadata:
     site: youtube
     identifier: -cWxSCiPKk4
@@ -1223,6 +1243,7 @@
     zh: 帽 子 戏 法
     ja: '"ハットトリック"'
   file: -cWxSCiPKk4--2812.32--2817.835.mp3
+  category: hihihi
   metadata:
     site: youtube
     identifier: -cWxSCiPKk4

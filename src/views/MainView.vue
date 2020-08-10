@@ -221,16 +221,16 @@ export default class App extends Vue {
 
   private putSoundsIntoCategories() {
     const soundsNoCat: Sound[] = [];
-    const categoriedSounds: CategorizedSounds = {};
+    const categorizedSounds: CategorizedSounds = {};
     for (const i of this.sounds) {
       if (!i.category) {
         soundsNoCat.push(i);
         continue;
       }
-      if (!categoriedSounds[i.category]) categoriedSounds[i.category] = [];
-      categoriedSounds[i.category].push(i);
+      if (!categorizedSounds[i.category]) categorizedSounds[i.category] = [];
+      categorizedSounds[i.category].push(i);
     }
-    const categorizedSoundEntries = Object.entries(categoriedSounds).sort(
+    const categorizedSoundEntries = Object.entries(categorizedSounds).sort(
       (a, b) =>
         (this.categories[a[0]]?.order || 999) -
         (this.categories[b[0]]?.order || 999)

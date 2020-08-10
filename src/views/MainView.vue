@@ -45,7 +45,7 @@
             </template>
             <div class="categoryTitle">{{ $t("Uncategorized") }}</div>
             <BaseButton
-              v-for="(item, index) of sounds"
+              v-for="(item, index) of sounds.filter(x => x.type !== 'center')"
               :item="item"
               :key="'cb-default-' + index"
               class="normalBtn"

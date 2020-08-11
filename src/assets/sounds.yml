@@ -1264,3 +1264,20 @@
     time:
       from: 307.807
       to: 323.08
+- name: "Burn it!"
+  name_l10n:
+    zh: 燃烧吧！
+    ja: 燃えろ！
+  file:
+    - onemachi-burn-it-1.mp3
+    - onemachi-burn-it-2.mp3
+    - onemachi-burn-it-3.mp3
+  metadata:
+    site: bilibili
+    identifier: av87674746
+    other_sources:
+      - site: youtube
+        identifier: RXIVBFiuZcA
+    time:
+      from: 398.3
+      to: 399.2

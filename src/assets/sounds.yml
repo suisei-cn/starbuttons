@@ -223,13 +223,25 @@
     zh: 星乐器（吃瘪限定）
     ja: すい楽器（びびってる限定）
   category: cute
-  file: RLKWrmGTemM--139--144.5.mp3
+  file: 
+    - RLKWrmGTemM--139--144.5.mp3
+    - 53MFzm-7mgQ--3068.511--3075.579.mp3
+    - 53MFzm-7mgQ--3463.236--3646.936.mp3
+    - 53MFzm-7mgQ--4481.229--4484.395.mp3
   metadata:
     site: youtube
-    identifier: RLKWrmGTemM
+    identifier: 
+      - RLKWrmGTemM
+      - 53MFzm-7mgQ
     time:
-      from: 139
-      to: 144.5
+      - from: 139
+        to: 144.5
+      - from: 3068.511
+        to: 3075.579
+      - from: 3463.236
+        to: 3646.936
+      - from: 4481.229
+        to: 4484.395
 - name: Today Sui-chan is still kawaii!(Frightened Only)
   name_l10n:
     zh: 彗酱今天也很卡哇伊～！（吃瘪限定）
@@ -354,12 +366,14 @@
     - 0WsDVU_W6QU--4150.545--4158.mp3
     - 0WsDVU_W6QU--4289.28--4295.832.mp3
     - 0WsDVU_W6QU--2692.343--2700.186.mp3
+    - 53MFzm-7mgQ--1718.591--1721.mp3
   metadata:
     site: youtube
     identifier:
       - H1D_xTnXvSE
       - clXusKnSBY0
       - 0WsDVU_W6QU
+      - 53MFzm-7mgQ
     time:
       - from: 2342.29
         to: 2348.99
@@ -375,6 +389,8 @@
         to: 4295.832
       - from: 2692.343
         to: 2700.186
+      - from: 1718.591
+        to: 1721
 - name: LOL
   name_l10n:
     zh: （狂笑）
@@ -522,12 +538,15 @@
     - pLUf75CZg38--2793.522--2795.mp3
     - pLUf75CZg38--3179.149--3185.929.mp3
     - 0WsDVU_W6QU--2289.926--2292.501.mp3
+    - 53MFzm-7mgQ--1019.316--1024.441.mp3
+    - 53MFzm-7mgQ--1448.407--1449.307.mp3
   metadata:
     site: youtube
     identifier:
       - lwszUzu_ARc
       - pLUf75CZg38
       - 0WsDVU_W6QU
+      - 53MFzm-7mgQ
     time:
       - from: 8180.789
         to: 8184.828
@@ -539,6 +558,10 @@
         to: 3185.929
       - from: 2289.926
         to: 2292.501
+      - from: 1019.316
+        to: 1024.441
+      - from: 1448.407
+        to: 1449.307
 - name: Nyaaaaa~
   name_l10n:
     zh: Nyaaaaa~
@@ -840,13 +863,22 @@
     zh: （悲鸣）
     ja: （悲鳴）
   category: cute
-  file: pLUf75CZg38--1980.543--1985.657.mp3
+  file:  
+    - pLUf75CZg38--1980.543--1985.657.mp3
+    - 53MFzm-7mgQ--1822.4--1830.mp3
+    - 53MFzm-7mgQ--2173.937--2175.845.mp3
   metadata:
     site: youtube
-    identifier: pLUf75CZg38
+    identifier: 
+      - pLUf75CZg38
+      - 53MFzm-7mgQ
     time:
-      from: 1980.543
-      to: 1985.657
+      - from: 1980.543
+        to: 1985.657
+      - from: 1822.4
+        to: 1830
+      - from: 2173.937
+        to: 2175.845
 - name: "Aka-chan, aka-chan, aka-chan!"
   name_l10n:
     zh: 蓝酱，蓝酱，蓝酱！
@@ -901,9 +933,14 @@
     - 0WsDVU_W6QU--2968.326--2970.mp3
     - 0WsDVU_W6QU--1702.619--1705.827.mp3
     - 0WsDVU_W6QU--1818.752--1820.936.mp3
+    - 53MFzm-7mgQ--1869.5--1871.154.mp3
+    - 53MFzm-7mgQ--2689.451--2693.mp3
+    - 53MFzm-7mgQ--2805.694--2809.149.mp3
   metadata:
     site: youtube
-    identifier: 0WsDVU_W6QU
+    identifier: 
+      - 0WsDVU_W6QU
+      - 53MFzm-7mgQ
     time:
       - from: 2968.326
         to: 2970
@@ -911,6 +948,12 @@
         to: 1705.827
       - from: 1818.752
         to: 1820.936
+      - from: 1869.5
+        to: 1871.154
+      - from: 2689.451
+        to: 2693
+      - from: 2805.694
+        to: 2809.149
 - name: Eh-Ahhh~~~
   name_l10n:
     zh: 饿啊~~~
@@ -991,14 +1034,19 @@
   file:
     - 0WsDVU_W6QU--4565.222--4568.472.mp3
     - 0WsDVU_W6QU--4832--4837.468.mp3
+    - 53MFzm-7mgQ--5237.061--5243.mp3
   metadata:
     site: youtube
-    identifier: 0WsDVU_W6QU
+    identifier: 
+      - 0WsDVU_W6QU
+      - 53MFzm-7mgQ
     time:
       - from: 4565.222
         to: 4568.472
       - from: 4832
         to: 4837.468
+      - from: 5237.061
+        to: 5243
 - name: Hehehehehe
   name_l10n:
     zh: 嘿嘿嘿嘿嘿
@@ -1200,13 +1248,19 @@
     zh: 阿巴阿巴阿巴阿巴
     ja: アバアバアバアバ
   category: cute
-  file: -cWxSCiPKk4--504.787--506.085.mp3
+  file: 
+    - -cWxSCiPKk4--504.787--506.085.mp3
+    - 53MFzm-7mgQ--1011.387--1016.376.mp3
   metadata:
     site: youtube
-    identifier: -cWxSCiPKk4
+    identifier: 
+      - -cWxSCiPKk4
+      - 53MFzm-7mgQ
     time:
-      from: 504.787
-      to: 506.085
+      - from: 504.787
+        to: 506.085
+      - from: 1011.387
+        to: 1016.376
 - name: (various nonsense)
   name_l10n:
     zh: （各种口胡）
@@ -1231,13 +1285,25 @@
     zh: 哈。。。（软软星）
     ja: は。。。（ふわふわ）
   category: cute
-  file: -cWxSCiPKk4--1720.262--1722.mp3
+  file: 
+    - -cWxSCiPKk4--1720.262--1722.mp3
+    - 53MFzm-7mgQ--1353.336--1355.511.mp3
+    - 53MFzm-7mgQ--1545.081--1551.858.mp3
+    - 53MFzm-7mgQ--3684.363--3686.095.mp3
   metadata:
     site: youtube
-    identifier: -cWxSCiPKk4
+    identifier: 
+      - -cWxSCiPKk4
+      - 53MFzm-7mgQ
     time:
-      from: 1720.262
-      to: 1722
+      - from: 1720.262
+        to: 1722
+      - from: 1353.336
+        to: 1355.511
+      - from: 1545.081
+        to: 1551.858
+      - from: 3684.363
+        to: 3686.095
 - name: '"Hat-trick"'
   name_l10n:
     zh: 帽 子 戏 法
@@ -1281,3 +1347,200 @@
     time:
       from: 398.3
       to: 399.2
+- name: >-
+    Na Na Na Na~~~
+  name_l10n:
+    zh: 呐 呐 呐 呐~~~
+    ja: な な な な~~~
+  file: 
+    - 53MFzm-7mgQ--151.396--154.31.mp3
+    - 53MFzm-7mgQ--445.244--450.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      - from: 151.396
+        to: 154.31
+      - from: 445.244
+        to: 450
+- name: >-
+    Today Sui-chan Wa~~~ Na~~~ is still kawaii!
+  name_l10n:
+    zh: 彗酱哇~~~ 呐~~~ 今天也很卡哇伊！
+    ja: すいちゃんは~~~、な~~~、今日もかわいい〜！
+  file: 53MFzm-7mgQ--167.5--179.838.mp3
+  category: kawaii
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 167.5
+      to: 179.838
+- name: Rage Value MAX
+  name_l10n:
+    zh: 怒气值MAX
+    ja: 怒りの値MAX
+  file: 53MFzm-7mgQ--589.567--592.261.mp3
+  category: psycho
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 589.567
+      to: 592.261
+- name: Stop~~~StopStop!!!
+  name_l10n:
+    zh: Stop~~~StopStop!!!
+    ja: Stop~~~StopStop!!!
+  file: 53MFzm-7mgQ--596.186--602.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 596.186
+      to: 602
+- name: Ah ~ ~ ~ It hurts!
+  name_l10n:
+    zh: 啊~~~疼疼疼！
+    ja: あ～～痛くて痛いです!
+  file: 
+    - 53MFzm-7mgQ--920--923.736.mp3
+    - 53MFzm-7mgQ--1721.885--1730.mp3
+    - 53MFzm-7mgQ--1931.822--1947.044.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      - from: 920
+        to: 923.736
+      - from: 1721.885
+        to: 1730
+      - from: 1931.822
+        to: 1947.044
+- name: >-
+    Don't like that!(Being Cute)
+  name_l10n:
+    zh: 不要不要不要不要~~~（撒娇）
+    ja: やだやだやだやだ~~~（甘える）
+  file: 53MFzm-7mgQ--2409.323--2419.087.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 2409.323
+      to: 2419.087
+- name: Ah↘ Ah→ Ah↗ ！
+  name_l10n:
+    zh: 啊↘ 啊→ 啊↗ ！
+    ja: あ↘ あ→ あ↗ ！
+  file: 
+    - 53MFzm-7mgQ--2526--2533.463.mp3
+    - 53MFzm-7mgQ--3051.854--3054.977.mp3
+    - 53MFzm-7mgQ--4570--4576.596.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      - from: 2526
+        to: 2533.463
+      - from: 3051.854
+        to: 3054.977
+      - from: 4570
+        to: 4576.596
+- name: DODODODODO!
+  name_l10n:
+    zh: DODODODODO!
+    ja: DODODODODO!
+  file: 53MFzm-7mgQ--2629.909--2631.692.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 2629.909
+      to: 2631.692
+- name: Howl~~~
+  name_l10n:
+    zh: 嗷呜~~~
+    ja: ウォ~~~
+  file: 53MFzm-7mgQ--3356.25--3368.646.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 3356.25
+      to: 3368.646
+- name: Mom~~~ (World-class beautiful sound)
+  name_l10n:
+    zh: 妈妈~~~（世界级美声）
+    ja: ママ~~~（世界に誇る美音）
+  file: 53MFzm-7mgQ--3534.881--3543.159.mp3
+  category: psycho
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 3534.881
+      to: 3543.159
+- name: >-
+    The song of 'Miss'
+  name_l10n:
+    zh: "'Miss'之歌"
+    ja: "'Miss'の歌"
+  file: 53MFzm-7mgQ--3924.105--3950.mp3
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 3924.105
+      to: 3950
+- name: (Being Cute)
+  name_l10n:
+    zh: （撒娇）
+    ja: （甘える）
+  file: 53MFzm-7mgQ--4413.854--4428.528.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 4413.854
+      to: 4428.528
+- name: Boo...（Being Cute）
+  name_l10n:
+    zh: 呜。。。（撒娇）
+    ja: うう。。。（甘える）
+  file: 53MFzm-7mgQ--4902--4903.758.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      from: 4902
+      to: 4903.758
+- name: Encrypted message
+  name_l10n:
+    zh: 加 密 通 话
+    ja: "あんごうぶん"
+  file:  
+    - 53MFzm-7mgQ--4913.844--4921.244.mp3
+    - 53MFzm-7mgQ--5021.289--5033.782.mp3
+    - 53MFzm-7mgQ--5421.453--5426.mp3
+  category: cute
+  metadata:
+    site: youtube
+    identifier: 53MFzm-7mgQ
+    time:
+      - from: 4913.844
+        to: 4921.244
+      - from: 5021.289
+        to: 5033.782
+      - from: 5421.453
+        to: 5426
+

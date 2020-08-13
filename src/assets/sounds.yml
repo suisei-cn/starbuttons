@@ -1355,7 +1355,9 @@
   file: 
     - 53MFzm-7mgQ--151.396--154.31.mp3
     - 53MFzm-7mgQ--445.244--450.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1370,7 +1372,9 @@
     zh: 彗酱哇~~~ 呐~~~ 今天也很卡哇伊！
     ja: すいちゃんは~~~、な~~~、今日もかわいい〜！
   file: 53MFzm-7mgQ--167.5--179.838.mp3
-  category: new #kawaii
+  category: 
+    - new
+    - kawaii
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1382,7 +1386,9 @@
     zh: 怒气值MAX
     ja: 怒りの値MAX
   file: 53MFzm-7mgQ--589.567--592.261.mp3
-  category: new #psycho
+  category: 
+    - new
+    - psycho
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1394,7 +1400,9 @@
     zh: Stop~~~StopStop!!!
     ja: Stop~~~StopStop!!!
   file: 53MFzm-7mgQ--596.186--602.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1409,7 +1417,9 @@
     - 53MFzm-7mgQ--920--923.736.mp3
     - 53MFzm-7mgQ--1721.885--1730.mp3
     - 53MFzm-7mgQ--1931.822--1947.044.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1426,7 +1436,9 @@
     zh: 不要不要不要不要~~~（撒娇）
     ja: やだやだやだやだ~~~（甘える）
   file: 53MFzm-7mgQ--2409.323--2419.087.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1441,7 +1453,9 @@
     - 53MFzm-7mgQ--2526--2533.463.mp3
     - 53MFzm-7mgQ--3051.854--3054.977.mp3
     - 53MFzm-7mgQ--4570--4576.596.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1457,7 +1471,9 @@
     zh: DODODODODO!
     ja: DODODODODO!
   file: 53MFzm-7mgQ--2629.909--2631.692.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1469,7 +1485,9 @@
     zh: 嗷呜~~~
     ja: ウォ~~~
   file: 53MFzm-7mgQ--3356.25--3368.646.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1481,7 +1499,9 @@
     zh: 妈妈~~~（世界级美声）
     ja: ママ~~~（世界に誇る美音）
   file: 53MFzm-7mgQ--3534.881--3543.159.mp3
-  category: new #psycho
+  category: 
+    - new
+    - psycho
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1506,7 +1526,9 @@
     zh: （撒娇）
     ja: （甘える）
   file: 53MFzm-7mgQ--4413.854--4428.528.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1518,7 +1540,9 @@
     zh: 呜。。。（撒娇）
     ja: うう。。。（甘える）
   file: 53MFzm-7mgQ--4902--4903.758.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ
@@ -1533,7 +1557,9 @@
     - 53MFzm-7mgQ--4913.844--4921.244.mp3
     - 53MFzm-7mgQ--5021.289--5033.782.mp3
     - 53MFzm-7mgQ--5421.453--5426.mp3
-  category: new #cute
+  category: 
+    - new
+    - cute
   metadata:
     site: youtube
     identifier: 53MFzm-7mgQ

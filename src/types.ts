@@ -9,7 +9,7 @@ export interface NameWithL10n {
 export interface Sound extends NameWithL10n {
   file: string | string[];
   type: string;
-  category?: string;
+  category?: string | string[];
 }
 
 export interface Categories {

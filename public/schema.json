@@ -30,7 +30,17 @@
         ]
       },
       "type": {
-        "type": "string",
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
         "title": "Sound button type",
         "default": "normal"
       },

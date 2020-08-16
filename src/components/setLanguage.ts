@@ -8,5 +8,7 @@ export function setLanguage(window: Window, navigator: Navigator, vue: Vue) {
     ).split("-")[0] || "zh";
   // Fallback yue to zh for now
   if (lang === "yue") lang = "zh";
+  if (!["en", "zh", "ja"].includes(lang)) lang = "en";
   vue.$i18n.locale = lang;
+  return lang;
 }

@@ -115,6 +115,12 @@
       >
         <i class="icon-discord"></i> <sup>(EN)</sup>
       </a>
+      /
+      <LanguageSwitch
+        id="compLangSwitch"
+        :lang="currLang"
+        @requestLanguageChange="changeLang"
+      ></LanguageSwitch>
     </div>
   </main>
 </template>
@@ -125,6 +131,7 @@ import { Sound, CategorizedSounds, Categories, NameWithL10n } from "../types";
 import Lottie from "lottie-web";
 import { getItem, removeItem } from "../components/localStorageWrapper";
 import BaseButton from "../components/BaseButton.vue";
+import LanguageSwitch from "../components/LanguageSwitch.vue";
 import { setLanguage } from "../components/setLanguage";
 import ErrorBar from "../components/ErrorBar.vue";
 const THEME_ENFORCEMENT_SETTINGS_ITEM = "enforced-theme";
@@ -132,7 +139,8 @@ const THEME_ENFORCEMENT_SETTINGS_ITEM = "enforced-theme";
 @Component({
   components: {
     BaseButton,
-    ErrorBar
+    ErrorBar,
+    LanguageSwitch
   }
 })
 export default class App extends Vue {
@@ -148,6 +156,7 @@ export default class App extends Vue {
   private currentSystemTheme = "light";
   private currentErrors: string[] = [];
   private dontRespond = false;
+  private currLang = "";
 
   @Emit("error")
   private showError(text: string, timeout = 3000) {
@@ -243,6 +252,11 @@ export default class App extends Vue {
     this.sounds = soundsNoCat;
   }
 
+  private changeLang(lang: string) {
+    this.$i18n.locale = lang;
+    history.pushState({ lang }, "", `/?lang=${lang}`);
+  }
+
   private async mounted() {
     this.settings = ["multiPlay"];
     this.sounds = (await fetch("/sounds.json")
@@ -260,7 +274,8 @@ export default class App extends Vue {
         this.showError(this.$t("Sound list fetch error:") + e.toString());
       })) as Categories;
     this.putSoundsIntoCategories();
-    setLanguage(window, navigator, this);
+    this.currLang = setLanguage(window, navigator, this);
+
     this.updateThemeSettings();
     this.setupBackgroundAnimations();
   }
@@ -492,5 +507,9 @@ label {
   margin: 0 0.5vw;
   text-decoration: none;
   color: var(--bottom-link-color);
+}
+
+#compLangSwitch {
+  margin-left: 0.5vw;
 }
 </style>

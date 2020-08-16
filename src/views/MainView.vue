@@ -511,5 +511,14 @@ label {
 
 #compLangSwitch {
   margin-left: 0.5vw;
+  outline: none;
+  border: none;
+  background: none;
+  color: var(--bottom-link-color);
+  cursor: pointer;
+}
+
+#compLangSwitch option {
+  color: initial;
 }
 </style>

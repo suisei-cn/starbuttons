@@ -518,7 +518,7 @@ label {
   cursor: pointer;
 }
 
-#compLangSwitch option {
+#compLangSwitch /deep/ option {
   color: initial;
 }
 </style>

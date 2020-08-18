@@ -392,8 +392,6 @@ label {
 .animateBtn {
   text-align: center;
   overflow: hidden;
-  font-family: Fira Code, iA Writer Mono V, IBM Plex Mono, Roboto Mono, Courier,
-    monospace;
   border-radius: 8px;
   cursor: pointer;
   background: linear-gradient(var(--color-1), var(--color-2));

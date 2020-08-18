@@ -37,3 +37,16 @@
   content: "\e902";
   // color: #7289da;
 }
+
+html {
+  font-family: -apple-system, HYQiHei, FZYouH, Source Han Sans, sans-serif;
+}
+
+html[lang="en"] {
+  font-family: -apple-system, Fira Code, iA Writer Mono V, IBM Plex Mono,
+    Roboto Mono, Courier, monospace;
+}
+
+html[lang="ja"] {
+  font-family: -apple-system, Kozuka Gothic Pro, Yu Gothic, Meiryo, sans-serif;
+}

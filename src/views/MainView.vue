@@ -255,6 +255,8 @@ export default class App extends Vue {
   private changeLang(lang: string) {
     this.$i18n.locale = lang;
     history.pushState({ lang }, "", `/?lang=${lang}`);
+    const htmlElement = document.querySelector("html");
+    if (htmlElement) htmlElement.lang = lang;
   }
 
   private async mounted() {

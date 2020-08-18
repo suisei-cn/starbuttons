@@ -408,6 +408,9 @@ label {
 
 .smallBtn {
   font-size: 1.6rem;
+  @media screen and (max-height: 750px) { 
+    font-size: 1rem !important;
+  }
   @media screen and (max-width: 1340px) {
     font-size: 1rem !important;
   }

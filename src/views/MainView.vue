@@ -357,7 +357,6 @@ $table-height: 52vh;
 
 label {
   font-display: swap;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-variant-caps: small-caps;
   font-variant-numeric: oldstyle-nums;
   font-weight: 400;

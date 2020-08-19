@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+.baseButton {
+  text-align: center;
+  min-height: $btn-height;
+  line-height: $btn-height;
+  margin: 12px 12px;
+  padding: 4px 16px;
+  border-radius: 4px;
+  background: var(--color-1);
+  user-select: none;
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 2.3s ease-in-out;
+  font-weight: 0.23s ease-in-out;
+
+  &.testHoverWidth {
+    font-weight: $btn-hover-font-weight;
+  }
+
+  &:hover {
+    cursor: pointer;
+    font-weight: $btn-hover-font-weight;
+    box-shadow: var(--box-shadow-hover);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: var(--color-1-focus);
+  }
+}

@@ -1570,11 +1570,11 @@
     - new
     - cute
   file: yoyoyo.mp3
-- name: "(Current in game: Muse Dash)"
+- name: "(Current in game: Fall Guys)"
   category: new
   name_l10n:
-    zh: "（Muse Dash 游玩中）"
-  file: keyboard-sounds-on-muse-dash.mp3
+    zh: "（糖豆人游玩中）"
+  file: keyboard-sounds-on-fall-guys.mp3
 - name: "No sex harassment, hentai!"
   category: new
   name_l10n:
@@ -1595,10 +1595,10 @@
     ja: "さよなら、さよなら"
     zh: "再见~再见~"
   file: farewell-farewell.mp3
-- name: "(Muse Dash upsets Suisei)"
+- name: "(Fall Guys upsets Suisei)"
   category:
     - new
     - cute
   file:
-    - "suisei-meets-unfriendly-mug-composition.mp3"
-    - "suisei-still-meets-unfriendly-mug-composition.mp3"
+    - "fall-bad-guys-1.mp3"
+    - "fall-bad-guys-2.mp3"

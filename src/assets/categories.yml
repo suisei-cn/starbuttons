@@ -1,8 +1,8 @@
 new:
-  name: 2020-08-13 Button addition
+  name: 2020-08-22 Button addition
   name_l10n:
-    ja: 2020-08-13 ボタン追加
-    zh: 2020-08-13 按钮追加
+    ja: 2020-08-22 ボタン追加
+    zh: 2020-08-22 按钮追加
   order: 1
 kawaii:
   name: Today Sui-chan is still kawaii!

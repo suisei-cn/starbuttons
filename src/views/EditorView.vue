@@ -333,6 +333,8 @@ export default class App extends Vue {
 #buttons {
   display: flex;
   flex-wrap: wrap;
+  max-height: 40vh;
+  overflow: scroll;
 }
 
 #tracks {

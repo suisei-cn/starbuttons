@@ -1586,7 +1586,7 @@
     - new
     - cute
   name_l10n:
-    ja: "掴むだよ！"
+    ja: "掴むなよ！"
     zh: "不要抓我啊！"
   file: dont-catch-me.mp3
 - name: "Farewell, farewell"

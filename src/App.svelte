@@ -1,4 +1,5 @@
 <main>
+  {$_('Do Not Click Me')}
   {#each sounds as sound}
     <BaseButton item="{sound}" />
   {/each}
@@ -8,6 +9,11 @@
   import { onMount } from 'svelte'
   import BaseButton from './components/BaseButton.svelte'
   import type { SiteConfig, Sound } from './types'
+  import { waitLocale, _ } from 'svelte-i18n'
+
+  export async function preload() {
+    return waitLocale()
+  }
 
   export let siteConfig: SiteConfig
   let sounds: Sound[] = []

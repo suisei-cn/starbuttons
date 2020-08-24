@@ -10,6 +10,7 @@
   import BaseButton from './components/BaseButton.svelte'
   import type { SiteConfig, Sound } from './types'
   import { waitLocale, _ } from 'svelte-i18n'
+  import _fontface from './styles/fontface.scss'
 
   export async function preload() {
     return waitLocale()

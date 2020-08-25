@@ -64,4 +64,8 @@
     font-size: 5rem;
     width: 40vw;
   }
+
+  #boardWrapper {
+    z-index: 1;
+  }
 </style>

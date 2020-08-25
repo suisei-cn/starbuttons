@@ -6,7 +6,6 @@ export default class CentralPlayer {
   addAudio(url: string): HTMLAudioElement {
     const audio = new Audio()
     audio.preload = 'auto'
-    this.audios.push(audio)
     audio.src = url
     audio.addEventListener('play', () => {
       this.playCount += 1
@@ -19,20 +18,16 @@ export default class CentralPlayer {
         audio.play()
       }
     })
+    if (!this.multiPlay) this.stopAll()
+    this.audios.push(audio)
     return audio
-  }
-
-  stopAllWhenNonMultiPlay() {
-    if (!this.multiPlay) {
-      this.stopAll()
-    }
   }
 
   preload(url: string) {
     this.addAudio(url)
   }
   stopAll() {
-    for (const i of this.audios.values()) {
+    for (const i of this.audios) {
       try {
         i.pause()
       } catch (_) {
@@ -40,5 +35,6 @@ export default class CentralPlayer {
         // See https://developers.google.com/web/updates/2017/06/play-request-was-interrupted
       }
     }
+    this.audios = []
   }
 }

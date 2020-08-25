@@ -2,17 +2,41 @@
   <input
     id="isMutliplay"
     type="checkbox"
-    value="multiPlay"
-    v-model="settings"
+    on:change="{chg}"
+    bind:checked="{multiPlay}"
   />
   <label for="isMutliplay">{$_('Do Not Click Me')}</label>
   |
-  <input id="isRepeat" type="checkbox" value="repeatThis" v-model="settings" />
+  <input
+    id="isRepeat"
+    type="checkbox"
+    on:change="{chg}"
+    bind:checked="{repeatThis}"
+  />
   <label for="isRepeat">{$_('Repeat')}</label>
 </div>
 
-<script>
+<script lang="ts">
+  import { getContext, onMount } from 'svelte'
   import { _ } from 'svelte-i18n'
+  import type CentralPlayer from './centralPlayer'
+
+  let playerCtx: CentralPlayer
+  let multiPlay, repeatThis: boolean
+
+  function chg() {
+    // Tricky!
+    setTimeout(() => {
+      playerCtx.multiPlay = multiPlay
+      playerCtx.repeatThis = repeatThis
+    }, 0)
+  }
+
+  onMount(() => {
+    playerCtx = getContext('player')
+    multiPlay = playerCtx.multiPlay
+    repeatThis = playerCtx.repeatThis
+  })
 </script>
 
 <style lang="scss">

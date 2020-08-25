@@ -1,6 +1,7 @@
 <div
   class="baseBtn stylizedBtn"
   class:active="{concurrentPlays !== 0}"
+  class:baseBtnInList
   class:pending
   on:click="{playSound}"
 >
@@ -18,6 +19,7 @@
 
   // Props
   export let item: Sound
+  export let baseBtnInList: boolean = true
   let playerCtx: CentralPlayer
   let concurrentPlays = 0
   let pending = false

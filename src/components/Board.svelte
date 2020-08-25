@@ -16,7 +16,7 @@
     </div>
   {:else}
     <div id="bigBtn" class="boardPart" class:wideMode>
-      <BaseButton item="{centralSound}" />
+      <BaseButton item="{centralSound}" baseBtnInList="{false}" />
     </div>
   {/if}
 </div>

@@ -1,16 +1,19 @@
 @import './variables.scss';
 
 .baseBtn {
-  min-height: $btn-height;
-  line-height: $btn-height;
-  margin: 12px 12px;
-  padding: 4px 16px;
-  border-radius: 4px;
   background: $color-1;
 
   &.testHoverWidth {
     font-weight: $btn-hover-font-weight;
   }
+}
+
+.baseBtnInList {
+  min-height: $btn-height;
+  line-height: $btn-height;
+  margin: 12px 12px;
+  padding: 4px 16px;
+  border-radius: 4px;
 }
 
 .active {

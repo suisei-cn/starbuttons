@@ -12,6 +12,7 @@
   import type { Sound } from '../types'
   import siteConfig from '../config'
   import type CentralPlayer from './centralPlayer'
+  import { ln } from '../utils/i18n'
   const assetBasePath = siteConfig.assets_path
 
   // Props
@@ -19,7 +20,7 @@
   let playerCtx: CentralPlayer
   let concurrentPlays = 0
 
-  $: localizedName = item?.name_l10n?.[$locale] || item.name
+  $: localizedName = ln($locale, item)
 
   // Methods
   function selectFile(): string {

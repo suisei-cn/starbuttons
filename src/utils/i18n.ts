@@ -8,6 +8,7 @@ import {
 import en from '../lang/en'
 import ja from '../lang/ja'
 import zh from '../lang/zh'
+import type { NameWithL10n } from '../types'
 
 export default () => {
   addMessages('en', en)
@@ -18,4 +19,8 @@ export default () => {
     fallbackLocale: 'ja',
     initialLocale: getLocaleFromQueryString('lang') || getLocaleFromNavigator(),
   })
+}
+
+export function ln(lang: string, str: NameWithL10n) {
+  return str?.name_l10n?.[lang] || str.name
 }

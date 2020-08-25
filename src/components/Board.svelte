@@ -16,6 +16,7 @@
   onMount(async () => {
     sounds = await fetch(config.sounds)
       .then((x) => x.json())
+      .then((x) => x.filter((k) => k.type !== 'center'))
       .catch(() => {
         console.error('Failed to fetch sounds')
         return []

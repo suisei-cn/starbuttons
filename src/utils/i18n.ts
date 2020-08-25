@@ -1,4 +1,9 @@
-import { addMessages, init, getLocaleFromNavigator } from 'svelte-i18n'
+import {
+  addMessages,
+  init,
+  getLocaleFromNavigator,
+  getLocaleFromQueryString,
+} from 'svelte-i18n'
 
 import en from '../lang/en'
 import ja from '../lang/ja'
@@ -11,6 +16,6 @@ export default () => {
 
   init({
     fallbackLocale: 'ja',
-    initialLocale: getLocaleFromNavigator(),
+    initialLocale: getLocaleFromQueryString('lang') || getLocaleFromNavigator(),
   })
 }

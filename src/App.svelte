@@ -12,14 +12,18 @@
   import BottomBar from './components/BottomBar.svelte'
   import Board from './components/Board.svelte'
   import type { SiteConfig } from './types'
-  import { waitLocale, _ } from 'svelte-i18n'
+  import { format } from 'svelte-i18n'
   import _fontface from './styles/fontface.scss'
 
-  export async function preload() {
-    return waitLocale()
+  export let siteConfig: SiteConfig
+
+  function updateLocalizedTitle() {
+    document.title = $format('Starbuttons')
   }
 
-  export let siteConfig: SiteConfig
+  onMount(() => {
+    updateLocalizedTitle()
+  })
 </script>
 
 <style lang="scss">

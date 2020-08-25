@@ -28,4 +28,5 @@ export default {
   'Unrecognized sound list.': 'Unrecognized sound list.',
   'Still loading...': 'Still loading...',
   Uncategorized: 'Uncategorized',
+  Starbuttons: 'Starbuttons',
 }

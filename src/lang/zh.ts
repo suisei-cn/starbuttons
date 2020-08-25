@@ -27,4 +27,5 @@ export default {
   'Unrecognized sound list.': '未能识别声音列表。',
   'Still loading...': '仍在加载...',
   Uncategorized: '未分类',
+  Starbuttons: '星按钮',
 }

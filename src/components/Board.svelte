@@ -1,18 +1,20 @@
 <div id="boardWrapper">
   {#if boardMode}
     <div id="board" class="boardPart" class:wideMode>
-      {#each soundGroups as soundGroup}
-        <h2>{ln($locale, categories[soundGroup.slug])}</h2>
-        {#each soundGroup.sounds as sound}
-          <BaseButton item="{sound}" />
+      <div id="boardContext">
+        {#each soundGroups as soundGroup}
+          <h2>{ln($locale, categories[soundGroup.slug])}</h2>
+          {#each soundGroup.sounds as sound}
+            <BaseButton item="{sound}" />
+          {/each}
         {/each}
-      {/each}
-      {#if uncategoriedSounds.length}
-        <h2>{$_('Uncategorized')}</h2>
-        {#each uncategoriedSounds as sound}
-          <BaseButton item="{sound}" />
-        {/each}
-      {/if}
+        {#if uncategoriedSounds.length}
+          <h2>{$_('Uncategorized')}</h2>
+          {#each uncategoriedSounds as sound}
+            <BaseButton item="{sound}" />
+          {/each}
+        {/if}
+      </div>
     </div>
   {:else}
     <div id="bigBtn" class="boardPart" class:wideMode>
@@ -115,6 +117,9 @@
     height: $table-height;
     border-radius: 12px;
     background: $board-color;
+  }
+
+  #boardContext {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;

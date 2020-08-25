@@ -35,5 +35,25 @@
 </script>
 
 <style lang="scss">
+  @import './styles/variables';
 
+  body {
+    overflow: hidden;
+  }
+
+  main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* what the hell */
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $main-background;
+    color: $color-font;
+  }
 </style>

@@ -1,6 +1,6 @@
 <div id="boardWrapper">
   {#if boardMode}
-    <div id="board">
+    <div id="board" class="boardPart" class:wideMode>
       {#each soundGroups as soundGroup}
         <h2>{ln($locale, categories[soundGroup.slug])}</h2>
         {#each soundGroup.sounds as sound}
@@ -15,7 +15,9 @@
       {/if}
     </div>
   {:else}
-    <div id="bigBtn" class="stylizedBtn">{centralSoundName}</div>
+    <div id="bigBtn" class="stylizedBtn boardPart" class:wideMode>
+      {centralSoundName}
+    </div>
     <div class="hidden">
       <BaseButton item="{centralSound}" />
     </div>
@@ -24,19 +26,31 @@
 
 <script lang="ts">
   import type { Categories, SiteConfig, Sound, SoundCategory } from '../types'
-  import { onMount } from 'svelte'
+  import { onMount, createEventDispatcher } from 'svelte'
   import { locale, _ } from 'svelte-i18n'
   import { ln } from '../utils/i18n'
   import BaseButton from './BaseButton.svelte'
 
   export let config: SiteConfig
   export let boardMode: boolean
+  let wideMode: boolean
 
   let soundGroups: SoundCategory[] = []
   let uncategoriedSounds: Sound[] = []
   let categories: Categories = {}
   let centralSound: Sound = { name: '', file: '', type: 'center' }
   $: centralSoundName = centralSound?.name_l10n?.[$locale] || centralSound.name
+  const dispatch = createEventDispatcher()
+
+  export function toggleBoard() {
+    boardMode = !boardMode
+    setTimeout(() => {
+      wideMode = boardMode
+      setTimeout(() => {
+        dispatch('changeok')
+      }, 250)
+    }, 0)
+  }
 
   function generateSoundGroups(
     sounds: Sound[],
@@ -103,24 +117,29 @@
   #board {
     overflow-y: scroll;
     height: $table-height;
-    width: 80vw;
-    padding: 5px;
     border-radius: 12px;
     background: $board-color;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    font-display: swap;
   }
 
   #bigBtn {
-    line-height: 40vh;
+    line-height: $table-height;
     font-size: 5rem;
-    width: 40vw;
+  }
+
+  .boardPart {
+    width: 42vw;
+    transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
+      background 0.25s linear;
+    &.wideMode {
+      width: 80vw;
+    }
   }
 
   #boardWrapper {
-    z-index: 1;
+    position: relative;
   }
 
   h2 {

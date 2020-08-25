@@ -1,12 +1,18 @@
 <main>
   <FullscreenAnim />
   <TopSettings />
-  <Board config="{siteConfig}" boardMode="{boardMode}" />
+  <Board
+    config="{siteConfig}"
+    on:changeok="{(e) => {
+      boardMode = !boardMode
+    }}"
+    bind:this="{board}"
+  />
   <div
     id="switchBtn"
     class="stylizedBtn"
     on:click="{(e) => {
-      boardMode = !boardMode
+      board.toggleBoard()
     }}"
   >
     {#if boardMode}{$_('Back')}{:else}{$_('Music board')}{/if}
@@ -28,6 +34,7 @@
   export let siteConfig: SiteConfig
 
   let boardMode = false
+  let board
 
   function updateLocalizedTitle() {
     document.title = $format('Starbuttons')

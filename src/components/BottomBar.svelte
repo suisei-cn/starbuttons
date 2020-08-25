@@ -1,6 +1,5 @@
 <footer>
   <a
-    class="bottonBtnLink"
     href="https://github.com/suisei-cn/starbuttons"
     aria-label="GitHub repository of suisei.moe"
     target="_blank"
@@ -9,7 +8,6 @@
   </a>
   /
   <a
-    class="bottonBtnLink"
     href="https://t.me/Hoshimachi_Suisei"
     aria-label="Telegram Fan Group"
     target="_blank"
@@ -19,7 +17,6 @@
   </a>
   /
   <a
-    class="bottonBtnLink"
     href="https://discord.com/invite/suiseicord"
     aria-label="Discord Fan Group"
     target="_blank"
@@ -29,7 +26,6 @@
   </a>
   /
   <a
-    class="bottonBtnLink"
     href="https://discord.gg/4fmY8WC"
     aria-label="Discord Fan Group"
     target="_blank"
@@ -44,7 +40,17 @@
 </script>
 
 <style lang="scss">
+  @import '../styles/variables';
+
   footer {
     text-align: center;
+    margin-bottom: 11vh;
+    line-height: 1em;
+  }
+
+  a {
+    margin: 0 0.5vw;
+    text-decoration: none;
+    color: $bottom-link-color;
   }
 </style>

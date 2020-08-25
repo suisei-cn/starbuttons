@@ -33,6 +33,9 @@
     padding: 5px;
     border-radius: 12px;
     background: $board-color;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 
     font-display: swap;
     .normalBtn {

@@ -1,7 +1,16 @@
 <main>
   <FullscreenAnim />
   <TopSettings />
-  <Board config="{siteConfig}" />
+  <Board config="{siteConfig}" boardMode="{boardMode}" />
+  <div
+    id="switchBtn"
+    class="stylizedBtn"
+    on:click="{(e) => {
+      boardMode = !boardMode
+    }}"
+  >
+    {#if boardMode}{$_('Back')}{:else}{$_('Music board')}{/if}
+  </div>
   <BottomBar />
 </main>
 
@@ -12,11 +21,13 @@
   import BottomBar from './components/BottomBar.svelte'
   import Board from './components/Board.svelte'
   import type { SiteConfig } from './types'
-  import { format } from 'svelte-i18n'
+  import { format, _ } from 'svelte-i18n'
   import _fontface from './styles/fontface.scss'
   import { initGlobalContext } from './globalCtx'
 
   export let siteConfig: SiteConfig
+
+  let boardMode = false
 
   function updateLocalizedTitle() {
     document.title = $format('Starbuttons')
@@ -31,6 +42,7 @@
 
 <style lang="scss">
   @import './styles/variables';
+  @import './styles/common';
 
   :global(body) {
     overflow: hidden;
@@ -50,5 +62,11 @@
     top: 0;
     background: $main-background;
     color: $color-font;
+  }
+
+  #switchBtn {
+    height: 6vh;
+    line-height: 6vh;
+    width: 30vh;
   }
 </style>

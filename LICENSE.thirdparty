@@ -1,0 +1,11 @@
+This file describes the license of some third-party components in this project.
+
+----
+
+Simpleicons, https://simpleicons.org/, CC0
+* public/assets/fonts/icomoon.{eot,svg,ttf,woff}
+
+
+Emojidex, https://emojidex.com/, https://www.emojidex.com/emojidex/emojidex_open_license
+* public/favicon.ico
+* public/img/*

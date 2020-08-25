@@ -15,10 +15,7 @@
       {/if}
     </div>
   {:else}
-    <div id="bigBtn" class="stylizedBtn nonBaseBtn boardPart" class:wideMode>
-      {centralSoundName}
-    </div>
-    <div class="hidden">
+    <div id="bigBtn" class="boardPart" class:wideMode>
       <BaseButton item="{centralSound}" />
     </div>
   {/if}
@@ -34,12 +31,10 @@
   export let config: SiteConfig
   let boardMode: boolean = false
   let wideMode: boolean
-
   let soundGroups: SoundCategory[] = []
   let uncategoriedSounds: Sound[] = []
   let categories: Categories = {}
   let centralSound: Sound = { name: '', file: '', type: 'center' }
-  $: centralSoundName = centralSound?.name_l10n?.[$locale] || centralSound.name
   const dispatch = createEventDispatcher()
 
   export function toggleBoard() {
@@ -126,8 +121,10 @@
     box-sizing: border-box;
   }
 
-  #bigBtn {
+  :global(#bigBtn .baseBtn) {
+    min-height: $table-height;
     line-height: $table-height;
+    background: $btn-gradient-background;
     font-size: 5rem;
   }
 

@@ -1,7 +1,7 @@
 @import './variables';
 
 .nonBaseBtn {
-  background: linear-gradient($color-1, $color-2);
+  background: $btn-gradient-background;
 }
 
 .stylizedBtn {

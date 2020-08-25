@@ -33,7 +33,7 @@
     }
   }
 
-  function playSound() {
+  export function playSound() {
     pending = true
     const audio = playerCtx.addAudio(assetBasePath + selectFile())
 

@@ -21,7 +21,7 @@ export interface Categories {
 }
 
 export interface SoundCategory {
-  name: string
+  slug: string
   sounds: Sound[]
 }
 

@@ -1,9 +1,18 @@
 <div id="boardWrapper">
   {#if boardMode}
     <div id="board">
-      {#each sounds as sound}
-        <BaseButton item="{sound}" />
+      {#each soundGroups as soundGroup}
+        <h2>{ln($locale, categories[soundGroup.slug])}</h2>
+        {#each soundGroup.sounds as sound}
+          <BaseButton item="{sound}" />
+        {/each}
       {/each}
+      {#if uncategoriedSounds.length}
+        <h2>{$_('Uncategoried')}</h2>
+        {#each uncategoriedSounds as sound}
+          <BaseButton item="{sound}" />
+        {/each}
+      {/if}
     </div>
   {:else}
     <div id="bigBtn" class="stylizedBtn">{centralSoundName}</div>
@@ -14,27 +23,72 @@
 </div>
 
 <script lang="ts">
-  import type { SiteConfig, Sound } from '../types'
+  import type { Categories, SiteConfig, Sound, SoundCategory } from '../types'
   import { onMount } from 'svelte'
-  import { locale } from 'svelte-i18n'
+  import { locale, _ } from 'svelte-i18n'
+  import { ln } from '../utils/i18n'
   import BaseButton from './BaseButton.svelte'
 
   export let config: SiteConfig
   export let boardMode: boolean
 
-  let sounds: Sound[] = []
+  let soundGroups: SoundCategory[] = []
+  let uncategoriedSounds: Sound[] = []
+  let categories: Categories = {}
   let centralSound: Sound = { name: '', file: '', type: 'center' }
   $: centralSoundName = centralSound?.name_l10n?.[$locale] || centralSound.name
 
+  function generateSoundGroups(
+    sounds: Sound[],
+    cats: Categories
+  ): [SoundCategory[], Sound[]] {
+    const categorizedSounds: { [name: string]: Sound[] } = {}
+    const soundNoCat = []
+
+    for (const i of sounds) {
+      if (!i.category) {
+        soundNoCat.push(i)
+        continue
+      }
+      // For backward compat
+      if (!Array.isArray(i.category)) i.category = [i.category]
+      for (const cat of i.category) {
+        if (!categorizedSounds[cat]) categorizedSounds[cat] = []
+        categorizedSounds[cat].push(i)
+      }
+    }
+
+    const sortedCats = Object.entries(categorizedSounds).sort(
+      (a, b) => (cats[a[0]]?.order || 999) - (cats[b[0]]?.order || 999)
+    )
+    const soundCategory: SoundCategory[] = []
+    for (const i of sortedCats) {
+      soundCategory.push({
+        slug: i[0],
+        sounds: i[1],
+      })
+    }
+
+    return [soundCategory, soundNoCat]
+  }
+
   onMount(async () => {
-    const allSounds = await fetch(config.sounds)
+    const allSounds: Sound[] = await fetch(config.sounds)
       .then((x) => x.json())
       .catch(() => {
         console.error('Failed to fetch sounds')
         return []
       })
 
-    sounds = allSounds.filter((x) => x.type !== 'center')
+    categories = await fetch(config.categories)
+      .then((x) => x.json())
+      .catch(() => {
+        console.error('Failed to fetch categories')
+        return {}
+      })
+
+    const sounds = allSounds.filter((x) => x.type !== 'center')
+    ;[soundGroups, uncategoriedSounds] = generateSoundGroups(sounds, categories)
     centralSound = allSounds.filter((x) => x.type === 'center')[0]
     if (!centralSound) {
       boardMode = true
@@ -67,5 +121,12 @@
 
   #boardWrapper {
     z-index: 1;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 12px;
+    width: 100%;
   }
 </style>

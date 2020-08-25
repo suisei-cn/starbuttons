@@ -1,8 +1,13 @@
-<div id="settings" :title="$t('Toggle chorus mode')">
-  <input type="checkbox" value="multiPlay" v-model="settings" />
+<div id="settings">
+  <input
+    id="isMutliplay"
+    type="checkbox"
+    value="multiPlay"
+    v-model="settings"
+  />
   <label for="isMutliplay">{$_('Do Not Click Me')}</label>
   |
-  <input type="checkbox" value="repeatThis" v-model="settings" />
+  <input id="isRepeat" type="checkbox" value="repeatThis" v-model="settings" />
   <label for="isRepeat">{$_('Repeat')}</label>
 </div>
 

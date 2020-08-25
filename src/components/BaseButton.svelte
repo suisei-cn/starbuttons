@@ -3,7 +3,10 @@
   class:active="{concurrentPlays !== 0}"
   class:baseBtnInList
   class:pending
+  class:testHoverWidth
+  style="min-width: {minWidth}"
   on:click="{playSound}"
+  bind:this="{self}"
 >
   {localizedName}
 </div>
@@ -23,6 +26,9 @@
   let playerCtx: CentralPlayer
   let concurrentPlays = 0
   let pending = false
+  let testHoverWidth: boolean = false
+  let self
+  let minWidth = '0px'
 
   $: localizedName = ln($locale, item)
 
@@ -33,6 +39,13 @@
     } else {
       return item.file
     }
+  }
+
+  function scanHoverWidth() {
+    testHoverWidth = true
+    const width = self.offsetWidth
+    minWidth = String(width - 16 + 'px')
+    testHoverWidth = false
   }
 
   export function playSound() {
@@ -51,6 +64,7 @@
 
   onMount(() => {
     playerCtx = getContext('player')
+    if (baseBtnInList) scanHoverWidth()
   })
 </script>
 

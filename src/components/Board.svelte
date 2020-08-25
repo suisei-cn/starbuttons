@@ -8,7 +8,7 @@
         {/each}
       {/each}
       {#if uncategoriedSounds.length}
-        <h2>{$_('Uncategoried')}</h2>
+        <h2>{$_('Uncategorized')}</h2>
         {#each uncategoriedSounds as sound}
           <BaseButton item="{sound}" />
         {/each}

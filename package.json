@@ -28,6 +28,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
+    "lottie-web": "^5.7.3",
     "sirv-cli": "^1.0.0",
     "svelte-i18n": "^3.0.4"
   },

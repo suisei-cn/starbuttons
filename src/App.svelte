@@ -1,4 +1,5 @@
 <main>
+  <FullscreenAnim />
   <TopSettings />
   {#each sounds as sound}
     <BaseButton item="{sound}" />
@@ -8,6 +9,7 @@
 
 <script lang="ts">
   import { onMount } from 'svelte'
+  import FullscreenAnim from './components/FullscreenAnim.svelte'
   import BaseButton from './components/BaseButton.svelte'
   import TopSettings from './components/TopSettings.svelte'
   import BottomBar from './components/BottomBar.svelte'

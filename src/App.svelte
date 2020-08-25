@@ -14,6 +14,7 @@
   import type { SiteConfig } from './types'
   import { format } from 'svelte-i18n'
   import _fontface from './styles/fontface.scss'
+  import { initGlobalContext } from './globalCtx'
 
   export let siteConfig: SiteConfig
 
@@ -24,6 +25,8 @@
   onMount(() => {
     updateLocalizedTitle()
   })
+
+  initGlobalContext()
 </script>
 
 <style lang="scss">

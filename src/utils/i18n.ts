@@ -17,7 +17,9 @@ export default () => {
 
   init({
     fallbackLocale: 'ja',
-    initialLocale: getLocaleFromQueryString('lang') || getLocaleFromNavigator(),
+    initialLocale: (
+      getLocaleFromQueryString('lang') || getLocaleFromNavigator()
+    ).split('-')[0],
   })
 }
 

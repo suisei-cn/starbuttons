@@ -1,19 +1,17 @@
 <main>
   <FullscreenAnim />
   <TopSettings />
-  {#each sounds as sound}
-    <BaseButton item="{sound}" />
-  {/each}
+  <Board config="{siteConfig}" />
   <BottomBar />
 </main>
 
 <script lang="ts">
   import { onMount } from 'svelte'
   import FullscreenAnim from './components/FullscreenAnim.svelte'
-  import BaseButton from './components/BaseButton.svelte'
   import TopSettings from './components/TopSettings.svelte'
   import BottomBar from './components/BottomBar.svelte'
-  import type { SiteConfig, Sound } from './types'
+  import Board from './components/Board.svelte'
+  import type { SiteConfig } from './types'
   import { waitLocale, _ } from 'svelte-i18n'
   import _fontface from './styles/fontface.scss'
 
@@ -22,16 +20,6 @@
   }
 
   export let siteConfig: SiteConfig
-  let sounds: Sound[] = []
-
-  onMount(async () => {
-    sounds = await fetch(siteConfig.sounds)
-      .then((x) => x.json())
-      .catch(() => {
-        console.error('Failed to fetch sounds')
-        return []
-      })
-  })
 </script>
 
 <style lang="scss">

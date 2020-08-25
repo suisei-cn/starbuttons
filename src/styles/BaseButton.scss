@@ -7,9 +7,9 @@
   margin: 12px 12px;
   padding: 4px 16px;
   border-radius: 4px;
-  background: var(--color-1);
+  background: $color-1;
   user-select: none;
-  box-shadow: var(--box-shadow);
+  box-shadow: $box-shadow;
   transition: box-shadow 2.3s ease-in-out;
   font-weight: 0.23s ease-in-out;
 
@@ -25,6 +25,6 @@
 
   &:focus {
     outline: none;
-    background-color: var(--color-1-focus);
+    background-color: $color-1-focus;
   }
 }

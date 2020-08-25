@@ -1,6 +1,6 @@
-<div id="boardWrapper">
+<div id="boardWrapper" class:wideView="{wideMode}">
   {#if boardMode}
-    <div id="board" class="boardPart" class:wideMode>
+    <div id="board" class="boardPart" class:wideMode transition:fade>
       <div id="boardContext">
         {#each soundGroups as soundGroup}
           <h2>{ln($locale, categories[soundGroup.slug])}</h2>
@@ -17,7 +17,7 @@
       </div>
     </div>
   {:else}
-    <div id="bigBtn" class="boardPart" class:wideMode>
+    <div id="bigBtn" class="boardPart" class:wideMode transition:fade>
       <BaseButton item="{centralSound}" baseBtnInList="{false}" />
     </div>
   {/if}
@@ -26,6 +26,7 @@
 <script lang="ts">
   import type { Categories, SiteConfig, Sound, SoundCategory } from '../types'
   import { onMount, createEventDispatcher } from 'svelte'
+  import { fade } from 'svelte/transition'
   import { locale, _ } from 'svelte-i18n'
   import { ln } from '../utils/i18n'
   import BaseButton from './BaseButton.svelte'
@@ -144,6 +145,7 @@
   }
 
   .boardPart {
+    position: absolute;
     width: $board-narrow-width;
     transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
       background 0.25s linear;
@@ -153,7 +155,13 @@
   }
 
   #boardWrapper {
+    transition: transform 0.25s;
     position: relative;
+    min-height: $table-height;
+    transform: translateX(-$board-narrow-width/2);
+    &.wideView {
+      transform: translateX(-$board-wide-width / 2);
+    }
   }
 
   h2 {

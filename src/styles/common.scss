@@ -1,16 +1,26 @@
 @import './variables';
 
+.nonBaseBtn {
+  background: linear-gradient($color-1, $color-2);
+}
+
 .stylizedBtn {
   text-align: center;
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
-  background: linear-gradient($color-1, $color-2);
   user-select: none;
   box-shadow: $box-shadow;
 
   &:hover {
-    box-shadow: $box-shadow-hover;
+    cursor: pointer;
+    font-weight: $btn-hover-font-weight;
+    box-shadow: var(--box-shadow-hover);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-1-focus;
   }
 
   transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;

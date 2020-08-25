@@ -15,7 +15,7 @@
       {/if}
     </div>
   {:else}
-    <div id="bigBtn" class="stylizedBtn boardPart" class:wideMode>
+    <div id="bigBtn" class="stylizedBtn nonBaseBtn boardPart" class:wideMode>
       {centralSoundName}
     </div>
     <div class="hidden">
@@ -32,7 +32,7 @@
   import BaseButton from './BaseButton.svelte'
 
   export let config: SiteConfig
-  export let boardMode: boolean
+  let boardMode: boolean = false
   let wideMode: boolean
 
   let soundGroups: SoundCategory[] = []
@@ -115,6 +115,7 @@
   @import '../styles/common';
 
   #board {
+    padding: 5px;
     overflow-y: scroll;
     height: $table-height;
     border-radius: 12px;
@@ -122,6 +123,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
+    box-sizing: border-box;
   }
 
   #bigBtn {
@@ -130,11 +132,11 @@
   }
 
   .boardPart {
-    width: 42vw;
+    width: $board-narrow-width;
     transition: width 0.25s ease-in-out, height 0.25s ease-in-out,
       background 0.25s linear;
     &.wideMode {
-      width: 80vw;
+      width: $board-wide-width;
     }
   }
 

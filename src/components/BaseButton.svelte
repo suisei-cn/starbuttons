@@ -1,5 +1,5 @@
 <div
-  class="baseButton"
+  class="baseBtn stylizedBtn"
   class:active="{concurrentPlays !== 0}"
   on:click="{playSound}"
 >
@@ -49,5 +49,6 @@
 
 <style lang="scss">
   @import '../styles/BaseButton.scss';
+  @import '../styles/common.scss';
   @import '../styles/utils.scss';
 </style>

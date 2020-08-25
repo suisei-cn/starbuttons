@@ -10,7 +10,7 @@
   />
   <div
     id="switchBtn"
-    class="stylizedBtn"
+    class="stylizedBtn nonBaseBtn"
     on:click="{(e) => {
       board.toggleBoard()
     }}"

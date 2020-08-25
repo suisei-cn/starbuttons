@@ -131,6 +131,16 @@
     line-height: $table-height;
     background: $btn-gradient-background;
     font-size: 5rem;
+
+    @media screen and (max-width: 1340px) {
+      font-size: 2rem !important;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 1rem !important;
+    }
+    @media screen and (max-width: 300px) {
+      font-size: 0 !important;
+    }
   }
 
   .boardPart {
@@ -151,5 +161,17 @@
     font-size: 1.3rem;
     margin: 12px;
     width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    #bigBtn {
+      margin-top: 0;
+      width: 30vh;
+      height: 13vh;
+    }
+    :global(#bigBtn .baseBtn) {
+      line-height: 13vh;
+      min-height: 13vh;
+    }
   }
 </style>

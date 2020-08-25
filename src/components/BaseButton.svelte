@@ -1,6 +1,7 @@
 <div
   class="baseBtn stylizedBtn"
   class:active="{concurrentPlays !== 0}"
+  class:pending
   on:click="{playSound}"
 >
   {localizedName}
@@ -19,6 +20,7 @@
   export let item: Sound
   let playerCtx: CentralPlayer
   let concurrentPlays = 0
+  let pending = false
 
   $: localizedName = ln($locale, item)
 
@@ -32,8 +34,11 @@
   }
 
   function playSound() {
+    pending = true
     const audio = playerCtx.addAudio(assetBasePath + selectFile())
+
     audio.addEventListener('play', () => {
+      pending = false
       concurrentPlays++
     })
     audio.addEventListener('pause', () => {
@@ -50,5 +55,8 @@
 <style lang="scss">
   @import '../styles/BaseButton.scss';
   @import '../styles/common.scss';
-  @import '../styles/utils.scss';
+
+  .pending {
+    opacity: 0.8;
+  }
 </style>

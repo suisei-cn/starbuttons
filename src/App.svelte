@@ -25,7 +25,7 @@
 <style lang="scss">
   @import './styles/variables';
 
-  body {
+  :global(body) {
     overflow: hidden;
   }
 

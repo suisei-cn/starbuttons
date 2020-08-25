@@ -8,6 +8,7 @@
 
 <script lang="ts">
   import { getContext, onMount } from 'svelte'
+  import { locale } from 'svelte-i18n'
   import type { Sound } from '../types'
   import siteConfig from '../config'
   import type CentralPlayer from './centralPlayer'
@@ -18,7 +19,7 @@
   let playerCtx: CentralPlayer
   let concurrentPlays = 0
 
-  $: localizedName = item?.name_l10n?.['ja'] || item.name
+  $: localizedName = item?.name_l10n?.[$locale] || item.name
 
   // Methods
   function selectFile(): string {

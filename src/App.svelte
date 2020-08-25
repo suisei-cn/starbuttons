@@ -1,4 +1,5 @@
 <main>
+  <TopSettings />
   {#each sounds as sound}
     <BaseButton item="{sound}" />
   {/each}
@@ -8,6 +9,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import BaseButton from './components/BaseButton.svelte'
+  import TopSettings from './components/TopSettings.svelte'
   import BottomBar from './components/BottomBar.svelte'
   import type { SiteConfig, Sound } from './types'
   import { waitLocale, _ } from 'svelte-i18n'

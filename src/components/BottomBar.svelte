@@ -33,10 +33,13 @@
     <i class="icon-discord"></i>
     <sup>(EN)</sup>
   </a>
+  /
+  <LanguageSwitch />
 </footer>
 
 <script lang="ts">
   import { _ } from 'svelte-i18n'
+  import LanguageSwitch from './LanguageSwitch.svelte'
 </script>
 
 <style lang="scss">

@@ -20,12 +20,10 @@
 <style lang="scss">
   #svgAnim {
     position: absolute;
-    left: 0;
+    left: calc(50vw - 89vh);
     top: auto;
-    right: 0;
     bottom: 0;
-    width: 100%;
-    min-width: 100%;
+    width: 178vh;
     height: 100%;
     pointer-events: none;
   }

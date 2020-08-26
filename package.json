@@ -9,27 +9,27 @@
     "format": "prettier --write --plugin-search-dir=. ./**/*.svelte"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "@rollup/plugin-typescript": "^4.0.0",
-    "@tsconfig/svelte": "^1.0.0",
-    "prettier": "2.0.5",
-    "prettier-plugin-svelte": "^1.1.0",
-    "rollup": "^2.3.4",
-    "rollup-plugin-livereload": "^1.0.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^5.0.2",
+    "@tsconfig/svelte": "^1.0.10",
+    "prettier": "2.1.1",
+    "prettier-plugin-svelte": "^1.1.1",
+    "rollup": "^2.26.5",
+    "rollup-plugin-livereload": "^1.3.0",
     "rollup-plugin-postcss": "^3.1.6",
-    "rollup-plugin-svelte": "^5.0.3",
-    "rollup-plugin-terser": "^6.0.0",
+    "rollup-plugin-svelte": "^6.0.0",
+    "rollup-plugin-terser": "^7.0.0",
     "sass": "^1.26.10",
-    "svelte": "^3.0.0",
-    "svelte-check": "^1.0.0",
-    "svelte-preprocess": "^4.0.12",
-    "tslib": "^2.0.0",
-    "typescript": "^3.9.3"
+    "svelte": "^3.24.1",
+    "svelte-check": "^1.0.25",
+    "svelte-preprocess": "^4.1.1",
+    "tslib": "^2.0.1",
+    "typescript": "^4.0.2"
   },
   "dependencies": {
     "lottie-web": "^5.7.3",
-    "sirv-cli": "^1.0.0",
+    "sirv-cli": "^1.0.6",
     "svelte-i18n": "^3.0.4"
   },
   "license": "MIT"

@@ -17,7 +17,13 @@
       </div>
     </div>
   {:else}
-    <div id="bigBtn" class="boardPart" class:wideMode transition:fade>
+    <div
+      id="bigBtn"
+      class="boardPart"
+      class:wideMode
+      transition:fade
+      tabindex="0"
+    >
       <BaseButton item="{centralSound}" baseBtnInList="{false}" />
     </div>
   {/if}

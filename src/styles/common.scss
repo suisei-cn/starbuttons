@@ -20,7 +20,7 @@
 
   &:focus {
     outline: none;
-    background-color: $color-1-focus;
+    background: $color-1-focus;
   }
 
   transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;

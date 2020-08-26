@@ -7,6 +7,7 @@
   style="min-width: {minWidth}"
   on:click="{playSound}"
   bind:this="{self}"
+  tabindex="0"
 >
   {localizedName}
 </div>

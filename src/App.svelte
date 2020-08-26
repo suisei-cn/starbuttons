@@ -15,6 +15,7 @@
     on:click="{(e) => {
       board.toggleBoard()
     }}"
+    tabindex="0"
   >
     {#if boardMode}{$_('Back')}{:else}{$_('Music board')}{/if}
   </div>

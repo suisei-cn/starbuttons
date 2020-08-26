@@ -9,9 +9,11 @@
     import { locale } from "svelte-i18n"
 
     let selected :string
+    let changeEvent = new Event('languagechange')
 
     onMount(()=>{
         selected = $locale
+        window.dispatchEvent(changeEvent)
     })
 </script>
 

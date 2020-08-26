@@ -78,8 +78,10 @@
 
   onMount(() => {
     playerCtx = getContext('player')
-    if (baseBtnInList) scanHoverWidth()
-    window.addEventListener('languagechange', scanHoverWidth)
+    if (baseBtnInList) {
+      scanHoverWidth()
+      window.addEventListener('languagechange', scanHoverWidth)
+    }
   })
 </script>
 

@@ -1,4 +1,4 @@
-<select id="langSelect" bind:value={selected} on:blur="{()=>{$locale = selected}}">
+<select id="langSelect" bind:value={selected} on:blur="{switchLanguage}">
     <option value="zh">中文</option>
     <option value="ja">日本語</option>
     <option value="en">English</option>
@@ -11,9 +11,14 @@
     let selected :string
     let changeEvent = new Event('languagechange')
 
+    function switchLanguage(){
+      if ($locale === selected) return;
+      $locale = selected;
+      window.dispatchEvent(changeEvent);
+    }
+
     onMount(()=>{
         selected = $locale
-        window.dispatchEvent(changeEvent)
     })
 </script>
 

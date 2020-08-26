@@ -43,10 +43,13 @@
   }
 
   function scanHoverWidth() {
+    minWidth = '0px'
     testHoverWidth = true
-    const width = self.offsetWidth
+    requestAnimationFrame(()=>{
+      const width = self.offsetWidth
     minWidth = String(width - 16 + 'px')
     testHoverWidth = false
+    })
   }
 
   export function playSound() {

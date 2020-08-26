@@ -27,7 +27,7 @@
   import type { Categories, SiteConfig, Sound, SoundCategory } from '../types'
   import { onMount, createEventDispatcher } from 'svelte'
   import { fade } from 'svelte/transition'
-  import { locale, _ } from 'svelte-i18n'
+  import { format, locale, _ } from 'svelte-i18n'
   import { ln } from '../utils/i18n'
   import BaseButton from './BaseButton.svelte'
 
@@ -87,7 +87,10 @@
   onMount(async () => {
     const allSounds: Sound[] = await fetch(config.sounds)
       .then((x) => x.json())
-      .catch(() => {
+      .catch((e) => {
+        window?.errorFormatter(
+          $format('Sound list fetch error:') + ' ' + String(e)
+        )
         console.error('Failed to fetch sounds')
         return []
       })
@@ -95,6 +98,9 @@
     categories = await fetch(config.categories)
       .then((x) => x.json())
       .catch(() => {
+        window?.errorFormatter(
+          $format('Categories fetch error:') + ' ' + String(e)
+        )
         console.error('Failed to fetch categories')
         return {}
       })

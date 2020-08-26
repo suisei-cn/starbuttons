@@ -28,3 +28,5 @@ export interface SoundCategory {
 export interface CategorizedSounds {
   [slug: string]: Sound[]
 }
+
+export type ErrorFormatter = (name: string, time?: number) => void

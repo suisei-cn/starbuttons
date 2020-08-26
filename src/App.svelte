@@ -1,5 +1,6 @@
 <main>
   <FullscreenAnim />
+  <ErrorPanel />
   <TopSettings />
   <Board
     config="{siteConfig}"
@@ -23,6 +24,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import FullscreenAnim from './components/FullscreenAnim.svelte'
+  import ErrorPanel from './components/ErrorPanel.svelte'
   import TopSettings from './components/TopSettings.svelte'
   import BottomBar from './components/BottomBar.svelte'
   import Board from './components/Board.svelte'

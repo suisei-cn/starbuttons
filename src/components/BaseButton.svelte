@@ -13,8 +13,8 @@
 
 <script lang="ts">
   import { getContext, onMount } from 'svelte'
-  import { locale } from 'svelte-i18n'
-  import type { Sound } from '../types'
+  import { format, locale } from 'svelte-i18n'
+  import type { ErrorFormatter, Sound } from '../types'
   import siteConfig from '../config'
   import type CentralPlayer from './centralPlayer'
   import { ln } from '../utils/i18n'
@@ -51,15 +51,28 @@
   export function playSound() {
     pending = true
     const audio = playerCtx.addAudio(assetBasePath + selectFile())
-
+    const playTimeout = setTimeout(() => {
+      window?.errorFormatter(
+        $format('Voices are still loading. Please be patient...')
+      )
+    }, 1500)
     audio.addEventListener('play', () => {
-      pending = false
       concurrentPlays++
     })
     audio.addEventListener('pause', () => {
       concurrentPlays--
     })
-    audio.play()
+    audio
+      .play()
+      .then(() => {
+        pending = false
+        clearTimeout(playTimeout)
+      })
+      .catch((e) => {
+        window?.errorFormatter(
+          $format('Error in the playback:') + ' ' + String(e)
+        )
+      })
   }
 
   onMount(() => {

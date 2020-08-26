@@ -170,7 +170,7 @@
     transition: transform 0.25s;
     position: relative;
     min-height: $table-height;
-    transform: translateX(-$board-narrow-width/2);
+    transform: translateX(-$board-narrow-width / 2);
     &.wideView {
       transform: translateX(-$board-wide-width / 2);
     }
@@ -184,14 +184,9 @@
   }
 
   @media screen and (max-width: 600px) {
-    #bigBtn {
-      margin-top: 0;
-      width: 30vh;
-      height: 13vh;
-    }
     :global(#bigBtn .baseBtn) {
-      line-height: 13vh;
-      min-height: 13vh;
+      margin-left: $xs-board-narrow-width-diff;
+      margin-right: $xs-board-narrow-width-diff;
     }
   }
 </style>

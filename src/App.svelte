@@ -77,7 +77,7 @@
   #switchBtn {
     height: 6vh;
     line-height: 6vh;
-    width: 30vh;
+    width: $option-button-width;
 
     font-size: 1.6rem;
     @media screen and (max-height: 750px) {

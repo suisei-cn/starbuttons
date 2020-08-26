@@ -45,10 +45,10 @@
   function scanHoverWidth() {
     minWidth = '0px'
     testHoverWidth = true
-    requestAnimationFrame(()=>{
+    requestAnimationFrame(() => {
       const width = self.offsetWidth
-    minWidth = String(width - 16 + 'px')
-    testHoverWidth = false
+      minWidth = String(width - 16 + 'px')
+      testHoverWidth = false
     })
   }
 

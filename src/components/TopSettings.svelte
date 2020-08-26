@@ -22,7 +22,8 @@
   import type CentralPlayer from './centralPlayer'
 
   let playerCtx: CentralPlayer
-  let multiPlay, repeatThis: boolean
+  let multiPlay: boolean
+  let repeatThis: boolean
 
   function chg() {
     // Tricky!

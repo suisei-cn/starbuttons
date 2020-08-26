@@ -140,8 +140,8 @@
   }
 
   :global(#bigBtn .baseBtn) {
-    min-height: $table-height;
-    line-height: $table-height;
+    margin-top: ($table-height - $main-btn-height)/2;
+    line-height: $main-btn-height;
     background: $btn-gradient-background;
     font-size: 5rem;
 

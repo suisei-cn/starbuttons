@@ -24,5 +24,5 @@ export default () => {
 }
 
 export function ln(lang: string, str: NameWithL10n) {
-  return str?.name_l10n?.[lang] || str.name
+  return str?.name_l10n?.[lang] || str?.name || ''
 }

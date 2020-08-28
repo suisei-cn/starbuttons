@@ -45,6 +45,7 @@
 
   onMount(() => {
     updateLocalizedTitle()
+    window.addEventListener('languagechange', updateLocalizedTitle)
   })
 
   initGlobalContext()

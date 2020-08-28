@@ -1,7 +1,9 @@
 <main>
   <FullscreenAnim />
   <ErrorPanel />
-  <TopSettings />
+  {#if !disableAll}
+    <TopSettings />
+  {/if}
   <Board
     config="{siteConfig}"
     on:changeok="{(e) => {
@@ -9,16 +11,18 @@
     }}"
     bind:this="{board}"
   />
-  <div
-    id="switchBtn"
-    class="stylizedBtn nonBaseBtn"
-    on:click="{(e) => {
-      if (window.globalReady) board.toggleBoard()
-    }}"
-    tabindex="0"
-  >
-    {#if boardMode}{$_('Back')}{:else}{$_('Music board')}{/if}
-  </div>
+  {#if !disableAll}
+    <div
+      id="switchBtn"
+      class="stylizedBtn nonBaseBtn"
+      on:click="{(e) => {
+        board.toggleBoard()
+      }}"
+      tabindex="0"
+    >
+      {#if boardMode}{$_('Back')}{:else}{$_('Music board')}{/if}
+    </div>
+  {/if}
   <BottomBar />
 </main>
 
@@ -38,6 +42,7 @@
 
   let boardMode = false
   let board
+  let disableAll = false
 
   function updateLocalizedTitle() {
     document.title = $format('Starbuttons')
@@ -46,6 +51,9 @@
   onMount(() => {
     updateLocalizedTitle()
     window.addEventListener('languagechange', updateLocalizedTitle)
+    window.addEventListener('loadfailed', () => {
+      disableAll = true
+    })
   })
 
   initGlobalContext()

@@ -103,6 +103,8 @@
       .then((x) => x.json())
       .catch((e) => {
         contentReady = -1
+        const err = new Event('loadfailed')
+        window.dispatchEvent(err)
         window?.errorFormatter(
           $format('Sound list fetch error:') + ' ' + String(e)
         )
@@ -112,7 +114,6 @@
 
     if (contentReady !== -1) {
       contentReady = 1
-      window.globalReady = true
     }
 
     categories = await fetch(config.categories)

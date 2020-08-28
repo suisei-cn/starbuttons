@@ -28,11 +28,13 @@
     </div>
   {/if}
 </div>
-{#if contentReady === 0}
-  <div id="placeholder">{$_('Loading...')}</div>
-{:else if contentReady === -1}
+{#if contentReady !== 1}
   <div id="placeholder">
-    {$_('Failed to fetch sounds list. Please try refreshing.')}
+    {#if contentReady === 0}
+      <p>{$_('Loading...')}</p>
+    {:else if contentReady === -1}
+      <p>{$_('Failed to fetch sounds list. Please try refreshing.')}</p>
+    {/if}
   </div>
 {/if}
 
@@ -212,9 +214,14 @@
     left: 0;
     top: 0;
     font-size: 3rem;
-    color: #ffffff66;
+    color: $color-placeholder-text;
     text-align: center;
-    line-height: 100vh;
     pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin: 0 5vw;
+    }
   }
 </style>

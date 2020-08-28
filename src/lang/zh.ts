@@ -28,4 +28,7 @@ export default {
   'Still loading...': '仍在加载...',
   Uncategorized: '未分类',
   Starbuttons: '星按钮',
+  'Loading...': '正在加载...',
+  'Failed to fetch sounds list. Please try refreshing.':
+    '声音列表获取失败，请刷新重试。',
 }

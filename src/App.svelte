@@ -13,7 +13,7 @@
     id="switchBtn"
     class="stylizedBtn nonBaseBtn"
     on:click="{(e) => {
-      board.toggleBoard()
+      if (window.globalReady) board.toggleBoard()
     }}"
     tabindex="0"
   >

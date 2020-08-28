@@ -29,4 +29,7 @@ export default {
   'Still loading...': 'Still loading...',
   Uncategorized: 'Uncategorized',
   Starbuttons: 'Starbuttons',
+  'Loading...': 'Loading...',
+  'Failed to fetch sounds list. Please try refreshing.':
+    'Failed to fetch sounds list. Please try refreshing.',
 }

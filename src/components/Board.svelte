@@ -28,6 +28,13 @@
     </div>
   {/if}
 </div>
+{#if contentReady === 0}
+  <div id="placeholder">{$_('Loading...')}</div>
+{:else if contentReady === -1}
+  <div id="placeholder">
+    {$_('Failed to fetch sounds list. Please try refreshing.')}
+  </div>
+{/if}
 
 <script lang="ts">
   import type { Categories, SiteConfig, Sound, SoundCategory } from '../types'
@@ -38,6 +45,7 @@
   import BaseButton from './BaseButton.svelte'
 
   export let config: SiteConfig
+  let contentReady: -1 | 0 | 1 = 0
   let boardMode: boolean = false
   let wideMode: boolean
   let soundGroups: SoundCategory[] = []
@@ -94,6 +102,7 @@
     const allSounds: Sound[] = await fetch(config.sounds)
       .then((x) => x.json())
       .catch((e) => {
+        contentReady = -1
         window?.errorFormatter(
           $format('Sound list fetch error:') + ' ' + String(e)
         )
@@ -101,9 +110,14 @@
         return []
       })
 
+    if (contentReady !== -1) {
+      contentReady = 1
+      window.globalReady = true
+    }
+
     categories = await fetch(config.categories)
       .then((x) => x.json())
-      .catch(() => {
+      .catch((e) => {
         window?.errorFormatter(
           $format('Categories fetch error:') + ' ' + String(e)
         )
@@ -114,7 +128,7 @@
     const sounds = allSounds.filter((x) => x.type !== 'center')
     ;[soundGroups, uncategoriedSounds] = generateSoundGroups(sounds, categories)
     centralSound = allSounds.filter((x) => x.type === 'center')[0]
-    if (!centralSound) {
+    if (!centralSound && contentReady === 1) {
       boardMode = true
     }
   })
@@ -188,5 +202,18 @@
       margin-left: $xs-board-narrow-width-diff;
       margin-right: $xs-board-narrow-width-diff;
     }
+  }
+
+  #placeholder {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    font-size: 3rem;
+    color: #ffffff66;
+    text-align: center;
+    line-height: 100vh;
+    pointer-events: none;
   }
 </style>

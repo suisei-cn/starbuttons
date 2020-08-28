@@ -31,4 +31,5 @@ export default {
   'Loading...': '正在加载...',
   'Failed to fetch sounds list. Please try refreshing.':
     '声音列表获取失败，请刷新重试。',
+  'But Watame did nothing wrong!': '但是 Watame 才没有做错呢！',
 }

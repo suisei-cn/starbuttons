@@ -34,6 +34,7 @@
       <p>{$_('Loading...')}</p>
     {:else if contentReady === -1}
       <p>{$_('Failed to fetch sounds list. Please try refreshing.')}</p>
+      <p class="small">{$_('But Watame did nothing wrong!')}</p>
     {/if}
   </div>
 {/if}
@@ -220,8 +221,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     p {
       margin: 0 5vw;
+      &.small {
+        margin-top: 2vh;
+        font-size: 1.5rem;
+      }
     }
   }
 </style>

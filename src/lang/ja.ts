@@ -32,4 +32,5 @@ export default {
   'Loading...': 'Loading...',
   'Failed to fetch sounds list. Please try refreshing.':
     'Failed to fetch sounds list. Please try refreshing.',
+  'But Watame did nothing wrong!': 'But Watame did nothing wrong!',
 }

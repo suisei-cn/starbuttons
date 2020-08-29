@@ -41,7 +41,7 @@
 
 <script lang="ts">
   import type { Categories, SiteConfig, Sound, SoundCategory } from '../types'
-  import { onMount, createEventDispatcher } from 'svelte'
+  import { createEventDispatcher } from 'svelte'
   import { fade } from 'svelte/transition'
   import { format, locale, _ } from 'svelte-i18n'
   import { ln } from '../utils/i18n'

@@ -5,7 +5,6 @@
     <TopSettings />
   {/if}
   <Board
-    config="{siteConfig}"
     on:changeok="{(e) => {
       boardMode = !boardMode
     }}"
@@ -35,6 +34,7 @@
   import Board from './components/Board.svelte'
   import type { SiteConfig } from './types'
   import { format, _ } from 'svelte-i18n'
+  // @ts-ignore
   import _fontface from './styles/fontface.scss'
   import { initGlobalContext } from './globalCtx'
 

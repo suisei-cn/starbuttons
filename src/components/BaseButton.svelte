@@ -15,7 +15,7 @@
 <script lang="ts">
   import { getContext, onMount } from 'svelte'
   import { format, locale } from 'svelte-i18n'
-  import type { ErrorFormatter, Sound } from '../types'
+  import type { Sound } from '../types'
   import siteConfig from '../config'
   import type CentralPlayer from './centralPlayer'
   import { ln } from '../utils/i18n'

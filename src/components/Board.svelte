@@ -47,7 +47,6 @@
   import { ln } from '../utils/i18n'
   import BaseButton from './BaseButton.svelte'
 
-  export let config: SiteConfig
   let contentReady: -1 | 0 | 1 = 0
   let boardMode: boolean = false
   let wideMode: boolean
@@ -101,7 +100,7 @@
     return [soundCategory, soundNoCat]
   }
 
-  onMount(async () => {
+  export async function load(config: SiteConfig) {
     const allSounds: Sound[] = await fetch(config.sounds)
       .then((x) => x.json())
       .catch((e) => {
@@ -135,7 +134,7 @@
     if (!centralSound && contentReady === 1) {
       boardMode = true
     }
-  })
+  }
 </script>
 
 <style lang="scss">

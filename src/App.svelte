@@ -39,6 +39,7 @@
   import { initGlobalContext } from './globalCtx'
 
   export let siteConfig: SiteConfig
+  export let testingConfig: SiteConfig
 
   let boardMode = false
   let board
@@ -49,6 +50,11 @@
   }
 
   onMount(() => {
+    if (new URL(String(window.location)).searchParams.get('testing') === '1') {
+      board.load(testingConfig)
+    } else {
+      board.load(siteConfig)
+    }
     updateLocalizedTitle()
     window.addEventListener('languagechange', updateLocalizedTitle)
     window.addEventListener('loadfailed', () => {

@@ -1,6 +1,6 @@
 describe('Language switch', () => {
   it('works for en', () => {
-    cy.visit('/?lang=en')
+    cy.visit('/?lang=en&testing=1')
     cy.title().should('include', 'Starbuttons')
   })
 
@@ -32,6 +32,41 @@ describe('Basic features', () => {
     cy.get('#switchBtn').click()
     cy.get('#boardContext h2').should('be.visible')
     cy.get('#boardContext div').should('be.visible')
+  })
+})
+
+describe('Board stuffs', () => {
+  const pages = [
+    'Today Sui-chan is still kawaii!',
+    "It's your diamond in the rough, your shooting star,​ Hoshimachi Suisei, in the flash!",
+    'Cute sounds',
+    'Big sister~',
+    'Uncategorized',
+    "I'm not calling you!",
+  ]
+
+  before(() => {
+    cy.server()
+    cy.route('GET', '/sounds.json', 'fixture:sounds.json').as('getSounds')
+    cy.route('GET', '/categories.json', 'fixture:categories.json').as(
+      'getCategories'
+    )
+    cy.visit('/?lang=en&testing=1')
+    cy.get('#switchBtn').click()
+  })
+
+  it('has the center button', () => {
+    cy.get('#bigBtn div').contains('Eeehihihihi')
+  })
+
+  it('have stuffs in board', () => {
+    cy.get('#boardContext h2').should('have.length', 3)
+    cy.get('#boardContext .baseBtn').should('have.length', 3)
+    let here = cy.get('#boardContext h2:first')
+    for (let i = 0; i < 6; i++) {
+      if (i !== 0) here = here.next()
+      here.should('have.text', pages[i])
+    }
   })
 })
 

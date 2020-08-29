@@ -1,0 +1,15 @@
+{
+  "kawaii": {
+    "name": "Today Sui-chan is still kawaii!",
+    "name_l10n": {
+      "ja": "すいちゃんは、今日もかわいい〜！",
+      "zh": "彗酱今天也很卡哇伊!"
+    },
+    "order": 1
+  },
+  "cute": {
+    "name": "Cute sounds",
+    "name_l10n": { "ja": "萌え音", "zh": "萌音" },
+    "order": 2
+  }
+}

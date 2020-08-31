@@ -6,8 +6,12 @@ import { terser } from 'rollup-plugin-terser'
 import sveltePreprocess from 'svelte-preprocess'
 import typescript from '@rollup/plugin-typescript'
 import postcss from 'rollup-plugin-postcss'
+import copy from 'rollup-plugin-copy'
 
 const production = !process.env.ROLLUP_WATCH
+const version = String(
+  require('child_process').execSync('git rev-parse --short HEAD')
+).trim()
 
 function serve() {
   let server
@@ -40,7 +44,9 @@ export default {
     sourcemap: true,
     format: 'iife',
     name: 'app',
-    file: 'public/build/bundle.js',
+    file: production
+      ? `dist/build/bundle-${version}.js`
+      : 'public/build/bundle.js',
   },
   plugins: [
     svelte({
@@ -49,7 +55,7 @@ export default {
       // we'll extract any component CSS out into
       // a separate file - better for performance
       css: (css) => {
-        css.write('bundle.css')
+        css.write(production ? `bundle-${version}.css` : 'bundle.css')
       },
       preprocess: sveltePreprocess(),
     }),
@@ -78,6 +84,30 @@ export default {
     // If we're building for production (npm run build
     // instead of npm run dev), minify
     production && terser(),
+
+    // Set commit hash to filenames
+    // see https://github.com/sveltejs/template/issues/39
+    production &&
+      copy({
+        targets: [
+          {
+            src: 'public/index.html',
+            dest: 'dist',
+            transform: (contents) =>
+              contents
+                .toString()
+                .replace(/build\/bundle/g, `build/bundle-${version}`),
+          },
+          {
+            src: 'public/assets',
+            dest: 'dist',
+          },
+          {
+            src: 'public/favicon.ico',
+            dest: 'dist',
+          },
+        ],
+      }),
   ],
   watch: {
     clearScreen: false,

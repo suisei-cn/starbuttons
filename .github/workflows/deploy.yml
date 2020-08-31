@@ -35,6 +35,6 @@ jobs:
         with:
           SSH: true
           BRANCH: gh-pages
-          FOLDER: public
+          FOLDER: dist
           SINGLE_COMMIT: true
           CLEAN: true

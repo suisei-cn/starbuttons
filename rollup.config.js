@@ -9,9 +9,18 @@ import postcss from 'rollup-plugin-postcss'
 import copy from 'rollup-plugin-copy'
 
 const production = !process.env.ROLLUP_WATCH
-const version = String(
-  require('child_process').execSync('git rev-parse --short HEAD')
-).trim()
+const version = (() => {
+  try {
+    return (
+      'v-' +
+      String(
+        require('child_process').execSync('git rev-parse --short HEAD')
+      ).trim()
+    )
+  } catch (e) {
+    return 'r-' + String(Math.random()).slice(2, 12)
+  }
+})()
 
 function serve() {
   let server

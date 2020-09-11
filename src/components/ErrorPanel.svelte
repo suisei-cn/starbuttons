@@ -1,6 +1,6 @@
 <div id="errors">
-  {#each currentErrors as error}
-    <div class="error">{error}</div>
+  {#each currentErrors as error, index}
+    <div class="error" on:click="{(e) => close(index)}">{error}</div>
   {/each}
 </div>
 
@@ -8,6 +8,13 @@
   import { onMount } from 'svelte'
 
   let currentErrors: string[] = []
+
+  function close(index: number) {
+    currentErrors = [
+      ...currentErrors.slice(0, index),
+      ...currentErrors.slice(index + 1),
+    ]
+  }
 
   export function displayError(text: string, time: number = 1500) {
     currentErrors = [...currentErrors, text]
@@ -32,7 +39,7 @@
     position: absolute;
     top: 4vh;
     opacity: 0.8;
-    pointer-events: none;
+    cursor: pointer;
   }
 
   .error {

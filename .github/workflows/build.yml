@@ -16,7 +16,6 @@ jobs:
         run: |
           yarn
           yarn validate
-          yarn e2e
 
       - name: Build 🔧
         run: yarn build

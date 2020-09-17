@@ -33,4 +33,7 @@ export default {
   'Failed to fetch sounds list. Please try refreshing.':
     'Failed to fetch sounds list. Please try refreshing.',
   'But Watame did nothing wrong!': 'But Watame did nothing wrong!',
+  'Click to close': 'Click to close',
+  'or it will automatically close later':
+    'or it will automatically close later',
 }

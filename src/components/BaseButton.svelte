@@ -10,10 +10,6 @@
   tabindex="0"
 >
   {localizedName}
-  {#if baseBtnInList && clickedOnce}
-    <div id="bg" class="{'bg-' + soundLevel}"></div>
-    <div id="level">{soundLevel}</div>
-  {/if}
 </div>
 
 <script lang="ts">
@@ -23,15 +19,11 @@
   import siteConfig from '../config'
   import type CentralPlayer from './centralPlayer'
   import { ln } from '../utils/i18n'
-  import { getLevelFromNumber } from '../utils/soundLevel'
-  import type { SoundLevel } from '../utils/soundLevel'
   const assetBasePath = siteConfig.assets_path
 
   // Props
   export let item: Sound
   export let baseBtnInList: boolean = true
-  let clickedOnce: boolean = false
-  let soundLevel: SoundLevel
   let playerCtx: CentralPlayer
   let concurrentPlays = 0
   let pending = false
@@ -61,7 +53,6 @@
   }
 
   export function playSound() {
-    clickedOnce = true
     pending = true
     const audio = playerCtx.addAudio(assetBasePath + selectFile())
     const playTimeout = setTimeout(() => {
@@ -90,8 +81,6 @@
 
   onMount(() => {
     playerCtx = getContext('player')
-    const soundNumber = Array.isArray(item.file) ? item.file.length : 1
-    soundLevel = getLevelFromNumber(soundNumber)
     if (baseBtnInList) {
       scanHoverWidth()
       window.addEventListener('languagechange', scanHoverWidth)

@@ -2,7 +2,6 @@
 
 .baseBtn {
   background: $color-1;
-  position: relative;
 
   &.testHoverWidth {
     font-weight: $btn-hover-font-weight;
@@ -21,39 +20,3 @@
   font-weight: $btn-hover-font-weight;
   transition: box-shadow 0.23s ease-in-out, font-weight 0.23s ease-in-out;
 }
-
-// Gacha start
-#level,
-#bg {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-#level {
-  font-size: 0.7rem;
-  font-weight: 900;
-  font-style: italic;
-  color: #5e65ad;
-  line-height: initial;
-  margin-right: 3px;
-}
-
-#bg {
-  height: 0.8 * $btn-height;
-  width: 0.8 * $btn-height;
-  // Gacha colors
-  // See utils/soundLevel.ts for all levels
-  &.bg-UR {
-    background: linear-gradient(-45deg, #faf33a 50%, transparent 0%);
-  }
-  &.bg-SR {
-    background: linear-gradient(-45deg, #e6f2fa 50%, transparent 0%);
-  }
-  &.bg-R {
-    background: linear-gradient(-45deg, #b5a642 50%, transparent 0%);
-  }
-  // This is .bg-N
-  background: linear-gradient(-45deg, #abb4ba 50%, transparent 1%);
-}
-// Gacha end

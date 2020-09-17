@@ -8,7 +8,7 @@ initi18n()
 Sentry.init({
   dsn:
     'https://fea8a42155df4851b95de0a8de86cb17@o407537.ingest.sentry.io/5276695',
-  release: 'NULL_RELEASE',
+  release: 'd7a1a4f2fadd25ced4def88ae5e89e59f2448993',
 })
 
 const app = new App({

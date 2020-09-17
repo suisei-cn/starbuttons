@@ -22,7 +22,7 @@ jobs:
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         run: |
-          bash utils/set-version.sh
+          sed -i "s/NULL_RELEASE/$GITHUB_SHA/" src/main.ts
           yarn
           yarn build
 

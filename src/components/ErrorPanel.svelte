@@ -71,6 +71,7 @@
     window.errorFormatter = displayError
     fetch(config.notice)
       .then((x) => x.json())
+      .catch((x) => [])
       .then((x) => {
         // This is in a Promise so feel free to throw errors
         const lastDateStr = getKey('last_notification_date')

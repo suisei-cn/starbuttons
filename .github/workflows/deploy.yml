@@ -22,6 +22,7 @@ jobs:
           SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         run: |
+          bash utils/set-version.sh
           yarn
           yarn build
 
@@ -38,3 +39,10 @@ jobs:
           FOLDER: dist
           SINGLE_COMMIT: true
           CLEAN: true
+
+      - name: Announce release and deploy to Sentry
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+        run: bash utils/sentry-commit.sh

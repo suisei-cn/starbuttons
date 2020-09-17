@@ -32,4 +32,6 @@ export default {
   'Failed to fetch sounds list. Please try refreshing.':
     '声音列表获取失败，请刷新重试。',
   'But Watame did nothing wrong!': '但是 Watame 才没有做错呢！',
+  'Click to close': '点击关闭',
+  'or it will automatically close later': '或等待其稍后自行关闭',
 }

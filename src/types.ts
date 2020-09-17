@@ -2,6 +2,7 @@ export interface SiteConfig {
   sounds: string
   categories: string
   assets_path: string
+  notice: string
 }
 
 export interface NameWithL10n {
@@ -27,6 +28,12 @@ export interface SoundCategory {
 
 export interface CategorizedSounds {
   [slug: string]: Sound[]
+}
+
+export interface ErrorObject {
+  html: string
+  slug: string
+  defaultTime: number
 }
 
 export type ErrorFormatter = (name: string, time?: number) => void

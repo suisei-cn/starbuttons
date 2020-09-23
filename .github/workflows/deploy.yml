@@ -14,15 +14,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
+          fetch-depth: '0'
 
       - name: Install and Build 🔧
         env:
           ENV: "PRODUCTION"
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
         run: |
-          sed -i "s/NULL_RELEASE/$GITHUB_SHA/" src/main.ts
           yarn
           yarn build
 

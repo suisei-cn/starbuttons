@@ -1,5 +1,6 @@
 <main>
   <FullscreenAnim />
+  <Topbar />
   <ErrorPanel />
   {#if !disableAll}
     <TopSettings />
@@ -32,6 +33,7 @@
   import TopSettings from './components/TopSettings.svelte'
   import BottomBar from './components/BottomBar.svelte'
   import Board from './components/Board.svelte'
+  import Topbar from './components/Topbar.svelte'
   import type { SiteConfig } from './types'
   import { format, _ } from 'svelte-i18n'
   // @ts-ignore

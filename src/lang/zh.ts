@@ -34,4 +34,7 @@ export default {
   'But Watame did nothing wrong!': '但是 Watame 才没有做错呢！',
   'Click to close': '点击关闭',
   'or it will automatically close later': '或等待其稍后自行关闭',
+  'Suisei Channel reaches 500k subscribers!':
+    'Suisei Channel 订阅数达到 50 万！',
+  '3rd YouTube Live on Oct 19': '3rd YouTube Live 将于 10/19 举办',
 }

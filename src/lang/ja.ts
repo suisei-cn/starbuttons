@@ -36,4 +36,6 @@ export default {
   'Click to close': 'Click to close',
   'or it will automatically close later':
     'or it will automatically close later',
+  'Suisei Channel reaches 500k subscribers!': 'チャンネル登録50万人突破！',
+  '3rd YouTube Live on Oct 19': '10月19日，3rd Youtube Live 開催決定',
 }

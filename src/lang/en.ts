@@ -36,7 +36,7 @@ export default {
   'Click to close': 'Click to close',
   'or it will automatically close later':
     'or it will automatically close later',
-  'Suisei Channel reaches 500k subscribers!':
-    'Suisei Channel reaches 500k subscribers!',
-  '3rd YouTube Live on Oct 19': '3rd YouTube Live on Oct 19',
+  '3rd YouTube live - STARt IN THE SCREEEN!':
+    '3rd YouTube live - STARt IN THE SCREEEN!',
+  'Available at 21 JST on 10/19': 'Available at 21 JST on 10/19',
 }

@@ -1,12 +1,12 @@
 {#if display}
   <header>
     <span>
-      {$_('Suisei Channel reaches 500k subscribers!')}
+      {$_('3rd YouTube live - STARt IN THE SCREEEN!')}
       <a
-        href="https://twitter.com/suisei_hosimati/status/1310208318338510850"
+        href="https://twitter.com/suisei_hosimati/status/1317318701843034112"
         target="_blank"
       >
-        {$_('3rd YouTube Live on Oct 19')}
+        {$_('Available at 21 JST on 10/19')}
       </a>
     </span>
     <svg

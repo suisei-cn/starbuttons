@@ -3,10 +3,10 @@
     <span>
       {$_('3rd YouTube live - STARt IN THE SCREEEN!')}
       <a
-        href="https://twitter.com/suisei_hosimati/status/1317318701843034112"
+        href="https://youtube.com/watch?v=JNmmnB4bP0M"
         target="_blank"
       >
-        {$_('Available at 21 JST on 10/19')}
+        {$_('Available at 21 JST on 10/19 →')}
       </a>
     </span>
     <svg

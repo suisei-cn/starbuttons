@@ -36,5 +36,5 @@ export default {
   'or it will automatically close later': '或等待其稍后自行关闭',
   '3rd YouTube live - STARt IN THE SCREEEN!':
     '3rd YouTube live - STARt IN THE SCREEEN!',
-  'Available at 21 JST on 10/19': '10月19日晚九点 (JST) 呈现。',
+  'Available at 21 JST on 10/19 →': '10月19日晚九点 (JST) 呈现 →',
 }

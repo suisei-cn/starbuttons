@@ -107,7 +107,7 @@
         contentReady = -1
         const err = new Event('loadfailed')
         window.dispatchEvent(err)
-        window?.errorFormatter(
+        window?.errorFormatter?.(
           $format('Sound list fetch error:') + ' ' + String(e)
         )
         console.error('Failed to fetch sounds')
@@ -121,7 +121,7 @@
     categories = await fetch(config.categories)
       .then((x) => x.json())
       .catch((e) => {
-        window?.errorFormatter(
+        window?.errorFormatter?.(
           $format('Categories fetch error:') + ' ' + String(e)
         )
         console.error('Failed to fetch categories')

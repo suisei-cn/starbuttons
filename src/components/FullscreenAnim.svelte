@@ -4,7 +4,7 @@
   import { onMount } from 'svelte'
   import lottie from 'lottie-web'
 
-  let svgAnim
+  let svgAnim: any
 
   onMount(async () => {
     lottie.loadAnimation({

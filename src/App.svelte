@@ -6,7 +6,7 @@
     <TopSettings />
   {/if}
   <Board
-    on:changeok="{(e) => {
+    on:changeok="{(_) => {
       boardMode = !boardMode
     }}"
     bind:this="{board}"
@@ -15,7 +15,7 @@
     <div
       id="switchBtn"
       class="stylizedBtn nonBaseBtn"
-      on:click="{(e) => {
+      on:click="{(_) => {
         board.toggleBoard()
       }}"
       tabindex="0"
@@ -53,7 +53,7 @@
   export let testingConfig: SiteConfig
 
   let boardMode = false
-  let board
+  let board: any
   let disableAll = false
 
   let modalUp = false

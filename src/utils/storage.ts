@@ -1,4 +1,4 @@
-export function getKey(key: string): string {
+export function getKey(key: string): string | null {
   try {
     return localStorage.getItem(key)
   } catch (_) {

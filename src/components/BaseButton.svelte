@@ -31,7 +31,7 @@
   let concurrentPlays = 0
   let pending = false
   let testHoverWidth: boolean = false
-  let self
+  let self: any
   let minWidth = '0px'
 
   $: localizedName = ln($locale, item)

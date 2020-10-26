@@ -7,7 +7,7 @@
     </span>
     <svg
       id="close"
-      on:click="{(e) => (display = false)}"
+      on:click="{(_) => (display = false)}"
       viewBox="0 0 4 4"
       stroke="white"
       stroke-width="0.25"

@@ -2,9 +2,9 @@
   {#each currentErrors as error}
     <div
       class="error"
-      on:mouseover="{(e) => mouseIn(error)}"
-      on:mouseout="{(e) => mouseOut(error)}"
-      on:click="{(e) => close(error.slug)}"
+      on:mouseover="{(_) => mouseIn(error)}"
+      on:mouseout="{(_) => mouseOut(error)}"
+      on:click="{(_) => close(error.slug)}"
     >
       {@html error.html}
       <p id="closeTip">
@@ -22,10 +22,10 @@
   import config from '../config'
   import { getKey, setKey } from '../utils/storage'
   import type { ErrorObject } from '../types'
-  import { _, locale } from 'svelte-i18n'
+  import { _ } from 'svelte-i18n'
 
   let currentErrors: ErrorObject[] = []
-  let timerData: { [key: string]: number } = {}
+  let timerData: { [key: string]: NodeJS.Timeout } = {}
   const DEFAULT_DISPLAY_TIME = 2500
 
   function close(slug: string) {
@@ -71,7 +71,7 @@
     window.errorFormatter = displayError
     fetch(config.notice)
       .then((x) => x.json())
-      .catch((x) => [])
+      .catch((_) => [])
       .then((x) => {
         // This is in a Promise so feel free to throw errors
         const lastDateStr = getKey('last_notification_date')
@@ -81,9 +81,10 @@
         const nowDate = Number(new Date())
         let totalDisplayLimit = 3
         for (const i of x
-          .filter((x) => Number(new Date(x.date)) <= nowDate)
+          .filter((x: any) => Number(new Date(x.date)) <= nowDate)
           .sort(
-            (b, a) => Number(new Date(a.date)) - Number(new Date(b.date))
+            (b: any, a: any) =>
+              Number(new Date(a.date)) - Number(new Date(b.date))
           )) {
           if (Number(new Date(i.date)) < Number(lastDate)) break
           if (totalDisplayLimit === 0) break

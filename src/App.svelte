@@ -46,7 +46,7 @@
   import { MsgStatus } from './types'
   import { format, _ } from 'svelte-i18n'
   // @ts-ignore
-  import _fontface from './styles/fontface.scss'
+  import './styles/fontface.scss'
   import { initGlobalContext } from './globalCtx'
 
   export let siteConfig: SiteConfig

@@ -16,6 +16,7 @@ module.exports = {
         output: 'stream',
       },
     ],
+    '@snowpack/plugin-optimize',
   ],
   install: [
     /* ... */
@@ -25,7 +26,7 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
-    /* ... */
+    out: 'dist',
   },
   proxy: {
     /* ... */

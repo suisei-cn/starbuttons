@@ -24,7 +24,7 @@
   // Props
   export let item: Sound
   export let baseBtnInList: boolean = true
-  let playerCtx: CentralPlayer
+  let playerCtx: CentralPlayer = getContext('player')
   let concurrentPlays = 0
   let pending = false
   let testHoverWidth: boolean = false
@@ -80,7 +80,6 @@
   }
 
   onMount(() => {
-    playerCtx = getContext('player')
     if (baseBtnInList) {
       scanHoverWidth()
       window.addEventListener('languagechange', scanHoverWidth)

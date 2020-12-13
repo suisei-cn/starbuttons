@@ -21,7 +21,7 @@
   import { _ } from 'svelte-i18n'
   import type CentralPlayer from './centralPlayer'
 
-  let playerCtx: CentralPlayer
+  let playerCtx: CentralPlayer = getContext('player')
   let multiPlay: boolean
   let repeatThis: boolean
 
@@ -34,7 +34,6 @@
   }
 
   onMount(() => {
-    playerCtx = getContext('player')
     multiPlay = playerCtx.multiPlay
     repeatThis = playerCtx.repeatThis
   })

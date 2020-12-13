@@ -133,7 +133,7 @@
     "@rollup/pluginutils" "^3.1.0"
     "resolve" "^1.17.0"
 
-"@rollup/pluginutils@^3.1.0":
+"@rollup/pluginutils@^3.1.0", "@rollup/pluginutils@3 || 4":
   "integrity" "sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg=="
   "resolved" "https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-3.1.0.tgz"
   "version" "3.1.0"
@@ -3055,6 +3055,13 @@
     "globby" "10.0.1"
     "is-plain-object" "^3.0.0"
 
+"rollup-plugin-css-only@^3.0.0":
+  "integrity" "sha512-v6ZZuApxXl/Z07jAmH+p5HsLPMW2BHIRJ4Tpxv22S+jpINZ1QFxWoeMDMyFDd+XM1jFcQeshkjuD8xUVOJJG7Q=="
+  "resolved" "https://registry.npmjs.org/rollup-plugin-css-only/-/rollup-plugin-css-only-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "@rollup/pluginutils" "3 || 4"
+
 "rollup-plugin-livereload@^2.0.0":
   "integrity" "sha512-oC/8NqumGYuphkqrfszOHUUIwzKsaHBICw6QRwT5uD07gvePTS+HW+GFwu6f9K8W02CUuTvtIM9AWJrbj4wE1A=="
   "resolved" "https://registry.npmjs.org/rollup-plugin-livereload/-/rollup-plugin-livereload-2.0.0.tgz"
@@ -3107,7 +3114,7 @@
   dependencies:
     "estree-walker" "^0.6.1"
 
-"rollup@^1.20.0||^2.0.0", "rollup@^2.0.0", "rollup@^2.14.0", "rollup@^2.26.5", "rollup@^2.30.0", "rollup@>=2.0.0":
+"rollup@^1.20.0||^2.0.0", "rollup@^2.0.0", "rollup@^2.14.0", "rollup@^2.26.5", "rollup@^2.30.0", "rollup@>=2.0.0", "rollup@1 || 2":
   "integrity" "sha512-mvtQLqu3cNeoctS+kZ09iOPxrc1P1/Bt1z15enuQ5feyKOdM3MJAVFjjsygurDpSWn530xB4AlA83TWIzRstXA=="
   "resolved" "https://registry.npmjs.org/rollup/-/rollup-2.34.2.tgz"
   "version" "2.34.2"

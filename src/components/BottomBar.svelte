@@ -26,7 +26,7 @@
   </a>
   /
   <a
-    href="https://discord.gg/4fmY8WC"
+    href="https://discord.gg/tetRtdV"
     aria-label="Discord Fan Group"
     target="_blank"
   >

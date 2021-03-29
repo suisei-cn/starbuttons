@@ -26,5 +26,5 @@ README：**中文** | [English](https://github.com/suisei-cn/starbuttons/blob/ma
 ```sh
 # 需要安装 yarn。
 yarn install
-yarn dev #带热重载的开发模式
+yarn start #带热重载的开发模式
 ```

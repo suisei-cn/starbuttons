@@ -26,5 +26,5 @@ Sound data has already been moved to [sbtn-assets](https://github.com/suisei-cn/
 ```sh
 # Needs yarn
 yarn install
-yarn dev #Development mode with hot reloading
+yarn start #Development mode with hot reloading
 ```

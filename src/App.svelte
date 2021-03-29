@@ -1,5 +1,6 @@
 <main>
   <FullscreenAnim />
+  <Topbar />
   <ErrorPanel />
   {#if !disableAll}
     <TopSettings />

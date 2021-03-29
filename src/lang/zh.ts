@@ -37,4 +37,7 @@ export default {
   '3rd YouTube live - STARt IN THE SCREEEN!':
     '3rd YouTube live - STARt IN THE SCREEEN!',
   'Available at 21 JST on 10/19 →': '10月19日晚九点 (JST) 呈现 →',
+  '4thLiveInfo_Header':
+  '4th YouTube live - 星街彗星生誕祭&出道3周年纪念',
+  '4thLiveInfo_Link': '4月13日晚九点 (JST) 呈现',
 }

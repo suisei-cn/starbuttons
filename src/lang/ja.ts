@@ -36,7 +36,7 @@ export default {
   'Click to close': 'Click to close',
   'or it will automatically close later':
     'or it will automatically close later',
-  '3rd YouTube live - STARt IN THE SCREEEN!':
-    '3rd YouTube live - STARt IN THE SCREEEN!',
-  'Available at 21 JST on 10/19 →': '10月19日21時放送 →',
+  '4thLiveInfo_Header':
+  '4th YouTube live - 星街すいせい生誕祭&デビュー3周年記念',
+  '4thLiveInfo_Link': '4月13日21時放送',
 }

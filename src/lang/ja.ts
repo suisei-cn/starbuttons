@@ -28,7 +28,7 @@ export default {
   'Unrecognized sound list.': 'Unrecognized sound list.',
   'Still loading...': 'Still loading...',
   Uncategorized: 'Uncategorized',
-  Starbuttons: 'Starbuttons',
+  Starbuttons: '姉街ボタン',
   'Loading...': 'Loading...',
   'Failed to fetch sounds list. Please try refreshing.':
     'Failed to fetch sounds list. Please try refreshing.',

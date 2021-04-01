@@ -11,13 +11,13 @@ $option-button-width: 30vh;
 $color-placeholder-text: #ffffff66;
 $color-background: #303030;
 $color--box-background: #444;
-$color-font: #eee;
-$color-font-button: #eee;
-$color-1: #eeb4bc;
-$color-1-focus: #c192a4;
-$color-2: #e9a4ac;
+$color-font: white;
+$color-font-button: white;
+$color-1: #6375bc;
+$color-1-focus: #8a98cd;
+$color-2: #485488;
 $board-color: #97cbed44;
-$bottom-link-color: #444;
+$bottom-link-color: #ccc;
 $box-shadow: 0 0.6px 1.1px rgba(0, 0, 0, 0.024),
   0 1.8px 3px rgba(0, 0, 0, 0.035), 0 4.2px 7.2px rgba(0, 0, 0, 0.046),
   0 14px 24px rgba(0, 0, 0, 0.07);
@@ -27,6 +27,16 @@ $box-shadow-hover: 0 2px 1.6px rgba(0, 0, 0, 0.012),
   0 30.1px 24.1px rgba(0, 0, 0, 0.033), 0 50px 40px rgba(0, 0, 0, 0.038),
   0 100px 80px rgba(0, 0, 0, 0.05);
 
-$main-background: transparent linear-gradient(180deg, #eeb4bc 0%, #e9dbdd 100%)
+$main-background: transparent
+  linear-gradient(
+    180deg,
+    #431f79 0%,
+    #15161e 3%,
+    #33394f 45%,
+    #6a6faf 60%,
+    #6b71b0 88%,
+    #9a9ccc 99%,
+    #eadab9 100%
+  )
   0% 0% no-repeat padding-box;
 $btn-gradient-background: linear-gradient($color-1, $color-2);

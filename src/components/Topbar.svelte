@@ -3,7 +3,7 @@
     <span>
       {$_('4thLiveInfo_Header')}
       <a
-        href="https://twitter.com/suisei_hosimati/status/1373991907924213766"
+        href="https://www.youtube.com/watch?v=Ajwv4ANSSg0"
         target="_blank"
       >
         {$_('4thLiveInfo_Link')}

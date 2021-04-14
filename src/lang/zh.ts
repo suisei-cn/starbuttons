@@ -34,6 +34,4 @@ export default {
   'But Watame did nothing wrong!': '但是 Watame 才没有做错呢！',
   'Click to close': '点击关闭',
   'or it will automatically close later': '或等待其稍后自行关闭',
-  '4thLiveInfo_Header': '4th YouTube live - 星街彗星生誕祭&出道3周年纪念',
-  '4thLiveInfo_Link': '4月13日晚九点 (JST) 呈现 →',
 }

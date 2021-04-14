@@ -1,12 +1,8 @@
 {#if display}
   <header>
     <span>
-      {$_('4thLiveInfo_Header')}
-      <a
-        href="https://www.youtube.com/watch?v=Ajwv4ANSSg0"
-        target="_blank"
-      >
-        {$_('4thLiveInfo_Link')}
+      <a href="https://www.youtube.com/watch?v=IKKar5SS29E" target="_blank">
+        GHOST - 星街すいせい →
       </a>
     </span>
     <svg

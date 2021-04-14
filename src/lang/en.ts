@@ -36,7 +36,4 @@ export default {
   'Click to close': 'Click to close',
   'or it will automatically close later':
     'or it will automatically close later',
-  '4thLiveInfo_Header':
-    '4th YouTube live - Suisei Birthday & Debut 3 Year Anniversary',
-  '4thLiveInfo_Link': 'Available at 21 JST on 4/13 →',
 }

@@ -66,7 +66,9 @@ export default {
       },
       // we'll extract any component CSS out into
       // a separate file - better for performance
-      preprocess: sveltePreprocess(),
+      preprocess: sveltePreprocess({
+        sourceMap: !production,
+      }),
     }),
     // Note that CSS must comes before postcss
     css({
@@ -84,7 +86,10 @@ export default {
       dedupe: ['svelte'],
     }),
     commonjs(),
-    typescript({ sourceMap: !production }),
+    typescript({
+      sourceMap: !production,
+      inlineSources: !production,
+    }),
 
     // In dev mode, call `npm run start` once
     // the bundle has been generated

@@ -1,7 +1,7 @@
 {#if display}
   <header>
     <span>
-      <a href="https://www.youtube.com/watch?v=IKKar5SS29E" target="_blank">
+      <a href="https://suisei.streamlink.to/GHOST" target="_blank">
         GHOST - 星街すいせい →
       </a>
     </span>

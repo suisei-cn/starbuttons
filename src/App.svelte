@@ -95,6 +95,7 @@
     height: 6vh;
     line-height: 6vh;
     width: $option-button-width;
+    margin: 3vh 0;
 
     font-size: 1.6rem;
     @media screen and (max-height: 750px) {

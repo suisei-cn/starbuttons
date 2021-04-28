@@ -144,7 +144,7 @@
   #board {
     padding: 5px;
     overflow-y: scroll;
-    height: $table-height;
+    height: 100%;
     border-radius: 12px;
     background: $board-color;
   }
@@ -157,10 +157,13 @@
   }
 
   :global(#bigBtn .baseBtn) {
-    margin-top: ($table-height - $main-btn-height)/2;
-    line-height: $main-btn-height;
+    height: $main-btn-height;
     background: $btn-gradient-background;
     font-size: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: 1340px) {
       font-size: 2rem !important;
@@ -186,11 +189,14 @@
   #boardWrapper {
     transition: transform 0.25s;
     position: relative;
-    min-height: $table-height;
+    flex-grow: 1;
     transform: translateX(-$board-narrow-width / 2);
     &.wideView {
       transform: translateX(-$board-wide-width / 2);
     }
+
+    display: flex;
+    align-items: center;
   }
 
   h2 {

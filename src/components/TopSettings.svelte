@@ -44,6 +44,7 @@
     display: flex;
     justify-content: center;
     margin-top: 15vh;
+    margin-bottom: 3vh;
   }
 
   label {

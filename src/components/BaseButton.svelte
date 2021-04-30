@@ -1,4 +1,6 @@
 <div
+  use:longPressOrRightClick
+  on:long-press="{showB64CopyPanel}"
   class="baseBtn stylizedBtn"
   class:active="{concurrentPlays !== 0}"
   class:baseBtnInList
@@ -19,6 +21,8 @@
   import siteConfig from '../config'
   import type CentralPlayer from './centralPlayer'
   import { ln } from '../utils/i18n'
+  import base64 from 'base64-js'
+  import { longPressOrRightClick } from '../actions/longPressOrRightClick'
   const assetBasePath = siteConfig.assets_path
 
   // Props
@@ -77,6 +81,22 @@
           $format('Error in the playback:') + ' ' + String(e)
         )
       })
+  }
+
+  function showB64CopyPanel() {
+    const b64 = convertMusicToBase64()
+    window.dispatchEvent(
+      new CustomEvent('showb64window', {
+        detail: b64,
+      })
+    )
+  }
+
+  async function convertMusicToBase64() {
+    const musicFile = assetBasePath + selectFile()
+    const fileBuf = await fetch(musicFile).then((x) => x.arrayBuffer())
+    const fileArr = new Uint8Array(fileBuf)
+    return base64.fromByteArray(fileArr)
   }
 
   onMount(() => {

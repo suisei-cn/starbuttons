@@ -37,6 +37,8 @@
   },
   "dependencies": {
     "@sentry/browser": "^6.2.5",
+    "base64-js": "^1.5.1",
+    "clipboard": "^2.0.8",
     "lottie-web": "^5.7.8",
     "sirv-cli": "^1.0.11",
     "svelte-i18n": "^3.3.9"

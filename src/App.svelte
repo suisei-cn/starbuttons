@@ -1,4 +1,4 @@
-<main>
+<main class:modalUp>
   <FullscreenAnim />
   <Topbar />
   <ErrorPanel />
@@ -25,6 +25,13 @@
   {/if}
   <BottomBar />
 </main>
+{#if modalUp}
+  <ShortcutPanel
+    text="{b64String}"
+    ready="{b64Ready}"
+    on:close="{() => (modalUp = false)}"
+  />
+{/if}
 
 <script lang="ts">
   import { onMount } from 'svelte'
@@ -34,6 +41,7 @@
   import BottomBar from './components/BottomBar.svelte'
   import Board from './components/Board.svelte'
   import Topbar from './components/Topbar.svelte'
+  import ShortcutPanel from './components/ShortcutPanel.svelte'
   import type { SiteConfig } from './types'
   import { format, _ } from 'svelte-i18n'
   // @ts-ignore
@@ -46,6 +54,10 @@
   let boardMode = false
   let board
   let disableAll = false
+
+  let modalUp = false
+  let b64String = ''
+  let b64Ready = false
 
   function updateLocalizedTitle() {
     document.title = $format('Starbuttons')
@@ -62,6 +74,15 @@
     window.addEventListener('loadfailed', () => {
       disableAll = true
     })
+    window.addEventListener('showb64window', async (evt: CustomEventInit) => {
+      console.log('Event triggered')
+      modalUp = true
+      b64String = 'Fetching...'
+      b64Ready = false
+      b64String = await evt.detail
+      b64Ready = true
+    })
+    console.log('Event binded')
   })
 
   initGlobalContext()
@@ -91,6 +112,10 @@
     top: 0;
     background: $main-background;
     color: $color-font;
+
+    &.modalUp {
+      filter: blur(10px);
+    }
   }
 
   #switchBtn {

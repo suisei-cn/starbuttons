@@ -2,6 +2,7 @@
 
 .baseBtn {
   background: $color-1;
+  user-select: none;
   word-break: break-all;
 
   &.testHoverWidth {

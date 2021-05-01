@@ -1,11 +1,11 @@
 <div id="modal" on:click|self="{() => dispatch('close')}">
   <div id="modalBox">
-    <span id="modalClose" on:click="{() => dispatch('close')}">&times;</span>
+    <span id="modalClose" on:click="{() => dispatch('close')}" aria-label="{$_("Close")}">&times;</span>
     <div id="modalBody">
       {#if status === MsgStatus.PENDING}
-        Loading...
+        {$_('Loading...')}
       {:else if status === MsgStatus.REJECTED}
-        Failed to load.
+        {$_('Failed to load.')}
       {:else}
         <b id="title">{payload.title}</b>
         <div>
@@ -24,14 +24,14 @@
             data-clipboard-target="#b64textboard"
             disabled="{!audioReady}"
           >
-            Copy to clipboard
+            {$_('Copy to clipboard')}
           </button>
           →
           <a
             href="https://www.icloud.com/shortcuts/90544f62b04d4ab68a536e55e3d05316"
             target="_blank"
           >
-            <button>Shortcut</button></a
+            <button>{$_('Shortcut')}</button></a
           >
         </div>
       {/if}
@@ -43,6 +43,7 @@
   import { createEventDispatcher, onMount } from 'svelte'
   import ClipboardJS from 'clipboard'
   import base64 from 'base64-js'
+  import { _ } from 'svelte-i18n'
 
   import siteConfig from '../config'
   import type { ButtonItem } from '../types'
@@ -66,7 +67,7 @@
   async function prepareB64Audio() {
     if (audioFilename === '') return
     audioReady = false
-    b64String = 'Fetching...'
+    b64String = $_('Fetching...')
     const musicFile = assetBasePath + audioFilename
     const fileBuf = await fetch(musicFile).then((x) => x.arrayBuffer())
     const fileArr = new Uint8Array(fileBuf)

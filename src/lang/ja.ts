@@ -36,4 +36,8 @@ export default {
   'Click to close': 'Click to close',
   'or it will automatically close later':
     'or it will automatically close later',
+  'Failed to load.': 'Failed to load.',
+  'Copy to clipboard': 'Copy to clipboard',
+  Shortcut: 'Shortcut',
+  'Fetching...': 'Fetching...',
 }

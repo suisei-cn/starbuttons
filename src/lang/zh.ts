@@ -34,4 +34,8 @@ export default {
   'But Watame did nothing wrong!': '但是 Watame 才没有做错呢！',
   'Click to close': '点击关闭',
   'or it will automatically close later': '或等待其稍后自行关闭',
+  'Failed to load.': '加载失败。',
+  'Copy to clipboard': '复制到剪贴板',
+  Shortcut: '快捷指令',
+  'Fetching...': '正在加载...',
 }

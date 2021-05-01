@@ -40,4 +40,5 @@ export default {
   'Copy to clipboard': 'Copy to clipboard',
   Shortcut: 'Shortcut',
   'Fetching...': 'Fetching...',
+  'Select a clip first': 'Select a clip first',
 }

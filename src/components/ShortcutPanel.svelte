@@ -1,6 +1,10 @@
 <div id="modal" on:click|self="{() => dispatch('close')}">
   <div id="modalBox">
-    <span id="modalClose" on:click="{() => dispatch('close')}" aria-label="{$_("Close")}">&times;</span>
+    <span
+      id="modalClose"
+      on:click="{() => dispatch('close')}"
+      aria-label="{$_('Close')}">&times;</span
+    >
     <div id="modalBody">
       {#if status === MsgStatus.PENDING}
         {$_('Loading...')}
@@ -10,21 +14,28 @@
         <b id="title">{payload.title}</b>
         <div>
           <select id="audioSelect" bind:value="{audioSelectedFilename}">
+            <option value="" selected>---</option>
             {#each payload.audios as item}
               <option value="{item}">{item}</option>
             {/each}
           </select>
-          <button on:click="{prepareB64Audio}">OK</button>
+          <button on:click="{generateB64Audio}">OK</button>
         </div>
-        <textarea id="b64textboard" cols="50" rows="5" readonly
-          >{b64String}</textarea>
         <div>
           <button
             id="b64copybtn"
-            data-clipboard-target="#b64textboard"
-            disabled="{!audioReady}"
+            data-clipboard-text="{b64String}"
+            disabled="{audioStatus !== AudioStatus.RESOLVED}"
           >
-            {$_('Copy to clipboard')}
+            {#if audioStatus === AudioStatus.WAITING_FOR_INPUT}
+              {$_('Select a clip first')}
+            {:else if audioStatus === AudioStatus.PENDING}
+              {$_('Fetching...')}
+            {:else if audioStatus === AudioStatus.REJECTED}
+              {$_('Failed to load.')}
+            {:else}
+              {$_('Copy to clipboard')}
+            {/if}
           </button>
           →
           <a
@@ -47,7 +58,7 @@
 
   import siteConfig from '../config'
   import type { ButtonItem } from '../types'
-  import { MsgStatus } from '../types'
+  import { MsgStatus, AudioStatus } from '../types'
 
   const assetBasePath = siteConfig.assets_path
 
@@ -58,21 +69,28 @@
   let clipboard
   let audioSelectedFilename = ''
   let b64String = ''
-  $: audioFilename =
-    payload.audios.length > 1 ? audioSelectedFilename : payload.audios[0]
-  let audioReady = false
+  let audioStatus: AudioStatus = AudioStatus.WAITING_FOR_INPUT
 
   const dispatch = createEventDispatcher()
 
   async function prepareB64Audio() {
-    if (audioFilename === '') return
-    audioReady = false
-    b64String = $_('Fetching...')
-    const musicFile = assetBasePath + audioFilename
+    console.log('yo', audioSelectedFilename)
+    if (audioSelectedFilename === '') return
+    console.log('ya')
+    audioStatus = AudioStatus.PENDING
+    b64String = ''
+    const musicFile = assetBasePath + audioSelectedFilename
     const fileBuf = await fetch(musicFile).then((x) => x.arrayBuffer())
     const fileArr = new Uint8Array(fileBuf)
-    audioReady = true
+    audioStatus = AudioStatus.RESOLVED
     b64String = base64.fromByteArray(fileArr)
+  }
+
+  function generateB64Audio() {
+    console.log('hey')
+    prepareB64Audio().catch((_) => {
+      audioStatus = AudioStatus.REJECTED
+    })
   }
 
   onMount(() => {
@@ -110,15 +128,15 @@
   #title {
     text-align: center;
   }
-  #b64textboard {
-    margin-bottom: 10px;
-    width: 100%;
-  }
 
   #modalBody {
     align-items: center;
     display: flex;
     flex-direction: column;
+
+    > div {
+      margin-top: 10px;
+    }
   }
 
   #modalClose {

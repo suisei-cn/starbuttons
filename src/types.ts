@@ -48,3 +48,10 @@ export enum MsgStatus {
   RESOLVED = 2,
   REJECTED = 3,
 }
+
+export enum AudioStatus {
+  PENDING = 1,
+  RESOLVED = 2,
+  REJECTED = 3,
+  WAITING_FOR_INPUT = 4,
+}

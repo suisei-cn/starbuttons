@@ -38,4 +38,5 @@ export default {
   'Copy to clipboard': '复制到剪贴板',
   Shortcut: '快捷指令',
   'Fetching...': '正在加载...',
+  'Select a clip first': '首先选择一段音频',
 }

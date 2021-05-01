@@ -17,11 +17,10 @@
 <script lang="ts">
   import { getContext, onMount } from 'svelte'
   import { format, locale } from 'svelte-i18n'
-  import type { Sound } from '../types'
+  import type { ButtonItem, Sound } from '../types'
   import siteConfig from '../config'
   import type CentralPlayer from './centralPlayer'
   import { ln } from '../utils/i18n'
-  import base64 from 'base64-js'
   import { longPressOrRightClick } from '../actions/longPressOrRightClick'
   const assetBasePath = siteConfig.assets_path
 
@@ -84,19 +83,15 @@
   }
 
   function showB64CopyPanel() {
-    const b64 = convertMusicToBase64()
+    const passItem: ButtonItem = {
+      title: localizedName,
+      audios: Array.isArray(item.file) ? item.file : [item.file],
+    }
     window.dispatchEvent(
       new CustomEvent('showb64window', {
-        detail: b64,
+        detail: JSON.stringify(passItem),
       })
     )
-  }
-
-  async function convertMusicToBase64() {
-    const musicFile = assetBasePath + selectFile()
-    const fileBuf = await fetch(musicFile).then((x) => x.arrayBuffer())
-    const fileArr = new Uint8Array(fileBuf)
-    return base64.fromByteArray(fileArr)
   }
 
   onMount(() => {

@@ -37,3 +37,14 @@ export interface ErrorObject {
 }
 
 export type ErrorFormatter = (name: string, time?: number) => void
+
+export interface ButtonItem {
+  title: string
+  audios: string[]
+}
+
+export enum MsgStatus {
+  PENDING = 1,
+  RESOLVED = 2,
+  REJECTED = 3,
+}

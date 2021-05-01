@@ -27,8 +27,8 @@
 </main>
 {#if modalUp}
   <ShortcutPanel
-    text="{b64String}"
-    ready="{b64Ready}"
+    payload="{b64Payload}"
+    status="{b64MsgStat}"
     on:close="{() => (modalUp = false)}"
   />
 {/if}
@@ -42,7 +42,8 @@
   import Board from './components/Board.svelte'
   import Topbar from './components/Topbar.svelte'
   import ShortcutPanel from './components/ShortcutPanel.svelte'
-  import type { SiteConfig } from './types'
+  import type { ButtonItem, SiteConfig } from './types'
+  import { MsgStatus } from './types'
   import { format, _ } from 'svelte-i18n'
   // @ts-ignore
   import _fontface from './styles/fontface.scss'
@@ -56,8 +57,11 @@
   let disableAll = false
 
   let modalUp = false
-  let b64String = ''
-  let b64Ready = false
+  let b64Payload: ButtonItem = {
+    title: '',
+    audios: [],
+  }
+  let b64MsgStat: MsgStatus = MsgStatus.RESOLVED
 
   function updateLocalizedTitle() {
     document.title = $format('Starbuttons')
@@ -75,14 +79,16 @@
       disableAll = true
     })
     window.addEventListener('showb64window', async (evt: CustomEventInit) => {
-      console.log('Event triggered')
+      b64MsgStat = MsgStatus.PENDING
       modalUp = true
-      b64String = 'Fetching...'
-      b64Ready = false
-      b64String = await evt.detail
-      b64Ready = true
+      try {
+        b64Payload = JSON.parse(await evt.detail)
+        b64MsgStat = MsgStatus.RESOLVED
+      } catch (e) {
+        b64MsgStat = MsgStatus.REJECTED
+        throw e
+      }
     })
-    console.log('Event binded')
   })
 
   initGlobalContext()

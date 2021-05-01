@@ -2,23 +2,39 @@
   <div id="modalBox">
     <span id="modalClose" on:click="{() => dispatch('close')}">&times;</span>
     <div id="modalBody">
-      <textarea id="b64textboard" cols="50" rows="10" readonly>{text}</textarea>
-      <div>
-        <button
-          id="b64copybtn"
-          data-clipboard-target="#b64textboard"
-          disabled="{!ready}"
-        >
-          Copy to clipboard
-        </button>
-        →
-        <a
-          href="https://www.icloud.com/shortcuts/90544f62b04d4ab68a536e55e3d05316"
-          target="_blank"
-        >
-          <button>Shortcut</button></a
-        >
-      </div>
+      {#if status === MsgStatus.PENDING}
+        Loading...
+      {:else if status === MsgStatus.REJECTED}
+        Failed to load.
+      {:else}
+        <b id="title">{payload.title}</b>
+        <div>
+          <select id="audioSelect" bind:value="{audioSelectedFilename}">
+            {#each payload.audios as item}
+              <option value="{item}">{item}</option>
+            {/each}
+          </select>
+          <button on:click="{prepareB64Audio}">OK</button>
+        </div>
+        <textarea id="b64textboard" cols="50" rows="5" readonly
+          >{b64String}</textarea>
+        <div>
+          <button
+            id="b64copybtn"
+            data-clipboard-target="#b64textboard"
+            disabled="{!audioReady}"
+          >
+            Copy to clipboard
+          </button>
+          →
+          <a
+            href="https://www.icloud.com/shortcuts/90544f62b04d4ab68a536e55e3d05316"
+            target="_blank"
+          >
+            <button>Shortcut</button></a
+          >
+        </div>
+      {/if}
     </div>
   </div>
 </div>
@@ -26,14 +42,37 @@
 <script lang="ts">
   import { createEventDispatcher, onMount } from 'svelte'
   import ClipboardJS from 'clipboard'
+  import base64 from 'base64-js'
+
+  import siteConfig from '../config'
+  import type { ButtonItem } from '../types'
+  import { MsgStatus } from '../types'
+
+  const assetBasePath = siteConfig.assets_path
 
   // Props
-  export let text: string
-  export let ready: boolean
+  export let payload: ButtonItem
+  export let status: MsgStatus
 
   let clipboard
+  let audioSelectedFilename = ''
+  let b64String = ''
+  $: audioFilename =
+    payload.audios.length > 1 ? audioSelectedFilename : payload.audios[0]
+  let audioReady = false
 
   const dispatch = createEventDispatcher()
+
+  async function prepareB64Audio() {
+    if (audioFilename === '') return
+    audioReady = false
+    b64String = 'Fetching...'
+    const musicFile = assetBasePath + audioFilename
+    const fileBuf = await fetch(musicFile).then((x) => x.arrayBuffer())
+    const fileArr = new Uint8Array(fileBuf)
+    audioReady = true
+    b64String = base64.fromByteArray(fileArr)
+  }
 
   onMount(() => {
     clipboard = new ClipboardJS('#b64copybtn')
@@ -67,6 +106,9 @@
     width: min(500px, 80vw);
   }
 
+  #title {
+    text-align: center;
+  }
   #b64textboard {
     margin-bottom: 10px;
     width: 100%;

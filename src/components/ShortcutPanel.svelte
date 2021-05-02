@@ -19,6 +19,9 @@
               <option value="{item}">{item}</option>
             {/each}
           </select>
+          <button on:click="{playAudio}">
+            {$_('Play')}
+          </button>
           <button on:click="{generateB64Audio}">OK</button>
         </div>
         <div>
@@ -91,6 +94,11 @@
     prepareB64Audio().catch((_) => {
       audioStatus = AudioStatus.REJECTED
     })
+  }
+
+  function playAudio() {
+    const audio = new Audio(assetBasePath + audioSelectedFilename)
+    audio.play()
   }
 
   onMount(() => {

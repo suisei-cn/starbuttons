@@ -12,7 +12,7 @@
         {$_('Failed to load.')}
       {:else}
         <b id="title">{payload.title}</b>
-        <div>
+        <div class="oprBar">
           <select id="audioSelect" bind:value="{audioSelectedFilename}">
             <option value="" selected>---</option>
             {#each payload.audios as item}
@@ -172,6 +172,14 @@
       color: black;
       text-decoration: none;
       cursor: pointer;
+    }
+  }
+
+  .oprBar {
+    display: flex;
+    align-items: center;
+    :not(:last-child) {
+      margin-right: 7px;
     }
   }
 </style>

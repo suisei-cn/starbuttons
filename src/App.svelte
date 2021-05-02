@@ -121,6 +121,7 @@
 
     &.modalUp {
       filter: blur(10px);
+      transition: all ease-in-out 0.3s;
     }
   }
 

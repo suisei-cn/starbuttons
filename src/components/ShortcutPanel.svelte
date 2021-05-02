@@ -19,10 +19,16 @@
               <option value="{item}">{item}</option>
             {/each}
           </select>
-          <button on:click="{playAudio}">
+          <button
+            on:click="{playAudio}"
+            disabled="{audioSelectedFilename === ''}"
+          >
             {$_('Play')}
           </button>
-          <button on:click="{generateB64Audio}">OK</button>
+          <button
+            on:click="{generateB64Audio}"
+            disabled="{audioSelectedFilename === ''}">OK</button
+          >
         </div>
         <div>
           <button
@@ -77,9 +83,6 @@
   const dispatch = createEventDispatcher()
 
   async function prepareB64Audio() {
-    console.log('yo', audioSelectedFilename)
-    if (audioSelectedFilename === '') return
-    console.log('ya')
     audioStatus = AudioStatus.PENDING
     b64String = ''
     const musicFile = assetBasePath + audioSelectedFilename
@@ -90,7 +93,6 @@
   }
 
   function generateB64Audio() {
-    console.log('hey')
     prepareB64Audio().catch((_) => {
       audioStatus = AudioStatus.REJECTED
     })

@@ -12,13 +12,15 @@
         {$_('Failed to load.')}
       {:else}
         <b id="title">{payload.title}</b>
-        <div class="oprBar">
+        <div>
           <select id="audioSelect" bind:value="{audioSelectedFilename}">
             <option value="" selected>---</option>
             {#each payload.audios as item}
               <option value="{item}">{item}</option>
             {/each}
           </select>
+        </div>
+        <div class="oprBar">
           <button
             on:click="{playAudio}"
             disabled="{audioSelectedFilename === ''}"

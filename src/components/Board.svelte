@@ -73,7 +73,7 @@
     const categorizedSounds: { [name: string]: Sound[] } = {}
     const soundNoCat = []
 
-    for (const i of sounds) {
+    for (const i of sounds.filter((x) => x.type === 'normal')) {
       if (!i.category) {
         soundNoCat.push(i)
         continue

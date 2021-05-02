@@ -45,14 +45,20 @@
     }
   }
 
+  function updateHoverWidth(){
+      const width = self.offsetWidth
+      if (!width) {
+        requestAnimationFrame(updateHoverWidth)
+        return
+      }
+      minWidth = String(width - 16 + 'px')
+      testHoverWidth = false
+  }
+
   function scanHoverWidth() {
     minWidth = '0px'
     testHoverWidth = true
-    requestAnimationFrame(() => {
-      const width = self.offsetWidth
-      minWidth = String(width - 16 + 'px')
-      testHoverWidth = false
-    })
+    requestAnimationFrame(updateHoverWidth)
   }
 
   export function playSound() {

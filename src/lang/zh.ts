@@ -39,4 +39,5 @@ export default {
   Shortcut: '快捷指令',
   'Fetching...': '正在加载...',
   'Select a clip first': '首先选择一段音频',
+  'Copied!': '已经拷贝！',
 }

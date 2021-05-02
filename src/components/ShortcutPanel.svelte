@@ -34,7 +34,8 @@
           <button
             id="b64copybtn"
             data-clipboard-text="{b64String}"
-            disabled="{audioStatus !== AudioStatus.RESOLVED}"
+            disabled="{audioStatus !== AudioStatus.RESOLVED &&
+              audioStatus !== AudioStatus.COPIED}"
           >
             {#if audioStatus === AudioStatus.WAITING_FOR_INPUT}
               {$_('Select a clip first')}
@@ -42,6 +43,8 @@
               {$_('Fetching...')}
             {:else if audioStatus === AudioStatus.REJECTED}
               {$_('Failed to load.')}
+            {:else if audioStatus === AudioStatus.COPIED}
+              {$_('Copied!')}
             {:else}
               {$_('Copy to clipboard')}
             {/if}
@@ -105,6 +108,13 @@
 
   onMount(() => {
     clipboard = new ClipboardJS('#b64copybtn')
+    clipboard.on('success', function (e) {
+      const wasStatus = audioStatus
+      audioStatus = AudioStatus.COPIED
+      setTimeout(() => {
+        audioStatus = wasStatus
+      }, 800)
+    })
   })
 </script>
 

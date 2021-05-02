@@ -54,4 +54,5 @@ export enum AudioStatus {
   RESOLVED = 2,
   REJECTED = 3,
   WAITING_FOR_INPUT = 4,
+  COPIED = 5,
 }

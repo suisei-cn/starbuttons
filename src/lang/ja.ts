@@ -27,7 +27,7 @@ export default {
     'Voices are still loading. Please be patient...',
   'Unrecognized sound list.': 'Unrecognized sound list.',
   'Still loading...': 'Still loading...',
-  Uncategorized: 'Uncategorized',
+  Uncategorized: '未分類',
   Starbuttons: 'すいちゃんボタン',
   'Loading...': '読み込み中',
   'Failed to fetch sounds list. Please try refreshing.':
@@ -36,9 +36,9 @@ export default {
   'Click to close': 'Click to close',
   'or it will automatically close later':
     'or it will automatically close later',
-  'Failed to load.': 'Failed to load.',
-  'Copy to clipboard': 'Copy to clipboard',
+  'Failed to load.': '読み込みに失敗しました。',
+  'Copy to clipboard': 'クリップボードにコピー',
   Shortcut: 'ショートカット',
-  'Fetching...': 'Fetching...',
+  'Fetching...': '読み込み中...',
   'Select a clip first': '音声を選択ください',
 }

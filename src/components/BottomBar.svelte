@@ -32,6 +32,20 @@
   >
     <i class="icon-discord"></i>
     <sup>(EN)</sup>
+  </a>/
+  <a
+    href="https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A"
+    aria-label="YouTube: Suisei Channel"
+    target="_blank"
+  >
+    <i class="icon-youtube"></i>
+  </a>
+  <a
+    href="https://twitter.com/suisei_hosimati"
+    aria-label="Twitter: @suisei_hosimati"
+    target="_blank"
+  >
+    <i class="icon-twitter"></i>
   </a>
   /
   <LanguageSwitch />

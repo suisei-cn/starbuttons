@@ -40,4 +40,6 @@ export default {
   'Fetching...': '正在加载...',
   'Select a clip first': '首先选择一段音频',
   'Copied!': '已经拷贝！',
+  Download: '下载',
+  Select: '选择',
 }

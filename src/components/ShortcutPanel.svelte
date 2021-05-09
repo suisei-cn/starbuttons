@@ -28,28 +28,26 @@
             {$_('Play')}
           </button>
           <button
-            on:click="{generateB64Audio}"
-            disabled="{audioSelectedFilename === ''}">OK</button
+            on:click="{downloadAudio}"
+            disabled="{audioSelectedFilename === ''}"
+          >
+            {$_('Download')}</button
           >
         </div>
         <div>
           <button
+            on:click="{prepareB64Audio}"
+            disabled="{audioSelectedFilename === ''}">{$_('Select')}</button
+          >
+          →
+          <button
             id="b64copybtn"
             data-clipboard-text="{b64String}"
-            disabled="{audioStatus !== AudioStatus.RESOLVED &&
-              audioStatus !== AudioStatus.COPIED}"
+            disabled="{audioSelectedFilename !== audioBlobFilename ||
+              audioSelectedFilename === '' ||
+              b64String === ''}"
           >
-            {#if audioStatus === AudioStatus.WAITING_FOR_INPUT}
-              {$_('Select a clip first')}
-            {:else if audioStatus === AudioStatus.PENDING}
-              {$_('Fetching...')}
-            {:else if audioStatus === AudioStatus.REJECTED}
-              {$_('Failed to load.')}
-            {:else if audioStatus === AudioStatus.COPIED}
-              {$_('Copied!')}
-            {:else}
-              {$_('Copy to clipboard')}
-            {/if}
+            {$_('Copy to clipboard')}
           </button>
           →
           <a
@@ -58,6 +56,17 @@
           >
             <button>{$_('Shortcut')}</button></a
           >
+        </div>
+        <div>
+          {#if audioStatus === AudioStatus.WAITING_FOR_INPUT}
+            {$_('Select a clip first')}
+          {:else if audioStatus === AudioStatus.PENDING}
+            {$_('Fetching...')}
+          {:else if audioStatus === AudioStatus.REJECTED}
+            {$_('Failed to load.')}
+          {:else if audioStatus === AudioStatus.COPIED}
+            {$_('Copied!')}
+          {/if}
         </div>
       {/if}
     </div>
@@ -82,29 +91,53 @@
 
   let clipboard
   let audioSelectedFilename = ''
+  let audioBlobFilename = ''
+  let audioBlobUrl = ''
   let b64String = ''
   let audioStatus: AudioStatus = AudioStatus.WAITING_FOR_INPUT
 
+  $: musicFile = assetBasePath + audioSelectedFilename
+
   const dispatch = createEventDispatcher()
 
-  async function prepareB64Audio() {
-    audioStatus = AudioStatus.PENDING
+  async function prepareAudio() {
+    if (audioBlobFilename === audioSelectedFilename) return true
     b64String = ''
-    const musicFile = assetBasePath + audioSelectedFilename
-    const fileBuf = await fetch(musicFile).then((x) => x.arrayBuffer())
-    const fileArr = new Uint8Array(fileBuf)
+    audioStatus = AudioStatus.PENDING
+    const blob = await fetch(musicFile)
+      .then((x) => x.blob())
+      .catch(() => {
+        audioStatus = AudioStatus.REJECTED
+        return
+      })
+    if (blob === undefined) return false
+    audioBlobUrl = URL.createObjectURL(blob)
+    audioBlobFilename = audioSelectedFilename
     audioStatus = AudioStatus.RESOLVED
+    return true
+  }
+
+  async function prepareB64Audio() {
+    const ret = await prepareAudio()
+    if (ret === false) return
+    const fileBuf = await fetch(audioBlobUrl).then((x) => x.arrayBuffer())
+    const fileArr = new Uint8Array(fileBuf)
     b64String = base64.fromByteArray(fileArr)
   }
 
-  function generateB64Audio() {
-    prepareB64Audio().catch((_) => {
-      audioStatus = AudioStatus.REJECTED
-    })
+  async function downloadAudio() {
+    const ret = await prepareAudio()
+    if (ret === false) return
+    const link = document.createElement('a')
+    link.href = audioBlobUrl
+    link.setAttribute('download', audioSelectedFilename)
+    link.click()
   }
 
-  function playAudio() {
-    const audio = new Audio(assetBasePath + audioSelectedFilename)
+  async function playAudio() {
+    const ret = await prepareAudio()
+    if (ret === false) return
+    const audio = new Audio(audioBlobUrl)
     audio.play()
   }
 

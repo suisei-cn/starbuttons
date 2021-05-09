@@ -42,4 +42,6 @@ export default {
   'Fetching...': '読み込み中...',
   'Select a clip first': '音声を選択ください',
   'Copied!': 'Copied!',
+  Download: 'Download',
+  Select: 'Select',
 }

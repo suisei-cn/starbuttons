@@ -42,4 +42,6 @@ export default {
   'Fetching...': 'Fetching...',
   'Select a clip first': 'Select a clip first',
   'Copied!': 'Copied!',
+  Download: 'Download',
+  Select: 'Select',
 }

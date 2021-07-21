@@ -1,8 +1,8 @@
 {#if display}
   <header>
     <span>
-      <a href="https://suisei.streamlink.to/GHOST" target="_blank">
-        GHOST - 星街すいせい →
+      <a href="https://tf.lnk.to/SanjiJuunihun" target="_blank">
+        TAKU INOUE, 星街すいせい - 3時12分 →
       </a>
     </span>
     <svg

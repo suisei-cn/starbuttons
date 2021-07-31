@@ -33,6 +33,18 @@
           >
             {$_('Download')}</button
           >
+          ({$_("What's this?")}
+          <span id="helpLink">
+            <a
+              href="https://youtube.com/watch?v=UARzqq93XPY"
+              target="_blank"
+              rel="noopener">YT</a
+            >/<a
+              href="https://www.bilibili.com/video/av375437164"
+              target="_blank"
+              rel="noopener">BILI</a
+            ></span
+          >)
         </div>
         <div>
           <button
@@ -157,6 +169,7 @@
   @import '../styles/variables';
 
   #modal {
+    font-family: system-ui, -apple-system, sans-serif;
     position: fixed;
     z-index: 3;
     left: 0;
@@ -216,5 +229,11 @@
     :not(:last-child) {
       margin-right: 7px;
     }
+  }
+
+  #helpLink {
+    font-size: 0.83em;
+    position: relative;
+    top: -0.5em;
   }
 </style>

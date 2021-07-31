@@ -44,4 +44,5 @@ export default {
   'Copied!': 'Copied!',
   Download: 'Download',
   Select: 'Select',
+  "What's this?": "What's this?",
 }

@@ -17,7 +17,7 @@
   </a>
   /
   <a
-    href="https://discord.com/invite/suiseicord"
+    href="https://discord.gg/suiseicord"
     aria-label="Discord Fan Group"
     target="_blank"
   >
@@ -26,7 +26,7 @@
   </a>
   /
   <a
-    href="https://discord.gg/tetRtdV"
+    href="https://discord.gg/hoshiyomi"
     aria-label="Discord Fan Group"
     target="_blank"
   >

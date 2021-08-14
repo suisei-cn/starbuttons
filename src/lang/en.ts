@@ -45,4 +45,5 @@ export default {
   Download: 'Download',
   Select: 'Select',
   "What's this?": "What's this?",
+  Close: 'Close',
 }

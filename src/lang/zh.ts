@@ -43,4 +43,5 @@ export default {
   Download: '下载',
   Select: '选择',
   "What's this?": '这是什么？',
+  Close: '关闭',
 }

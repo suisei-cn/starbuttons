@@ -1,8 +1,8 @@
 {#if display}
   <header>
     <span>
-      <a href="https://tf.lnk.to/SanjiJuunihun" target="_blank">
-        TAKU INOUE, 星街すいせい - 3時12分 →
+      <a href="https://www.youtube.com/watch?v=IqT6cHCT1TE" target="_blank">
+        星街すいせい - 駆けろ →
       </a>
     </span>
     <svg

@@ -194,7 +194,7 @@
     flex-grow: 1;
     transform: translateX(math.div(-$board-narrow-width, 2));
     &.wideView {
-      transform: translateX(math.div(-$board-narrow-width, 2));
+      transform: translateX(math.div(-$board-wide-width, 2));
     }
 
     display: flex;

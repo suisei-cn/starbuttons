@@ -138,6 +138,8 @@
 </script>
 
 <style lang="scss">
+  @use "sass:math";
+
   @import '../styles/variables';
   @import '../styles/common';
 
@@ -190,9 +192,9 @@
     transition: transform 0.25s;
     position: relative;
     flex-grow: 1;
-    transform: translateX(-$board-narrow-width / 2);
+    transform: translateX(math.div(-$board-narrow-width, 2));
     &.wideView {
-      transform: translateX(-$board-wide-width / 2);
+      transform: translateX(math.div(-$board-narrow-width, 2));
     }
 
     display: flex;

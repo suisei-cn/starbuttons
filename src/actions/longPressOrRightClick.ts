@@ -2,7 +2,7 @@
 
 const EVT_NAME_LONGPRESS = 'long-press'
 
-export function longPressOrRightClick(node, threshold = 500) {
+export function longPressOrRightClick(node: Element, threshold = 500) {
   const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0
 
   const evtMouseDown = isTouch ? 'touchstart' : 'mousedown'

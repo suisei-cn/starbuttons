@@ -155,7 +155,7 @@
 
   onMount(() => {
     clipboard = new ClipboardJS('#b64copybtn')
-    clipboard.on('success', function (e) {
+    clipboard.on('success', () => {
       const wasStatus = audioStatus
       audioStatus = AudioStatus.COPIED
       setTimeout(() => {

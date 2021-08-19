@@ -18,20 +18,7 @@ module.exports = {
     ],
     '@snowpack/plugin-optimize',
   ],
-  install: [
-    /* ... */
-  ],
-  installOptions: {},
-  devOptions: {
-    /* ... */
-  },
   buildOptions: {
     out: 'dist',
-  },
-  proxy: {
-    /* ... */
-  },
-  alias: {
-    /* ... */
   },
 }

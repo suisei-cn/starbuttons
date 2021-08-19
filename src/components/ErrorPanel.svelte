@@ -4,6 +4,8 @@
       class="error"
       on:mouseover="{(_) => mouseIn(error)}"
       on:mouseout="{(_) => mouseOut(error)}"
+      on:focus="{(_) => mouseIn(error)}"
+      on:blur="{(_) => mouseOut(error)}"
       on:click="{(_) => close(error.slug)}"
     >
       {@html error.html}

@@ -1,8 +1,8 @@
 {#if display}
   <header>
     <span>
-      <a href="https://www.youtube.com/watch?v=IqT6cHCT1TE" target="_blank">
-        星街すいせい - 駆けろ →
+      <a href="https://stellarintothegalaxy.hololive.tv/" target="_blank">
+        {$_('TOPBAR_NOTICE')}
       </a>
     </span>
     <svg

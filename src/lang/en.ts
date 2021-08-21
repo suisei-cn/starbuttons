@@ -46,4 +46,5 @@ export default {
   Select: 'Select',
   "What's this?": "What's this?",
   Close: 'Close',
+  TOPBAR_NOTICE: '1st Solo Live "STELLAR in to the GALAXY" planned on Oct 21 →',
 }

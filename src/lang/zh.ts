@@ -44,4 +44,6 @@ export default {
   Select: '选择',
   "What's this?": '这是什么？',
   Close: '关闭',
+  TOPBAR_NOTICE:
+    '1st Solo Live "STELLAR in to the GALAXY" 计划于10月21日举行 →',
 }

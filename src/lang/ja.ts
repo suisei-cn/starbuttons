@@ -47,5 +47,5 @@ export default {
   "What's this?": "What's this?",
   Close: 'Close',
   TOPBAR_NOTICE:
-    '2021年10月21日、1st Solo Live "STELLAR in to the GALAXY"開催決定！ →',
+    '2021年10月21日、1st Solo Live "STELLAR into the GALAXY"開催決定！ →',
 }

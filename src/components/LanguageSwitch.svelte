@@ -6,6 +6,8 @@
 </select>
 
 <script lang="ts">
+  import { GLOBAL_DEFAULT_LANG } from '../utils/i18n'
+
   import { onMount } from 'svelte'
   import { locale } from 'svelte-i18n'
 
@@ -19,7 +21,7 @@
   }
 
   onMount(() => {
-    selected = $locale
+    selected = $locale || GLOBAL_DEFAULT_LANG
   })
 </script>
 

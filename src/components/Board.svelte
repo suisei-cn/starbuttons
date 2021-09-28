@@ -3,7 +3,9 @@
     <div id="board" class="boardPart" class:wideMode transition:fade>
       <div id="boardContext">
         {#each soundGroups as soundGroup}
-          <h2>{ln($locale, categories[soundGroup.slug])}</h2>
+          <h2>
+            {ln($locale || GLOBAL_DEFAULT_LANG, categories[soundGroup.slug])}
+          </h2>
           {#each soundGroup.sounds as sound}
             <BaseButton item="{sound}" />
           {/each}
@@ -44,7 +46,7 @@
   import { createEventDispatcher } from 'svelte'
   import { fade } from 'svelte/transition'
   import { format, locale, _ } from 'svelte-i18n'
-  import { ln } from '../utils/i18n'
+  import { GLOBAL_DEFAULT_LANG, ln } from '../utils/i18n'
   import BaseButton from './BaseButton.svelte'
 
   let contentReady: -1 | 0 | 1 = 0
@@ -138,7 +140,7 @@
 </script>
 
 <style lang="scss">
-  @use "sass:math";
+  @use 'sass:math';
 
   @import '../styles/variables';
   @import '../styles/common';

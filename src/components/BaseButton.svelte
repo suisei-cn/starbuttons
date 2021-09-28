@@ -20,7 +20,7 @@
   import type { ButtonItem, Sound } from '../types'
   import siteConfig from '../config'
   import type CentralPlayer from './centralPlayer'
-  import { ln } from '../utils/i18n'
+  import { GLOBAL_DEFAULT_LANG, ln } from '../utils/i18n'
   import { longPressOrRightClick } from '../actions/longPressOrRightClick'
   const assetBasePath = siteConfig.assets_path
 
@@ -34,7 +34,7 @@
   let self: any
   let minWidth = '0px'
 
-  $: localizedName = ln($locale, item)
+  $: localizedName = ln($locale || GLOBAL_DEFAULT_LANG, item)
 
   // Methods
   function selectFile(): string {
@@ -45,14 +45,14 @@
     }
   }
 
-  function updateHoverWidth(){
-      const width = self.offsetWidth
-      if (!width) {
-        requestAnimationFrame(updateHoverWidth)
-        return
-      }
-      minWidth = String(width - 16 + 'px')
-      testHoverWidth = false
+  function updateHoverWidth() {
+    const width = self.offsetWidth
+    if (!width) {
+      requestAnimationFrame(updateHoverWidth)
+      return
+    }
+    minWidth = String(width - 16 + 'px')
+    testHoverWidth = false
   }
 
   function scanHoverWidth() {

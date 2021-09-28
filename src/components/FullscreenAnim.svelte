@@ -1,6 +1,6 @@
 <div id="svgAnim" bind:this="{svgAnim}"></div>
 
-<script>
+<script lang="ts">
   import { onMount } from 'svelte'
   import lottie from 'lottie-web'
 

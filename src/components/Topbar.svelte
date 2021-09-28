@@ -1,8 +1,8 @@
 {#if display}
   <header>
     <span>
-      <a href="https://stellarintothegalaxy.hololive.tv/" target="_blank">
-        {$_('TOPBAR_NOTICE')}
+      <a href="https://suisei.streamlink.to/sss" target="_blank">
+        Still Still Stellar →
       </a>
     </span>
     <svg

@@ -1,8 +1,8 @@
 {#if display}
   <header>
     <span>
-      <a href="https://suisei.streamlink.to/sss" target="_blank">
-        Still Still Stellar →
+      <a href="https://www.youtube.com/watch?v=LtqzI9y5yII" target="_blank">
+        STELLAR into the GALAXY →
       </a>
     </span>
     <svg

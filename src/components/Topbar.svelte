@@ -23,7 +23,7 @@
 
 <script lang="ts">
   import { _ } from 'svelte-i18n'
-  let display = true
+  let display = false
 </script>
 
 <style lang="scss">

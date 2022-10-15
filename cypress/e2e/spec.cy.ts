@@ -1,6 +1,6 @@
 describe('Language switch', () => {
   it('works for en', () => {
-    cy.visit('/?lang=en&testing=1')
+    cy.visit('/?lang=en')
     cy.title().should('include', 'Starbuttons')
   })
 
@@ -46,13 +46,7 @@ describe('Board stuffs', () => {
   ]
 
   before(() => {
-    cy.server()
-    cy.route('GET', '/sounds.json', 'fixture:sounds.json').as('getSounds')
-    cy.route('GET', '/categories.json', 'fixture:categories.json').as(
-      'getCategories'
-    )
-    cy.visit('/?lang=en&testing=1')
-    cy.get('#switchBtn').click()
+    cy.visit('/?lang=en')
   })
 
   it('has the center button', () => {
@@ -60,13 +54,9 @@ describe('Board stuffs', () => {
   })
 
   it('have stuffs in board', () => {
-    cy.get('#boardContext h2').should('have.length', 3)
-    cy.get('#boardContext .baseBtn').should('have.length', 3)
-    let here = cy.get('#boardContext h2:first')
-    for (let i = 0; i < 6; i++) {
-      if (i !== 0) here = here.next()
-      here.should('have.text', pages[i])
-    }
+    cy.get('#switchBtn').click()
+    cy.get('#boardContext h2').should('have.length', 14)
+    cy.get('#boardContext .baseBtn').should('have.length.greaterThan', 120)
   })
 })
 

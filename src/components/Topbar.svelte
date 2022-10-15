@@ -1,7 +1,11 @@
 {#if display}
   <header>
     <span>
-      <a href="https://www.youtube.com/watch?v=LtqzI9y5yII" target="_blank">
+      <a
+        href="https://www.youtube.com/watch?v=LtqzI9y5yII"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         STELLAR into the GALAXY →
       </a>
     </span>

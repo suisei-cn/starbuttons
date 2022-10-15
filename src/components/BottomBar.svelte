@@ -3,6 +3,7 @@
     href="https://github.com/suisei-cn/starbuttons"
     aria-label="GitHub repository of suisei.moe"
     target="_blank"
+    rel="noopener noreferrer"
   >
     <i class="icon-github"></i>
   </a>
@@ -11,6 +12,7 @@
     href="https://t.me/Hoshimachi_Suisei"
     aria-label="Telegram Fan Group"
     target="_blank"
+    rel="noopener noreferrer"
   >
     <i class="icon-telegram"></i>
     <sup>(CN)</sup>
@@ -20,6 +22,7 @@
     href="https://discord.gg/suiseicord"
     aria-label="Discord Fan Group"
     target="_blank"
+    rel="noopener noreferrer"
   >
     <i class="icon-discord"></i>
     <sup>(JP)</sup>
@@ -29,6 +32,7 @@
     href="https://discord.gg/hoshiyomi"
     aria-label="Discord Fan Group"
     target="_blank"
+    rel="noopener noreferrer"
   >
     <i class="icon-discord"></i>
     <sup>(EN)</sup>
@@ -37,6 +41,7 @@
     href="https://www.youtube.com/channel/UC5CwaMl1eIgY8h02uZw7u8A"
     aria-label="YouTube: Suisei Channel"
     target="_blank"
+    rel="noopener noreferrer"
   >
     <i class="icon-youtube"></i>
   </a>
@@ -44,6 +49,7 @@
     href="https://twitter.com/suisei_hosimati"
     aria-label="Twitter: @suisei_hosimati"
     target="_blank"
+    rel="noopener noreferrer"
   >
     <i class="icon-twitter"></i>
   </a>

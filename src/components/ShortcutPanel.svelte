@@ -38,11 +38,11 @@
             <a
               href="https://youtube.com/watch?v=UARzqq93XPY"
               target="_blank"
-              rel="noopener">YT</a
+              rel="noopener noreferrer">YT</a
             >/<a
               href="https://www.bilibili.com/video/av375437164"
               target="_blank"
-              rel="noopener">BILI</a
+              rel="noopener noreferrer">BILI</a
             ></span
           >)
         </div>
@@ -65,6 +65,7 @@
           <a
             href="https://www.icloud.com/shortcuts/90544f62b04d4ab68a536e55e3d05316"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <button>{$_('Shortcut')}</button></a
           >

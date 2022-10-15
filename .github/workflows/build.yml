@@ -14,8 +14,8 @@ jobs:
 
       - name: Install and check 🔍
         run: |
-          yarn
-          yarn validate
+          npx pnpm install
+          npx pnpm run validate
 
       - name: Build 🔧
-        run: yarn build
+        run: npx pnpm run build

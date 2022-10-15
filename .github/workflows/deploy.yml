@@ -21,8 +21,8 @@ jobs:
           ENV: "PRODUCTION"
         run: |
           sed -i "s/NULL_RELEASE/$GITHUB_SHA/" src/index.ts
-          yarn
-          yarn build
+          npx pnpm install
+          npx pnpm run build
 
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1

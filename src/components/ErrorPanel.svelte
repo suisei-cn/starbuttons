@@ -7,6 +7,8 @@
       on:focus="{(_) => mouseIn(error)}"
       on:blur="{(_) => mouseOut(error)}"
       on:click="{(_) => close(error.slug)}"
+      on:keypress="{(_) => close(error.slug)}"
+      tabIndex="0"
     >
       {@html error.html}
       <p id="closeTip">
@@ -27,7 +29,7 @@
   import { _ } from 'svelte-i18n'
 
   let currentErrors: ErrorObject[] = []
-  let timerData: { [key: string]: NodeJS.Timeout } = {}
+  let timerData: { [key: string]: number } = {}
   const DEFAULT_DISPLAY_TIME = 2500
 
   function close(slug: string) {

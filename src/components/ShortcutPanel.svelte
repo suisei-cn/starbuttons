@@ -1,8 +1,15 @@
-<div id="modal" on:click|self="{() => dispatch('close')}">
+<div
+  id="modal"
+  on:click|self="{() => dispatch('close')}"
+  on:keypress="{() => dispatch('close')}"
+  tabIndex="0"
+>
   <div id="modalBox">
     <span
       id="modalClose"
       on:click="{() => dispatch('close')}"
+      on:keypress="{() => dispatch('close')}"
+      tabIndex="0"
       aria-label="{$_('Close')}">&times;</span
     >
     <div id="modalBody">
@@ -23,12 +30,16 @@
         <div class="oprBar">
           <button
             on:click="{playAudio}"
+            on:keypress="{playAudio}"
+            tabIndex="0"
             disabled="{audioSelectedFilename === ''}"
           >
             {$_('Play')}
           </button>
           <button
             on:click="{downloadAudio}"
+            on:keypress="{downloadAudio}"
+            tabIndex="0"
             disabled="{audioSelectedFilename === ''}"
           >
             {$_('Download')}</button
@@ -49,6 +60,8 @@
         <div>
           <button
             on:click="{prepareB64Audio}"
+            on:keypress="{prepareB64Audio}"
+            tabIndex="0"
             disabled="{audioSelectedFilename === ''}">{$_('Select')}</button
           >
           →

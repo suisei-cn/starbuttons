@@ -8,8 +8,9 @@
   class:testHoverWidth
   style="min-width: {minWidth}"
   on:click="{playSound}"
+  on:keypress="{playSound}"
   bind:this="{self}"
-  tabindex="0"
+  tabIndex="0"
 >
   {localizedName}
 </div>

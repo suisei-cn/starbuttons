@@ -12,12 +12,14 @@
     <svg
       id="close"
       on:click="{(_) => (display = false)}"
+      on:keypress="{(_) => (display = false)}"
       viewBox="0 0 4 4"
       stroke="white"
       stroke-width="0.25"
       stroke-linecap="round"
       stroke-linejoin="round"
       fill="none"
+      tabIndex="0"
     >
       <path d="M3 1L1 3"></path>
       <path d="M1 1l2 2"></path>

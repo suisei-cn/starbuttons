@@ -18,7 +18,10 @@
       on:click="{(_) => {
         board.toggleBoard()
       }}"
-      tabindex="0"
+      on:keypress="{(_) => {
+        board.toggleBoard()
+      }}"
+      tabIndex="0"
     >
       {#if boardMode}{$_('Back')}{:else}{$_('Music board')}{/if}
     </div>

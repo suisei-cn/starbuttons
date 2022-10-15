@@ -24,7 +24,7 @@
       class="boardPart"
       class:wideMode
       transition:fade
-      tabindex="0"
+      tabIndex="0"
     >
       <BaseButton item="{centralSound}" baseBtnInList="{false}" />
     </div>

@@ -11,6 +11,7 @@ specifiers:
   '@snowpack/plugin-svelte': ^3.7.0
   '@snowpack/plugin-typescript': ^1.2.1
   '@tsconfig/svelte': ^3.0.0
+  '@types/snowpack-env': ^2.3.4
   base64-js: ^1.5.1
   clipboard: ^2.0.11
   cypress: ^10.10.0
@@ -47,6 +48,7 @@ devDependencies:
   '@snowpack/plugin-svelte': 3.7.0_tiizjcnm4ooxdd2bswor23t43a
   '@snowpack/plugin-typescript': 1.2.1_typescript@4.8.4
   '@tsconfig/svelte': 3.0.0
+  '@types/snowpack-env': 2.3.4
   cypress: 10.10.0
   npm-run-all: 4.1.5
   prettier: 2.7.1
@@ -1990,6 +1992,10 @@ packages:
 
   /@types/sizzle/2.3.3:
     resolution: {integrity: sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==}
+    dev: true
+
+  /@types/snowpack-env/2.3.4:
+    resolution: {integrity: sha512-zYzMb2aMyzXW5VgOQHy+FgI8N5tLFb+tIsUqk35CIgSr9pT4pji2GR8BCOTMdniusVuRHIp/DaYQNQGYGLVZHQ==}
     dev: true
 
   /@types/yargs-parser/21.0.0:

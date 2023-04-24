@@ -2,7 +2,7 @@
 
 One or more vocal buttons for Suisei.
 
-**[中文](https://suisei.moe/?lang=zh)** | **[English](https://suisei.moe/?lang=en)** | **[日本語](https://suisei.moe/?lang=ja)**
+**[中文](https://suisei.cc/?lang=zh)** | **[English](https://suisei.cc/?lang=en)** | **[日本語](https://suisei.cc/?lang=ja)**
 
 ---
 

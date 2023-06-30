@@ -24,7 +24,7 @@ README：**中文** | [English](https://github.com/suisei-cn/starbuttons/blob/ma
 ## 本地开发部署
 
 ```sh
-# 需要安装 yarn。
-yarn install
-yarn dev #带热重载的开发模式
+# 需要安装 pnpm。
+pnpm install
+pnpm run dev #带热重载的开发模式
 ```

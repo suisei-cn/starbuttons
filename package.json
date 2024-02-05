@@ -11,7 +11,6 @@
     "e2e": "npm-run-all format --parallel --race dev cypress"
   },
   "devDependencies": {
-    "@sentry/cli": "^2.7.0",
     "@snowpack/app-scripts-svelte": "^2.0.1",
     "@snowpack/plugin-dotenv": "^2.2.0",
     "@snowpack/plugin-optimize": "^0.2.13",
@@ -37,7 +36,6 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@sentry/browser": "^7.15.0",
     "base64-js": "^1.5.1",
     "clipboard": "^2.0.11",
     "lottie-web": "^5.9.6",

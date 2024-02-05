@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "base64-js": "./base64-js.js",
+    "clipboard": "./clipboard.js",
+    "lottie-web": "./lottie-web.js",
+    "svelte": "./svelte.js",
+    "svelte-i18n": "./svelte-i18n.js",
+    "svelte/internal": "./svelte/internal.js",
+    "svelte/transition": "./svelte/transition.js"
+  }
+}

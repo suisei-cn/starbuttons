@@ -1,0 +1,1 @@
+import{P as a}from"../common/index-a28ccc74.js";function m(t,{delay:o=0,duration:c=400,easing:e=a}={}){const i=+getComputedStyle(t).opacity;return{delay:o,duration:c,easing:e,css:n=>`opacity: ${n*i}`}}export{m as fade};

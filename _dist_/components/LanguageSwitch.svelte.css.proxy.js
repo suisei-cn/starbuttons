@@ -1,0 +1,1 @@
+if(typeof document!="undefined"){const n="#langSelect.svelte-qyqg6i{margin-left:0.5vw;outline:none;border:none;background:none;color:#ccc;cursor:pointer}",e=document.createElement("style"),t=document.createTextNode(n);e.type="text/css",e.appendChild(t),document.head.appendChild(e)}

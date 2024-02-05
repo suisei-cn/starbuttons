@@ -1,0 +1,1 @@
+import*as e from"../_snowpack/env.js";import.meta.env=e;import i from"./App.svelte.js";import o,{testingConfig as n}from"./config.js";import t from"./utils/i18n.js";t();const p=new i({target:document.body,props:{siteConfig:o,testingConfig:n}});export default p;

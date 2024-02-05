@@ -1,0 +1,1 @@
+if(typeof document!="undefined"){const t="#settings.svelte-17l6vvl{display:flex;justify-content:center;margin-top:15vh;margin-bottom:3vh}label.svelte-17l6vvl{font-variant-caps:small-caps;font-variant-numeric:oldstyle-nums;font-weight:400;font-size:16px}",e=document.createElement("style"),n=document.createTextNode(t);e.type="text/css",e.appendChild(n),document.head.appendChild(e)}

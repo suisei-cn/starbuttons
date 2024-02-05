@@ -1,0 +1,1 @@
+if(typeof document!="undefined"){const t="footer.svelte-14k0q7p{text-align:center;margin-bottom:11vh;line-height:1em}a.svelte-14k0q7p{margin:0 0.5vw;text-decoration:none;color:#ccc}",e=document.createElement("style"),n=document.createTextNode(t);e.type="text/css",e.appendChild(n),document.head.appendChild(e)}

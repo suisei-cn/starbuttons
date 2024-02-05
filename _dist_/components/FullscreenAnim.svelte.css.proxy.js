@@ -1,0 +1,1 @@
+if(typeof document!="undefined"){const t="#svgAnim.svelte-1odw1jc{position:absolute;left:calc(50vw - 89vh);top:auto;bottom:0;width:178vh;height:100%;pointer-events:none}",e=document.createElement("style"),o=document.createTextNode(t);e.type="text/css",e.appendChild(o),document.head.appendChild(e)}

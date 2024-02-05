@@ -1,0 +1,1 @@
+export var MsgStatus;(function(E){E[E.PENDING=1]="PENDING",E[E.RESOLVED=2]="RESOLVED",E[E.REJECTED=3]="REJECTED"})(MsgStatus||(MsgStatus={}));export var AudioStatus;(function(E){E[E.PENDING=1]="PENDING",E[E.RESOLVED=2]="RESOLVED",E[E.REJECTED=3]="REJECTED",E[E.WAITING_FOR_INPUT=4]="WAITING_FOR_INPUT",E[E.COPIED=5]="COPIED"})(AudioStatus||(AudioStatus={}));

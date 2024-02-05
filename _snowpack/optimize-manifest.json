@@ -1,0 +1,59 @@
+{
+  "imports": {
+    "/index.html": {
+      "entry": [
+        "/_dist_/index.js"
+      ],
+      "css": [
+        "/assets/img/icons/favicon-16x16.png",
+        "/assets/img/icons/favicon-32x32.png",
+        "/favicon.ico"
+      ],
+      "js": [
+        "/_dist_/actions/longPressOrRightClick.js",
+        "/_dist_/App.svelte.css.proxy.js",
+        "/_dist_/App.svelte.js",
+        "/_dist_/components/BaseButton.svelte.css.proxy.js",
+        "/_dist_/components/BaseButton.svelte.js",
+        "/_dist_/components/Board.svelte.css.proxy.js",
+        "/_dist_/components/Board.svelte.js",
+        "/_dist_/components/BottomBar.svelte.css.proxy.js",
+        "/_dist_/components/BottomBar.svelte.js",
+        "/_dist_/components/centralPlayer.js",
+        "/_dist_/components/ErrorPanel.svelte.css.proxy.js",
+        "/_dist_/components/ErrorPanel.svelte.js",
+        "/_dist_/components/FullscreenAnim.svelte.css.proxy.js",
+        "/_dist_/components/FullscreenAnim.svelte.js",
+        "/_dist_/components/LanguageSwitch.svelte.css.proxy.js",
+        "/_dist_/components/LanguageSwitch.svelte.js",
+        "/_dist_/components/ShortcutPanel.svelte.css.proxy.js",
+        "/_dist_/components/ShortcutPanel.svelte.js",
+        "/_dist_/components/Topbar.svelte.css.proxy.js",
+        "/_dist_/components/Topbar.svelte.js",
+        "/_dist_/components/TopSettings.svelte.css.proxy.js",
+        "/_dist_/components/TopSettings.svelte.js",
+        "/_dist_/config.js",
+        "/_dist_/globalCtx.js",
+        "/_dist_/index.js",
+        "/_dist_/lang/en.js",
+        "/_dist_/lang/ja.js",
+        "/_dist_/lang/zh.js",
+        "/_dist_/styles/fontface.css.proxy.js",
+        "/_dist_/types.js",
+        "/_dist_/utils/i18n.js",
+        "/_dist_/utils/storage.js",
+        "/_snowpack/env.js",
+        "/_snowpack/pkg/base64-js.js",
+        "/_snowpack/pkg/clipboard.js",
+        "/_snowpack/pkg/common/_commonjsHelpers-8c19dec8.js",
+        "/_snowpack/pkg/common/index-a28ccc74.js",
+        "/_snowpack/pkg/lottie-web.js",
+        "/_snowpack/pkg/svelte-i18n.js",
+        "/_snowpack/pkg/svelte.js",
+        "/_snowpack/pkg/svelte/internal.js",
+        "/_snowpack/pkg/svelte/transition.js"
+      ]
+    }
+  },
+  "generated": {}
+}

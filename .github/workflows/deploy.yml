@@ -27,11 +27,6 @@ jobs:
           npx pnpm install
           npx pnpm run build
 
-      - name: Install SSH Client 🔑
-        uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: ${{ secrets.DEPLOY_PRODUCTON_KEY }}
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:

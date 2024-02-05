@@ -5,20 +5,23 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
-    if: "(!contains(github.event.commits[0].message, '[skip ci]')) && (!contains(github.event.commits[0].message, '[ci skip]'))"
+    if: (!contains(github.event.commits[0].message, '[skip ci]')) && (!contains(github.event.commits[0].message, '[ci skip]'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
-          fetch-depth: "0"
+          fetch-depth: '0'
 
       - name: Install and Build 🔧
         env:
-          ENV: "PRODUCTION"
+          ENV: 'PRODUCTION'
         run: |
           sed -i "s/NULL_RELEASE/$GITHUB_SHA/" src/index.ts
           npx pnpm install
@@ -30,10 +33,9 @@ jobs:
           ssh-private-key: ${{ secrets.DEPLOY_PRODUCTON_KEY }}
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          SSH: true
-          BRANCH: gh-pages
-          FOLDER: dist
-          SINGLE_COMMIT: true
-          CLEAN: true
+          branch: gh-pages
+          folder: dist
+          single-commit: true
+          clean: true
